@@ -1,0 +1,42 @@
+<!--product_info_start-->
+
+DISPLAY_PRODUCT_NAME</br>
+
+ DISPLAY_PRODUCT_IMAGE</br>
+
+DISPLAY_PRODUCT_MANUFACTURER</br>
+DISPLAY_PRODUCT_MODEL</br>                             
+
+DISPLAY_CHILD_PRODUCT_PRICE</br>
+
+                                
+DISPLAY_AVAILABILITY_N_PRICE</br>
+
+DISPLAY_PRODUCT_OPTIONS_TITLE</br>
+
+ DISPLAY_PRODUCT_ATTRIBUTE</br>
+
+                               
+
+DISPLAY_PRODUCT_QUANTITY</br>
+
+DISPLAY_PRODUCT_DISCLAIMER</br>
+
+DISPLAY_PRODUCT_ADD_TO_CART </br>
+
+DISPLAY_PRODUCT_ADD_TO_WISHLIST</br>
+
+DISPLAY_PRODUCT_SHARE_LINK</br>
+
+                
+  DISPLAY_PRODUCT_DISCLAIMER</br>
+                                              
+DISPLAY_PRODUCT_ADD_TO_CART</br>
+DISPLAY_PRODUCT_SPECIFICATIONS</br>
+DISPLAY_PRODUCT_ATTRIBUTES</br>
+                       
+DISPLAY_PRODUCT_DESCRIPTION</br>
+DISPLAY_PRODUCT_RATINGS </br>
+DISPLAY_PRODUCT_WRITE_RATINGS </br>
+
+<!--product_info__end-->
