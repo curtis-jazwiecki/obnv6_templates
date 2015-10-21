@@ -1002,7 +1002,7 @@ p.product_s_desc
 
 #mj-footer .social_icons {
 
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 
 }
 
@@ -1014,7 +1014,7 @@ p.product_s_desc
 
    
 
-    float: left;
+    /*float: left;*/
 
     font-size: 0;
 
@@ -1976,7 +1976,7 @@ p.s_desc {
 
 	font-family: Myriad Pro;
 	font-weight:bold;
-color:#ffffff !important;
+color:#008080 !important;
 
 }
 
@@ -2572,7 +2572,7 @@ input[type="radio"], input[type="checkbox"] {
 
     width: auto;
 	
-	height: auto; 
+/*	height: auto; */
 
     margin-bottom: 25px;
 
@@ -6753,7 +6753,7 @@ li.sfHover > a > .sf-sub-indicator {
 
     position: absolute !important;
 
-    top: 88% !important;
+   /*top: 88% !important;*/
 
     width: auto;
 
