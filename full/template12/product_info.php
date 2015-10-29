@@ -1,10 +1,3 @@
-<script>    
-    $(document).ready(function() {        
-        $('td.childButton').each(function() {            
-            $(this).children().eq(1).replaceWith('<input type="submit" value="add to cart" class="addtocart_btn">');        
-        });    
-    });
-</script>
 <div id="productinfo">    
     <div id="leftpart">        
         <h1>DISPLAY_PRODUCT_NAME</h1>        
@@ -50,10 +43,22 @@
                 </div>            
                 <div>DISPLAY_PRODUCT_QUANTITY</div>            
                 <div>DISPLAY_PRODUCT_DISCLAIMER</div>            
-                <div>DISPLAY_PRODUCT_ADD_TO_CART <input type="submit" value="add to cart" class="addtocart_btn"></div>            
+                <div>DISPLAY_PRODUCT_ADD_TO_CART <input type="submit" value="add to cart" class="addtocart_btn" id="disc_cart_btn"></div>            
                 <div>DISPLAY_PRODUCT_ADD_TO_WISHLIST<input type="submit" class="skubutton" name="wishlist_x" value="Add to Wishlist"></div>            
                 <div id="sharelink">DISPLAY_PRODUCT_SHARE_LINK</div>        
             </div>
             <div>DISPLAY_PRODUCT_RELATED_ITEMS</div>    
         </div>            
 </div>  
+<script type="text/javascript">  
+var is_disclaimer = DISCLAIMER_ADD_TO_CART;
+    oPt(document).ready(function() {        
+        oPt('td.childButton').each(function() {            
+			oPt(this).children().eq(1).replaceWith('<input type="submit" value="add to cart" class="addtocart_btn">');        
+        });  
+		
+		if(is_disclaimer == 1){
+			oPt('#disc_cart_btn').attr('onclick','return disclaimer_onclick();');
+		}  
+    });
+</script>
