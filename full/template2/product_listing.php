@@ -51,7 +51,7 @@ if (isset($pw_mispell)){ //added for search enhancements mod
         switch ($column_list[$col]) {
           case 'PRODUCT_LIST_MODEL':
             $lc_align = '';
-            $lc_text = '&nbsp;' . $listing[$x]['products_model'] . '&nbsp;';
+            $lc_text = ' ' . $listing[$x]['products_model'] . ' ';
             break;
           case 'PRODUCT_LIST_NAME':
             $lc_align = '';
@@ -65,7 +65,7 @@ if (isset($pw_mispell)){ //added for search enhancements mod
             break;
           case 'PRODUCT_LIST_MANUFACTURER':
             $lc_align = '';
-            $lc_text = '&nbsp;<a href="' . tep_href_link(FILENAME_DEFAULT, 'manufacturers_id=' . $listing[$x]['manufacturers_id']) . '">' . $listing[$x]['manufacturers_name'] . '</a>&nbsp;';
+            $lc_text = ' <a href="' . tep_href_link(FILENAME_DEFAULT, 'manufacturers_id=' . $listing[$x]['manufacturers_id']) . '">' . $listing[$x]['manufacturers_name'] . '</a> ';
             break;
           case 'PRODUCT_LIST_PRICE':
           if ($listing[$x]['products_price'] <= 0) {
@@ -74,20 +74,20 @@ if (isset($pw_mispell)){ //added for search enhancements mod
 		     $lc_align = 'right';
             if (tep_not_null($listing[$x]['specials_new_products_price'])) {
 			$lc_text = '';
-              $lc_price = '&nbsp;<s>' .  $currencies->display_price($listing[$x]['products_price'], tep_get_tax_rate($listing[$x]['products_tax_class_id'])) . '</s>&nbsp;&nbsp;<span class="productSpecialPrice">' . $currencies->display_price($listing[$x]['specials_new_products_price'], tep_get_tax_rate($listing[$x]['products_tax_class_id'])) . '</span>&nbsp;';
+              $lc_price = ' <s>' .  $currencies->display_price($listing[$x]['products_price'], tep_get_tax_rate($listing[$x]['products_tax_class_id'])) . '</s>  <span class="productSpecialPrice">' . $currencies->display_price($listing[$x]['specials_new_products_price'], tep_get_tax_rate($listing[$x]['products_tax_class_id'])) . '</span> ';
             } else {
 			$lc_text = '';
-              $lc_price = '&nbsp;' . $currencies->display_price($listing[$x]['products_price'], tep_get_tax_rate($listing['products_tax_class_id'])) . '&nbsp;';
+              $lc_price = ' ' . $currencies->display_price($listing[$x]['products_price'], tep_get_tax_rate($listing['products_tax_class_id'])) . ' ';
             }
            } 
             break;
           case 'PRODUCT_LIST_QUANTITY':
             $lc_align = 'right';
-            $lc_text = '&nbsp;' . $listing[$x]['products_quantity'] . '&nbsp;';
+            $lc_text = ' ' . $listing[$x]['products_quantity'] . ' ';
             break;
           case 'PRODUCT_LIST_WEIGHT':
             $lc_align = 'right';
-            $lc_text = '&nbsp;' . $listing[$x]['products_weight'] . '&nbsp;';
+            $lc_text = ' ' . $listing[$x]['products_weight'] . ' ';
             break;
           case 'PRODUCT_LIST_IMAGE':
          $feed_status = is_xml_feed_product($listing[$x]['products_id']);
@@ -108,7 +108,7 @@ if (isset($pw_mispell)){ //added for search enhancements mod
          case 'PRODUCT_LIST_BUY_NOW':
             $lc_align = 'center';
 			
-            $lc_text = '<a href="' . tep_href_link(basename($PHP_SELF), tep_get_all_get_params(array('action')) . 'action=buy_now&products_id=' . $listing['products_id']) . '">' . tep_image_button('button_buy_now.gif', IMAGE_BUTTON_BUY_NOW) . '</a>&nbsp;';
+            $lc_text = '<a href="' . tep_href_link(basename($PHP_SELF), tep_get_all_get_params(array('action')) . 'action=buy_now&products_id=' . $listing['products_id']) . '">' . tep_image_button('button_buy_now.gif', IMAGE_BUTTON_BUY_NOW) . '</a> ';
             break;
           
         }
@@ -131,7 +131,7 @@ if (isset($pw_mispell)){ //added for search enhancements mod
 
         	$feed_status = is_xml_feed_product($listing[$x]['products_id']);
           	if ($feed_status) 
-		  		$image = tep_small_image($listing[$x]['products_image'], $listing[$x]['products_name'], 150, 150,'class="subcatimages" border="0"');
+		  		$image = tep_small_image($listing[$x]['products_image'], $listing[$x]['products_name'], 200, 250,'class="subcatimages" border="0"');
           	else 
           		$image = tep_image(DIR_WS_IMAGES . $listing[$x]['products_image'], $listing[$x]['products_name'], 150, 150,'class="subcatimages" border="0"');
             $lc_align = 'center';

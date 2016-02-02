@@ -1,653 +1,378 @@
-/*
-  $Id: stylesheet.css,v 1.56 2003/06/30 20:04:02 hpdl Exp $
-*/
-/*.boxText { font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size: 14px; }*/
-.boxText{font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size: 11px; color:#ffffff; font-weight:bold;  line-height:1.5em; text-align:left; text-decoration: none;}
-.boxText a{font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size: 11px; color:#ffffff;   font-weight:bold;  text-align: left; text-decoration: none;}
-span.style1{ 
-	color:#ffffff; 
-	text-decoration:underline;
-	font-size: 14px;
+#mj-maincontent table td {
+  border-bottom: medium none;
 }
-p.cat {
-font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-font-size: 11px; 
-color:#ffffff; 
-font-weight:bold; 
-line-height:1.5em; 
-text-indent:-5px;
-margin-left:5px;
-margin-top:-7px;
-margin-bottom:-7px;
-margin-right:0px;
-padding:0px;
+.mj-categoriessidebox br {
+  display: none;
 }
-.errorBox { font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size : 10px; background: #111111; font-weight: bold; }
-.stockWarning { font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size : 10px; color: #ffffff ; }
-.productsNotifications { background: #111111; }
-.orderEdit { font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size : 10px; color: #ff0000; text-decoration: underline; }
-BODY {
+.mj-categoriessidebox .cat {
+  padding-left: 11px;
+}
+.mj-product td[valign="top"] {
+  border-top: 1px dashed #00c4c4;
+}
+.mj-product td[valign="top"] tr {
+  display: table-cell;
+}
+.mj-product td[valign="top"] tr:last-child {
+  display: none;
+}
+.mj-product td[valign="top"] tr td b {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.mj-bestsellersbox td.infoBoxContents[valign="top"] {
+  padding-left: 10px;
+}
+.mj-bestsellersbox td.infoBoxContents[valign="top"] + td {
+  padding-bottom: 7px;
+  padding-left: 10px;
+}
+.mj-bestsellersbox td.infoBoxContents[valign="top"] + td a {
+  color: #404040  !important;
+  font-size: 14px !important;
+  font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+}
+#mj-languagebar .ui-widget-content {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border: medium none;
+}
+#mj-languagebar .ui-widget-content table tr:first-child {
+  display: none;
+}
+div.mj-reviewbox td.boxText,
+.mj-cartbox td.boxText {
+  padding: 0 5px 0 10px;
+}
+td.category_cell > table.categoryListBoxContents.subproduct_name {
+  border: 1px solid #d9d9d9;
+}
+td.category_cell > table.categoryListBoxContents.subproduct_name.onlycat {
+  height: 230px;
+  min-height: 230px;
+}
+td.category_cell > table.categoryListBoxContents.subproduct_name tr {
+  height: auto;
+}
+td.category_cell > table.categoryListBoxContents.subproduct_name td {
+  width: 33%;
+  text-align: center;
+  vertical-align: top;
+}
+td.category_cell > table.categoryListBoxContents.subproduct_name img {
+  margin-bottom: 0;
+}
+table.categoryListBoxContents.subproduct_name {
+  border: 1px solid #d9d9d9;
+  min-height: 440px;
+  height: 440px;
+}
+body.checkout #mj-contentarea h2.margin {
+  background: url("ext/images/plus-minus.png") no-repeat scroll 5px -92px #006eff !important;
+  padding: 2px 0 2px 40px !important;
+  border-bottom: 1px solid #cac9c9;
+  font-size: 16px;
   color: #ffffff;
-  margin: 0px;
+  height: 32px;
+  line-height: 30px;
+  font-weight:700;
 }
-A {
+body.checkout #mj-contentarea h2.margin + table {
+  /*background: none repeat scroll 0 0 #e3e5e7;*/
+  border: 1px solid #d6d6d6;
+  padding: 10px;
+}
+body.checkout #mj-contentarea h2.margin + table td {
+  font-family: PT Sans, sans-serif;
+  font-size: 14px;
+  color: #404040;
+}
+body.checkout #mj-contentarea h2.margin + table textarea {
+  background: #fff;
+  border: 1px solid #d2d2d2;
+  box-shadow: 0 0 3px #c0c0c0 inset;
+  color: #666666;
+}
+body.index div#mj-slidetitle {
+  display: none;
+}
+body.index .centerBoxContentsNew.centeredContent {
+  height: 314px;
+  max-height: 314px;
+  max-width: 300px;
+  width: 200px;
+  overflow: hidden;
+}
+body.index .imagename {
+  height: 175px;
+}
+div#mj-footer .subcatimages {
+  width: 64px;
+  max-width: 64px;
+  min-width: 64px;
+}
+body.create_account div#mj-contentarea td.infoBoxHeadingLogin {
+  background: url("ext/images/plus-minus.png") no-repeat scroll 5px -88px #006eff !important;
+  /*background: url("ext/images/plus-minus.png") no-repeat scroll 5px -88px #008080 !important;*/
+  border-bottom: 1px solid #cac9c9;
+  font-size: 16px;
+  margin: 0 0 10px;
+  padding: 0 0 5px 40px !important;
   color: #ffffff;
-  text-decoration: none;
+  line-height: 35px;
 }
-A:hover {
-  color: #ffffff;
-  text-decoration: underline;
+body.create_account div#mj-contentarea td[background="images/template/infoboxbg.jpg"] {
+  display: none;
 }
-FORM {
-	display: inline;
+body.create_account div#mj-contentarea > form > table > tbody > tr:nth-child(3) > td {
+ /* background: none repeat scroll 0 0 #e3e5e7;*/
+  border-top: 10px solid #fff;
 }
-TR.header {
-  background: #111111;
+body.create_account div#mj-contentarea > form > table > tbody > tr:nth-child(3) > td table {
+  padding: 5px;
 }
-TR.headerNavigation {
-  background: #bbc3d3;
+body.login #mj-maincontent table.logintable tr#onepagecheckout > td {
+  border: 1px solid #d2d2d2;
 }
-TD.headerNavigation {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 10px;
-
-  font-weight : bold;
+body.login #mj-maincontent table.logintable #tr1 td {
+  /*padding: 15px 0 0 15px;*/
+ /*border-top: 1px solid #d2d2d2;*/
 }
-A.headerNavigation { 
-  color: #ffffff; 
-  font-weight:bold;
- font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 11px;
-  
+body.login #mj-maincontent table.logintable #tr1 td:first-child {
+ /* border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;*/
 }
-A.headerNavigation:hover {
-  color: #ffffff;
-   font-weight:bold;
-   font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-    font-size: 11px;
+body.login #mj-maincontent table.logintable #tr1 td:last-child {
+ /* border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;*/
 }
-TR.headerError {
-  background: #ffffff;
+body.login #mj-maincontent table.logintable #tr1 td b {
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 16px;
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  padding-right: 200px;
 }
-TD.headerError {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 12px;
-  background: #ffffff;
-  color: #ffffff;
-  font-weight : bold;
-  text-align : center;
+body.login #mj-maincontent table.logintable #tr2 > td {
+  line-height: 25px;
+  padding: 0 15px;
+  border-bottom: 1px solid #d2d2d2;
+  border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
 }
-TR.headerInfo {
-  background: #00ff00;
+body.product_info {
+  /*#mj-maincontent > .mj-subcontainer{
+        @media (min-width:900px) {
+            width: auto;
+        }
+    }*/
 }
-TD.headerInfo {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 12px;
-  background: #00ff00;
-  color: #ffffff;
-  font-weight: bold;
+body.product_info .shareText {
+  color: #008080;
+  font-size: 14px;
+}
+body.product_info div.mj-product_inforight .cart_info {
+  max-width: 440px;
+}
+body.product_info div.mj-product_inforight #attribute_title {
+  float: left;
+}
+body.product_info div.mj-product_inforight #attribute_value {
+  float: left;
+  margin-left: 0px;
+  margin-top: 15px;
+}
+body.product_info div.mj-product_inforight #attribute_value select{
+    /*float: left;*/
+    margin-right: 10px;
+}
+body.product_info div.mj-product_inforight #attribute_value select#attribute:not(:first-child) {
+  display: block;
+}
+body.product_info div.mj-product_inforight div.priceClassId span:after {
+  content: 'a';
+  white-space: pre;
+}
+body.product_info #proimg {
+  float: left;
+  text-align: center;
+  width: 400px;
+}
+body.product_info div#mj-right p.moduleHeader {
+	background:  url(images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50% repeat-x;
+  /*background: url("/includes/sts_templates/full/template18/ext/images/sidebox-bg.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+  border-color: -moz-use-text-color -moz-use-text-color #d9d9d9;
+  border-style: none none solid;
+  border-width: medium medium 1px;*/
+  font-family: "Montserrat",helvetica,arial,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 10px;
+  text-transform: none;
+  color:#fff;
+}
+body.product_info div#mj-right p.moduleHeader + table {
   text-align: center;
 }
-TR.footer {
-  background: #ffffff;
-}
-TD.footer {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 11px;
-  background: #ffffff;
-  color: #ffffff;
-  font-weight: bold;
-}
-a.footer{
-font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 11px;
-  background: #ffffff;
-  color: #ffffff;
-  font-weight: bold;
-   
-  }
-  a.footer:hover{font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 11px;
-  background: #ffffff;
-  color: #ffffff;
-  font-weight: bold;
-}
-.infoBox {
-  background: #111111;
-}
-.infoBoxl {
-  background: #111111;
-}
-
-.infoBox2 {
-  background: none;
-}
-.infoBoxl2 {
-  background: none;
-}
-.infoBoxContents {
- 
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 11px;
-  color: #ffffff;
-   /* ag edit - remove background for currency box - *background: #000000;*/
-   text-decoration: none;
-}
-.infoBoxContents a {
- 
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 11px;
-  color: #ffffff;
-   background: #252525;
-   text-decoration: none;
-}
-
-.infoBoxContents2 {
- 
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 11px;
-  color: #666;
- background: none;
-   text-decoration: none;
-}
-.infoBoxContents2 a {
- 
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 11px;
-  color: #666;
-   background: none;
-   text-decoration: none;
-}
-
-
-.infoLeftBoxContents {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-weight: bold;
-  font-size: 11px;
-  color: #ffffff;
-  line-height:1.5em;
-   text-align:left;
-    background: #252525;
-}
-.infoLeftBoxContents a {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-weight: bold;
-  font-size: 11px;
-  color: #ffffff;
-  line-height:1.5em;
-   text-align:left;
-    background: #252525;
-}
-.columnBox{background: #252525;}
-.columnBoxContents{
-	background: ;
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 10px;}
-.infoBoxNotice {
-  background: #FF8E90;
-}
-.infoBoxNoticeContents {
-  background: #FD0000;
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 10px;
-}
-td.infoBoxHeadingLogin
-{
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; 
-	font-size: 14px;
-	font-weight: bold;
-	color: #ffffff;
-	padding:0px;
-	text-align:center;
-	background: #000000;
-}
-TD.infoBoxHeading {
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; 
-	font-size: 14px;
-	font-weight: bold;
-	background: #252525;
-	color: #ffffff;
-	/*text-transform: uppercase;*/
-}
-TD.infoBox, SPAN.infoBox {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 10px;
-}
-TR.accountHistory-odd, TR.addressBook-odd, TR.alsoPurchased-odd, TR.payment-odd, TR.productReviews-odd, TR.upcomingProducts-odd, TR.shippingOptions-odd {
-  background: #ffffff;
-  
-}
-TR.productListing-odd{ background: #ffffff; border-bottom:1px solid #666666;}
-TR.accountHistory-even, TR.addressBook-even, TR.alsoPurchased-even, TR.payment-even, TR.productReviews-even, TR.upcomingProducts-even, TR.shippingOptions-even {
-  background: #ffffff;
-}
-TR.productListing-even{background: #ffffff; border-bottom:1px solid #666666;}
-TABLE.productListing {
-  border: 0px;
-  border-style: solid;
-  border-color: #111111;
-  border-spacing: 0px;
-}
-.productListing-heading {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 10px;
-  background: #666666;
-  color: #FFFFFF;
-  font-weight: bold;
-}
-TD.productListing-data {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 10px;
-  width: 25%;
-  background: #252525;
-  color: #FFFFFF;
-   border: 0px;
-  border-style: solid;
-  border-color: #252525;
-  border-spacing: 0px;
-}
-TD.productListing-data a {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 10px;
-  width: 25%;
-  background: #252525;
-  color: #FFFFFF;
-    border: 0px;
-  border-style: solid;
-  border-color: #252525;
-  border-spacing: 0px;
-}
-A.pageResults {
-  color: #ffffff;
-}
-A.pageResults:hover {
-  color: #ffffff;
-  background: #111111;
-}
-TD.pageHeading, DIV.pageHeading {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
-}
-TR.subBar {
-  background: #f4f7fd;
-}
-TD.subBar {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 10px;
-  color: #ffffff;
-}
-TD.main, P.main {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 12px;
-  line-height: 1.5;
-  color: #ffffff;
- /* background: #111111; ag edit- removed for options8*/
-  border:0px;
-}
-TD.smallText, SPAN.smallText, P.smallText {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 13px;
-  
-  color:#ffffff;
-}
-TD.accountCategory {
-  font-family:Arial;
-  font-size: 13px;
-  color: #aabbdd;
-}
-TD.fieldKey {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-}
-TD.fieldValue {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 12px;
-}
-TD.tableHeading {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-}
-SPAN.newItemInCart {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 12px;
-  color: #ffffff;
-}
-CHECKBOX, INPUT, RADIO, SELECT {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 12px;
-}
-TEXTAREA {
+body.product_info div#mj-right p.moduleHeader + table table {
   width: 100%;
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 11px;
 }
-SPAN.greetUser {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 12px;
-  color: #f0a480;
-  font-weight: bold;
+div#mj-contentarea td.pageHeading {
+  border-bottom: 1px solid #e9e8e8;
+  margin-bottom: 10px;
+  padding-bottom: 14px;
+  padding-top: 5px;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 35px;
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
 }
-TABLE.formArea {
-  background: #f1f9fe;
-  border-color: #7b9ebd;
-  border-style: solid;
-  border-width: 1px;
-}
-TD.formAreaTitle {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-}
-SPAN.markProductOutOfStock {
-  font-family:Arial;
-  font-size: 12px;
-  color: #c76170;
-  font-weight: bold;
-}
-SPAN.productSpecialPrice {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
+body.shopping_cart div#mj-contentarea table.productListing.productListingTpl2 td.infoBoxHeading {
+  border-bottom: 3px solid #00c4c4;
   color: #ffffff;
-  font-weight: bold;
-  font-size:larger;
-  width:140px;
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  padding: 5px 6px;
+  text-align: center;
+  text-shadow: 0 0 0;
+  background-color: #008080;
+  float: none;
 }
-SPAN.errorText {
-  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-  color: #ffffff;
+body.shopping_cart div#mj-contentarea table.productListing.productListingTpl2 td.infoBoxHeading:first-child {
+  width: 300px;
 }
-.moduleRow { }
-.moduleRowOver { background-color: #252525; cursor: pointer; cursor: hand; }
-.moduleRowSelected { background-color: #252525; }
-.checkoutBarFrom, .checkoutBarTo { font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size: 10px; color: #8c8c8c; }
-.checkoutBarCurrent { font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size: 10px; color: #ffffff; }
-/* message box */
-.messageBox { font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size: 10px; }
-.messageStackError, .messageStackWarning { font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size: 10px; background-color: #111111; }
-.messageStackSuccess { font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size: 10px; background-color: #99ff00; }
-/* input requirement */
-.inputRequirement { font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; font-size: 10px; color: #ffffff; }
-A.subcatheader {
-	font-size: 12px;
-	font-weight: bold;
-	color: #ffffff;
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	line-height: 1.2;
-	text-align: center;
-	text-decoration: none;
-	background-color: #111111; 
+body.shopping_cart div#mj-contentarea table.productListing.productListingTpl2 tr.productListing-tr {
+  float: none;
 }
-A.viewallsubcat {
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	color: #ffffff;
-	font-size: 11px;
-	text-decoration: underline;
-	background-color: #111111; 
+body.shopping_cart div#mj-contentarea table.productListing.productListingTpl2 td.productListing-data {
+  float: none;
+  width: auto;
+  vertical-align: middle;
 }
-.subcatimages {
-font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-color: #ffffff;
-font-size: 11px;
-padding: 4px;
-width:100%;
-height:auto;
- max-width: 235px;
- max-height:275px;
-  background-color: #252525; 
+body.shopping_cart div#mj-contentarea table.productListing.productListingTpl2 td.productListing-data td.productListing-data {
+  display: table-header-group;
 }
-
-.subcatimages2 {
-font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-color: #ffffff;
-font-size: 11px;
-padding: 0px;
-width:140px;
-height:auto;
- max-width: 140px;
-background-color: #252525; 
+body {
+  /*&.checkout_success{
+        div#mj-contentarea > form > table table table{
+            display:none;
+        }
+    }*/
 }
-.subcatimages a{
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	color: #ffffff;
-	font-size: 11px;
-	background-color: #252525; 
+body:not(.checkout):not(.login):not(.password_forgotten):not(.address_book):not(.account_history):not(.my_points_help) div#mj-contentarea td.main b {
+  /*border-bottom: 1px solid #d2d2d2;*/
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 0 9px;
+  padding-bottom: 9px;
+  text-transform: uppercase;
+  color: #008080;
 }
-.subcat{ 
-  background:#111111;
-  text-align:center;
+body.address_book div#mj-contentarea > table > tbody > tr > td.main {
+  border-bottom: 1px solid #d2d2d2;
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 0 9px;
+  padding-bottom: 9px;
+  text-transform: uppercase;
+  color: #008080;
 }
-.cat_title {
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	color: #FFFFFF;
-	background: #111111;
-	font-size: 11px;
-	font-weight: bold;
-	text-decoration: none;
-	text-align: left;
-	padding: 1px;
+body.create_account_success img[src$="table_background_man_on_board.gif"] {
+  display: none;
 }
-.cat_title a {
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif; 
-	color: #FFFFFF;
-	font-size: 11px; 
-	font-weight: bold; 
-	text-decoration: underline;
+body.create_account_success td.pageHeading {
+  text-align: left;
+}
+body.account div#mj-contentarea img[src$="pixel_trans.gif"] {
+  display: none;
+}
+body.account div#mj-contentarea > table {
+  border: 1px solid #cac9c9;
+  border-spacing: 15px;
+  border-radius: 4px;
+}
+body.account div#mj-contentarea > table td.infoBoxHeading {
+  border-bottom: 1px solid #d2d2d2;
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 0 9px;
+  padding-bottom: 9px;
+  text-transform: uppercase;
+  color: #008080;
+}
+body.account div#mj-contentarea > table table.infoBox {
+  border: 1px solid #cac9c9;
+  border-spacing: 15px;
+  border-radius: 4px;
+}
+body.account_edit div#mj-contentarea form > table,
+body.account_password div#mj-contentarea form > table,
+body.account_newsletters div#mj-contentarea form > table,
+body.account_notifications div#mj-contentarea form > table {
+  border: 1px solid #cac9c9;
+  border-spacing: 15px;
+  border-radius: 4px;
+}
+body.account_notifications .infoBoxContents > td > table {
+  /*border: 1px solid #cac9c9;*/
+  border-spacing: 15px;
+  border-radius: 4px;
+}
+body.address_book div#mj-contentarea > table,
+body.account_history div#mj-contentarea > table,
+body.my_points div#mj-contentarea > table,
+body.my_points_help div#mj-contentarea > table {
+  border: 1px solid #cac9c9;
+  border-spacing: 15px;
+  border-radius: 4px;
+}
+.infoBoxHeadingLoginl > img, .infoBoxHeadingLogin2 > img {
+    display: none;
+}
+.infoBoxHeadingLoginl, .infoBoxHeadingLogin2{
+    background-image: none !important;
+}
+.moduleCls a{
+	font-size:14px;
 	}
+/*Login responsive changes*/
+table.logintable.table_login_responsive1{
+border-left: 0px solid #d2d2d2 !important;
+    float: left;
+    padding: 10px;}
+table.logintable.table_login_responsive{
+    float: left;
+    padding: 10px;}
+.login_box{color: #666;
+    font-family: "Karla","HelveticaNeue","Helvetica Neue",sans-serif;
+    font-size: 16px;
+    line-height: 1.375;}
 	
-.cat_list {
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	color:#ffffff;
-	font-size: 11px;
-	font-weight:bold;
-}
-a.cat_list {
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	/*color: #ffffff;*/
-	color:#ffffff;
-	font-size: 11px;
-	font-weight: bold; 
-	/*text-transform:capitalize;*/
-	text-decoration: underline;
-}
-   .maincat_title h1 {
-   	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	border: 0px ;
-	background: #252525;
-	color: #ffffff ;
-	padding-left: 10px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	font-size: 14px; 
-	font-weight: bold; 
-	height: 18px;
-	margin: 0px;
-}
-    h1 {
-   	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	color: #ffffff;
-	padding-left: 10px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	font-size: 14px; 
-	font-weight: bold; 
-	height: 18px;
-	margin: 0px;
-}
-.mainpage_cat {
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	color:#ffffff;
-	background: #252525;
-	font-size: 13px;
-	font-weight: bold;
-	text-decoration: none;
-	text-align: left;
-	border: 0px solid #252525;
-}
-.mainpage_cat a {
-	font-family:Arial; 
-	/*color: #7C8894;*/
-	color:#ffffff;
-	font-size: 13px; 
-	font-weight: bold; 
-	text-decoration: none;
-	padding-left: 5px;
-	border: 0;
-	}
 	
-.mainpage_catimage {
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	color:#7C8894;
-	background: #111111;
-	font-size: 11px;
-	font-weight: bold;
-	text-decoration: none;
-	text-align: left;
-	border: 1px solid #79838F;
+	.logintable {
+    max-width: 600px;
+    width: 100%;
 }
-.mainpage_catimage a{
-	padding: 0px;
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	color:#7C8894;
-	background: #111111;
-	font-size: 11px;
-	font-weight: bold;
-	text-decoration: none;
-	text-align: left;
-	border: 0;
-}
-.mainpagecat_list {
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	color: #ffffff;
-	font-size: 11px
-}
-a.mainpagecat_list {
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	color: #ffffff;
-	font-size: 11px;
-	font-weight:bold;
-	/*text-transform:capitalize;*/
-	text-decoration: underline;
-}	
-td.description {
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-    font-size: 12px;
-    text-align: left;
-    border:0px solid #111111;
-    padding:5px;
-}
-td.xcell{
-		border:2px solid #e9e9e9;
-		background:#ffffff;
-		  text-align:left;
-		}
-td.xcellImage{
-		}		
-table.xcell{
-		background:#ffffff;
-		padding:7px;
-		  text-align:left;
-}
-a.xcell{font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-		font-size: 10px;
-		color:#515453;
-		  text-align:left;
-	}
-a.xcell:hover{
-	font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-    font-size: 10px;
-	color:#515453;
-	  text-align:left;}	
-	td.xcellPrice{color:#15222f;font-weight:bold;}
+/*14.01.2016*/
+.infoBoxHeading.heading_text_style > b{font-family: "Karla","HelveticaNeue","Helvetica Neue",sans-serif;text-transform:uppercase;}
+.main > a{
+    font-family: "Karla","HelveticaNeue","Helvetica Neue",sans-serif;
+    font-size: 16px;
+    line-height: 1.375;}
+
+.main > b{font-family: "Karla","HelveticaNeue","Helvetica Neue",sans-serif;text-transform:uppercase;}
+.boxAlignment{text-align:center;}
+.heading_text_style > b{font-family: "Karla","HelveticaNeue","Helvetica Neue",sans-serif;text-transform:uppercase;}
+.acct_box{font-family: "Karla","HelveticaNeue","Helvetica Neue",sans-serif;
+    font-size: 16px;
+    line-height: 1.375;}
 	
-	ul.productOption{
-	margin:0px;
-	padding-left:0px;
-	text-align:left;
-	/*list-style:url(../images/template/ul_circle.gif) inside;*/
-	vertical-align:middle;
-	list-style-type:disc;
-	list-style-position:inside;
-	}
-	li.productOption{padding-left:3px;}
-	table.productInfo{
-	border:0px solid #252525;
-	 background:#252525;
-	  padding-left:7px;
-	    text-align:left;
-	  }
-	  span.productName{
-	  font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	  font-size:16px;
-	  font-weight:bold;
-	   text-align:left;
-	  }
-	  td.productPrice{font-family:  'Exo', 'Titillium Web', 'Dosis', 'Abel',  'Ropa Sans', 'Gudea',  sans-serif;
-	  font-size:14px;
-	  font-weight:bold;
-	  text-align:left;}
-	  table.ProductInfoBox{background:#252525;
-	  text-align:left;
-	  padding:7px;
-	  }
-	td.setSize {width:150px;}
-	.BoxH{height:230px;}
-
-	/* Basic jQuery Slider essential styles */
-
-ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none;}
-li.bjqs-slide{position:absolute; display:none;}
-ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
-ul.bjqs-controls.v-centered li a{position:absolute;}
-ul.bjqs-controls.v-centered li.bjqs-next a{right:0;}
-ul.bjqs-controls.v-centered li.bjqs-prev a{left:0;}
-ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
-ol.bjqs-markers.h-centered{text-align: center;}
-ol.bjqs-markers li{display:inline;}
-ol.bjqs-markers li a{display:inline-block;}
-p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0; font-size:18px; font-weight:bold; color:#FFFFFF;}
-#container{
-	max-width:980px;
-	margin:0 auto;
-	padding-bottom:0px;
-}
-
-#banner-fade,
-#banner-slide{
-	margin-bottom: 0px;
-}
-
-ul.bjqs-controls.v-centered li a{
-	display:block;
-	padding:10px;
-	background:#333333;
-	color:#e9e9e9;
-	text-decoration: none;
-}
-
-ul.bjqs-controls.v-centered li a:hover{
-	background:#ffffff;
-	color:#fff;
-}
-
-ol.bjqs-markers li a{
-	padding:5px 10px;
-	background:#ffffff;
-	color:#fff;
-	margin:5px;
-	text-decoration: none;
-}
-
-ol.bjqs-markers li.active-marker a,
-ol.bjqs-markers li a:hover{
-	background: #999;
-}
-
-p.bjqs-caption{
-	background: rgba(0,0,0,0.7);
-}
-
-.productimages{
-	max-width: 450px;}
+.new_text_style{font-family: "Karla","HelveticaNeue","Helvetica Neue",sans-serif;}
+.pointWarning > b{font-family: "Karla","HelveticaNeue","Helvetica Neue",sans-serif;text-transform:uppercase;}
+#answer_q1{font-family: "Karla","HelveticaNeue","Helvetica Neue",sans-serif;}
+.main.new_text_style a{font-family: "Karla","HelveticaNeue","Helvetica Neue",sans-serif;}
+b{font-family: "Karla","HelveticaNeue","Helvetica Neue",sans-serif;text-transform:uppercase;}
+/*end*/
