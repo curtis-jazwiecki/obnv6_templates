@@ -98,43 +98,58 @@
                  $products_price =  $currencies->display_price($products['products_price'], tep_get_tax_rate($products['products_tax_class_id']));
             }
        
-          /* if (tep_not_null($products['products_image'])) {
-            	
-                $feed_status = is_xml_feed_product($products['products_id']);
-                
-                //if ($feed_status) 
-                  // $image = tep_small_image($products['products_image'], $products['products_name'], 360, 380,'class="img-responsive img-portfolio img-hover"');
-                //else 
-                   $image = tep_image(DIR_WS_IMAGES . $products['products_image'], $products['products_name'], 360, 380,'class="img-responsive img-portfolio img-hover"');
-           
-           }*/
-		   
-		    if (tep_not_null($products['products_image'])) {
+            if (tep_not_null($products['products_image'])) {
+
 					
+
 				
+
 				$feed_status = is_xml_feed_product($products['products_id']);
+
 				
+
 				if ($feed_status && stripos($products['products_largeimage'], 'http://')!==false){
+
 				
+
 					if (@getimagesize($products['products_largeimage'])){
+
 					
+
 					$image = '<img src="' . $products['products_largeimage'] . '" title="' . $products['products_name'] . '" class="img-responsive img-portfolio img-hover" style="width:350px;height:auto;">';
+
 					
+
 					} else {
+
 					
-					$image = '<img src="' . $products['products_largeimage'] . '" title="' . $products['products_name'] . '" class="img-responsive img-portfolio img-hover" style="width:350px;height:auto;">';
+
+					$image = '<img "' . DIR_WS_IMAGES . $products['products_largeimage'] . '" title="' . $products['products_name'] . '" class="img-responsive img-portfolio img-hover" style="width:350px;height:auto;">';
 					
+					
+
+					
+
 					}
+
 				
+
 				} else {
+
+				$image = '<img src="' . DIR_WS_IMAGES . $products['products_largeimage'] . '" title="' . $featured['products_name'] . '" class="img-responsive img-portfolio img-hover" style="width:350px;height:200px;">';
+
 				
-				$image = tep_small_image(DIR_WS_IMAGES . $products['products_image'], $products['products_name'], SMALL_IMAGE_WIDTH, SMALL_IMAGE_HEIGHT,' class="img-responsive img-portfolio img-hover" ');
-				
+
 				}
+
 		   
+
 		   
+
 	   		}else{
+
             	$image = '<img src="images/noimage.gif" title="' . $products['products_name'] . '" width="350" height="200" class="img-responsive img-portfolio img-hover">';
+
        		}
            
             $categories_products_array[] = array(
