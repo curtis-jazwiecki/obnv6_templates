@@ -44,9 +44,11 @@ file,boxes/infobox_reviews.php.html,$infobox_reviews,,,Infobox Reviews
 file,boxes/infobox_shopping_cart.php.html,$infobox_shopping_cart,,,Infobox Shopping Cart
 file,boxes/infobox_whats_new.php.html,$infobox_whats_new,,,Infobox Whats New
 file,index.php.html,,,,Main template
-file,product_info.php,,,,Product Info Page
+file,product_info.php.html,,,,Product Info Page
 file,product_listing.php,,,,Product Listing
 file,product_listing_column.php,,,,Column Layout
 file,product_listing_large.php,,,,Large Picture Layout
 file,product_listing_large_description.php,,,,Large Descriptive layout
 file,product_listing_standard.php,,,,Standard Layout
+file,create_account.php.html,,,,Create Account Main template
+file,login.php.html,,,,Login Main template

@@ -132,16 +132,16 @@ body.login #mj-maincontent table.logintable tr#onepagecheckout > td {
   border: 1px solid #d2d2d2;
 }
 body.login #mj-maincontent table.logintable #tr1 td {
-  padding: 15px 0 0 15px;
-  border-top: 1px solid #d2d2d2;
+  /*padding: 15px 0 0 15px;*/
+ /*border-top: 1px solid #d2d2d2;*/
 }
 body.login #mj-maincontent table.logintable #tr1 td:first-child {
-  border-left: 1px solid #d2d2d2;
-  border-right: 1px solid #d2d2d2;
+ /* border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;*/
 }
 body.login #mj-maincontent table.logintable #tr1 td:last-child {
-  border-left: 1px solid #d2d2d2;
-  border-right: 1px solid #d2d2d2;
+ /* border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;*/
 }
 body.login #mj-maincontent table.logintable #tr1 td b {
   border-bottom: 1px solid #d9d9d9;
@@ -336,3 +336,94 @@ body.my_points_help div#mj-contentarea > table {
 .moduleCls a{
 	font-size:14px;
 	}
+/*Login responsive changes*/
+table.logintable.table_login_responsive1{
+border-left: 1px solid #d2d2d2 !important;
+    float: left;
+    padding: 10px;}
+table.logintable.table_login_responsive{
+    float: left;
+    padding: 10px;}
+.login_box{border: 1px solid #d2d2d2 !important;}
+
+
+/*12-02-2016 santosh*/
+.heading_background_img {
+    display: none;
+}
+/* added on 27-04-2016 for ffl dealer shipping */
+
+.ffl_selected {
+		color: #008080;
+		cursor: pointer;
+		font-weight: bold;
+	}
+	
+	.ffl_table {
+		background-color:#008080; color:#fff; width:94.6%; font-family: PT Sans,sans-serif; font-size: 14px;
+    text-transform: uppercase; padding: 4px 0;
+	}
+	
+	.ffl_table_left {
+		width:47%; height:100px; float:left; border: 1px solid #008080; min-height:250px; overflow-y: scroll; font-family: PT Sans,sans-serif; font-size: 14px;
+	}
+	
+	.ffl_table_right {
+		width:47%; height:100px; float:left; border: 1px solid #008080; min-height:250px; overflow-y: scroll; font-family: PT Sans,sans-serif; font-size: 14px; line-height:20px;
+	}
+	
+	.ffl_dealers_color {
+	color:#900;	
+	}
+	
+	.ffl_sele-color {
+	cursor:pointer; line-height:28px;font-size:14px;
+	}
+	
+	.ffl_table input[type="button"] {
+	color:#FFF; border:1px solid #fff; padding:2px 3px; border-radius:2px;
+    background: #008080; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#008080, #00C4C5); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#008080, #00C4C5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#008080, #00C4C5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#008080, #00C4C5); /* Standard syntax */
+
+	}
+	
+	.ffl_table_right input[type="button"] {
+	color:#FFF; border:1px solid #00C4C5; padding:3px 4px; border-radius:2px;
+    background: #008080; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#008080, #00C4C5); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#008080, #00C4C5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#008080, #00C4C5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#008080, #00C4C5); /* Standard syntax */
+
+	}
+	
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.ffl_table input[type=text]{width:50px;}
+.ffl_table{ width:95.5%;font-size: 10px;}
+.ffl_table select{width:50px;}
+.ffl_sele-color {line-height: 20px; font-size: 10px;}
+.ffl_table_right{font-size: 10px;}
+.ffl_table input[type="button"]{font-size: 10px;}
+}
+
+@media only screen and (min-device-width : 481px) and (max-device-width : 667px) {
+.ffl_table{ width:94.7%;font-size: 10px;}
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+.ffl_table input[type=text]{width:50px;}
+.ffl_table{ width:95.5%;font-size: 10px;}
+.ffl_table select{width:50px;}
+.ffl_sele-color {line-height: 20px; font-size: 10px;}
+.ffl_table_right{font-size: 10px;}
+.ffl_table input[type="button"]{font-size: 10px;}
+}
+
+
+
+
+
+                                                    

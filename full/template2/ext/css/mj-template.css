@@ -3706,10 +3706,17 @@ position:relative;top:-40px;
 .main img{display:none;}
 .checkout .main img{display:block;max-width: 196px;
     width: 100%;}
-.checkout_shipping .main img{display:block;max-width: 196px;
-    width: 100%;}
+.checkout_shipping .main img{display:block;}
 	.address_book .main img{display:block;max-width: 76px;
     width: 100%;}
+.checkout_shipping .row, .checkout_shipping .thumbnails	{margin-right:0px;}
+
+.checkout_shipping .btn_img {
+    float: left;
+    margin: 2px;
+}
+#validate_avatax_address{margin: 2px;}
+	
 /*end*/
 /*end*/
 
