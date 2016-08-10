@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+$template18_stylesheet1
+<script type="text/javascript">
+            var jqqqnoconf = jQuery.noConflict();
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+            if (jqqqnoconf.attrFn) {
+                jqqqnoconf.attrFn.text = true;
+            }
+        </script>
+<script type="text/javascript">
+		function popupWindow2(url) {
+            window.open(url,'popupWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no,width=550,height=450,screenX=150,screenY=150,top=150,left=150')
+        }
+            var tba = jQuery.noConflict();
+            tba(document).ready(function () {
+                //SKU BOF
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+                
+                //SKU EOF
+                var scroll_pos = 0;
+                tba(document).scroll(function () {
+                    
+                    scroll_pos = tba(this).scrollTop();
+                    if (scroll_pos > 25) {
+                        tba("#mj-topbar").css('background-color', '#008080');
+                        tba("#mj-topbar").css('background-image', 'url("/includes/sts_templates/full/template21/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
+                        tba("#mj-topbar a").css('color', '#FFFFFF');
+                        tba("#mj-topbar i").css('color', '#FFFFFF');
+                        tba("#mj-topbar div").css('color', '#FFFFFF');
+                        
+                        tba("#mj-topbar li:last-child").css('background', 'none');
+                    }
+                    else
+                    {
+                        tba("#mj-topbar").css('background', 'url("/includes/sts_templates/full/template21/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
+                        tba("#mj-topbar a").css('color', '#008080');
+                        tba("#mj-topbar i").css('color', '#008080');
+                        tba("#mj-topbar div").css('color', '#008080');
+                        
+                        tba("#mj-topbar li:last-child").css('background', 'none');
+                    }
+					
+					
+                });
+				
+				
+				
+            });
+        </script>
+<script src="$templatedirurlext/lightbox/js/lightbox.min.js"></script>
+<link href="$templatedirurlext/lightbox/css/lightbox.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/includes/sts_templates/full/template21/ext/css/default.css">
+<link rel="stylesheet" type="text/css" href="/includes/sts_templates/full/template21/ext/css/1471759.css">
+<link rel='stylesheet' type="text/css" href="/includes/sts_templates/full/template21/ext/css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="/includes/sts_templates/full/template21/ext/css/mobile.css">
+$stylesheet 
+        $js_code
+<style type="text/css">
+table.prd_bdr td:first-child {
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#mj-contentarea h2 {
+	margin: 0px !important;
+}
+.cart_button.addtocart_button {
+	width: 54%;
+}
+.add_to_cart_quantity {
+	width: 45%;
+	text-align: right;
+}
+input[type="submit"].addcart {
+	margin: 5px 0px !important;
+}
+.cart_quantity > input {
+	background: none;
+	
+	border: 1px solid #666;
+	box-shadow: 0 0 0px #fff inset;
+	color: #000;
+	line-height: 20px;
+	margin: 5px 0 3px;
+	min-height: 20px;
+	padding: 0px;
+}
+.prd_hdr > h1 {
+	font-size: 16px !important;
+}
+.prd_hdr {
+	color: #000000 !important;
+}
+.prd_hdr {
+	font-weight: bold !important;
+}
+.prd_hdr h2.mj-productheading1 {
+	background-color: #fff !important;
+	font-weight: bold;
+}
+.prd_hdr h2.mj-productheading1 {
+	background-color: #fff !important;
+	font-weight: bold;
+}
+.mj-product_infoleft > #piGal {
+	text-align: center;
+}
+table.prd_bdr {
+	border-spacing: 5px;
+}
+.prd_bdr .price {
+	font-size: 8pt;
+	color: green;
+}
+
+.carousel li{margin-right:0px !important;}
+.product_name_1 {
+   height: 35px;
+   clear:both;
+   overflow:hidden;
+}
+.subcatimages {
+    height: 75px;
+}
+.flex-direction-nav a {
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    margin: -21px 40px 0 !important;
+    opacity: 1 !important;
+   top:-74px !important;
+    text-indent: -9999px;
+    
+    width: 30px !important;
+}
+.flex-direction-nav .flex-next {
+    background-position: 100% 0;
+    
+}
+.flexslider2.carousel .flex-direction-nav {position:relative;top:-50% !important;}
+.flexslider2.carousel{min-height:160px !important;}
+.flex-viewport{min-height:160px !important;}
+.sim-container{min-height: 260px;}
+</style>
+</head>
+<body class="$script">
+<div id="wrapper">
+  <div class="main_table" style=""> $top_bar   
+    $header    
+    $navigation_menu
+    <div id="mnu_side"> 
+      <div id="mj-contentarea" class="mj-grid64 mj-lspace content-body">
+            <form method="post" action="?action=add_product" name="cart_quantity">
+        <div id="mj-slidetitle" class="std" > 
+          <!-- mj-slidetitle starts -->
+            
+          <table width="100%" border="0">
+            <tr>
+              <td><div class="mj-subcontainer1"> <!-- mj-subcontainer starts -->
+                  <div class="moduletable1 mj-grid961 breadcrumb1"> <!-- mj-grid96 starts -->
+                    <div class="breadcrumbs mj-grid961 breadcrumb1">
+                      <div id="navBreadCrumb1"> $breadcrumbs </div>
+                    </div>
+                  </div>
+                  <!-- mj-grid96 ends --> 
+                </div></td>
+              <td>$product_add_to_wishlist</td>
+            </tr>
+          </table>
+          <!-- mj-subcontainer ends --> 
+          
+        </div>
+        
+        <!--sku start-->
+        
+        
+          <div class="mj-productinfo">
+            <div class="prd_hdr">
+              <h2 class="mj-productheading1">$productname [<span class="smallText model" id="productItem12" >$productmodel</span>]</h2>
+            </div>
+            <div class="contentContainer">
+              <div class="contentText">
+                <div class="mj-product_infoleft">
+                  <div id="piGal">$product_image</div>
+                  <script type="text/javascript">
+            tba(function () {
+                tba('#piGal').photosetGrid({
+                    layout: '1',
+                    width: '250px',
+                    highresLinks: true,
+                    rel: 'pigallery',
+                    onComplete: function () {
+                        tba('#piGal').css({'visibility': 'visible'});
+                        tba('#piGal a').colorbox({
+                            maxHeight: '90%',
+                            maxWidth: '90%',
+                            rel: 'pigallery'
+                        });
+                        tba('#piGal img').each(function () {
+                            var imgid = tba(this).attr('id').substring(9);
+                            if (tba('#piGalDiv_' + imgid).length) {
+                                tba(this).parent().colorbox({inline: true, href: "#piGalDiv_" + imgid});
+                            }
+                        });
+                    }
+                });
+            });
+                                            </script>
+                  <div id="moreImg">$display_product_extra_images</div>
+                </div>
+                <div class="mj-product_inforight">
+                  <div class="product_price ">
+                    <h4 class="product_title alert_box"> $product_availability_n_price <br>
+                      </h4>
+                  </div>
+                  <div class="cart_info">
+                    <div class="cart_quantity add_to_cart_quantity"> 
+                      <input type="text" size="3" value="1" name="cart_quantity">
+                    </div>
+                    <div class="cart_button addtocart_button">
+                      <input type="hidden" value="$products_id" name="products_id" id="Pid">
+                      <span class="tdbLink"> 
+               
+                      <input type="submit" class="addcart" id="tdb5" onclick="javascript:return disclaimer_onclick();" value="Add to Cart">
+                      </input>
+                      </span></div>
+                  </div>
+                  
+                  <!--sku bof-->
+                  <table width="100%" border="0" class="prd_bdr">
+                    <tbody>
+                      <tr>
+                        <td width="50%;">Your Price</td>
+                        <td><div class="prd_price">$checkoutprice</div></td>
+                      </tr>
+                    $msrp_price
+                    $you_save
+                    <tr>
+                      <td width="50%;">Mfg No.</td>
+                      <td>$manufacturer_model_number</td>
+                    </tr>
+                    <tr>
+                      <td width="50%;">Barcode</td>
+                      <td>not available</td>
+                    </tr>
+                    <tr>
+                      <td width="50%;">Restriction</td>
+                      <td>not available</td>
+                    </tr>
+                    </tbody>
+                    
+                  </table>
+                                   
+                  <div id="sharelink" style="display:none;">$product_share_links</div>
+                  <!--sku eof-->
+                  
+                  <div class="cartadd"> 
+                    
+                   
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="clear:both"></div>
+            <div class="shipcalc"> <b>How much will this cost to ship?</b>
+              <table width="100%" border="0" id="tblFreight" name="tblFreight" class="std">
+                <tbody>
+                  <tr>
+                    <td><b>Calculate Freight</b> <br>
+                      2 Letter State Code:
+                      <input type="text" id="shipzone" name="shipzone" maxlength="2" size="3">
+                      Quantity:
+                      <input type="text" value="1" id="prod_qty" name="prod_qty" size="4">
+                      <input type="button" value="Go" onClick="return getShippingEstimate();">
+                      <span id="ajaxloader"></span>
+                      <div id="frghtRates" class="shipping_options" style="margin-top:7px;"></div></td>
+                  </tr>
+                </tbody>
+              </table>
+              <script type="text/javascript">
+          	function getShippingEstimate(){
+				
+				var shipzone = jQuery('#shipzone').val();
+				
+				var prod_qty = jQuery('#prod_qty').val();
+				
+				var Pid = jQuery('#Pid').val();
+				
+				if(shipzone != '' && prod_qty != ''){
+				
+					jQuery.ajax({
+						
+						
+						url: 'ship_estimator.php?action=getShipping',
+						
+						type: 'post',
+						
+						dataType: 'json',
+						
+						data: 'shipzone=' + encodeURIComponent(shipzone)+'&prod_qty='+encodeURIComponent(prod_qty)+'&Pid='+encodeURIComponent(Pid),
+						
+						beforeSend: function() {
+							jQuery('#ajaxloader').html('<img src="images/ajax_loader_small.gif" alt="" class="attention" align="absmiddle" />');
+							jQuery('.shipping_options').html('');
+						},
+						complete: function() {
+							
+							jQuery('#ajaxloader').html('');
+							
+						},
+						success: function(data) {
+							
+							var count = Object.keys(data).length;
+  							var shipping_html = 'Error: no shipping methods available';
+							if(count > 0){
+							
+								shipping_html = '<table width="100%" cellpadding="5" border="1"><tbody><tr><th>Service</th><th>Billable Weight</th><th>Service Code</th><th>Cost</th></tr>';
+								
+								for (var i = 0; i < count; i++){
+									
+									shipping_html += '<tr><td>'+data[i]['service']+'</td><td>'+data[i]['billable_weight']+'</td><td>'+data[i]['service_code']+'</td><td>'+data[i]['cost']+'</td></tr>';
+								
+								}
+								
+								shipping_html += '</tbody></table>';
+							
+							}
+							jQuery('.shipping_options').hide().fadeIn().html(shipping_html);							
+						}
+			
+				
+					});
+				
+				}
+			
+			}
+          </script> 
+            </div>
+            <div id="prodVids"></div>
+             <table class="std prodpage" width="100%">
+              <tbody>
+                <tr>
+                  <td>$product_description $product_specifications $display_package_str</td>
+                </tr>
+              </tbody>
+            </table>
+            $product_related_items </div>
+        </form>
+      </div>
+      <div class="mnu_side" style="">
+        <div id="content-side">
+          <div id="sidemnu_tbl">
+            <div class="mnu_side3">$cartbox</div>
+            <div class="mnu_side2"> $categorybox </div>
+          </div>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+      <div id="mj-right" class="mj-grid16 mj-lspace mj-rspace" style="display:none;">
+        <div class="ui-widget infoBoxContainer"> </div>
+      </div>
+      
+      <!--sku end--> 
+       
+    </div>
+    
+    
+  </div>
+</div>
+</body>
+</html>

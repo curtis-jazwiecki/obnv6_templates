@@ -1,0 +1,63 @@
+<!-- DO NOT REMOVE header, content, and footer comments -->
+<!--header_bof-->
+<style type="text/css">
+
+.itemtable {
+    text-align: center;
+}
+</style>
+<script type="text/javascript">
+	jQuery(window).load(function(){
+	  jQuery('.flexslider2').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 220,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 3,
+		controlNav: false,
+        start: function(slider){
+          jQuery('body').removeClass('loading');
+        }
+      });
+    });
+</script>
+<table class="std similar prodpage" width="100%" border="0">
+<tbody>
+<tr>
+<td>
+<div class="moduleCls">
+    
+    <b class="std">$header</b>
+    <br>
+    <br>
+    <div class="slider">
+        <div class="flexslider2 carousel">
+          <ul class="slides">
+    
+    <!--header_eof-->
+    
+    
+          <!--block_bof-->
+          <li><div class="itemtable">
+  <div class="imagename">
+    <a href="$link">$image</a>
+  </div>
+  <div class="product_name_1"><a href="$link">$name</a></div>
+  <div class="propricemain_1"><a href="$link">$price</a></div>
+ 
+</div></li>
+          <!--block_eof-->
+
+   		 
+<!--footer_bof-->
+ </ul>
+        </div>
+    </div>
+    <div>$footer</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!--footer_eof-->
