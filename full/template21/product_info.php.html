@@ -22,28 +22,28 @@ $template18_stylesheet1
                 tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
                 tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');
                 tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
-                
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
                 //SKU EOF
                 var scroll_pos = 0;
                 tba(document).scroll(function () {
-                    
+                    //alert("hello");
                     scroll_pos = tba(this).scrollTop();
                     if (scroll_pos > 25) {
                         tba("#mj-topbar").css('background-color', '#008080');
-                        tba("#mj-topbar").css('background-image', 'url("/includes/sts_templates/full/template21/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
+                        tba("#mj-topbar").css('background-image', 'url("/includes/sts_templates/full/template18/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
                         tba("#mj-topbar a").css('color', '#FFFFFF');
                         tba("#mj-topbar i").css('color', '#FFFFFF');
                         tba("#mj-topbar div").css('color', '#FFFFFF');
-                        
+                        //tba("#mj-topbar li").css('background', 'url("images/topbar-arrow-white.png") no-repeat scroll right center transparent');
                         tba("#mj-topbar li:last-child").css('background', 'none');
                     }
                     else
                     {
-                        tba("#mj-topbar").css('background', 'url("/includes/sts_templates/full/template21/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
+                        tba("#mj-topbar").css('background', 'url("/includes/sts_templates/full/template18/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
                         tba("#mj-topbar a").css('color', '#008080');
                         tba("#mj-topbar i").css('color', '#008080');
                         tba("#mj-topbar div").css('color', '#008080');
-                        
+                        //tba("#mj-topbar li").css('background', 'url("images/icons/<?php echo $_SESSION['themecolor_com']."-arrow.png" ?>") no-repeat scroll right center transparent');
                         tba("#mj-topbar li:last-child").css('background', 'none');
                     }
 					
@@ -54,6 +54,11 @@ $template18_stylesheet1
 				
             });
         </script>
+<!--<link rel="stylesheet" type="text/css" href="$templatedirurlext/lightbox/lightbox.css" />
+        <script src="$templatedirurlext/lightbox/prototype.js"></script>
+        <script src="$templatedirurlext/lightbox/scriptaculous.js?load=effects"></script>
+        <script src="$templatedirurlext/lightbox/builder.js"></script>
+        <script src="$templatedirurlext/lightbox/lightbox.js"></script>-->
 <script src="$templatedirurlext/lightbox/js/lightbox.min.js"></script>
 <link href="$templatedirurlext/lightbox/css/lightbox.css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="/includes/sts_templates/full/template21/ext/css/default.css">
@@ -82,7 +87,7 @@ input[type="submit"].addcart {
 }
 .cart_quantity > input {
 	background: none;
-	
+	;
 	border: 1px solid #666;
 	box-shadow: 0 0 0px #fff inset;
 	color: #000;
@@ -118,35 +123,8 @@ table.prd_bdr {
 	font-size: 8pt;
 	color: green;
 }
-
+.flex-direction-nav a{top:83% !important;}
 .carousel li{margin-right:0px !important;}
-.product_name_1 {
-   height: 35px;
-   clear:both;
-   overflow:hidden;
-}
-.subcatimages {
-    height: 75px;
-}
-.flex-direction-nav a {
-    cursor: pointer;
-    display: block;
-    height: 30px;
-    margin: -21px 40px 0 !important;
-    opacity: 1 !important;
-   top:-74px !important;
-    text-indent: -9999px;
-    
-    width: 30px !important;
-}
-.flex-direction-nav .flex-next {
-    background-position: 100% 0;
-    
-}
-.flexslider2.carousel .flex-direction-nav {position:relative;top:-50% !important;}
-.flexslider2.carousel{min-height:160px !important;}
-.flex-viewport{min-height:160px !important;}
-.sim-container{min-height: 260px;}
 </style>
 </head>
 <body class="$script">
@@ -217,16 +195,16 @@ table.prd_bdr {
                 <div class="mj-product_inforight">
                   <div class="product_price ">
                     <h4 class="product_title alert_box"> $product_availability_n_price <br>
-                      </h4>
+                      <!--$display_products_stock_availability--></h4>
                   </div>
                   <div class="cart_info">
-                    <div class="cart_quantity add_to_cart_quantity"> 
+                    <div class="cart_quantity add_to_cart_quantity"> <!--<strong>Quantity :</strong>-->
                       <input type="text" size="3" value="1" name="cart_quantity">
                     </div>
                     <div class="cart_button addtocart_button">
                       <input type="hidden" value="$products_id" name="products_id" id="Pid">
                       <span class="tdbLink"> 
-               
+                      <!--<button type="submit" id="tdb5" onclick="javascript:return disclaimer_onclick();">Add to Cart</button>-->
                       <input type="submit" class="addcart" id="tdb5" onclick="javascript:return disclaimer_onclick();" value="Add to Cart">
                       </input>
                       </span></div>
@@ -370,8 +348,35 @@ table.prd_bdr {
       <!--sku end--> 
        
     </div>
+    <div id="mj-footer" style="display:none;"> <!-- mj-footer starts -->
+      
+      <div class="mj-subcontainer"> <!-- mj-subcontainer starts --> 
+        
+        $footer_box_01
+        
+        $footer_box_02
+        
+        $footer_box_03
+        
+        $footer_box_04 </div>
+    </div>
+    <script type="text/javascript">
+tba(document).ready(function(e) {
+	var reviews_id_tab = '<?php echo isset($_GET["reviews_id"]) ? $_GET["reviews_id"] : ""; ?>';
+				if(reviews_id_tab != ''){
+					
+					setTimeout(function(){ setactive(); }, 3000);
+				}
     
-    
+});
+function setactive(){
+	
+	tba("ul.tabs li").removeClass("selected"); 
+					tba("#viewrev").addClass("selected");
+					tba(".tab_content").hide(); 
+					tba("#view2").css("display",'block');
+}
+</script> 
   </div>
 </div>
 </body>

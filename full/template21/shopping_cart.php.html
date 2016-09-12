@@ -1,50 +1,95 @@
 <!DOCTYPE HTML>
+
 <html>
 <head>
 $headertags
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 $template18_stylesheet1
 <script type="text/javascript">
+
             var jqqqnoconf = jQuery.noConflict();
+
 // fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+
             if (jqqqnoconf.attrFn) {
+
                 jqqqnoconf.attrFn.text = true;
+
             }
+
         </script>
 <script type="text/javascript">
+
             var tba = jQuery.noConflict();
+
+
+
             tba(document).ready(function () {
+
                 //SKU BOF
+
                 tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+
                 tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+
                 tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
+
                 tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
-               
+
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+
                 //SKU EOF
+
                 var scroll_pos = 0;
+
+
+
                 tba(document).scroll(function () {
-                    
+
+                    //alert("hello");
+
                     scroll_pos = tba(this).scrollTop();
+
                     if (scroll_pos > 25) {
+
                         tba("#mj-topbar").css('background-color', '#008080');
-                        tba("#mj-topbar").css('background-image', 'url("/includes/sts_templates/full/template21/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
+
+                        tba("#mj-topbar").css('background-image', 'url("/includes/sts_templates/full/template18/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
+
                         tba("#mj-topbar a").css('color', '#FFFFFF');
+
                         tba("#mj-topbar i").css('color', '#FFFFFF');
+
                         tba("#mj-topbar div").css('color', '#FFFFFF');
-                        
+
+                        //tba("#mj-topbar li").css('background', 'url("images/topbar-arrow-white.png") no-repeat scroll right center transparent');
+
                         tba("#mj-topbar li:last-child").css('background', 'none');
+
                     }
+
                     else
+
                     {
-                        tba("#mj-topbar").css('background', 'url("/includes/sts_templates/full/template21/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
+
+                        tba("#mj-topbar").css('background', 'url("/includes/sts_templates/full/template18/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
+
                         tba("#mj-topbar a").css('color', '#008080');
+
                         tba("#mj-topbar i").css('color', '#008080');
+
                         tba("#mj-topbar div").css('color', '#008080');
-                        
+
+                        //tba("#mj-topbar li").css('background', 'url("images/icons/<?php echo $_SESSION['themecolor_com']."-arrow.png" ?>") no-repeat scroll right center transparent');
+
                         tba("#mj-topbar li:last-child").css('background', 'none');
+
                     }
+
                 });
+
             });
+
         </script>
 $stylesheet
 <link rel="stylesheet" type="text/css" href="/includes/sts_templates/full/template21/ext/css/default.css">
@@ -56,23 +101,32 @@ $stylesheet
   <div class="main_table" style=""> $top_bar    
     $header    
     $navigation_menu
+       
     <table id="mnu_side" cellspacing="0">
+    
       <tr>
-        <td class="mnu_side" valign="top"><div id="content-side">
+      <td class="mnu_side" valign="top">
+          <div id="content-side">
             <div id="sidemnu_tbl">
               <div class="mnu_side3">$cartbox</div>
               <div class="mnu_side32"> $categorybox </div>
             </div>
-          </div></td>
-        <td class="content" width="100%" valign="top"><div id="mj-contentarea" class="mj-grid64 mj-lspace content-body"> 
-            
-            <!--sku start--> 
-            
-            $content 
-            
-            <!--sku end--> 
-            
-          </div></td>
+          </div>
+        </td>
+        
+        <td class="content" width="100%" valign="top">
+        <div id="mj-contentarea" class="mj-grid64 mj-lspace content-body"> 
+         
+          <!--sku start--> 
+          
+          $content 
+          
+          <!--sku end--> 
+          
+        </div>
+        </td>
+        
+        
       </tr>
     </table>
   </div>

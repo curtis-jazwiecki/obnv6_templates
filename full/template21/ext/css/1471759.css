@@ -149,6 +149,7 @@ table.pg_hdr_tbl {
 	text-align: left;
 	top: 9px;
 	width: 198px;
+	
 }
 .navleft td[width="13%"] {
 	display: none;
@@ -198,7 +199,7 @@ input.sbutton, input[value="Go"], input[type="submit"], input[type="button"] {
 	right: 8px;
 	top: 8px;
 	transition: all 0.2s ease 0s;
-	background: #333333 linear-gradient(#333333, #333333 ) repeat scroll 0 0;
+	background:#333333  linear-gradient(#333333 , #333333 ) repeat scroll 0 0;
 }
 .navleft > div input.sbutton {
 	padding: 0;
@@ -268,8 +269,9 @@ div.mnu_top_lnk:hover > ul.dropdown {
 	max-height: none;
 	opacity: 1;
 	padding: 8px;
-	position: absolute;
-	z-index: 999999999999999 !important;
+	position:absolute;
+	z-index:999999999999999 !important;
+	
 }
 .dropdown > li {
 	font-size: 12px;
@@ -338,8 +340,8 @@ li.mnu_side_row:hover {
 	background-color: rgba(0,0,0,0.1) !important;
 	border-bottom-color: rgba(0,0,0,0.3);
 	border-top-color: rgba(0,0,0,0.3);
-	border-bottom: 1px solid;
-	border-top: 1px solid;
+	border-bottom:1px solid;
+	border-top:1px solid;
 }
 li.mnu_side_row > a.mnu_side_lnk {
 	display: block;
@@ -348,6 +350,7 @@ li.mnu_side_row > a.mnu_side_lnk {
 	padding: 8px 10px 8px !important;
 	color: #000;
 }
+
 li.cat.mnu_side_row > b > a.mnu_side_lnk {
 	display: block;
 	/*font-family: "Open Sans";*/
@@ -355,6 +358,9 @@ li.cat.mnu_side_row > b > a.mnu_side_lnk {
 	padding: 8px 10px 8px !important;
 	color: #000;
 }
+
+
+
 #finder {
 	font-weight: bold;
 	padding-left: 25px;
@@ -517,7 +523,7 @@ table#sidemnu_tbl.mnu_side_cat{
 	font-size: 12px;
 	line-height: 17px !important;
 	text-decoration: none;
-	padding: 0px;
+	padding:0px;
 }
 #sidemnu_tbl.mnu_side_tools .mnu_side_row .mnu_side_lnk:hover {
 	color: #FFFFFF;
@@ -626,6 +632,7 @@ table.prd_bdr + table[align="center"] {
 table.prd_bdr + table[align="center"] > tbody > tr > td {
 	vertical-align: top;
 }
+
 /*jitu 04.05.2016*/
 .itemtable {
 	background-color: rgba(255, 255, 255, 0.85);
@@ -636,6 +643,7 @@ table.prd_bdr + table[align="center"] > tbody > tr > td {
 	padding: 15px 10px;
 	width: 80%;
 }
+
 .itemtable2 {
 	background-color: rgba(255, 255, 255, 0.85);
 	border-radius: 10px;
@@ -730,26 +738,29 @@ form[action="https://www.dealerease.net/catalog/cart/add.asp"] {
 	width: 135px !important;
 }
 /*13.07.2016*/
-.smallText.products_listing_shop_box1 > input {
+.smallText.products_listing_shop_box1 > input{
 	background-attachment: scroll !important;
-	background-clip: border-box !important;
-	background-image: url("/includes/sts_templates/full/template21/ext/images/cart-add.gif") !important;
-	background-origin: padding-box !important;
-	background-position: 4px 5px !important;
-	background-repeat: no-repeat;
-	background-size: auto auto !important;
-	height: 25px;
-	position: absolute;
-	top: 4px;
-	width: 16px;
-	background-color: #333;
-}
-.smallText.products_listing_shop_box1 > input {
-	margin: 0 auto;
+    background-clip: border-box !important;
+   
+    background-image: url("/includes/sts_templates/full/template21/ext/images/cart-add.gif") !important;
+    background-origin: padding-box !important;
+    background-position: 4px 5px !important;
+    background-repeat: no-repeat;
+    background-size: auto auto !important;
+    height: 25px;
+    position: absolute;
+    top: 4px;
+    width: 16px;
+	background-color:#333;
+	}
+	
+	
+	.smallText.products_listing_shop_box1 > input{margin: 0 auto;
 	position: relative;
 	text-align: right;
-	width: 100px !important;
-}
+	width: 100px !important;}
+
+
 /*end*/
 form[action="https://www.dealerease.net/catalog/cart/add.asp"]:before {
 	content: url("/includes/sts_templates/full/template21/ext/images/cart-add.gif") !important;
@@ -1046,7 +1057,7 @@ table.sortable tr {
 }
 
 /******************************** MOBILE /********************************/
-@media screen and (max-device-width: 384px) and (max-device-height: 667px) {
+@media screen  and (max-device-width: 384px)  and (max-device-height: 667px) {
 }
 /******************************** MOBILE /********************************/
 
@@ -1076,50 +1087,52 @@ table.sortable tr {
 .navleft > div input#search-button.sbutton:hover, input[value="Go"]:hover, input[type="submit"]:hover, input[type="button"]:hover {
 	background-color: #000000 !important;
 }
-.productListing-data.productlisting_new {
-	border-bottom: 1px dashed gray !important;
-}
-.removeFromCart > img {
-	max-width: 30px;
-}
-.navright.nav .nav > li:hover > ul.nav-child {
-	display: block;
-	position: absolute;
-	z-index: 99999;
-}
+.productListing-data.productlisting_new{border-bottom:1px dashed gray !important;}
+.removeFromCart > img{max-width:30px;}
+
+.navright.nav .nav > li:hover > ul.nav-child{display: block;
+    position: absolute;
+    z-index: 99999 ;}
+
 ul.nav li:hover > ul.nav-child {
-	display: block;
-	left: 206px;
-	position: absolute;
-	margin-top: -38px;
-	z-index: 200;
-	background: #F0F0F0;
-	position: relative;
+    display: block ;
+    left: 206px;
+    position: absolute ;
+    margin-top:-38px;
+    z-index: 200 ;
+	background:#F0F0F0;
+	position:relative;
 }
-.navright.nav .nav > li ul.nav-child li a {
-	transition: all 0.3s ease 0s;
-	width: 150px;
-}
+
+.navright.nav .nav > li ul.nav-child li a{ 
+    transition: all 0.3s ease 0s;
+    width: 150px;}
+	
+	
 .shop .cart {
 	color: #222222;
-	font-size: 14px;
-	text-decoration: underline;
+	font-size:14px;
+	text-decoration:underline;
 }
 .shop .productListing > tbody > tr:nth-child(n+1) > td {
+	
 }
 .shop .prd_price > b {
 	font-weight: normal;
-}
+}	
+
 .cart {
 	color: #222222;
-	font-size: 14px;
-	text-decoration: underline;
+	font-size:14px;
+	text-decoration:underline;
 }
 .productListing > tbody > tr:nth-child(n+1) > td {
+	
 }
 .prd_price > b {
 	font-weight: normal;
-}
+}	
+
 #HDpic {
 	background-color: #333333;
 	border-radius: 5px;
@@ -1128,18 +1141,6 @@ ul.nav li:hover > ul.nav-child {
 	padding: 5px 8px;
 	text-decoration: none;
 }
-.mj-grid64.mj-lspace {
-	width: 100%;
-}
-.product_info .mj-grid64.mj-lspace {
-	width: 75%;
-}
-.products_listing_shop_box table td {
-	border: 0px solid #fff !important;
-}
-.Price_heading {
-	width: 210px !important;
-}
-.ui-widget-content {
-	width: 210px;
-}
+.mj-grid64.mj-lspace{width:100%;}
+.product_info .mj-grid64.mj-lspace{width:75%;}
+.products_listing_shop_box table td{border:0px solid #fff !important;}

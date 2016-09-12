@@ -1,13 +1,9 @@
 <?php
 /*
-  $Id$
-
-  osCommerce, Open Source E-Commerce Solutions
-  http://www.oscommerce.com
-
-  Copyright (c) 2014 osCommerce
-
-  Released under the GNU General Public License
+$Id$
+CloudCommerce - Multi-Channel eCommerce Solutions
+http://www.cloudcommerce.org
+Copyright (c) 2016 Outdoor Business Network, Inc.
 */
 
   chdir('../../../../../');

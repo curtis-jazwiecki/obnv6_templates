@@ -1,10 +1,9 @@
 <?php
 /*
- $Id: pb_handler.php VER: 1.0.3414 $
- osCommerce, Open Source E-Commerce Solutions
- http://www.oscommerce.com
- Copyright (c) 2013 osCommerce
- Released under the GNU General Public License
+$Id: pb_handler.php VER: 1.0.3414 $
+CloudCommerce - Multi-Channel eCommerce Solutions
+http://www.cloudcommerce.org
+Copyright (c) 2016 Outdoor Business Network, Inc.
  */
 
 chdir('../../../../');

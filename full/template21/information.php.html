@@ -46,7 +46,7 @@ $template18_stylesheet1
 
                 tba(document).scroll(function () {
 
-                    
+                    //alert("hello");
 
                     scroll_pos = tba(this).scrollTop();
 
@@ -54,7 +54,7 @@ $template18_stylesheet1
 
                         tba("#mj-topbar").css('background-color', '#008080');
 
-                        tba("#mj-topbar").css('background-image', 'url("/includes/sts_templates/full/template21/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
+                        tba("#mj-topbar").css('background-image', 'url("/includes/sts_templates/full/template18/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
 
                         tba("#mj-topbar a").css('color', '#FFFFFF');
 
@@ -72,7 +72,7 @@ $template18_stylesheet1
 
                     {
 
-                        tba("#mj-topbar").css('background', 'url("/includes/sts_templates/full/template21/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
+                        tba("#mj-topbar").css('background', 'url("/includes/sts_templates/full/template18/ext/images/topbar-bg.png") repeat scroll 0 0 transparent');
 
                         tba("#mj-topbar a").css('color', '#008080');
 
@@ -96,6 +96,8 @@ $stylesheet
 <link rel='stylesheet' type="text/css" href="/includes/sts_templates/full/template21/ext/css/jquery.bxslider.css">
 <link rel="stylesheet" type="text/css" href="/includes/sts_templates/full/template21/ext/css/mobile.css">
 </head><body class="$script">
+
+<!--<div id="mj-container">-->
 <div id="wrapper">
 <div class="main_table" style=""> $top_bar
   
@@ -103,8 +105,10 @@ $stylesheet
   
   $navigation_menu
   <table id="mnu_side" cellspacing="0">
-    <tr>
-      <td class="mnu_side" valign="top" ><div id="content-side">
+       <tr>
+  
+  <td class="mnu_side" valign="top" >
+        <div id="content-side">
           <div id="sidemnu_tbl">
             <div class="mnu_side3">$cartbox</div>
             <div class="mnu_side2"> $manufacturerbox </div>
@@ -112,28 +116,33 @@ $stylesheet
             <div class="mnu_side2"> $search_filterbox </div>
           </div>
         </div>
-        <div style="clear:both"></div></td>
-      <td class="content" width="100%" valign="top"><div id="mj-contentarea" class="mj-grid64 mj-lspace content-body">
-          <div id="mj-slidetitle" class="std" >
-            <div class="mj-subcontainer1"> <!-- mj-subcontainer starts -->
-              <div class="moduletable1 mj-grid961 breadcrumb1"> <!-- mj-grid96 starts -->
-                <div class="breadcrumbs mj-grid961 breadcrumb1">
-                  <div id="navBreadCrumb1"> $breadcrumbs </div>
-                </div>
-              </div>
-              <!-- mj-grid96 ends --> 
+        <div style="clear:both"></div>
+      </td>
+   <td class="content" width="100%" valign="top">
+    <div id="mj-contentarea" class="mj-grid64 mj-lspace content-body">
+      <div id="mj-slidetitle" class="std" >
+        <div class="mj-subcontainer1"> <!-- mj-subcontainer starts -->
+          <div class="moduletable1 mj-grid961 breadcrumb1"> <!-- mj-grid96 starts -->
+            <div class="breadcrumbs mj-grid961 breadcrumb1">
+              <div id="navBreadCrumb1"> $breadcrumbs </div>
             </div>
-            <!-- mj-subcontainer ends --> 
-            
           </div>
-          
-          <!--sku start--> 
-          
-          $content 
+          <!-- mj-grid96 ends --> 
+        </div>
+        <!-- mj-subcontainer ends --> 
+        
+      </div>
+      
+      <!--sku start-->
+      
+         $content 
           
           <!--sku end--> 
-          
-        </div></td>
+        
+      
+    </div>
+    </td>
+    
     </tr>
   </table>
 </div>

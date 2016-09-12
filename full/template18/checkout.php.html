@@ -14,14 +14,11 @@ $headertags
 .pstrength-minchar {
 	font-size : 10px;
 }
-.infoBox2 > table td {
-	float:none !important;
-}
-.ui-dialog-title {
-	color:#000 !important;
-}
+.infoBox2 > table td{float:none !important;}
+.ui-dialog-title{color:#000 !important;} 
 </style>
-<script language="javascript"><!--
+
+   <script language="javascript"><!--
 
     function selectRowEffect(object, buttonSelect, vendor) {
 
@@ -358,6 +355,18 @@ $headertags
 
 	}
 
+
+
+	function callshippingMethod(){
+
+		onePage.setShippingMethod();
+
+		onePage.updateOrderTotals();
+
+	}
+
+
+
     $(document).ready(function() {
 
 		//$('#shippingAddress').hide();
@@ -418,191 +427,435 @@ $headertags
 
             $('#loginButton').click(function() {
 
+				
+
+
+
                 if (loginBoxOpened) {
+
+
 
                     $('#loginBox').dialog('open');
 
+
+
                     return false;
+
+
+
                 }
+
+
+
+
+
 
 
                 $('#loginBox').dialog({
 
+
+
                     resizable: false,
+
+
 
                     shadow: false,
 
+
+
                     open: function() {
 
-                    var $dialog = this;
 
-                    $('input', $dialog).keypress(function(e) {
 
-                        if (e.which == 13) {
 
-                            $('#loginWindowSubmit', $dialog).click();
 
-                        }
 
-                     });
+
+                        var $dialog = this;
+
+
+
+
+
+
+
+                        $('input', $dialog).keypress(function(e) {
+
+
+
+                            if (e.which == 13) {
+
+
+
+                                $('#loginWindowSubmit', $dialog).click();
+
+
+
+                            }
+
+
+
+                        });
+
+
+
+
+
+
 
                         $('#loginWindowSubmit', $dialog).hover(function() {
 
+
+
                             this.style.cursor = 'pointer';
+
+
 
                         }, function() {
 
+
+
                             this.style.cursor = 'default';
+
+
 
                         }).click(function() {
 
+
+
                             var $this = $(this);
+
+
 
                             $this.hide();
 
+
+
                             var email = $('input[name="email_address"]', $dialog).val();
+
+
 
                             var pass = $('input[name="password"]', $dialog).val();
 
+
+
                             onePage.queueAjaxRequest({
+
+
 
                                 url: onePage.pageLinks.checkout,
 
+
+
                                 data: 'action=processLogin&email=' + email + '&pass=' + pass,
+
+
 
                                 dataType: 'json',
 
+
+
                                 type: 'post',
+
+
 
                                 beforeSend: function() {
 
+
+
                                    onePage.showAjaxMessage('Refreshing Shopping Cart');
+
+
 
                                     if ($('#loginStatus', $this.parent()).size() <= 0) {
 
+
+
                                         $('<div>')
+
+
+
                                                 .attr('id', 'loginStatus')
+
+
+
                                                 .html('Processing Login')
+
+
+
                                                 .attr('align', 'center')
+
+
+
                                                 .insertAfter($this);
+
+
+
                                     }
+
+
 
                                 },
 
+
+
                                 success: function(data) {
+
+
 
 									if (data.success == true) {
 
+
+
                                         $('#loginStatus', $dialog).html(data.msg);
+
+
 
                                         $('#logInRow').hide();
 
+
+
                                         $('#changeBillingAddressTable').show();
+
+
 
                                         $('#changeShippingAddressTable').show();
 
+
+
                                         $('#newAccountEmail').remove();
+
+
 
                                         $('#diffShipping').parent().parent().parent().remove();
 
+
+
                                         onePage.updateAddressHTML('billing');
+
+
 
                                         onePage.updateAddressHTML('shipping');
 
+
+
                                         $('#shippingAddress').show();
+
+
 
                                         var updateTotals = true;
 
+
+
                                         onePage.updateCartView();
+
+
 
                                         onePage.updateFinalProductListing();
 
+
+
                                         onePage.updatePaymentMethods(true);
+
+
 
                                         onePage.updatePayment();
 
+
+
                                         if ($(':radio[name="payment"]:checked').size() > 0) {
+
+
 
                                             onePage.setPaymentMethod($(':radio[name="payment"]:checked'));
 
+
+
                                             updateTotals = false;
 
+
+
                                         }
+
+
+
+
+
+
 
                                         onePage.updateShippingMethods();
 
+
+
+
+
+
+
                                         if ($(':radio[name="shipping"]:checked').size() > 0) {
+
+
 
                                             //onePage.setShippingMethod($(':radio[name="shipping"]:checked').val());
 
+
+
                                             onePage.setShippingMethod($(':radio[name="shipping"]:checked'));
+
+
 
                                             updateTotals = false;
 
+
+
                                         }
+
+
+
+
+
+
 
                                         if (updateTotals == true) {
 
+
+
                                             onePage.updateOrderTotals();
+
+
 
                                         }
 
+
+
+
+
+
+
                                         $('#loginBox').dialog('destroy');
+
+
 
                                     } else {
 
+
+
+
+
+
+
                                         $('#logInRow').show();
+
+
 
                                         $('#loggedInRow').hide();
 
+
+
                                         $('#loginStatus', $dialog).html(data.msg);
 
+
+
                                         setTimeout(function() {
+
+
 
                                             $('#loginStatus').remove();
 
+
+
                                             $('#loginWindowSubmit').show();
+
+
 
                                         }, 6000);
 
+
+
                                         setTimeout(function() {
 
+
+
                                             $('#loginStatus').html('Try again in 3');
+
+
 
                                         }, 3000);
 
 
+
+
+
+
+
                                         setTimeout(function() {
 
+
+
                                             $('#loginStatus').html('Try again in 2');
+
+
 
                                         }, 4000);
 
 
+
                                         setTimeout(function() {
+
+
 
                                             $('#loginStatus').html('Try again in 1');
 
+
+
                                         }, 5000);
+
+
 
                                     }
 
+
+
                                 },
+
+
 
 								errorMsg: 'There was an error logging in, please inform ShedsForLessDirect about this error.'
 
+
+
                             });
+
+
 
                         });
 
+
+
                     }
+
+
 
                 });
 
 
+
+
+
+
+
                 loginBoxOpened = true;
 
+
+
                 return false;
+
+
+
+
+
+
+
+            
 
 			});
 
@@ -610,37 +863,113 @@ $headertags
 
             $('#changeBillingAddress, #changeShippingAddress').click(function(event) {
 
+				
+
+
+
                 event.preventDefault();
+
+
 
                 var addressType = 'billing';
 
+
+
+
+
+
+
                 if ($(this).attr('id') == 'changeShippingAddress') {
+
+
 
                     addressType = 'shipping';
 
+
+
                 }
+
+
+
+
+
+
 
                 $('#addressBook').clone().show().appendTo(document.body).dialog({
 
+
+
                     shadow: false,
+
+
 
                     width: 'auto',
 
+
+
                     // height: 450,
+
+
+
+
+
+
 
                     minWidth: 550,
 
+
+
+
+
+
+
                     //minHeight: 500,
+
+
+
+
+
+
 
                     beforeclose: function() {
 
+
+
+
+
+
+
                         var $this = $(this);
+
+
+
+
+
+
 
                         var action = $('input[name="action"]', $this).val();
 
+
+
+
+
+
+
                         //alert($(':input, :select, :radio, :checkbox', this).serialize());
 
+
+
+
+
+
+
                         if (action == 'selectAddress') {
+
+
+
+
+
+
 
                             //$this.dialog('close');
 
@@ -1512,11 +1841,24 @@ $headertags
 
 </script>
 
+
+
 <!-- end get_javascript(applicationtop2header) //-->
 
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
 <link rel="stylesheet" type="text/css" href="ext/jQuery/themes/smoothness/ui.all.css">
+
+
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+
 <script>
 
 
@@ -1526,176 +1868,415 @@ $headertags
 
 
 </script>
+
+
+
 <link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template18/stylesheet.css" />
+
+
+
 <style type="text/css">
-.left_column + table {
-	width: 100%;
-}
-</style>
-$template18_stylesheet1
-</head>
-
-<body class="checkout">
-<div id="mj-container"> $top_bar
-  
-  
-  
-  $header
-  
-  
-  
-  $navigation_menu
-  <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
-    
-    <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
-      
-      <div class="moduletable mj-grid96 breadcrumb"> <!-- mj-grid96 starts -->
-        
-        <div class="breadcrumbs mj-grid96 breadcrumb">
-          <div id="navBreadCrumb"> $breadcrumbs 
-            
-            <!--<ul><li><a class="headerNavigation" href="http://localhost/osmart/index.php">Catalog</a></li> <li><a class="headerNavigation" href="http://localhost/osmart/login.php">Login</a></li></ul>--> 
-            
-          </div>
-        </div>
-      </div>
-      <!-- mj-grid96 ends --> 
-      
-    </div>
-    <!-- mj-subcontainer ends --> 
-    
-  </div>
-  <div id="mj-maincontent">
-    <div class="wrapper">
-      <div id="loginBox" title="Log Into My Account" style="display:none;">
-        <table cellpadding="2" cellspacing="0" border="0">
-          <tr>
-            <td class="main"><?php echo ENTRY_EMAIL_ADDRESS; ?></td>
-            <td><?php echo tep_draw_input_field('email_address'); ?></td>
-          </tr>
-          <tr>
-            <td class="main"><?php echo ENTRY_PASSWORD; ?></td>
-            <td><?php echo tep_draw_password_field('password'); ?></td>
-          </tr>
-          <tr>
-            <td colspan="2" align="right" class="main"><a href="<?php echo tep_href_link(FILENAME_PASSWORD_FORGOTTEN, '', 'SSL'); ?>"><?php echo TEXT_PASSWORD_FORGOTTEN; ?></a></td>
-          </tr>
-          <tr>
-            <td colspan="2" align="right"><?php echo tep_image_button('button_login.gif', IMAGE_BUTTON_LOGIN, 'id="loginWindowSubmit"'); ?></td>
-          </tr>
-        </table>
-      </div>
-      <div id="addressBook" title="Address Book" style="display:none"></div>
-      <div id="newAddress" title="New Address" style="display:none"></div>
-      <div id="mj-maincontent">
-        <div class="mj-subcontainer">
-          <div id="mj-contentarea" class="mj-grid64 mj-lspace"> $message
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            $content </div>
-          <div id="mj-left" class="mj-grid16 mj-lspace">
-            <div class="ui-widget infoBoxContainer mj-categoriessidebox"> $categorybox </div>
-            <div class="ui-widget infoBoxContainer mj-whatsnew"> $whatsnewbox </div>
-            <div class="ui-widget infoBoxContainer mj-information"> $informationbox </div>
-          </div>
-          <div id="mj-right" class="mj-grid16 mj-lspace mj-rspace">
-            <div class="ui-widget infoBoxContainer"> $product_related_items </div>
-          </div>
-          
-          <!--sku end--> 
-          
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="mj-footer"> <!-- mj-footer starts -->
-    
-    <div class="mj-subcontainer"> <!-- mj-subcontainer starts --> 
-      
-      $footer_box_01
-      
-      
-      
-      $footer_box_02
-      
-      
-      
-      $footer_box_03
-      
-      
-      
-      $footer_box_04 </div>
-  </div>
-  $footer_copyright </div>
- 
-<script type="text/javascript">
-function showfflData(radio_buttons){
-	jQuery('#ffl_dealers_iframe_'+radio_buttons).attr('src', jQuery('#ffl_dealers_iframe_'+radio_buttons).attr('src'));
-	jQuery('#ffl_dealers_html_'+radio_buttons).show('slow');
-}
 
 
-function pre_selected_ffl(x,y){
-	jQuery.ajax({
-		url: 'ffl_dealers.php',
-		type: 'post',
-		data: "action=getDealersDetails&data="+x+"&datay="+y,
-		dataType: 'html',
-		beforeSend: function() {
-			
-		},
-		success: function(response) {
-			
-			setTimeout(function(){ 
-				jQuery('#selected_ffl_'+y).html('<br>'+response);
-				jQuery('#btn_select_'+y).hide('fast');
-				jQuery('#selected_ffl_'+y).append('<br> <input type="button" onclick="showfflData('+y+')"  value="edit">');
-			}, 1000);
-			
-			
-			
-		}
-	});	
-}
 
-<?php
-	if ((isset($_SESSION['ffl_selected']) && (count($_SESSION['ffl_selected']) > 0))) {
-		foreach ($_SESSION['ffl_selected'] as $vID => $fflID) { ?>
-			pre_selected_ffl(<?php echo $fflID; ?>,<?php echo $vID; ?>);
-		<?php
-		}
+	.left_column + table {
+
+
+
+		width: 100%;
+
+
+
 	}
-?>
-function hidefflData(radio_buttons){
-	
-	jQuery('#ffl_dealers_html_'+radio_buttons).hide('slow');
-	
-	jQuery.ajax({
-		url: 'ffl_dealers.php',
-		type: 'post',
-		data: "action=removeDealersDetails&datay="+radio_buttons,
-		dataType: 'html',
-		beforeSend: function() {
-		},
-		success: function(response) {
-			jQuery('#selected_ffl_'+radio_buttons).html('');
-			//alert(response);
-		}
-	});
-}
-</script>  
-</body>
+
+
+
+</style>
+
+
+
+$template18_stylesheet1
+
+
+
+	</head>
+
+
+
+    <body class="checkout">
+
+
+
+        <div id="mj-container">
+
+
+
+            $top_bar
+
+
+
+            $header
+
+
+
+            $navigation_menu
+
+
+
+            <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
+
+
+
+                <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+
+
+
+                    <div class="moduletable mj-grid96 breadcrumb">	<!-- mj-grid96 starts -->
+
+
+
+                        <div class="breadcrumbs mj-grid96 breadcrumb"> 
+
+
+
+                            <div id="navBreadCrumb">
+
+
+
+                                $breadcrumbs
+
+
+
+                                <!--<ul><li><a class="headerNavigation" href="http://localhost/osmart/index.php">Catalog</a></li> <li><a class="headerNavigation" href="http://localhost/osmart/login.php">Login</a></li></ul>-->
+
+
+
+                            </div> 
+
+
+
+                        </div>
+
+
+
+                    </div> <!-- mj-grid96 ends -->
+
+
+
+                </div> <!-- mj-subcontainer ends -->
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div id="mj-maincontent">
+
+
+
+  
+
+
+
+		<div class="wrapper">
+
+
+
+        <div id="loginBox" title="Log Into My Account" style="display:none;"><table cellpadding="2" cellspacing="0" border="0">
+
+
+
+                <tr>
+
+
+
+                    <td class="main"><?php echo ENTRY_EMAIL_ADDRESS; ?></td>
+
+
+
+                    <td><?php echo tep_draw_input_field('email_address'); ?></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                    <td class="main"><?php echo ENTRY_PASSWORD; ?></td>
+
+
+
+                    <td><?php echo tep_draw_password_field('password'); ?></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                    <td colspan="2" align="right" class="main"><a href="<?php echo tep_href_link(FILENAME_PASSWORD_FORGOTTEN, '', 'SSL'); ?>"><?php echo TEXT_PASSWORD_FORGOTTEN; ?></a></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                    <td colspan="2" align="right"><?php echo tep_image_button('button_login.gif', IMAGE_BUTTON_LOGIN, 'id="loginWindowSubmit"'); ?></td>
+
+
+
+                </tr>
+
+
+
+            </table></div>
+
+
+
+            <div id="addressBook" title="Address Book" style="display:none"></div>
+
+
+
+<div id="newAddress" title="New Address" style="display:none"></div>
+
+
+
+			
+
+
+
+                        
+
+
+
+    <div id="mj-maincontent">
+
+
+
+                <div class="mj-subcontainer">
+
+
+
+                    <div id="mj-contentarea" class="mj-grid64 mj-lspace">
+
+
+
+                    
+
+
+
+                    
+
+
+
+                    
+
+
+
+     
+
+
+
+$message
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$content
+
+
+
+
+
+
+
+                
+
+
+
+			
+
+
+
+                        </div>
+
+
+
+                    
+
+
+
+		<div id="mj-left" class="mj-grid16 mj-lspace">                            
+
+
+
+                        <div class="ui-widget infoBoxContainer mj-categoriessidebox">
+
+
+
+                            $categorybox
+
+
+
+                        </div>                        
+
+
+
+                        <div class="ui-widget infoBoxContainer mj-whatsnew">
+
+
+
+                            $whatsnewbox
+
+
+
+                        </div>   
+
+
+
+                        <div class="ui-widget infoBoxContainer mj-information">
+
+
+
+                            $informationbox
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <div id="mj-right" class="mj-grid16 mj-lspace mj-rspace">
+
+
+
+                        <div class="ui-widget infoBoxContainer">
+
+
+
+                            $product_related_items
+
+
+
+                        </div>                        
+
+
+
+                    </div>
+
+
+
+                    <!--sku end-->
+
+
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+		</div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div id="mj-footer"> <!-- mj-footer starts -->
+
+
+
+                <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+
+
+
+                    $footer_box_01
+
+
+
+                    $footer_box_02
+
+
+
+                    $footer_box_03
+
+
+
+                    $footer_box_04
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+            $footer_copyright
+
+
+
+        </div>
+
+
+
+    </body>
+
+
+
 </html>

@@ -1,11 +1,9 @@
 02
 /**
 
-* @package Os-mart - Responsive Os-commerce Template
-
-* @copyright (C) 2012 by Dasinfomedia - All rights reserved!
-
-* CSS Document
+CloudCommerce - Multi-Channel eCommerce Solutions
+http://www.cloudcommerce.org
+Copyright (c) 2016 Outdoor Business Network, Inc.
 
 * General CSS
 
@@ -3265,8 +3263,6 @@ in smooth jquery style. Other styling options from Superfish can be downloaded f
 
 site. - HTML for this menubar was adapted from UL_Categories contribution by 
 
-www.niora.com/css-oscommerce.php.
-
 ********************************************************************************************/
 
 /*** ESSENTIAL STYLES ***/
@@ -3706,17 +3702,10 @@ position:relative;top:-40px;
 .main img{display:none;}
 .checkout .main img{display:block;max-width: 196px;
     width: 100%;}
-.checkout_shipping .main img{display:block;}
+.checkout_shipping .main img{display:block;max-width: 196px;
+    width: 100%;}
 	.address_book .main img{display:block;max-width: 76px;
     width: 100%;}
-.checkout_shipping .row, .checkout_shipping .thumbnails	{margin-right:0px;}
-
-.checkout_shipping .btn_img {
-    float: left;
-    margin: 2px;
-}
-#validate_avatax_address{margin: 2px;}
-	
 /*end*/
 /*end*/
 

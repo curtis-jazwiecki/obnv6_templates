@@ -311,62 +311,7 @@ $content
 
 		</div>
 
-	<script type="text/javascript">
-function showfflData(radio_buttons){
-	jQuery('#ffl_dealers_iframe_'+radio_buttons).attr('src', jQuery('#ffl_dealers_iframe_'+radio_buttons).attr('src'));
-	jQuery('#ffl_dealers_html_'+radio_buttons).show('slow');
-}
-
-
-function pre_selected_ffl(x,y){
-	jQuery.ajax({
-		url: 'ffl_dealers.php',
-		type: 'post',
-		data: "action=getDealersDetails&data="+x+"&datay="+y,
-		dataType: 'html',
-		beforeSend: function() {
-			
-		},
-		success: function(response) {
-			
-			setTimeout(function(){ 
-				jQuery('#selected_ffl_'+y).html('<br>'+response);
-				jQuery('#btn_select_'+y).hide('fast');
-				jQuery('#selected_ffl_'+y).append('<br> <input type="button" onclick="showfflData('+y+')"  value="edit">');
-			}, 1000);
-			
-			
-			
-		}
-	});	
-}
-
-<?php
-	if ((isset($_SESSION['ffl_selected']) && (count($_SESSION['ffl_selected']) > 0))) {
-		foreach ($_SESSION['ffl_selected'] as $vID => $fflID) { ?>
-			pre_selected_ffl(<?php echo $fflID; ?>,<?php echo $vID; ?>);
-		<?php
-		}
-	}
-?>
-function hidefflData(radio_buttons){
-	
-	jQuery('#ffl_dealers_html_'+radio_buttons).hide('slow');
-	
-	jQuery.ajax({
-		url: 'ffl_dealers.php',
-		type: 'post',
-		data: "action=removeDealersDetails&datay="+radio_buttons,
-		dataType: 'html',
-		beforeSend: function() {
-		},
-		success: function(response) {
-			jQuery('#selected_ffl_'+radio_buttons).html('');
-			//alert(response);
-		}
-	});
-}
-</script>	
+		
 
 	</body>
 

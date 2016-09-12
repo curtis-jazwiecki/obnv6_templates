@@ -26,10 +26,6 @@
 
                 <![endif]-->
 
-       <script>
-       jQuery.noconflict();
-       </script>
-
         <script type="text/javascript" src="$templatedir/ext/jquery/jquery-1.11.1.min.js"></script>
 
         <script type="text/javascript" src="$templatedir/ext/jquery/ui/jquery-ui-1.10.4.min.js"></script>
@@ -102,17 +98,14 @@
         <script type="text/javascript" src="$templatedir/dresscode_theme/dresscode_js/jquery.carouFredSel-6.2.1-packed.js"></script> 
 
         <script type="text/javascript" src="$templatedir/dresscode_theme/dresscode_js/jquery.parallax.js"></script> 
-               <script>
-       jQuery.noconflict();
-       </script>
-
+       
         <script type="text/javascript" src="$templatedir/dresscode_theme/dresscode_js/custom.js"></script> 
 
         <script type="text/javascript" src="star_rating.js"></script> 
 
         <script>
 
-            $('#stylesku').next().html($('#stylesku').next().html().replace('<!-- start stylesheet //-->','').replace('<!-- end stylesheet //-->', ''));
+            //$('#stylesku').next().html($('#stylesku').next().html().replace('<!-- start stylesheet //-->','').replace('<!-- end stylesheet //-->', ''));
 
 
 
@@ -173,7 +166,8 @@
 
                     <div>
 
-                        <div id="bodyContent" class="normal"> $top_slider
+                        <div id="bodyContent" class="normal"> 
+                           $top_slider
 
                             $slogan
 

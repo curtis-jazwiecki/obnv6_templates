@@ -89,37 +89,46 @@ $google_analytics
 <link rel="stylesheet" type="text/css" href="/includes/sts_templates/full/template21/ext/css/1471759.css">
 <link rel='stylesheet' type="text/css" href="/includes/sts_templates/full/template21/ext/css/jquery.bxslider.css">
 <link rel="stylesheet" type="text/css" href="/includes/sts_templates/full/template21/ext/css/mobile.css">
-</head><body class="$script">
+</head>
+<body class="$script">
 <div id="wrapper">
   <div class="main_table" style=""> $top_bar
     $header
     $navigation_menu
     <table id="mnu_side" cellspacing="0">
-      <tr>
-        <td class="mnu_side" valign="top"><div id="content-side" style="width:210px;">
-            <div id="sidemnu_tbl">
-              <div class="mnu_side3">$cartbox</div>
-              <div class="mnu_side2"> $manufacturerbox </div>
-              <div id="testing2" class="mnu_side2"> $categorybox </div>
-              <div class="mnu_side2"> $search_filterbox </div>
-            </div>
+    <tr>
+    
+       <td class="mnu_side" valign="top">
+        <div id="content-side" style="width:210px;">
+          <div id="sidemnu_tbl">
+            <div class="mnu_side3">$cartbox</div>
+            <div class="mnu_side2"> $manufacturerbox </div>
+            <div id="testing2" class="mnu_side2"> $categorybox </div>
+            <div class="mnu_side2"> $search_filterbox </div>
           </div>
-          <div style="clear:both"></div></td>
-        <td class="content" width="100%" valign="top"><div class="content-body">
-            <div id="mj-slidetitle" class="std" > 
-              <!-- mj-slidetitle starts -->
-              <div class="mj-subcontainer1"> <!-- mj-subcontainer starts -->
-                <div class="moduletable1 mj-grid961 breadcrumb1"> <!-- mj-grid96 starts -->
-                  <div class="breadcrumbs mj-grid961 breadcrumb1">
-                    <div id="navBreadCrumb1"> $breadcrumbs </div>
-                  </div>
-                </div>
-                <!-- mj-grid96 ends --> 
+        </div>
+        <div style="clear:both"></div>
+      </td>
+      <!--<div id="mj-contentarea" class="mj-grid64 mj-lspace ">-->
+        
+        <td class="content" width="100%" valign="top">
+        
+          <div class="content-body">
+          
+          <div id="mj-slidetitle" class="std" > 
+          <!-- mj-slidetitle starts -->
+          <div class="mj-subcontainer1"> <!-- mj-subcontainer starts -->
+            <div class="moduletable1 mj-grid961 breadcrumb1"> <!-- mj-grid96 starts -->
+              <div class="breadcrumbs mj-grid961 breadcrumb1">
+                <div id="navBreadCrumb1"> $breadcrumbs </div>
               </div>
-              <!-- mj-subcontainer ends --> 
-              
             </div>
-            &nbsp;
+            <!-- mj-grid96 ends --> 
+          </div>
+          <!-- mj-subcontainer ends --> 
+          
+        </div>
+        &nbsp;
             <?php
 if($_SERVER['PHP_SELF'] == "/index.php")
 {
@@ -144,9 +153,10 @@ if($_SERVER['PHP_SELF'] == "/index.php")
             
             <!--sku end--> 
             
-          </div></td>
-        <!--</div>--> 
-        
+          </div>
+        </td>
+      <!--</div>-->
+      
       </tr>
     </table>
   </div>

@@ -10,6 +10,7 @@ $headertags
 <script type="text/javascript" language="javascript" src="ext/jQuery/jQuery.pstrength.js"></script>
 <script type="text/javascript" language="javascript" src="ext/jQuery/jQuery.ui.js"></script>
 <script type="text/javascript" language="javascript" src="includes/checkout/checkout.js"></script>
+
 <style>
 .pstrength-minchar {
 	font-size : 10px;
@@ -1545,79 +1546,99 @@ $headertags
 }
 </style>
 $template18_stylesheet1
+
 <link rel="stylesheet" type="text/css" href="/includes/sts_templates/full/template21/ext/css/default.css">
 <link rel="stylesheet" type="text/css" href="/includes/sts_templates/full/template21/ext/css/1471759.css">
 <link rel='stylesheet' type="text/css" href="/includes/sts_templates/full/template21/ext/css/jquery.bxslider.css">
 <link rel="stylesheet" type="text/css" href="/includes/sts_templates/full/template21/ext/css/mobile.css">
 </head>
+
 <body class="checkout">
+
+<!-- <div id="mj-container">-->
 <div class="main_table" style="">
-  <div id="wrapper"> $top_bar
-    
-    
-    
-    $header
-    
-    
-    
-    $navigation_menu
-    <div id="mnu_side">
-      <div class="wrapper">
-        <div id="loginBox" title="Log Into My Account" style="display:none;">
-          <table cellpadding="2" cellspacing="0" border="0">
-            <tr>
-              <td class="main"><?php echo ENTRY_EMAIL_ADDRESS; ?></td>
-              <td><?php echo tep_draw_input_field('email_address'); ?></td>
-            </tr>
-            <tr>
-              <td class="main"><?php echo ENTRY_PASSWORD; ?></td>
-              <td><?php echo tep_draw_password_field('password'); ?></td>
-            </tr>
-            <tr>
-              <td colspan="2" align="right" class="main"><a href="<?php echo tep_href_link(FILENAME_PASSWORD_FORGOTTEN, '', 'SSL'); ?>"><?php echo TEXT_PASSWORD_FORGOTTEN; ?></a></td>
-            </tr>
-            <tr>
-              <td colspan="2" align="right"><?php echo tep_image_button('button_login.gif', IMAGE_BUTTON_LOGIN, 'id="loginWindowSubmit"'); ?></td>
-            </tr>
-          </table>
-        </div>
-        <div id="addressBook" title="Address Book" style="display:none"></div>
-        <div id="newAddress" title="New Address" style="display:none"></div>
-        <table id="mnu_side" cellspacing="0">
+<div id="wrapper"> $top_bar
+  
+  
+  
+  $header
+  
+  
+  
+  $navigation_menu
+  
+  <div id="mnu_side">
+    <div class="wrapper">
+      <div id="loginBox" title="Log Into My Account" style="display:none;">
+        <table cellpadding="2" cellspacing="0" border="0">
           <tr>
-            <td class="mnu_side" valign="top" ><div id="content-side">
-                <div id="sidemnu_tbl">
-                  <div class="mnu_side3">$cartbox</div>
-                  <div class="mnu_side32"> $categorybox </div>
-                </div>
-              </div></td>
-            <td class="content" width="100%" valign="top"><div id="mj-contentarea" class="mj-grid64 mj-lspace content-body">
-                <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
-                  
-                  <div class="mj-subcontainer1"> <!-- mj-subcontainer starts -->
-                    <div class="moduletable1 mj-grid961 breadcrumb1"> <!-- mj-grid96 starts -->
-                      <div class="breadcrumbs mj-grid961 breadcrumb1">
-                        <div id="navBreadCrumb1"> $breadcrumbs </div>
-                      </div>
-                    </div>
-                    <!-- mj-grid96 ends --> 
-                  </div>
-                  <!-- mj-subcontainer ends --> 
-                  
-                </div>
-                $message                      
-                $content </div></td>
-            
-            <!--sku end--> 
-            
+            <td class="main"><?php echo ENTRY_EMAIL_ADDRESS; ?></td>
+            <td><?php echo tep_draw_input_field('email_address'); ?></td>
+          </tr>
+          <tr>
+            <td class="main"><?php echo ENTRY_PASSWORD; ?></td>
+            <td><?php echo tep_draw_password_field('password'); ?></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="right" class="main"><a href="<?php echo tep_href_link(FILENAME_PASSWORD_FORGOTTEN, '', 'SSL'); ?>"><?php echo TEXT_PASSWORD_FORGOTTEN; ?></a></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="right"><?php echo tep_image_button('button_login.gif', IMAGE_BUTTON_LOGIN, 'id="loginWindowSubmit"'); ?></td>
           </tr>
         </table>
       </div>
-      <div style="clear:both"></div>
+      
+      <div id="addressBook" title="Address Book" style="display:none"></div>
+      <div id="newAddress" title="New Address" style="display:none"></div>
+      <!--<div id="mj-maincontent">-->
+      
+     <table id="mnu_side" cellspacing="0">
+       <tr>
+       <td class="mnu_side" valign="top" >
+            <div id="content-side">
+              <div id="sidemnu_tbl">
+                <div class="mnu_side3">$cartbox</div>
+                <div class="mnu_side32"> $categorybox </div>
+              </div>
+            </div>
+          </td>
+          <td class="content" width="100%" valign="top">
+          <div id="mj-contentarea" class="mj-grid64 mj-lspace content-body"> 
+          <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
+    
+    <div class="mj-subcontainer1"> <!-- mj-subcontainer starts -->
+          <div class="moduletable1 mj-grid961 breadcrumb1"> <!-- mj-grid96 starts -->
+            <div class="breadcrumbs mj-grid961 breadcrumb1">
+              <div id="navBreadCrumb1"> $breadcrumbs 
+                
+                <!--<ul><li><a class="headerNavigation" href="http://localhost/osmart/index.php">Catalog</a></li> <li><a class="headerNavigation" href="http://localhost/osmart/login.php">Login</a></li></ul>--> 
+                
+              </div>
+            </div>
+          </div>
+          <!-- mj-grid96 ends --> 
+        </div>
+    <!-- mj-subcontainer ends --> 
+    
+  </div>
+  			 $message                      
+            $content </div></td>
+          
+          
+          
+          
+          <!--sku end--> 
+          
+        </tr>
+      </table>
+      
+      
     </div>
     <div style="clear:both"></div>
   </div>
   <div style="clear:both"></div>
+  </div>
+<div style="clear:both"></div>
 </div>
 </body>
 </html>
