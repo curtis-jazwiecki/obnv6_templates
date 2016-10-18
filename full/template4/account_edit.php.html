@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+$template18_stylesheet1
+<script type="text/javascript">
+	var jqqqnoconf = jQuery.noConflict();
+	// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+	if (jqqqnoconf.attrFn) {
+		jqqqnoconf.attrFn.text = true;
+	}
+</script>
+$stylesheet
+<?php require('includes/form_check.js.php'); ?>
+</head>
+
+<body class="$script">
+<div id="mj-container"> $top_bar
+  
+  $header
+  
+  $navigation_menu
+  <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
+    
+    <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+      
+      <div class="moduletable mj-grid96 breadcrumb"> <!-- mj-grid96 starts -->
+        
+        <div class="breadcrumbs mj-grid96 breadcrumb">
+          <div id="navBreadCrumb"> $breadcrumbs </div>
+        </div>
+      </div>
+      <!-- mj-grid96 ends --> 
+      
+    </div>
+    <!-- mj-subcontainer ends --> 
+    
+  </div>
+  $free_shipping_banner
+  <div id="mj-maincontent">
+    <div class="mj-subcontainer">
+      <div id="mj-contentarea" class="mj-grid64 mj-lspace"> 
+        
+        <!-- start Default Content //-->
+        <form onSubmit="return check_form(account_edit);" method="post" action="$action_url" name="account_edit">
+    <input type="hidden" value="process" name="action">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+              <tbody>
+                <tr>
+                  <td class="pageHeading">{%HEADING_TITLE%}</td>
+                  <td align="right" class="pageHeading"><img width="57" border="0" height="40" title=" My Account Information " alt="My Account Information" src="images/table_background_account.gif"></td>
+                </tr>
+              </tbody>
+            </table></td>
+        </tr>
+        <tr>
+          <td><img width="100%" border="0" height="10" alt="" src="images/pixel_trans.gif"></td>
+        </tr>
+        
+        <?php
+		  if (!empty($message)) {
+		?>
+			  <tr>
+				<td><?php echo $message; ?></td>
+			  </tr>
+			  <tr>
+				<td><img width="100%" border="0" height="10" alt="" src="images/pixel_trans.gif"></td>
+			  </tr>
+		<?php
+		  }
+		?>
+        
+        
+        <tr>
+          <td><table width="100%" cellspacing="0" cellpadding="2" border="0">
+              <tbody>
+                <tr>
+                  <td><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                      <tbody>
+                        <tr>
+                          <td class="main"><b>{%MY_ACCOUNT_TITLE%}</b></td>
+                          <td align="right" class="inputRequirement">{%FORM_REQUIRED_INFORMATION%}</td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                </tr>
+                <tr>
+                  <td><table width="100%" cellspacing="1" cellpadding="2" border="0" class="infoBox">
+                      <tbody>
+                        <tr class="infoBoxContents">
+                          <td><table cellspacing="2" cellpadding="2" border="0">
+                              <tbody>
+                                <tr>
+                                  <td class="main">{%ENTRY_GENDER%}</td>
+                                  <td class="main"><input type="radio" value="m" name="gender" <?php if($male){ echo 'checked="checked"'; } ?>>
+                                    &nbsp;&nbsp;Male&nbsp;&nbsp;
+                                    <input type="radio" value="f" name="gender" <?php if($female){ echo 'checked="checked"'; } ?>>
+                                    &nbsp;&nbsp;Female&nbsp;<span class="inputRequirement">*</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="main">{%ENTRY_FIRST_NAME%}</td>
+                                  <td class="main"><input type="text" value="$customers_firstname" name="firstname">
+                                    &nbsp;<span class="inputRequirement">*</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="main">{%ENTRY_LAST_NAME%}</td>
+                                  <td class="main"><input type="text" value="$customers_lastname" name="lastname">
+                                    &nbsp;<span class="inputRequirement">*</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="main">{%ENTRY_DATE_OF_BIRTH%}</td>
+                                  <td class="main"><input type="text" value="$customers_dob" name="dob">
+                                    &nbsp;<span class="inputRequirement">{%ENTRY_DATE_OF_BIRTH_TEXT%}</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="main">{%ENTRY_EMAIL_ADDRESS%}</td>
+                                  <td class="main"><input type="text" value="$customers_email_address" name="email_address">
+                                    &nbsp;<span class="inputRequirement">*</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="main">{%ENTRY_TELEPHONE_NUMBER%}</td>
+                                  <td class="main"><input type="text" value="$customers_telephone" name="telephone">
+                                    &nbsp;<span class="inputRequirement">*</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="main">{%ENTRY_FAX_NUMBER%}</td>
+                                  <td class="main"><input type="text" name="fax" value="$customers_fax">
+                                    &nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td class="main">{%ENTRY_COMPANY_TAX_ID%}</td>
+                                  <td class="main"><input type="text" name="company_tax_id" value="$entry_company_tax_id">
+                                    &nbsp;<span class="inputRequirement">{%ENTRY_COMPANY_TAX_ID_TEXT%}</span></td>
+                                </tr>
+                              </tbody>
+                            </table></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                </tr>
+              </tbody>
+            </table></td>
+        </tr>
+        <tr>
+          <td><img width="100%" border="0" height="10" alt="" src="images/pixel_trans.gif"></td>
+        </tr>
+        <tr>
+          <td><table width="100%" cellspacing="1" cellpadding="2" border="0" class="infoBox">
+              <tbody>
+                <tr class="infoBoxContents">
+                  <td><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="10"><img width="10" border="0" height="1" alt="" src="images/pixel_trans.gif"></td>
+                          <td><a href="$back_url"><img width="50" border="0" height="25" title=" Back " alt="Back" src="includes/sts_templates/full/template4/images/buttons/button_back.gif"></a></td>
+                          <td align="right"><input type="image" border="0" title=" Continue " alt="Continue" src="includes/sts_templates/full/template4/images/buttons/button_continue.gif"></td>
+                          <td width="10"><img width="10" border="0" height="1" alt="" src="images/pixel_trans.gif"></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                </tr>
+              </tbody>
+            </table></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+        <!-- end Default Content //--> 
+        
+      </div>
+      <div id="mj-left" class="mj-grid16 mj-lspace">
+        <div class="ui-widget infoBoxContainer mj-categoriessidebox"> $categorybox </div>
+        <div class="ui-widget infoBoxContainer mj-whatsnew"> $whatsnewbox </div>
+        <div class="ui-widget infoBoxContainer mj-information"> $informationbox </div>
+      </div>
+      <div id="mj-right" class="mj-grid16 mj-lspace mj-rspace">
+        <div class="ui-widget infoBoxContainer mj-cartbox"> $cartbox </div>
+        <div class="ui-widget infoBoxContainer mj-bestsellersbox"> $bestsellersbox </div>
+        <div class="ui-widget infoBoxContainer mj-reviewbox"> $reviewsbox </div>
+        <div class="ui-widget infoBoxContainer mj-currenciesbox"> $currenciesbox </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="mj-footertop">
+  <div class="mj-subcontainer"> $brands
+    
+    $newsletter </div>
+</div>
+<div id="mj-footer"> <!-- mj-footer starts -->
+  
+  <div class="mj-subcontainer"> <!-- mj-subcontainer starts --> 
+    
+    $footer_box_01
+    
+    $footer_box_02
+    
+    $footer_box_03
+    
+    $footer_box_04 </div>
+</div>
+$footer_copyright
+</body>
+</html>

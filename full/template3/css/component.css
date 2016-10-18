@@ -1,0 +1,138 @@
+/* General styles for all menus */
+.mobile-spmenu {
+	background: #333333 !important;
+	position: fixed;
+}
+.mobile-spmenu h3 {
+	background: #666 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: normal;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+.mobile-spmenu a {
+	box-sizing: border-box;
+    color: #fff;
+    display: block;
+    
+    font-weight: normal;
+    padding: 20px 15px;
+}
+.mobile-spmenu a:hover {
+	background: #258ecd;
+}
+.mobile-spmenu a:active {
+	background: #afdefa;
+	color: #47a3da;
+}
+/* Orientation-dependent styles for the content of the menu */
+.mobile-spmenu-vertical {
+	max-width: 240px;
+	width:100% !important;
+	max-width:
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+.mobile-spmenu-vertical a {
+	border-bottom: 1px solid #ccc;
+	padding: 1.14em;
+}
+.mobile-spmenu-horizontal {
+	width: 100%;
+	height: 150px;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+}
+.mobile-spmenu-horizontal h3 {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+.mobile-spmenu-horizontal a {
+	float: left;
+	width: 20%;
+	padding: 0.8em;
+	border-left: 1px solid #258ecd;
+}
+/* Vertical menu that slides from the left or right */
+.mobile-spmenu-left {
+	left: -240px;
+}
+.mobile-spmenu-right {
+	right: -240px;
+}
+/*.mobile-spmenu-left.mobile-spmenu-open {
+	left: 0px;
+}*/
+.mobile-spmenu-right.mobile-spmenu-open {
+	right: 0px;
+}
+/* Horizontal menu that slides from the top or bottom */
+.mobile-spmenu-top {
+	top: -150px;
+}
+.mobile-spmenu-bottom {
+	bottom: -150px;
+}
+.mobile-spmenu-top.mobile-spmenu-open {
+	top: 0px;
+}
+.mobile-spmenu-bottom.mobile-spmenu-open {
+	bottom: 0px;
+}
+/* Push classes applied to the body */
+.side-menu-mobile {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+.side-menu-mobile-toright {
+	left: 240px;
+}
+.side-menu-mobile-toleft {
+	left: -240px;
+}
+/* Transitions */
+.mobile-spmenu,
+.side-menu-mobile {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+/* Example media queries */
+@media screen and (max-width: 55.1875em){
+	.mobile-spmenu-horizontal {
+		font-size: 75%;
+		height: 110px;
+	}
+	#slide-mobile-menu{
+		top: -131px;
+	}
+	#slide-mobile-menu {
+		
+	}
+}
+@media screen and (max-height: 26.375em){
+	.mobile-spmenu-vertical {
+		font-size: 90%;
+		width: 190px;
+	}
+	.mobile-spmenu-left,
+	.side-menu-mobile-toleft {
+		left:-250px;
+	}
+	.mobile-spmenu-right {
+		right:-250px;
+	}
+	.side-menu-mobile-toright {
+		left: 250px;
+	}
+	
+}
+.mobile-spmenu-vertical {
+		font-size: 90%;
+		width: 190px;
+	}

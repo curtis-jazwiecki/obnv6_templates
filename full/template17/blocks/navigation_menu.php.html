@@ -1,0 +1,361 @@
+
+<style type="text/css">
+.nav-uppercase > li > a {
+	font-weight: bolder;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+.nav > li > a, .nav-dropdown > li > a, .nav-column > li > a {
+	color: rgba(102, 102, 102, 0.85);
+	transition: all 0.2s ease 0s;
+}
+.nav > li > a {
+	align-items: center;
+	display: inline-flex;
+	flex-wrap: wrap;
+	padding: 10px 0;
+}
+.is-small, .is-small.button {
+	font-size: 0.8em;
+}
+li.current-dropdown > .nav-dropdown, li.has-dropdown:hover > .nav-dropdown {
+	left: -15px;
+	max-height: inherit;
+	opacity: 1;
+	transition-delay: 0.1s;
+}
+.nav-dropdown-default {
+	padding: 15px;
+}
+.nav-dropdown.nav-dropdown-default{position:absolute;}
+.nav-dropdown {
+	background-color: #fff;
+	border: 2px solid #ddd;
+	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
+	color: #777;
+	display: table;
+	left: -99999px;
+	margin: 0;
+	max-height: 0;
+	min-width: 260px;
+	opacity: 0;
+	text-align: left;
+	transition: opacity 0.2s ease 0s, transform 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
+	z-index: 9;
+}
+ul {
+	list-style: none;
+}
+.flex-col .search-field.mb-0 {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 0;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	box-sizing: border-box;
+	color: #333;
+	font-size: 0.97em;
+	height: 2.507em;
+	max-width: 100%;
+	padding: 0 0.75em;
+	transition: color 0.3s ease 0s, border 0.3s ease 0s, background 0.3s ease 0s, opacity 0.3s ease 0s;
+	vertical-align: middle;
+	width: 100%;
+}
+.flex-row {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	width: 100%;
+}
+.flex-col {
+	max-height: 100%;
+}
+.button.icon {
+	display: inline-block;
+	margin-left: 0.12em;
+	margin-right: 0.12em;
+	min-width: 2.5em;
+	padding-left: 0.6em;
+	padding-right: 0.6em;
+}
+#search-button.ux-search-submit.submit-button.secondary.button.icon.mb-0 {
+	border-radius: 0px !important;
+	font-size: 0.97em;
+	font-weight: bolder;
+	max-width: 100%;
+	min-height: 2.5em;
+	padding: 0 1.2em;
+	color:#fff !important;
+}
+.col-md-2.search-BTTN-dropdown{width:33px;}
+#search-button.ux-search-submit.submit-button.secondary.button.icon.mb-0 {
+	background-color: #d26e4b !important;
+	position:relative !important;
+	top:0px !important;
+}
+.flex-left {
+	margin-right: auto;
+}
+
+.flex-col {
+	max-height: 100%;
+}
+li.has-dropdown::before {
+	border-color: rgba(221, 221, 221, 0) rgba(221, 221, 221, 0) #ddd;
+	border-width: 11px;
+	margin-left: -11px;
+}
+li.has-dropdown::after, li.has-dropdown::before {
+	border: medium solid transparent;
+	bottom: -2px;
+	content: "";
+	height: 0;
+	left: 50%;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	transition: opacity 0.1s ease 0s;
+	width: 0;
+	z-index: 10;
+}
+</style>
+<script type="text/javascript">
+    var tba = jQuery.noConflict();
+
+    tba(document).ready(function () {
+        var scroll_pos = 0;
+
+        tba(document).scroll(function () {
+            
+            scroll_pos = tba(this).scrollTop();
+            if (scroll_pos > 25) {
+                tba("#mj-righttop-menu").css('background-color', 'rgba(555,555,555, 0.9)');
+               
+                tba("#mj-righttop-menu a").css('color', '#333');
+                tba("#mj-righttop-menu i").css('color', '#333');
+                tba("#mj-righttop-menu div").css('color', '#333');  
+				tba("#mj-righttop-menu").css('position', 'fixed');              
+                //tba("#top-menu li:last-child").css('background', 'none');
+				tba("#top-menu.jsn-mainnav.navbar").css('width', '1080px');
+				tba("#top-menu.jsn-mainnav.navbar").css('margin', '0px auto');
+				tba("#mj-righttop-menu.sticky-jump").css('animation', '0.6s ease 0s normal none 1 running stuckMoveDown')
+				
+				
+            }
+            else
+            {
+                
+                tba("#mj-righttop-menu a").css('color', '#333');
+                tba("#mj-righttop-menu i").css('color', '#333');
+                tba("#mj-righttop-menu div").css('color', '#333');
+                tba("#mj-righttop-menu").css('position', 'relative')  
+                tba("#mj-righttop-menu li:last-child").css('background', 'none');
+				tba("#top-menu.jsn-mainnav.navbar").css('width', '1080px');
+				tba("#top-menu.jsn-mainnav.navbar").css('margin', '0px auto');
+				tba("#mj-righttop-menu.sticky-jump").css('animation', '0.6s ease 0s normal none 1 running stuckMoveDown')
+            }
+        });
+    });
+</script>
+
+<div id="mj-righttop-menu" class="sticky-jump"> <!-- mj-righttop starts -->
+  
+  <div class="header-wrapper-menu stuck" class="mj-subcontainer" > <!-- mj-subcontainer starts -->
+    
+    <div id="mj-menubar"> <!-- mj-menubar starts -->
+      
+      <nav class="mobile-spmenu mobile-spmenu-vertical mobile-spmenu-left mainNav" id="slide-mobile-menu">
+        <h3>Categories</h3>
+        <ul class="nav">
+          <li><a href="index.php">Homepage</a> </li>
+          <li id="store_li"><a href="javascript:void(0)">Store</a>
+            <ul class="nav-child unstyled">
+              <li><a href="#">What's&nbsp;New?</a> </li>
+              <li><a href="$urlspecials">Specials</a> </li>
+            </ul>
+          </li>
+          <li id="cate_li"><a href="javascript:void(0)">Categories</a>
+            <ul class="nav-child unstyled">
+              
+              <!--Superfish Horizontal Navigation bar--> 
+              
+              $categories_html 
+              
+              <!--end Superfish-->
+              
+            </ul>
+          </li>
+        </ul>
+        <h3>Site Information</h3>
+        <ul class="menu">
+          <li class="menu_bar"><span class="phoneIcon"><a href="tel:8888888888">Call Us - 8888888888</a></span></li>
+          <li class="menu_bar"> <span class="tdbLink"> $loginofflogo </span> </li>
+          <li class="menu_bar"> <span class="tdbLink"> <a href="$urlmyaccount">My Account</a> </span> </li>
+          <li class="menu_bar"><a href="$urlmyaccount">Create an Account</a></li>
+          <li class="menu_bar"> <span class="tdbLink"> <a href="$urlcheckout" id="tdb3">Checkout</a> </span> </li>
+        </ul>
+      </nav>
+      <div class="jsn-mainnav navbar" id="top-menu">
+        <div class="jsn-mainnav-inner navbar-inner">
+          <div class="container clearfix">
+            <div class="mainnav-toggle clearfix" style="display:none">
+              <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button" id="btn"> <span>Main Menu</span></button>
+            </div>
+            <div class="row">
+            <div class="col-md-2">
+            <div id="mj-logo" class="mj-box"> <!-- mj-logo starts --> 
+      <a href="index.php"><img src="images/tpl/logo_tpl18.png"></a> </div>
+    <!-- mj-logo ends --> 
+    </div>
+    
+    <div class="col-md-2 search-BTTN-dropdown">
+    
+    <div class="mj-grid32-search mj-lspace-search">
+    
+    
+    <!--new create html search-->
+    
+    <div class="flex-col hide-for-medium flex-left flex-grow">
+  <ul class="header-nav header-nav-main nav nav-left nav-uppercase">
+    <li class="header-search header-search-dropdown has-icon has-dropdown menu-item-has-children">
+    <a href="#" class="is-small"><i class="fa fa-search" aria-hidden="true"></i></a>
+      <ul class="nav-dropdown nav-dropdown-default">
+        <li class="header-search-form search-form html relative has-icon">
+          <div class="header-search-form-wrapper">
+            <div class="searchform-wrapper ux-search-box relative form- is-normal">
+            
+              <form method="get" class="searchform" name="search" action="advanced_search_result.php" role="search">
+                <div class="flex-row relative">
+                  <div class="flex-col flex-grow">
+                  
+                  
+                    
+                    
+                  
+                  <input id="search_query"  class="search-field mb-0" type="text" onfocus="if (this.value == ' Search entire store...')
+                                            this.value = ''" onblur="if (this.value == '')
+                                                        this.value = ' Search entire store...'" value=" Search entire store..." style="width:100%;" class="go" name="keywords">
+                  
+                  
+                  </div>
+                  <div class="flex-col">
+                    <button type="submit" id="search-button" class="ux-search-submit submit-button secondary button icon mb-0"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                  </div>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    
+    <!--end of html search-->
+    
+    
+    
+    
+    
+     <!-- mj-grid32 starts -->
+      <form method="get" action="advanced_search_result.php" name="search" style="display:none">
+        <button type="submit" id="search-button"><i class="fa fa-search" aria-hidden="true"></i>
+</button>
+        <div class="search">
+          
+          
+          <input id="search_query" type="text" onfocus="if (this.value == ' Search entire store...')
+                                            this.value = ''" onblur="if (this.value == '')
+                                                        this.value = ' Search entire store...'" value=" Search entire store..." style="width:100%;" class="go" name="keywords">
+          
+        </div>
+      </form>
+    </div>
+    </div>
+    <div class="col-md-8">
+    
+      
+            <div class="nav-collapse collapse clearfix" id="jsn-pos-mainnav">
+              <ul class="nav">
+                <li><a href="index.php">Homepage</a> </li>
+                <li id="store_li"><a href="javascript:void(0)">Store</a>
+                  <ul class="nav-child unstyled">
+                    <li><a href="#">What's&nbsp;New?</a> </li>
+                    <li><a href="$urlspecials">Specials</a> </li>
+                  </ul>
+                </li>
+                <li id="cate_li"><a href="javascript:void(0)">Categories</a>
+                  <ul class="nav-child unstyled">
+                    
+                    <!--Superfish Horizontal Navigation bar--> 
+                    
+                    $categories_html 
+                    
+                    <!--end Superfish-->
+                    
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            </div>
+      
+      </div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+				
+				/*var addcls = jQuery.noConflict();
+				addcls(".navbar-inner button#btn").click(function(){
+					 if (addcls(".navbar-inner #jsn-pos-mainnav").hasClass('intro')) {
+  						addcls(".navbar-inner #jsn-pos-mainnav").removeClass("intro");
+					 }
+					 else {
+						 addcls(".navbar-inner #jsn-pos-mainnav").addClass("intro");
+					 }
+					
+				}); */
+				
+				var menuLeft = document.getElementById( 'slide-mobile-menu' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				
+				body = document.body;
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'side-menu-mobile-toright' );
+				classie.toggle( menuLeft, 'mobile-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			};
+			
+			function disableOther( button ) {
+			
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				}
+			
+			}
+			
+			
+			
+			
+				</script> 
+      <script type="text/javascript">
+        jQuery(document).ready(function(){
+		
+			//Accordion Nav
+			jQuery('.mainNav').navAccordion({
+				expandButtonText: '<i class="fa fa-plus"></i>',  //Text inside of buttons can be HTML
+				collapseButtonText: '<i class="fa fa-minus"></i>'
+			});
+			
+		});
+        </script> 
+    </div>
+    <!-- mj-menubar ends --> 
+    
+  </div>
+  <!-- mj-subcontainer ends --> 
+  
+</div>

@@ -1,0 +1,59 @@
+<div class="mj-stayintouch mj-grid40 mj-lspace mj-rspace" style="display:none;">
+  <h3>Stay In Touch</h3>
+  <div class="mj-newsletter"> <a href="newsletters.php" class="mj-newstext">Join Our Newsletter</a>
+    <p>Stay Updated with Offers &amp; New Arrivals</p>
+  </div>
+  <div class="mj-storelocator mj-lspace mj-rspace"> <a href="store_finder.php" class="mj-storetext">Store Finder</a>
+    <p>FInd store near to you</p>
+  </div>
+</div>
+<div class="inner">
+<div id="newsletter_message" class="success_notification"></div>
+  <div class="grid">
+    <div class="grid__item one-third">
+      <h4>Sign up for our newsletter  </h4>
+    </div>
+    
+    <div class="grid__item two-thirds">
+     
+      <form name="subscribe_form" class="subscribe_form" id="subscribe_form" method="post" action="?action=newsletter_signup">
+        <input type="hidden" value="subscribe" name="action">
+        <div class="grid">
+          <div class="grid__item two-fifths">
+            <label for="nl_first_name">Name</label>
+            <input type="text" name="newsletter_name" id="nl_first_name" class="Textbox autobox default" placeholder="Name">
+          </div>
+          <div class="grid__item two-fifths">
+            <label for="nl_email">Email</label>
+            <input type="email" name="newsletter_email" id="nl_email" class="Textbox autobox default" placeholder="Email">
+          </div>
+          <div class="grid__item one-fifth">
+            <input type="submit" class="btn-news" value="Submit">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function getQueryStrings() { 
+  var assoc  = {};
+  var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+  var queryString = location.search.substring(1); 
+  var keyValues = queryString.split('&'); 
+
+  for(var i in keyValues) { 
+    var key = keyValues[i].split('=');
+    if (key.length > 1) {
+      assoc[decode(key[0])] = decode(key[1]);
+    }
+  } 
+
+  return assoc; 
+} 
+var qs = getQueryStrings();
+var signup = qs["signup"]; 
+if(signup == 'success'){
+	jQuery('#newsletter_message').html('Thank you for subscribing to the Newsletter');
+}
+</script>

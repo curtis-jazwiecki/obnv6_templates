@@ -1,0 +1,51 @@
+	#mj-contentarea 
+
+	{
+
+    	position: relative;
+		margin-left: auto ;
+  margin-right: auto ;
+		/*left:4.8%; Not original code*/
+
+    	/*right: 16.7%; Original code*/
+		
+
+    }
+
+    #mj-right 
+
+	{
+
+    	position: relative;
+
+    	right: -65.7%;
+
+    }
+
+    
+
+    .mj-subcontainer 
+
+	{
+
+    	position: relative;
+
+    }
+
+    
+
+	#shopping_items .mj-grid64
+
+	{
+
+		width:63%;
+
+	}
+
+	#whatsNew, #featuredProducts, #specialsDefault
+
+	{
+
+		display:none;
+
+	}

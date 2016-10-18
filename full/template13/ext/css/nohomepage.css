@@ -1,0 +1,50 @@
+	#mj-contentarea 
+
+	{
+
+    	position: relative;
+
+    	/*right: 16.7%;*/
+		/*left:16.7%;*/
+		margin-left:auto;
+		margin-right:auto;
+
+    }
+
+    #mj-right 
+
+	{
+
+    	position: relative;
+
+    	right: -65.7%;
+
+    }
+
+    
+
+    .mj-subcontainer 
+
+	{
+
+    	position: relative;
+
+    }
+
+    
+
+	#shopping_items .mj-grid64
+
+	{
+
+		width:63%;
+
+	}
+
+	#whatsNew, #featuredProducts, #specialsDefault
+
+	{
+
+		display:none;
+
+	}

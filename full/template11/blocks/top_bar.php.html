@@ -1,0 +1,295 @@
+<script type="text/javascript">
+
+    var tba = jQuery.noConflict();
+
+
+
+    tba(document).ready(function () {
+
+        var scroll_pos = 0;
+
+
+
+        tba(document).scroll(function () {
+
+            //alert("hello");
+
+            scroll_pos = tba(this).scrollTop();
+
+            if (scroll_pos > 25) {
+
+                tba("#mj-topbar").css('background-color', '#5c9ccc');
+
+                tba("#mj-topbar").css('background-image', 'url("/includes/sts_templates/full/template11/ext/images/topbar-bggr.png") repeat scroll 0 0 transparent');
+
+                tba("#mj-topbar a").css('color', '#FFFFFF');
+
+                tba("#mj-topbar i").css('color', '#FFFFFF');
+
+                tba("#mj-topbar div").css('color', '#FFFFFF');
+
+                //tba("#mj-topbar li").css('background', 'url("images/topbar-arrow-white.png") no-repeat scroll right center transparent');
+
+                tba("#mj-topbar li:last-child").css('background', 'none');
+
+            }
+
+            else
+
+            {
+
+                tba("#mj-topbar").css('background', 'url("/includes/sts_templates/full/template11/ext/images/topbar-bg.png") repeat scroll 0 0 #fff');
+
+                tba("#mj-topbar a").css('color', '#70a8d3');
+
+                tba("#mj-topbar i").css('color', '#70a8d3');
+
+                tba("#mj-topbar div").css('color', '#70a8d3');
+
+                //tba("#mj-topbar li").css('background', 'url("images/icons/<?php echo $_SESSION['themecolor_com']."-arrow.png" ?>") no-repeat scroll right center transparent');
+
+                tba("#mj-topbar li:last-child").css('background', 'none');
+
+            }
+
+        });
+
+    });
+
+</script>
+
+<div id="mj-topbar"><!-- mj-topabar -->
+
+    <div class="mj-subcontainer"><!-- mj-subcontainer -->
+
+        <div class="mj-grid16 mj-lspace">
+        
+        <div id="mj-logo"> <!-- mj-logo starts -->
+
+            <a href="index.php"><img src="images/tpl/logo_tpl18.png" width="400px"></a>                      
+
+        </div>
+        
+        </div>
+        
+        <center>
+        <Div class="nav_topbar_element">
+        <div id="mj-menubar"> <!-- mj-menubar starts -->
+
+            	
+
+    			<div class="jsn-mainnav navbar">
+
+					<div class="jsn-mainnav-inner navbar-inner">
+
+						<div class="container clearfix">
+
+                        	<div class="mainnav-toggle clearfix">
+
+                    			<button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button" id="btn"> <span>Main Menu</span></button>
+
+                			</div>
+
+   							<div class="nav-collapse collapse clearfix" id="jsn-pos-mainnav">
+
+    							<ul class="nav">
+
+                                    <li><a href="$urlcataloglogo">Homepage</a>
+
+                                    </li>
+
+                                    <li id="store_li"><!--<a href="javascript:void(0)">--><a href="/shop.php">Store</a>
+
+                                    	<ul class="nav-child unstyled">
+
+                                        	<li><a href="/about-us-i-5.html">About Us</a>
+
+                                            </li>
+
+                                    		<li><a href="$urlspecials">Specials</a>
+
+                                            </li>
+
+                                            <!--<li><a href="javascript:void(0)">Typography</a>
+
+                                            </li>-->
+                                            <li><a href="/privacy-policy-i-4.html">Privacy</a>
+
+                                            </li>
+<li><a href="/terms-&-conditions-i-125.html">Terms & conditions</a>
+
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+                                    <li id="cate_li"><a href="javascript:void(0)">Categories</a>
+
+                                    	<ul class="nav-child unstyled">
+
+                                    <!--Superfish Horizontal Navigation bar-->
+
+$categories_html
+
+		                                    <!--end Superfish-->
+
+                                    	</ul>
+
+                                   	</li>
+
+											                                                           
+
+                                    <li><a href="$urlmyaccount">Create an Account</a>
+
+                                    </li>
+
+                                    <li>
+
+                                    	<a href="$urlcontactus">Contact&nbsp;Us</a>
+
+                                    </li>
+
+    							</ul>
+
+    						</div> 
+
+    					</div>
+
+    				</div>
+
+				</div>
+
+                <script type="text/javascript">
+
+
+
+				
+
+				var addcls = jQuery.noConflict();
+
+				addcls(".navbar-inner button#btn").click(function(){
+
+					 if (addcls(".navbar-inner #jsn-pos-mainnav").hasClass('intro')) {
+
+  						addcls(".navbar-inner #jsn-pos-mainnav").removeClass("intro");
+
+					 }
+
+					 else {
+
+						 addcls(".navbar-inner #jsn-pos-mainnav").addClass("intro");
+
+					 }
+
+					
+
+				}); 
+
+					
+
+				</script>
+
+    		</div> <!-- mj-menubar ends --> 
+            </div></center>            	
+
+        <div class="mj-grid80 mj-rspace" id="headerShortcuts">
+
+            <ul class="menu"> 
+
+                <li>
+
+                    <i class="fa fa-angle-right fa-2x menu_bar">
+
+                        <span class="menu_txt">
+
+                            <span class="tdbLink">
+
+                                <a href="$urlcataloglogo">Home&nbsp;&nbsp;</a>
+
+                            </span>
+
+                        </span>
+
+                    </i>
+
+                </li>
+
+                <li>
+
+                    <i class="fa fa-angle-right fa-2x menu_bar">
+
+                        <span class="menu_txt">
+
+                            <span class="tdbLink">
+
+                                $loginofflogo &nbsp;&nbsp;
+
+                            </span>
+
+                        </span>
+
+                    </i>
+
+                </li>
+
+                <li>
+
+                    <i class="fa fa-angle-right fa-2x menu_bar">
+
+                        <span class="menu_txt">
+
+                            <span class="tdbLink">
+
+                                <a href="$urlmyaccount">My Account&nbsp;&nbsp;</a>
+
+                            </span>
+
+                        </span>
+
+                    </i>
+
+                </li>
+
+                <li>
+
+                    <i class="fa fa-angle-right fa-2x menu_bar">
+
+                        <span class="menu_txt">
+
+                            <span class="tdbLink">
+
+                                <a href="$urlcheckout" id="tdb3">Checkout&nbsp;&nbsp;</a>
+
+                            </span>
+
+                        </span>
+
+                    </i>
+
+                </li>
+
+                <li>
+
+                    <i class="fa fa-angle-right fa-2x menu_bar">
+
+                        <span class="menu_txt">
+
+                            <span class="tdbLink">
+
+                                <a href="$urlcartcontents" id="tdb4">Cart Contents ($cart_items_count) &nbsp;&nbsp;</a>  
+
+                            </span>
+
+                        </span>
+
+                    </i>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div><!-- mj-subcontainer End -->
+
+</div>

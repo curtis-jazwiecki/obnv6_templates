@@ -1,10 +1,30 @@
-<table cellpadding="0" border="0" cellspacing="0" style="margin: 0 0 8px 0;">
- <tr valign="top">
-  <td width="15" align="left" valign="top"></td>
-  <td width="255" align="left" valign="top" style="maxwidth: 165">DISPLAY_PRODUCT_IMAGE</td>
-  <td width="*" class="smallText" valign="top">DISPLAY_PRODUCT_NAME<br /><br />DISPLAY_PRODUCT_DESCRIPTION</td>
-  <td width="100" class="smallText" valign="top" align="right">DISPLAY_PRODUCT_STOCK<br /><br /></td>
-  <td width="100" class="smallText" valign="top" align="right">DISPLAY_PRODUCT_PRICE<br />DISPLAY_PRODUCT_COMPARE<br /></td>
-  <td width="15" class="smallText" valign="top" align="right"></td>
- </tr>
-</table>				  				  				  				  				  
+
+
+<center><table width="100%" border="1" align="center" class="productListing_hover">
+  <tbody>
+    <tr>
+    <td>
+    <table width="100%">
+    <tbody>
+    <tr>
+      <td width="20%" rowspan="3" align="center" bgcolor="#FFFFFF" height="200px" class="hover_white"><center>DISPLAY_PRODUCT_IMAGE</center></td>
+      <td width="55%" align="left" style="padding-left:5%;"><h2 class="ProductListing_h2">DISPLAY_PRODUCT_NAME</h2></td>
+      <td width="19%" align="right" style="padding-right:1%;" >DISPLAY_PRODUCT_COMPARE</td>
+    </tr>
+    <tr>
+      <td width="55%" align="left" style="padding-left:5%;"> DISPLAY_PRODUCT_DESCRIPTION</td>
+      <td width="19%" align="right" style="padding-right:1%; font-size:36px; font-family: 'Unica One', cursive;" > DISPLAY_PRODUCT_PRICE </td>
+    </tr>
+    <tr>
+      <td width="55%" align="left" style="padding-left:5%;">	 </td>
+      <td width="19%" align="right" style="padding-right:1%; font-size:20px; font-family: 'Unica One', cursive;" >DISPLAY_PRODUCT_STOCK</td>
+      </tr>
+      </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</center>
+<br><br>

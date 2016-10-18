@@ -1,422 +1,308 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
     <head>
 
-        <!--$headcontent-->
+    $headertags
 
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+        $template18_stylesheet1
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+            var jqqqnoconf = jQuery.noConflict();
 
-        <script>
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
 
-            var jQuery = jQuery.noConflict();
+            if (jqqqnoconf.attrFn) {
 
-            jQuery(document).ready(function() {
+                jqqqnoconf.attrFn.text = true;
 
-               /* jQuery('img[src$="button_compare.gif"]').replaceWith('<input type="button" class="buttonbg" value="Compare Selected Products">');
+            }
 
+        </script>
 
+        <script type="text/javascript">
 
-                jQuery('img[src$="button_back.gif"]').replaceWith('<input type="button" class="skubutton" value="BACK">');
+            var tba = jQuery.noConflict();
 
-                jQuery('input[src$="button_redeem.gif"]').replaceWith('<input type="submit" class="skubutton" value="Redeem">');
+            tba(document).ready(function () {
 
-                jQuery('img[src$="button_change_address.gif"]').replaceWith('<input type="button" class="buttonbg" value="Change Address">');
+                //SKU BOF
 
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
 
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
 
-                jQuery('img[src$="button_edit_product.gif"]').replaceWith('<input type="button" class="buttonbg" value="Edit Products">');
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
 
-                jQuery('img[src$="small_edit.gif"]').replaceWith('<input type="button" class="skubutton" value="Edit">');
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
 
-                jQuery('img[src$="small_delete.gif"],input[src$="button_delete.gif"]').replaceWith('<input type="button" class="skubutton" value="Delete">');
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
 
-                jQuery('body.wishlist input[src$="button_in_cart.gif"]').replaceWith('<input type="button" class="skubutton" value="Add To Cart">');
+                //SKU EOF
 
-                
+                var scroll_pos = 0;
 
-                jQuery('img[src$="button_add_address.gif"]').replaceWith('<input type="button" class="skubutton" value="Add Address">');
+                tba(document).scroll(function () {
 
-                jQuery('img[src$="small_view.gif"]').replaceWith('<input type="button" class="skubutton" value="View">');
+                    //alert("hello");
 
-                jQuery('input[src$="button_update.gif"]').replaceWith('<input type="submit" class="skubutton" value="Update">');
+                    scroll_pos = tba(this).scrollTop();
 
-                jQuery('input[src$="button_confirm_order.gif"]').replaceWith('<input type="submit" class="buttonbg" value="Confirm Order">');
+                    if (scroll_pos > 25) {
 
+                        tba("#mj-topbar").css('background-color', '#a60707');
 
+                        tba("#mj-topbar").css('background-image', 'url("")');
 
-                if (jQuery('body').hasClass('checkout_payment')) {
+                        tba("#mj-topbar a").css('color', '#000000');
 
+                        tba("#mj-topbar i").css('color', '#000000');
 
+                        tba("#mj-topbar div").css('color', '#000000');
 
-                }
+                        //tba("#mj-topbar li").css('background', 'url("") no-repeat scroll right center transparent');
 
-                else {
+                        tba("#mj-topbar li:last-child").css('background', 'none');
 
-                    jQuery('input[src$="button_continue.gif"]').replaceWith('<input type="submit" class="skubutton" value="Continue">');
+                    }
 
-                  jQuery('img[src$="button_continue.gif"]').replaceWith('<input type="submit" class="skubutton" value="Continue">');
+                    else
 
+                    {
 
+                        tba("#mj-topbar").css('background', 'url("") repeat scroll 0 0 transparent');
 
+                        tba("#mj-topbar a").css('color', '#a60707');
 
+                        tba("#mj-topbar i").css('color', '#a60707');
 
-                }*/
+                        tba("#mj-topbar div").css('color', '#a60707');
 
-                jQuery('img[src$="infoboxbgL.jpg"],img[src$="infoboxbgR.jpg"]').parent().css('display', 'none');
+                        //tba("#mj-topbar li").css('background', 'url("images/icons/<?php echo $_SESSION['themecolor_com']."-arrow.png" ?>") no-repeat scroll right center transparent');
 
+                        tba("#mj-topbar li:last-child").css('background', 'none');
 
-
-jQuery('.skubutton,.buttonbg,.shopping_cart_button').parent('a').css('text-decoration','none');
-
-
-
-jQuery('#brand_search').autocomplete({
-
-    source: 'brand_search.php', 
-
-    minLength: 2, 
-
-    select: function(event, ui){
-
-        jQuery('input[name="selected_brand_id"]').val(ui.item.id);
-
-    }
-
-});
-
-jQuery('.brand_searc_sub').click(function(){
-
-    if ( jQuery('input#brand_search').val()!='' ){
-
-        brand_id = jQuery('input[name="selected_brand_id"]').val();
-
-        if (brand_id!=''){
-
-            location.href = 'advanced_search_result.php?manufacturers_id=' + brand_id;
-
-        }        
-
-    }
-
-});
-
-
-
-            jQuery('input:checkbox[name^="columns_"]').click(function(){
-
-                var product_id = jQuery(this).val();
-
-                var action = (jQuery(this).is(':checked') ? 'add' : 'remove'); 
-
-                jQuery.ajax({
-
-                   url: 'register_product_for_comparison.php', 
-
-                   method: 'post', 
-
-                   data: {
-
-                        action: action, 
-
-                        id: product_id
-
-                   }, 
-
-                   success: function(response){
-
-                        if (response=='added'){
-
-                            alert('Product added for comparison');
-
-                        } else if (response=='removed'){
-
-                            alert('Product removed from comparison');
-
-                        }
-
-                   }
+                    }
 
                 });
 
             });
 
-
-
-            });
-
-
-
         </script>
-  $stylesheet
-        <style type="text/css">
 
-            .left_column + table {
+        
 
-                width: $content_width_css_val;
+<link href='https://fonts.googleapis.com/css?family=Vollkorn:400italic|Oswald|Unica+One' rel='stylesheet' type='text/css'>
 
-            }
-        </style>
+         <link rel='stylesheet' id='camera-css'  href='http://67.227.151.180/camera/css/camera.css' type='text/css' media='all'> 
+
+    <style>
+
+		body {
+
+			margin: 0;
+
+			padding: 0;
+
+		}
+
+		
+
+		a:hover {
+
+			text-decoration: none;
+
+		}
+
+		#back_to_camera {
+
+			clear: both;
+
+			display: block;
+
+			height: 80px;
+
+			line-height: 40px;
+
+			padding: 20px;
+
+		}
+
+		.fluid_container {
+
+			margin: 0 auto;
+
+			
+
+			
+
+			width: 90%;
+
+		}
+
+	</style>
+
+            $stylesheet
+
+            
+
+            <link href='https://fonts.googleapis.com/css?family=Allerta+Stencil|Stardos+Stencil:400,700|Black+Ops+One|Special+Elite' rel='stylesheet' type='text/css'>
 
     </head>
 
     <body class="$script">
 
+        <div id="mj-container">
 
+            $top_bar
 
-        <div class="wrapper">
+            $header
 
-            <table class="quick_link" cellspacing="0" cellpadding="0" align="center" height="100px">
+            $navigation_menu
 
-                <tr>
+            <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
 
-                    <td align="center" colspan="5" class="quick_link" >
+                <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
 
+                    <div class="moduletable mj-grid96 breadcrumb">	<!-- mj-grid96 starts -->
 
+                        <div class="breadcrumbs mj-grid96 breadcrumb"> 
 
-                        <table width="100%" class="header_bar">
+                            <div id="navBreadCrumb">
 
+                                $breadcrumbs
 
+                                <!--<ul><li><a class="headerNavigation" href="http://localhost/osmart/index.php">Catalog</a></li> <li><a class="headerNavigation" href="http://localhost/osmart/login.php">Login</a></li></ul>-->
 
-                            <tr>
-
-                                <td class="quick_links" align="center">
-
-                                    <table width="1002px" align="center">
-
-                                        <tr>
-
-                                            <td style="width:60%">
-
-                                                <b>Phone No.: 123456789</b>
-
-                                            </td>
-
-                                            <td>
-
-                                                <b>$myaccountlogoff</b></td>
-
-                                            <td><b>$cartcontents</b></td>
-
-                                            <td><b>$checkout</b></td> 
-
-
-
-                                        </tr>
-
-                                    </table>
-
-
-
-
-
-                                </td>
-
-
-
-
-
-                            </tr></table>
-
-                        <table  align="center" class="header_logobar">
-
-                            <tr>
-
-                                <td style="height: 100%;width: 17%;">$header_logo</td>
-
-                                <td style="text-align:center;width:392px;" class="search_box_back">$search_box</td>
-
-                                <td style="text-align:center;">
-
-                                    $sale_clearance
-
-
-
-
-
-                                </td>
-
-                                <td style="text-align:center;">
-
-                                    <img src="../images/tpl/free_shiping_tpl12.png"></td>
-
-                                <td style="text-align:center;">$shopping_cart</td>
-
-                            </tr>
-
-
-
-
-
-                        </table>
-
-                        <table width="1002" cellspacing="0" cellpadding="0" align="center" class="navi">
-
-                            <tr>
-
-                                <td align="center">
-
-                                    $navigation_menu_top
-
-
-
-                                </td>
-
-
-
-
-
-                            </tr>
-
-                        </table>
-
-                        <table cellspacing="0" cellpadding="0" align="center" style="margin-top:10px;text-align:left; width:1002px; height:25px;">
-
-                            <tr>
-
-
-
-                                <td>
-
-                                    <center>  $alphabetical_brand_index</center>
-
-                                </td>
-
-
-
-
-
-                            </tr>
-
-                            <tr><td><span id="breadcrumbs_12"> $breadcrumbs</span></td></tr>
-
-                        </table>
-
-
-
-
-
-
-
-                        <div id="container">      
-
-$message
-
-                            <table class="left_column" cellspacing="0" cellpadding="0" border="0" align="left" style="display:$left_column_display;">
-
-                                <tr>
-
-                                    <td valign="top" align="left" style="width:210px; border:1px solid grey;">
-
-                                        $search_filterbox
-
-$categorybox
-
-                                    </td>
-
-                                </tr>
-
-                            </table>
-
-
-
-
-
-                            $content
-
-
-
-
+                            </div> 
 
                         </div>
 
-                        <table class="footer">
+                    </div> <!-- mj-grid96 ends -->
 
-                            <tr>
+                </div> <!-- mj-subcontainer ends -->
 
-                                <td>
-
-                                    <table class="footer_content">
-
-                                        <tr>
+            </div>
 
 
+            <div id="mj-maincontent">
 
-                                            <td style="height:350px;" valign="top">
+                <div class="mj-subcontainer">
 
-                                                $footer_box_01
+                    <div id="mj-contentarea" class="mj-grid64 mj-lspace">
 
-                                            </td>
+                                        
 
-                                            <td style="height:350px;" valign="top">
+<?php
 
+if($_SERVER['PHP_SELF'] == "/index.php")
 
+{
 
-                                                $footer_box_02
+?>
 
-                                            </td>
+<center>
 
-                                            <td style="height:350px;" valign="top">
-
-                                                $footer_box_03
-
-
-
-                                            </td>
-
-                                            <td style="height:350px;" valign="top">
-
-                                                $footer_box_04
-
+<table width="90%" border="none">
+<tr>
+<td width="30%"><a href="/shop.php"><img src="/images/banners/featured_callout01.png" width="100%"></a></td>
+<td width="30%"><a href="/about-us-i-3.html"><img src="/images/banners/featured_callout4.png" width="100%"></a></td>
+<td width="30%"><a href="/shop.php"><img src="/images/banners/featured_callout3.png" width="100%"></a></td>
+</tr>
+</table>
 
 
+<h3>Featured Brands</h3>
 
 
+<table width="90%"><tr>
 
+  <td align="center" valign="middle"><a href="#"><img src="/includes/sts_templates/full/template12/images/brands/easton.png" border="0" style="width:70%;"></a></td>
 
-                                            </td>
+  <td align="center" valign="middle"><a href="#"><img src="/includes/sts_templates/full/template12/images/brands/missionarchery3.png" border="0" style="width:80%;"></a></td>
+<td align="center" valign="middle"><a href="#"><img src="/includes/sts_templates/full/template12/images/brands/excalibur_logo.png" border="0" style="width:80%;"></a></td>
+  <td align="center" valign="middle"><a href="#"><img src="/includes/sts_templates/full/template12/images/brands/pse-archery.png" border="0" style="width:70%;"></a></td>
 
+  <td align="center" valign="middle"><a href="#"><img src="/includes/sts_templates/full/template12/images/brands/axion_logo.png" border="0" style="width:80%;"></a></td>
 
+  <td align="center" valign="middle"><a href="#"><img src="/includes/sts_templates/full/template12/images/brands/tenpoint.png" border="0" style="width:70%;"></a></td>
 
-                                        </tr>
+</tr></table>
+</center><br><br>
 
+<br>   <?php 
 
+}
 
-                                        <tr>
+?> <!--sku start-->
 
-                                            <td valign="middle" height="35" align="center" colspan="5">
+$content                              
 
-                                                <span style="font-size:10px; color:#000">$footer</span>
+ <!--sku end--> </div>         
 
-                                            </td>
+<div id="mj-left" class="mj-grid16 mj-lspace">  
 
-                                        </tr>
+ <?php
 
-                                        <tr>
+if($_SERVER['PHP_SELF'] == "/shop.php")
 
-                                            <td valign="middle" height="35" align="center" colspan="5">
+{
 
-                                                <span style="font-size:10px; color:#000">$switch_template_link</span>
+?>                       
 
-                                            </td>
+<?php }
 
-                                        </tr>
+    ?>    
 
-                                    </table>
+    </div>
 
-                                </td></tr></table>
+                        
 
-                        </div>
+               
 
+                </div>
 
-$google_analytics
-                        </body>
+            </div>
 
-                        </html>
+        </div>
+
+        <div id="mj-footertop">
+
+            <div class="mj-subcontainer">
+
+            
+
+               
+
+            </div>
+
+        </div>
+
+        
+
+        <div id="mj-footer"> <!-- mj-footer starts -->
+
+            <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+
+                $footer_box_01
+
+                $footer_box_02
+
+                $footer_box_03
+
+                $footer_box_04
+
+            </div>
+
+        </div>
+
+        $footer_copyright
+
+    </body>
+
+</html>
+

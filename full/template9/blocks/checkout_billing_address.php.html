@@ -1,0 +1,190 @@
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tbody>
+    <?php
+    if($account_gender_enabled  == 'true'){ ?>
+    <tr>
+      <td class="main">{%ENTRY_GENDER%}<br>
+        <input type="radio" value="m" name="billing_gender" <?=$male?> >
+        &nbsp;&nbsp;{%MALE%}&nbsp;&nbsp;
+        <input type="radio" value="f" name="billing_gender" <?=$female?>>
+        &nbsp;&nbsp;{%FEMALE%}</td>
+    </tr>
+    <?php } ?>
+    
+    <tr>
+      <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+              <td width="50%" class="main">{%ENTRY_FIRST_NAME%}</td>
+            </tr>
+            <tr>
+              <td width="80%" class="main"><input type="text" style="width:80%;float:left;" class="required" name="billing_firstname" value="<?=$firstname?>">
+                <div class="required_icon ui-icon-red ui-icon-gear" style="margin-left: 1px; margin-top: 1px; float: left; display: none;" title="Required"></div>
+                <div class="error_icon ui-icon-red ui-icon-circle-close" style="margin-left: 1px; margin-top: 1px; float: left;" title="Your First Name must contain a minimum of 2 characters."></div></td>
+            </tr>
+            <tr>
+              <td width="50%" class="main">{%ENTRY_LAST_NAME%}</td>
+            </tr>
+            <tr>
+              <td width="80%" class="main"><input type="text" style="width:80%;float:left;" class="required" name="billing_lastname" value="<?=$lastname?>">
+                <div class="required_icon ui-icon-red ui-icon-gear" style="margin-left: 1px; margin-top: 1px; float: left;" title="Required"></div></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+    <?php
+    if($account_dob_enabled == 'true'){ ?>
+    <tr>
+      <td class="main">{%ENTRY_DATE_OF_BIRTH%}</td>
+    </tr>
+    <tr>
+      <td class="main"><input type="text" style="width:80%;float:left;" name="billing_dob" value="<?=$dob?>"></td>
+    </tr>
+    <?php } ?>
+    
+    <?php
+    if($customer_not_logged_in){ ?>
+    
+    <tr id="newAccountEmail">
+      <td class="main">{%ENTRY_EMAIL_ADDRESS%}</td>
+    </tr>
+    <tr>
+      <td class="main"><input type="text" style="width:80%;float:left;" class="required" name="billing_email_address" value="<?=$email_address?>">
+        <div class="required_icon ui-icon-red ui-icon-gear" style="margin-left: 1px; margin-top: 1px; float: left;" title="Required"></div></td>
+    </tr>
+    
+    <?php } ?>
+    
+    <?php
+    if($account_company_enabled == 'true'){ ?>
+    <tr>
+      <td class="main">{%ENTRY_COMPANY%}</td>
+    </tr>
+    <tr>
+      <td class="main"><input type="text" style="width:80%;float:left;" name="billing_company" value="<?=$company?>"></td>
+    </tr>
+    <?php } ?>
+    
+    <tr>
+      <td class="main">{%ENTRY_COUNTRY%}</td>
+    </tr>
+    <tr>
+      <td class="main"><?=$billing_country?>
+        <div title="false" style="margin-left: 3px; margin-top: 1px; float: left;" class="success_icon ui-icon-green ui-icon-circle-check"></div></td>
+    </tr>
+    <tr>
+      <td class="main">{%ENTRY_STREET_ADDRESS%}</td>
+    </tr>
+    <tr>
+      <td class="main"><input type="text" style="width:80%;float:left;" class="required" name="billing_street_address" value="<?=$street_address?>">
+        <div class="required_icon ui-icon-red ui-icon-gear" style="margin-left: 1px; margin-top: 1px; float: left;" title="Required"></div></td>
+    </tr>
+    
+    <?php
+    if($account_suburb_enabled == 'true'){ ?>
+    <tr>
+	    <td class="main">{%ENTRY_SUBURB%}</td>
+    </tr>
+    <tr>
+    	<td class="main"><input type="text" style="width:80%;float:left;" name="billing_suburb" value="<?=$suburb?>"></td>
+    </tr>
+    <?php
+    } ?>
+    
+    
+    <tr>
+      <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+              <td width="33%" class="main">{%ENTRY_CITY%}</td>
+            </tr>
+            <tr>
+              <td width="33%" class="main"><input type="text" style="width:80%;float:left;" class="required" name="billing_city" value="<?=$city?>">
+                <div class="required_icon ui-icon-red ui-icon-gear" style="margin-left: 1px; margin-top: 1px; float: left;" title="Required"></div></td>
+            </tr>
+            
+            <?php
+            if($account_state_enabled == 'true'){ ?>
+            <tr>
+              <td width="33%" class="main">{%ENTRY_STATE%}</td>
+            </tr>
+            <tr>
+              <td width="33%" id="stateCol_billing" class="main">
+              	<?=$stateField?>
+              	<div class="$state_class" style="margin-left: 3px; margin-top: 1px; float: left;" title="Required" /></div>
+      		  </td>
+            </tr>
+            <?php
+            } ?>
+            
+           
+            <?php
+            if($onepage_zip_below == 'False') { ?>
+            <tr>
+              <td width="33%" class="main">{%ENTRY_POST_CODE%}</td>
+            </tr>
+            <tr>
+              <td width="33%" class="main"><input type="text" style="width:80%;float:left;" class="required" name="billing_zipcode" value="<?=$postcode?>">
+                <div class="required_icon ui-icon-red ui-icon-gear" style="margin-left: 1px; margin-top: 1px; float: left;" title="Required"></div></td>
+            </tr>
+            <?php
+            } ?>
+            
+            
+          </tbody>
+        </table></td>
+    </tr>
+    
+    <?php
+    if($customer_not_logged_in){ ?>
+    <tr>
+      <td class="main">{%ENTRY_TELEPHONE%} <br>
+        <input type="text" style="width:80%;float:left;" class="<?=$telephone_required_class?>" name="billing_telephone" value="<?=$telephone?>">
+        <div class="required_icon ui-icon-red ui-icon-gear" style="margin-left: 1px; margin-top: 1px; float: left;" title="Required"></div></td>
+    </tr>
+    
+    <tr>
+      <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+          <?php if (!empty($onepage_create_account_text)){ ?>
+            <tr>
+              <td colspan="2" class="main"><br>
+                <?=$onepage_create_account_text?></td>
+            </tr>
+          <?php } ?>
+          
+          
+            <tr>
+              <td class="main">{%ENTRY_PASSWORD_NEW%}</td>
+            </tr>
+            <tr>
+              <td class="main"><input type="password" style="float:left;" maxlength="40" class="<?=$is_password_required?>" autocomplete="off" name="password">
+                <div class="required_icon ui-icon-red ui-icon-gear" style="margin-left: 1px; margin-top: 1px; float: left;" title="Required"></div></td>
+            </tr>
+            <tr>
+              <td class="main">{%ENTRY_PASSWORD_CONFIRMATION%}</td>
+            </tr>
+            <tr>
+              <td class="main"><input type="password" style="float:left;" maxlength="40" class="<?=$is_password_required?>" autocomplete="off" name="confirmation">
+                <div class="required_icon ui-icon-red ui-icon-gear" style="margin-left: 1px; margin-top: 1px; float: left;" title="Required"></div></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="main"><div id="pstrength_password"></div>
+                <div style="border: 1px solid white; font-size: 1px; height: 5px; width: 0px;" id="pstrength_password_bar" class="pstrength-bar"></div>
+                <div id="pstrength_password_text" class="pstrength-info"></div>
+                <div style="display:none;" id="pstrength_password_minchar" class="pstrength-minchar">Minimum number of characters is 5</div></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        
+        </td>
+    </tr>
+    <tr>
+      <td class="main">{%ENTRY_NEWSLETTER%}<br>
+        <input type="checkbox" value="1" name="billing_newsletter" <?=$newsletter?> ></td>
+    </tr>
+    <?php } ?>
+  </tbody>
+</table>
+

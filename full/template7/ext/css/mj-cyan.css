@@ -1,0 +1,446 @@
+/**
+
+* @package Os-mart - Responsive Os-commerce Template
+
+* @copyright (C) 2012 by Dasinfomedia - All rights reserved!
+
+* CSS Document
+
+* Theme Color CSS
+
+*/
+
+@charset "utf-8";
+
+
+
+
+
+#mj-footer, table#cartContentsDisplay tr th, td .mj-boxcontent h2, .searchbtn, #mj-left #categoriesContent li:hover, .tableHeading th, .mj-event-time .mj-month, .mj-block-number .mj-bottom, #accountHistInfo .tableHeading, .jsn-mainnav.navbar .nav > li ul.nav-child li  a:hover, .jsn-mainnav.navbar .nav > li ul.nav-child li  a:active, #jsn-pos-mainnav li a.current_parent:hover {
+
+	background-color: #a61a1e;
+
+}
+
+#jsn-pos-mainnav li.submenu li a:hover, #jsn-pos-mainnav li.submenu li.submenu li a:hover, #jsn-pos-mainnav li .submenu a:hover, #jsn-pos-mainnav li.submenu li.submenu a:hover{
+
+	background-color: #a61a1e !important;
+
+}
+
+ol > li:before {
+
+    /*border-left: 5px solid #a61a1e;*/
+
+}
+
+#mj-featured1 .mj-grid80, h4.optionName, .cart_quantity
+
+{
+
+	color:#a61a1e;
+
+}
+
+#mj-right #twittersidebox h3
+
+{
+
+	background-color:#a61a1e;
+
+}
+
+.mj-brands h3, .mj-stayintouch h3
+
+{	
+
+	color:#a61a1e;
+
+}
+
+#mj-left .leftBoxHeading a, #mj-right .rightBoxHeading a
+
+{
+
+	color:#a61a1e;
+
+}
+
+.a-btn
+
+{
+
+	border:0px solid  #a61a1e;
+
+	background-color:#a61a1e;
+
+}
+
+.a-btn-slide-text
+
+{
+
+	background-color: #666666;
+
+}
+
+#mj-logo a, .product_head, .product_title, .product_price strong,.jsn-mainnav.navbar .nav > li > a, .jsn-mainnav.navbar .nav > li ul.nav-child li a, .mj-headcolor, .add_title, #mj-menu a, #mj-menu .mj-submenu li a, #mj-menu .mj-submenu ul.mj-text li, a:visited, a, .prodprice, .navNextPrevList a, .buttonRow .rightBoxContainer a, #cartProdTitle, .cartBoxTotal, #mj-right li a, .product_name a, .subproduct_name a,  .navbar .nav > li > a:hover, .navbar .nav > li > a:active, .breadcrumbs, #navBreadCrumb a:hover
+
+{
+
+	color:#000000;
+
+}
+
+#mj-topbar .mj-grid16 {color:#ffffff !important; font-family: 'Arial', sans-serif; }
+
+
+#mj-topbar a {color:#ffffff !important;    font-family: 'Exo', sans-serif; /*font-size:12px;*/ padding:2px 15 2px; 	margin-bottom:0px; top:0; left:0;
+}
+
+.reviewsContent a
+
+{
+
+	color:#000000;
+
+}
+
+/*#mj-logo 
+
+{
+
+	background: url(../images/logo/slategray.png) no-repeat scroll 0 0 transparent;
+
+}
+
+.mj-productdetailimage a
+
+{
+
+	background:url("../images/Cart-image_cyan.png") no-repeat scroll 20px 22px transparent;
+
+	background-size: 59px auto;
+
+	float: right;
+
+    font-size: 0;
+
+	-webkit-appearance: none;
+
+	height:86px;
+
+	width:79px;
+
+}
+
+*/
+
+
+
+
+.mj-productdetailimage a
+
+{
+
+	background:url("../images/Cart-image_cyan.png") no-repeat scroll 20px 12px transparent;
+
+	background-size: 59px auto;
+
+	float: right;
+
+    font-size: 0;
+
+	-webkit-appearance: none;
+
+	/*height:83px;*/
+
+	width:79px;
+
+}
+
+#mj-slideshow, .tableHeading th {
+
+    border-bottom: 0px solid #666666;
+
+}
+
+#mj-slidetitle
+
+{
+
+	border-bottom: 0px solid #E3E3E3;
+
+}
+
+.no-touch .ps-content a:last-child:hover {
+
+	border-color: #a61a1e;
+
+	color: #a61a1e;
+
+}
+
+.button, input[type="submit"], input[type="reset"], input[type="button"], .readmore, button, .link_button {
+
+border: 2px solid  #a61a1e;
+background-color:#a61a1e;
+
+}
+
+.product-details, .billto-shipto .details, span.details-button input.details-button, .control-buttons button.default, #shoppingCartDefault .buttonRow, .change_add, .mj-step, .mj-step1 {
+
+
+    border: 0px solid #a61a1e !important;
+
+    color: #FFFFFF !important;
+
+	background-color: #a61a1e;
+
+}
+
+#mj-header #mj-righttop {
+
+	color: #4D4D4D;
+
+}
+
+#mj-righttop .mj-currencies 
+
+{
+
+	border-left:0px solid #ffffff;
+
+}
+
+.mj-search input
+
+{
+
+	color:#A6A6A6;
+
+}
+
+#mj-menu li:hover a 
+
+	{
+
+		background-color:#7B8493;
+
+	}
+
+#mj-menu li:hover 
+
+	{
+
+		background:none repeat scroll 0 0  #a61a1e;
+
+	}
+
+.wk-twitter article {
+
+   /* border-color: #79CEE8;*/
+   border-width: 0px;
+
+}
+
+.searchbtn{
+
+		border: 0px solid #a61a1e;
+
+}
+
+#mj-left #categories h3, #mj-right h3{
+
+	border-bottom: 0px solid #D8D8D8;
+
+}
+
+#mj-left #categories{
+
+    border: 0px solid #D8D8D8;
+
+}
+
+.leftBoxContainer, .rightBoxContainer{
+
+	border: 0px solid #D8D8D8;
+
+}
+
+/*a:hover, .reviewsContent a:hover, .subproduct_name a:hover, #mj-right li a:hover {
+
+    color: #7B8493;
+
+}*/
+
+.moduleBox {
+
+	background: none repeat scroll 0 0 #DADDDF;
+
+}
+
+.centerBoxContentsNew.centeredContent, .centerBoxContentsFeatured.centeredContent, .centerBoxContentsSpecials.centeredContent,.productListing-odd,.productListing-even,.categoryListBoxContents{ }
+
+FIELDSET 
+
+{
+
+    border: 0px solid #D4D4D4;
+
+}
+
+LEGEND 
+
+{
+
+    color: #575757;
+
+}
+
+#mj-pagenav
+
+{
+
+	border-bottom: 0px solid #F0F0F0;
+
+}
+
+#twitter_update_list li 
+
+{
+
+	border-bottom: 0px solid #D8D8D8;
+
+}
+
+.propricemain{
+
+	background-color: #cccccc;
+
+    border-top: 4px solid #000000;
+
+
+}
+
+span.title {
+
+     border-bottom: 0px solid #D2D2D2;
+
+}
+
+.productSpecialPrice, .productSalePrice, .productSpecialPriceSale, .productPriceDiscount {
+
+    color: #a61a1e; font-weight:bold; font-size:larger;
+
+}
+
+hr {
+
+    color: #F7F7F7;
+
+}
+
+#mj-topbar .mj-grid72 a
+
+	{
+
+		color:#FFFFFF;
+
+	}
+
+#productListHeading, #indexCategoriesHeading,#checkoutPayAddressDefaultHeading, #checkoutShipAddressDefaultHeading, #cartDefaultHeading
+
+	{
+
+		border-bottom: 0px solid #E9E8E8;
+
+	}
+
+	.fa.fa-angle-right.fa-2x {
+
+	/*color:#a61a1e;*/ 	color:#ffffff !important;
+
+	
+
+}
+
+/*#mj-topbar li {
+
+    background:url(../images/icons/slategray-arrow.png) no-repeat scroll right center;
+
+}*/
+
+.category-top, .category-links {
+
+	background:url("../images/icons/slategray-arrow.png") no-repeat scroll right center transparent;
+
+}
+
+.navbar .nav > li.tab_active a, .flex-caption, .slide-description
+
+{
+
+	color:#a61a1e !important;
+
+	text-shadow:none !important;
+
+}
+
+#mj-featured1 .mj-grid16, .mj-categoriessidebox .ui-widget-content.infoBoxContents ul li:hover, .ui-datepicker, #mj-shoppingcart .mj-cartcontent {
+
+	background-color: #a61a1e;
+
+}
+
+.footer_productinfo{
+
+	border-top:0px dashed #666666;
+
+}
+
+ul.tabs li.selected a, /*h3.rightBoxHeading, h3.leftBoxHeading, .alternate_text, .ui-widget-header a, .ui-widget-header.infoBoxHeading*/ {
+
+	color:#a61a1e;
+
+}
+
+.a-btn{
+
+	border:0px solid #a61a1e;
+
+}
+
+.acc_trigger.active {
+
+    background: url("../images/plus-minus.png") no-repeat scroll 5px -88px #a61a1e !important;
+
+}
+
+.acc_trigger {
+
+    background: url("../images/plus-minus.png") no-repeat scroll 5px 5px #a61a1e !important;
+
+}
+
+.logo_background {
+
+    background: none repeat scroll 0 0 #a61a1e;
+
+    border: 0px solid #a61a1e;
+
+}
+
+/* Breadcrumb */
+
+#navBreadCrumb li {
+
+    background: url("../images/icons/cyan-arrow.png") no-repeat scroll right center transparent;
+
+}
+
+.searchFlFtClr{
+
+    color: #000000;
+
+}

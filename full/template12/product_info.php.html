@@ -1,0 +1,409 @@
+
+
+   <!DOCTYPE HTML>
+
+<html>
+
+    <head>
+    <META http-equiv="Content-type" content="text/html; charset=iso-8859-1">
+   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        $headertags
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        $template18_stylesheet1
+
+        <script type="text/javascript">
+
+            var jqqqnoconf = jQuery.noConflict();
+
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+
+            if (jqqqnoconf.attrFn) {
+
+                jqqqnoconf.attrFn.text = true;
+
+            }
+
+        </script>
+
+        <script type="text/javascript">
+
+            var tba = jQuery.noConflict();
+
+
+
+            tba(document).ready(function () {
+
+                //SKU BOF
+
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');
+
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+
+                //SKU EOF
+
+                var scroll_pos = 0;
+
+
+
+                tba(document).scroll(function () {
+
+                    //alert("hello");
+
+                    scroll_pos = tba(this).scrollTop();
+
+                    if (scroll_pos > 25) {
+
+                        tba("#mj-topbar").css('background-color', '#a60707');
+
+                        tba("#mj-topbar").css('background-image', 'url("") repeat scroll 0 0 transparent');
+
+                        tba("#mj-topbar a").css('color', '#000000');
+
+                        tba("#mj-topbar i").css('color', '#000000');
+
+                        tba("#mj-topbar div").css('color', '#000000');
+
+                        //tba("#mj-topbar li").css('background', 'url("images/topbar-arrow-white.png") no-repeat scroll right center transparent');
+
+                        tba("#mj-topbar li:last-child").css('background', 'none');
+
+                    }
+
+                    else
+
+                    {
+
+                        tba("#mj-topbar").css('background', 'url("") repeat scroll 0 0 transparent');
+
+                        tba("#mj-topbar a").css('color', '#a60707');
+
+                        tba("#mj-topbar i").css('color', '#a60707');
+
+                        tba("#mj-topbar div").css('color', '#a60707');
+
+                        //tba("#mj-topbar li").css('background', 'url("images/icons/<?php echo $_SESSION['themecolor_com']."-arrow.png" ?>") no-repeat scroll right center transparent');
+
+                        tba("#mj-topbar li:last-child").css('background', 'none');
+
+                    }
+
+                });
+
+            });
+
+        </script>
+
+       <!--<link rel="stylesheet" type="text/css" href="$templatedirurlext/lightbox/lightbox.css" />
+
+        <script src="$templatedirurlext/lightbox/prototype.js"></script>
+
+        <script src="$templatedirurlext/lightbox/scriptaculous.js?load=effects"></script>
+
+        <script src="$templatedirurlext/lightbox/builder.js"></script>
+
+        <script src="$templatedirurlext/lightbox/lightbox.js"></script>-->
+
+       <script src="$templatedirurlext/lightbox/js/lightbox.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Vollkorn:400italic|Oswald|Unica+One' rel='stylesheet' type='text/css'>
+       <link href="$templatedirurlext/lightbox/css/lightbox.css" rel="stylesheet" />
+
+            $stylesheet 
+
+
+        $js_code
+
+    </head>
+
+    <body class="$script">
+
+        <div id="mj-container">
+
+            $top_bar
+
+            $header
+
+            $navigation_menu
+
+            <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
+
+                <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+
+                    <div class="moduletable mj-grid96 breadcrumb">	<!-- mj-grid96 starts -->
+
+                        <div class="breadcrumbs mj-grid96 breadcrumb"> 
+
+                            <div id="navBreadCrumb">
+
+                                $breadcrumbs
+
+                                <!--<ul><li><a class="headerNavigation" href="http://localhost/osmart/index.php">Catalog</a></li> <li><a class="headerNavigation" href="http://localhost/osmart/login.php">Login</a></li></ul>-->
+
+                            </div> 
+
+                        </div>
+
+                    </div> <!-- mj-grid96 ends -->
+
+                </div> <!-- mj-subcontainer ends -->
+
+            </div>
+
+
+
+
+
+            <div id="mj-maincontent">
+
+                <div class="mj-subcontainer">
+
+                    <div id="mj-contentarea" class="mj-grid64 mj-lspace">
+
+                        <!--sku start-->
+<div id="bodyContent" class="product_info_page_central">
+
+                        <form method="post" action="?action=add_product" name="cart_quantity">
+                          
+                                                       
+
+<center>
+
+                                                            <div class="six columns alpha product-img">
+
+                                                              
+                                                                    <div class="gallery_bigimg">
+                                                                      <div id="piGal">  <!--<a rel="adjustX:-4, adjustY:-4, softFocus:true" id="zoom1" class="cloud-zoom" href="$urllargeimage" style="position: relative; display: block;">-->
+                                                                          <!--  <img width="30%" alt="" src="$urllargeimage" style="display: block;">-->
+                                           $product_image                            <!-- </a>--></div>
+                                                                        
+                                                                            <script type="text/javascript">
+
+            $(function () {
+
+
+
+
+
+                $('#piGal').photosetGrid({
+
+                    layout: '1',
+
+                    width: '250px',
+
+                    highresLinks: true,
+
+                    rel: 'pigallery',
+
+                    onComplete: function () {
+
+                        $('#piGal').css({'visibility': 'visible'});
+
+
+
+                        $('#piGal a').colorbox({
+
+                            maxHeight: '90%',
+
+                            maxWidth: '90%',
+
+                            rel: 'pigallery'
+
+                        });
+
+
+
+                        $('#piGal img').each(function () {
+
+                            var imgid = $(this).attr('id').substring(9);
+
+
+
+                            if ($('#piGalDiv_' + imgid).length) {
+
+                                $(this).parent().colorbox({inline: true, href: "#piGalDiv_" + imgid});
+
+                            }
+
+                        });
+
+                    }
+
+                });
+
+            });
+
+                                            </script>
+
+                                                                        
+                                                                    </div>
+                                                           
+                                                            </div>
+                                                            
+                                                            
+                                                            
+
+<div class="prod_info_name"><h1 itemprop="name">$productname<br><span class="smallText">[$productmodel]</span></h1></div> </center>  
+
+                                                            <div class="five columns product-info">
+
+
+
+
+                                                                    <div class="prod_info_name_price">
+                                                                        
+                                                                        <div class="product_description" align="left">$product_description</div>
+                                                                        
+
+                                                                        
+                                                                        
+                                                                        <!--<div class="prod_info_price" itemtype="http://data-vocabulary.org/Offer" itemscope="" itemprop="offerDetails"><span itemprop="price">$product_availability_n_price</span></div>-->
+                                                                    </div>
+
+
+                                                                    <div class="clearfix socials_plugins">
+                                                                    <br>
+                                                                    
+                                                                        <div class="google">
+                                                                            <script src="https://apis.google.com/js/plusone.js" type="text/javascript" gapi_processed="true"></script>
+                                                                            <div style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;" id="___plusone_0"><iframe width="100%" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" id="I0_1424243627831" name="I0_1424243627831" src="https://apis.google.com/se/0/_/+1/fastbutton?usegapi=1&count=true&size=medium&origin=http%3A%2F%2Flocalhost&url=http%3A%2F%2Flocalhost%2Fdresscode%2Fproduct_info.php%3Fproducts_id%3D17&gsrc=3p&ic=1&jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.1spIbQynYaw.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCNDPzacieNN-Bs1kWZ7JiVQQNRuDg#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&id=I0_1424243627831&parent=http%3A%2F%2Flocalhost&pfname=&rpctoken=61932732" data-gapiattached="true" title="+1"></iframe></div>
+                                                                        </div>
+                                                                        <div class="facebook">
+                                                                            <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+                                                                            <div data-font="arial" data-show-faces="false" data-width="94" data-layout="button_count" data-send="false" class="fb-like fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&container_width=90&font=arial&href=http%3A%2F%2Flocalhost%2Fdresscode%2Fproduct_info.php%3Fproducts_id%3D17&layout=button_count&locale=en_GB&sdk=joey&send=false&show_faces=false&width=94"><span style="vertical-align: bottom; width: 78px; height: 20px;"><iframe width="94px" height="1000px" frameborder="0" name="f56a44a285c3b6" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" style="border: medium none; visibility: visible; width: 78px; height: 20px;" src="http://www.facebook.com/plugins/like.php?app_id=&channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FDU1Ia251o0y.js%3Fversion%3D41%23cb%3Df32acd9d05632b4%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%252Ff2e99467a8a28d8%26relation%3Dparent.parent&container_width=90&font=arial&href=http%3A%2F%2Flocalhost%2Fdresscode%2Fproduct_info.php%3Fproducts_id%3D17&layout=button_count&locale=en_GB&sdk=joey&send=false&show_faces=false&width=94" class=""></iframe></span></div>
+                                                                        </div>
+                                                                        <div class="twitter">
+                                                                            <iframe frameborder="0" id="twitter-widget-0" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.62da0a34306f5c17db7d290755ed1d7d.en.html#_=1424243627754&count=horizontal&dnt=true&id=twitter-widget-0&lang=en&original_referer=http%3A%2F%2Flocalhost%2Fdresscode%2Fproduct_info.php%3Fproducts_id%3D17&size=m&text=Speed%2C%20Dresscode&url=http%3A%2F%2Flocalhost%2Fdresscode%2Fproduct_info.php%3Fproducts_id%3D17&via=tonytemplates" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 109px; height: 20px;"></iframe><script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+                                                                        </div>
+                                                                    </div>
+
+
+
+
+  <div id="sharelink">$product_share_links</div>
+
+
+
+                                                                    <div class="buttonAction">
+                                                                        
+                                                                             <div class="f_left"><a href="$reviewsurl" class="dresscode_submit">Reviews</a></div>
+                                                                            
+                                                                                   <div class="f_left"><div class="dresscode_button">$product_add_to_wishlist</div>
+                                                                                   
+                                                                        </div>
+                                                                  
+
+
+                                                              
+
+
+
+
+
+                                                            </div>
+                                                            
+                                                            </div>
+
+                                                            <div class="five columns omega">
+                                                                <div class="dresscode_product_custom_block custom_block">
+                                                                    <div class="inside">
+                                                                        <!--rightside html bof-->
+                                                                        <h2>$product_manufacturer</h2>
+                                                                        <p id="productItem12">$productmodel</p>
+                                                                        
+                                                                        
+                                                                        <div>
+                                                                            <table align="right" style="text-align: right;">$product_availability_n_price</table>
+                                                                        </div>
+                                                                        <div class="dresscode_product_custom_block_title" id="productPrice12" align="right">$product_child_price</div>
+                                                                   <br>
+                                                                        <div align="right" style="padding-left:80%; padding-top:3%;">$product_quantity</div>
+                                                                     
+                                                                        <br>
+                                                                         <div class="product_description" align="right">$product_specifications</div>
+                                                                        
+                                                                        
+                                                                        
+                                                                      
+                                                                        <div class="buttonAction">
+                                                                          <div style="display:none;">$product_add_to_cart</div>
+                                                                        <div class="clearfix">
+                                                                            <div class="f_left" style="width:100% !important;"><button name=" Add to Cart " title=" Add to Cart " type="submit" class="dresscode_button" style="width:100% !important">Add to Cart</button> </div> 
+                                                                     
+                                                                        </div>
+                                                                    </div>
+                                                                      
+                                                                       
+                                                                      
+                                                                        <!--rightside html eof-->
+
+
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+
+
+
+
+
+
+
+
+
+                    </form>  
+                   
+</div>
+                    
+
+                    
+
+                    <!--sku end-->
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+            <div id="mj-footer"> <!-- mj-footer starts -->
+
+                <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+
+                    $footer_box_01
+
+                    $footer_box_02
+
+                    $footer_box_03
+
+                    $footer_box_04
+
+                </div>
+
+            </div>
+
+            $footer_copyright
+
+        </div>
+</div>
+    </body>
+
+</html>

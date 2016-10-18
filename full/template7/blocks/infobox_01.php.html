@@ -1,0 +1,182 @@
+<!-- DO NOT REMOVE header, content, and footer comments -->
+
+<!--header_bof-->
+
+
+
+<style type="text/css">
+
+.flex-direction-nav .flex-prev {
+
+    left: 80% !important;
+
+}
+
+.flex-direction-nav a {
+cursor: pointer;
+ display: block;
+ height: 30px;
+margin: 55% 100px 0 !important;
+ opacity: 1 !important;
+position: absolute;
+top: 90% !important;
+text-indent: -9999px;
+ width: 30px !important;
+}
+
+/*.flex-direction-nav a {
+cursor: pointer;
+ display: block;
+ height: 30px;
+margin: -21px 20px 0 !important;
+ opacity: 1 !important;
+position: absolute;
+top: 90% !important;
+text-indent: -9999px;
+ width: 30px !important;
+}
+
+
+.flex-direction-nav a {
+cursor: pointer;
+ display: block;
+ height: 30px;
+margin: -21px 40px 0 !important;
+ opacity: 1 !important;
+position: absolute;
+top: 55% !important;
+text-indent: -9999px;
+ width: 30px !important;
+}*/
+
+.flex-direction-nav .flex-next {
+
+    background-position: 100% 0;
+
+    right: 0px !important;
+
+}
+
+.flex-viewport{min-height:250px !important; max-height:300px;}
+
+.sim-container{min-height: 260px;}
+
+.itemtable {
+
+    text-align: center;
+
+}
+
+</style>
+
+
+
+<script type="text/javascript">
+
+	jQuery(window).load(function(){
+
+	  jQuery('.flexslider2').flexslider({
+
+        animation: "slide",
+
+        animationLoop: false,
+
+        itemWidth: 220,
+
+        itemMargin: 5,
+
+        minItems: 2,
+
+        maxItems: 3,
+
+		controlNav: false,
+
+        start: function(slider){
+
+          jQuery('body').removeClass('loading');
+
+        }
+
+      });
+
+    });
+
+</script> 
+
+<table class="std similar prodpage" width="100%" border="0">
+
+<tbody>
+
+<tr>
+
+<td>
+
+<div class="moduleCls">
+
+    
+
+    <b class="std">$header</b>
+
+    <br>
+
+    <br>
+
+    <div class="slider">
+
+        <div class="flexslider2 carousel" style="max-height: 300px;">
+
+          <ul class="slides">
+
+    
+
+    <!--header_eof-->
+
+    
+
+    
+
+          <!--block_bof-->
+
+          <li><div class="itemtable">
+
+  <div style="padding-top:35px;">
+
+    <a href="$link">$image</a>
+
+  </div>
+
+  <div class="product_name_1"><a href="$link">$name</a></div>
+
+  <div class="propricemain_1"><a href="$link">$price</a></div>
+
+ 
+
+</div></li>
+
+          <!--block_eof-->
+
+
+
+   		 
+
+<!--footer_bof-->
+
+ </ul>
+
+        </div>
+
+    </div>
+
+    <div>$footer</div>
+
+</div>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<!--footer_eof-->

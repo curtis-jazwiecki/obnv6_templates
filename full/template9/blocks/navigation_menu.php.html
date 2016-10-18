@@ -1,0 +1,45 @@
+<div class="tpheader">
+  <div class="mnu_top">
+    <table width="100%" cellspacing="0" cellpadding="0" class="std">
+      <tbody>
+        <tr>
+          <td align="left" class="navleft"><div align="center">
+              <center>
+                <table width="100%" cellspacing="2" cellpadding="2" class="std">
+                  <tbody>
+                    <tr>
+                      <td width="13%"><font class="mnu_top_lnk">Search </font></td>
+                      <td width="87%"><form method="get" id="do_search" action="advanced_search_result.php" name="search">
+                          <input type="text" onfocus="if (this.value == ' Search entire store...')
+                                            this.value = ''" onblur="if (this.value == '')
+                                                        this.value = ' Search entire store...'" value=" Search entire store..." class="searchbox" name="keywords">
+                          <input type="submit" id="search-button" class="sbutton" value="Go">
+                          </input>
+                        </form></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </center>
+            </div></td>
+            
+          <td align="right" class="navright nav"><font class="mnu_top_lnk"> <a class="mnu_top_lnk" href="index.php">Home</a> <span>|</span>
+          <div  id="cate_li" class="mnu_top_lnk"> <a class="mnu_top_lnk" href="javascript:void(0)">Shop</a> <span>|</span>
+              <ul class="dropdown ">
+                $categories_html
+              </ul>
+              <span>|</span> </div>
+            <div  id="store_li" class="mnu_top_lnk" > <a class="mnu_top_lnk" href="javascript:void(0)">Speciality pages</a> <span>|</span>
+              <ul class="dropdown ">
+                $information_pages
+                <li><a href="$urlspecials">Specials</a> </li>
+              </ul>
+              
+              <span>|</span> </div>
+              
+	            <a class="mnu_top_lnk" href="$urlcontactus">Contact&nbsp;Us</a> <span>|</span> <a class="mnu_top_lnk" href="$urlmyaccount">My account</a> <span>|</span> </font></td>
+            
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

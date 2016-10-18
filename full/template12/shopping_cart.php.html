@@ -1,396 +1,189 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
     <head>
+        $headertags
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        $template18_stylesheet1
 
-        <!--$headcontent-->
+        <script type="text/javascript">
 
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            var jqqqnoconf = jQuery.noConflict();
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
 
-        <script>
+            if (jqqqnoconf.attrFn) {
 
-            var jQuery = jQuery.noConflict();
-
-            jQuery(document).ready(function() {
-
-
-
-                /*jQuery('#container').append('<table class="left_column skufix" align="left" border="0">' + jQuery('.left_column').html() + '</table>');*/
-
-
-
-                jQuery('span.remove_cart_product_tpl12').click(function() {
-
-                    var chk = jQuery('input[name="cart_delete[]"][value="' + jQuery(this).attr('pid') + '"]');
-
-                    jQuery(chk).attr('checked', true);
-
-                    jQuery('form[name="cart_quantity"]').submit();
-
-
-
-                });
-
-
-
-                jQuery('input[src$="button_update_cart.gif"]').replaceWith('<a href="index.php"><input type="button" class="skubutton" value="Continue Shopping"></a>');
-
-
-
-                jQuery('img[src$="button_checkout.gif"]').replaceWith('<a href="checkout_shipping.php"><input type="button" class="shopping_cart_button" value="PROCEED TO CHECKOUT"></a>');
-
-                
-
-                cartEmpty = jQuery('.boxText').length;
-
-                if(cartEmpty===0)
-
-                {
-
-                jQuery('<p class="note12">*<b>Note:</b> We are required by law to collect sales tax on orders shipped to specific states. Appropriate charges will be added to your merchandise total and displayed for your review prior to checkout (tax displayed on this page may change if you decide to update your shipping address.)</p>').insertAfter('.infoBoxContents').children('td');
-
-                
-
-                jQuery('<p>Have a gift card certificate or coupon code ?<br>Proceed to checkout to redeem it.</p>').insertBefore('a[href="checkout_shipping.php"]');
-
-                
-
-                jQuery('<p>Shipping and Returns Policy | Privacy Policy</p><p class="note3">Have questions ? We would be glad to help you!<br>Call us at (xxx) xxx-xxxx<br>Or email us at name@site.com </p>').insertAfter('a[href="checkout_shipping.php"]');
+                jqqqnoconf.attrFn.text = true;
 
             }
 
+        </script>
+
+        <script type="text/javascript">
+
+            var tba = jQuery.noConflict();
 
 
-jQuery('.skubutton,.buttonbg,.shopping_cart_button').parent('a').css('text-decoration','none');
+
+            tba(document).ready(function () {
+
+                //SKU BOF
+
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
+
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+
+                //SKU EOF
+
+                var scroll_pos = 0;
 
 
 
-if(jQuery('.shopping_cart_button').length > 1)
+                tba(document).scroll(function () {
 
-{
+                    //alert("hello");
 
-    jQuery('.skubutton[value="Continue Shopping"]:last').offset({top:jQuery('.shopping_cart_button:last').offset().top}); 
+                    scroll_pos = tba(this).scrollTop();
 
-}
+                    if (scroll_pos > 25) {
 
-                
+                        tba("#mj-topbar").css('background-color', '#a60707');
 
-  jQuery('img[src$="button_continue.gif"]').replaceWith('<input type="submit" class="skubutton" value="Continue">');
+                        tba("#mj-topbar").css('background-image', 'url("") repeat scroll 0 0 transparent');
+
+                        tba("#mj-topbar a").css('color', '#000000');
+
+                        tba("#mj-topbar i").css('color', '#000000');
+
+                        tba("#mj-topbar div").css('color', '#000000');
+
+                        //tba("#mj-topbar li").css('background', 'url("images/topbar-arrow-white.png") no-repeat scroll right center transparent');
+
+                        tba("#mj-topbar li:last-child").css('background', 'none');
+
+                    }
+
+                    else
+
+                    {
+
+                        tba("#mj-topbar").css('background', 'url("images/topbar-bg.png") repeat scroll 0 0 transparent');
+
+                        tba("#mj-topbar a").css('color', '#a60707');
+
+                        tba("#mj-topbar i").css('color', '#a60707');
+
+                        tba("#mj-topbar div").css('color', '#a60707');
+
+                        //tba("#mj-topbar li").css('background', 'url("images/icons/<?php echo $_SESSION['themecolor_com']."-arrow.png" ?>") no-repeat scroll right center transparent');
+
+                        tba("#mj-topbar li:last-child").css('background', 'none');
+
+                    }
+
+                });
 
             });
 
         </script>
+        
+        <link href='https://fonts.googleapis.com/css?family=Vollkorn:400italic|Oswald|Unica+One' rel='stylesheet' type='text/css'>
 
             $stylesheet
-        <style type="text/css">
-
-            .left_column + table {
-
-                width: $content_width_css_val;
-
-            }
-
-
-        </style>
 
     </head>
 
     <body class="$script">
 
+        <div id="mj-container">
 
+            $top_bar
 
-        <div class="wrapper">
+            $header
 
-            <table class="quick_link" align="center" height="100px">
+            $navigation_menu
 
-                <tr>
+            <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
 
-                    <td align="center" colspan="5" class="quick_link" >
+                <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
 
+                    <div class="moduletable mj-grid96 breadcrumb">	<!-- mj-grid96 starts -->
 
+                        <div class="breadcrumbs mj-grid96 breadcrumb"> 
 
-                        <table width="100%" class="header_bar">
+                            <div id="navBreadCrumb">
 
+                                $breadcrumbs
 
+                                <!--<ul><li><a class="headerNavigation" href="http://localhost/osmart/index.php">Catalog</a></li> <li><a class="headerNavigation" href="http://localhost/osmart/login.php">Login</a></li></ul>-->
 
-                            <tr>
-
-                                <td class="quick_links" align="center">
-
-                                    <table width="1002px" align="center">
-
-                                        <tr>
-
-                                            <td style="width:60%">
-
-                                                <b>Phone No.: 123456789</b>
-
-                                            </td>
-
-                                            <td>
-
-                                                <b>$myaccountlogoff</b></td>
-
-                                            <td><b>$cartcontents</b></td>
-
-                                            <td><b>$checkout</b></td> 
-
-
-
-                                        </tr>
-
-                                    </table>
-
-
-
-
-
-                                </td>
-
-
-
-
-
-                            </tr></table>
-
-                        <table  align="center" class="header_logobar">
-
-                            <tr>
-
-                                <td style="height: 100%;width: 20%;">$header_logo</td>
-
-                                <td style="text-align:center;" class="search_box_back">$search_box</td>
-
-                                <td style="text-align:center;">
-
-                                    $sale_clearance
-
-
-
-
-
-                                </td>
-
-                                <td style="text-align:center;">
-
-                                    <img src="../images/tpl/free_shiping_tpl12.png"></td>
-
-                                <td style="text-align:center;">$shopping_cart</td>
-
-                            </tr>
-
-
-
-
-
-                        </table>
-
-                        <table width="1002" cellspacing="0" cellpadding="0" align="center" class="navi">
-
-                            <tr>
-
-                                <td align="center">
-
-                                    $navigation_menu_top
-
-
-
-                                </td>
-
-
-
-
-
-                            </tr>
-
-                        </table>
-
-                        <table cellspacing="0" cellpadding="0" align="center" style="margin-top:10px;text-align:left; width:1002px; height:25px;">
-
-                            <tr>
-
-
-
-                                <td>
-
-                                    <center>  $alphabetical_brand_index</center>
-
-                                </td>
-
-
-
-
-
-                            </tr>
-
-                            <tr><td><span id="breadcrumbs_12"> $breadcrumbs</span></td></tr>
-
-                        </table>
-
-
-
-
-
-                    </td></tr></table>
-
-
-
-
-
-            <div id="container">    
-
-$message  
-
-                <div class="cartTop">
-
-                    <h2>You have $cart_items_count item(s) in your shopping cart</h2>
-
-                    <p>Buying from our company is safe. Your order will be processed on our secure servers</p>
-
-                    <div class="buttons">
-
-                        <div> 
-
-                            <a href="index.php" style="text-decoration:none;">
-
-                                <input type="button" class="skubutton" value="Continue Shopping">
-
-                            </a>
-
-                            <span>Not Your Shopping Cart ? Remove Them</span>
+                            </div> 
 
                         </div>
 
-                        <div>
+                    </div> <!-- mj-grid96 ends -->
 
-                            
-
-                            <a href="$urlcheckout"><input type="button" class="shopping_cart_button" value="PROCEED TO CHECKOUT "></a>
-
-                            
-
-                        </div>
-
-                    </div>
-
-
-
-
-
-                </div>
-
-
-
-                $content
-
-                <table class="left_column" style="float:right;">
-
-                    <tr>
-
-                        <td>$infobox_06</td>
-
-                    </tr>
-
-                </table>
+                </div> <!-- mj-subcontainer ends -->
 
             </div>
 
-            
+            $free_shipping_banner
 
 
 
+            <div id="mj-maincontent">
+
+                <div class="mj-subcontainer">
+
+                    <div id="mj-contentarea" class="mj-grid64 mj-lspace">
+
+                        <!--sku start-->
+
+                        $content      
 
 
 
+                        <!--sku end-->
 
-            <table class="footer">
+                    </div>
 
-                <tr>
+                  
 
-                    <td>
+                   
+                </div>
 
-                        <table class="footer_content">
-
-                            <tr>
-
-
-
-                                <td style="height:350px;" valign="top">
-
-                                    $footer_box_01
-
-                                </td>
-
-                                <td style="height:350px;" valign="top">
-
-
-
-                                    $footer_box_02
-
-                                </td>
-
-                                <td style="height:350px;" valign="top">
-
-                                    $footer_box_03
-
-
-
-                                </td>
-
-                                <td style="height:350px;" valign="top">
-
-                                    $footer_box_04
-
-
-
-
-
-
-
-                                </td>
-
-
-
-                            </tr>
-
-
-
-                            <tr>
-
-                                <td valign="middle" height="35" align="center" colspan="5">
-
-                                    <span style="font-size:10px; color:#000">$footer</span>
-
-                                </td>
-
-                            </tr>
-
-                            <tr>
-
-                                <td valign="middle" height="35" align="center" colspan="5">
-
-                                    <span style="font-size:10px; color:#000">$switch_template_link</span>
-
-                                </td>
-
-                            </tr>
-
-                        </table>
-
-                    </td></tr></table>
-
-            </td>
-
-            </tr>
-
-            </table>
+            </div>
 
         </div>
 
 
+        
+
+        <div id="mj-footer"> <!-- mj-footer starts -->
+
+            <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+
+                $footer_box_01
+
+                $footer_box_02
+
+                $footer_box_03
+
+                $footer_box_04
+
+            </div>
+
+        </div>
+
+        $footer_copyright
 
     </body>
 

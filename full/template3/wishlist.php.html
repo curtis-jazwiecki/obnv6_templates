@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+$template18_stylesheet1
+<script type="text/javascript">
+	var jqqqnoconf = jQuery.noConflict();
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+	if (jqqqnoconf.attrFn) {
+		jqqqnoconf.attrFn.text = true;
+	}
+</script>
+$stylesheet
+
+<!--add css stylesheet-->
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template3/ext/css/component.css">
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template3/ext/css/default.css">
+<link rel="stylesheet" href="includes/sts_templates/full/template3/ext/css/New-style.css">
+<!--end of stylesheet-->
+
+<!--add new javascript -->
+<script src="includes/sts_templates/full/template3/ext/jquery/jquery-2.1.1.js"></script>
+<script src="includes/sts_templates/full/template3/ext/jquery/velocity.min.js"></script>
+<script src="includes/sts_templates/full/template3/ext/jquery/main.js"></script>
+<script src="includes/sts_templates/full/template3/ext/jquery/modernizr.js"></script><!-- Modernizr -->
+<script src="includes/sts_templates/full/template3/ext/jquery/slide-menu.js"></script>
+<script src="includes/sts_templates/full/template3/ext/jquery/menu.custom.js"></script>
+<!--end of javascript-->
+</head>
+
+<body class="$script">
+<div id="mj-container"> $top_bar
+  
+  $header
+  
+  $navigation_menu
+  <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
+    
+    <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+      
+      <div class="moduletable mj-grid96 breadcrumb"> <!-- mj-grid96 starts -->
+        
+        <div class="breadcrumbs mj-grid96 breadcrumb">
+          <div id="navBreadCrumb"> $breadcrumbs </div>
+        </div>
+      </div>
+      <!-- mj-grid96 ends --> 
+      
+    </div>
+    <!-- mj-subcontainer ends --> 
+    
+  </div>
+  $free_shipping_banner
+  <div id="mj-maincontent">
+    <div class="mj-subcontainer">
+      <div id="mj-contentarea" class="mj-grid64 mj-lspace"> 
+        
+        <!-- start Default Content //-->
+        <form name="wishlist_form" action="$action_url" method="post">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+              <tr>
+                <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                      <tr>
+                        <td class="pageHeading" colspan="3">{%HEADING_TITLE%}</td>
+                        <td class="pageHeading" align="right"></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <?php if(sizeof($msgStack)>0){?>
+                 <tr>
+                    <td>$msgStack</td>
+                </tr>
+                <tr>
+                    <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                </tr> 
+              <?php }
+                if($wishlist_data_present==1){ 
+              ?>
+              <tr>
+                <td><table class="productListing" width="100%" cellspacing="0" cellpadding="3" border="0">
+                    <tbody>
+                      <tr>
+                        <td class="productListing-heading">{%BOX_TEXT_IMAGE%}</td>
+                        <td class="productListing-heading">{%BOX_TEXT_PRODUCT%}</td>
+                        <td class="productListing-heading">{%BOX_TEXT_PRICE%}</td>
+                        <td class="productListing-heading" align="center">{%BOX_TEXT_SELECT%}</td>
+                      </tr>
+                      
+                      <!-- loop each wishlist product starts -->
+                      <?php foreach($wishlist_products as $products) {?>
+                        <tr class="<?php echo $products['class'] ?>">
+                           <?php if(isset($products['href'])){ ?>
+                                <td class="productListing-data wishlist-Data" valign="top" align="left"><a href="<?php echo $products['href']; ?>"><?php echo $products['image']; ?></a></td>
+                           <?php } else { ?>
+                               <td class="productListing-data wishlist-Data" valign="top" align="left"><?php echo  $products['image'];  ?></td>
+                           <?php } ?>
+                           <?php if($products['status']==0){ ?>
+                            <td class="productListing-data wishlist-Data" valign="top" align="left"><b> <a href="<?php echo $products['href'] ?>"><?php echo $products['name'] ?></a> </b>
+                          <?php } else {?>
+                            <td class="productListing-data wishlist-Data" valign="top" align="left"><b> <?php echo $products['name'] ?></b>
+                          <?php } ?>
+                          <input name="prod_link[]" value="<?php echo $products['href']; ?>" type="hidden">
+                          <input name="prod_name[]" value="<?php echo $products['name']; ?>" type="hidden">
+                          <?php foreach($products['prod_attributes'] as $option){ ?>
+                          <input type="hidden" name="id[<?php echo $products['wishlist_id']; ?>][<?php echo $option['option'] ?>]" value="<?php echo $option['value']; ?>"><br><small><i> <?php echo $option['option_name']; ?>: <?php echo $option['option_value']; ?></i></small>
+                          <?php } ?>
+                          <input name="prod_att[]" value="<?php echo $product['att_name'];?>" type="hidden">
+                          <?php if($products['in_cart']){ ?>
+                          <br>
+                          <font color="#FF0000"><b>{%TEXT_ITEM_IN_CART%}</b></font>
+                          <?php } ?>
+                          <?php if($products['status']==1){ //one means product status in db is zero ?>
+                          <br /><font color="#FF0000"><b> {%TEXT_ITEM_NOT_AVAILABLE%} </b></font></td>
+                          <?php } ?>
+                          <td class="productListing-data wishlist-Data" valign="top"><?php echo $products['products_price']; ?></td>
+                          <td class="productListing-data wishlist-Data" valign="top" align="center"><input name="add_wishprod[]" value="<?php echo $products['wishlist_id'] ?>" type="checkbox"></td>    
+                        </tr>
+                      <?php } ?>
+                      <!-- loop each wishlist product ends -->
+                      
+                    </tbody>
+                  </table></td>
+              </tr>
+              <tr>
+                <td align="right"><br>
+                  <input src="includes/sts_templates/full/template3/images/buttons/button_delete.gif" alt="Delete From Wishlist" title=" Delete From Wishlist " name="delete_prod" value="delete_prod" type="image" border="0">
+                  <input src="includes/sts_templates/full/template3/images/buttons/button_in_cart.gif" alt="Add to Cart" title=" Add to Cart " name="add_prod" value="add_prod" type="image" border="0"></td>
+              </tr>
+            </tbody>
+          </table>
+          <?php if($session_customer==0){ ?>
+          <table border="0" width="100%" cellspacing="0" cellpadding="2">
+          <tbody><tr>
+            <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+          </tr>
+    	  <tr>
+    		<td class="main">{%WISHLIST_EMAIL_TEXT_GUEST%}</td>
+    	  </tr>
+          <tr>
+            <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+          </tr>
+          <tr>
+        <td align="center">
+			<table border="0" width="400px" cellspacing="0" cellpadding="2" class="wishlist_form">
+			  <tr>
+				<td class="main" colspan="2"><table cellpadding="2" cellspacing="0">
+				  <tr>
+					<td colspan="2">$guest_errors</td>
+				  </tr>
+                  <tr>
+					<td class="main">{%TEXT_YOUR_NAME%} </td>
+					<td class="main"><input type="text" name="your_name" value="$your_name"></td>
+			  	  </tr>
+			  	  <tr>
+					<td class="main">{%TEXT_YOUR_EMAIL%} </td>
+					<td class="main"><input type="text" name="your_email" value="$your_email"></td>
+			  	  </tr>
+				</tbody></table></td>
+			  </tr>
+              <tr>
+		        <td colspan="2"><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+		      </tr>
+		      <tr>
+		        <td colspan="2"><img src="images/pixel_black.gif" border="0" alt="" width="100%" height="1"></td>
+		      </tr>
+		      <tr>
+		        <td colspan="2"><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+		      </tr>
+
+          <?php }else{?>
+                <table border="0" width="100%" cellspacing="0" cellpadding="2">
+                    <tr>
+                        <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                    </tr>
+                    <tr>
+                        <td class="main">{%WISHLIST_EMAIL_TEXT%}</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table border="0" width="400px" cellspacing="0" cellpadding="2" class="wishlist_form"> 
+          <?php } ?>
+                                <tr>
+                    				<td colspan="2">$email_errors</td>
+                    			</tr>
+           
+                    <?php
+                    
+                    $email_counter = 0;
+                    while($email_counter < 6) {
+                    ?>
+                        <tr>
+                            <td class="main">{%TEXT_NAME%}&nbsp;&nbsp;<input type="text" name="friend[]" value="<?php echo $friend[$email_counter] ?>"></td>
+                            <td class="main">{%TEXT_EMAIL%}&nbsp;&nbsp;<input type="text" name="email[]" value="<?php echo $email[$email_counter] ?>"></td>
+                        </tr>
+                    <?php
+                    $email_counter++;
+                    }
+                    ?>
+                    <tr>
+				<td colspan="2"><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+			  </tr>
+			  <tr>
+				<td colspan="2">$message_error</td>
+			  </tr>
+			  <tr>
+				<td colspan="2" class="main">{%TEXT_MESSAGE%}  <textarea name="message" wrap="soft" cols="45" rows="5"></textarea></td>
+			  </tr>
+			  <tr>
+				<td colspan="2" align="right"><input type="image" src="includes/sts_templates/full/template3/images/buttons/button_continue.gif" border="0" alt="Continue" title=" Continue " name="email_prod" value="email_prod"></td>
+
+			  </tr>
+			</table>
+		</td>
+	  </tr>
+	</table>
+	</form>
+    <?php } else { ?>
+        <tr>
+            <td>
+                <table border="0" width="100%" cellspacing="0" cellpadding="2">
+                    <tr>
+                        <td><table border="0" width="100%" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="main">{%BOX_TEXT_NO_ITEMS%}</td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </table>
+        </form> 
+    <?php } ?>
+                                
+          
+        <!-- end Default Content //--> 
+        
+      </div>
+      <div id="mj-left" class="mj-grid16 mj-lspace" style="display:none" >
+        <div class="ui-widget infoBoxContainer mj-categoriessidebox"> $categorybox </div>
+        <div class="ui-widget infoBoxContainer mj-whatsnew"> $whatsnewbox </div>
+        <div class="ui-widget infoBoxContainer mj-information"> $informationbox </div>
+      </div>
+      <div id="mj-right" class="mj-grid16 mj-lspace mj-rspace" style="display:none">
+        <div class="ui-widget infoBoxContainer mj-bestsellersbox"> $bestsellersbox </div>
+        <div class="ui-widget infoBoxContainer mj-reviewbox"> $reviewsbox </div>
+        <div class="ui-widget infoBoxContainer mj-currenciesbox"> $currenciesbox </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="mj-footertop">
+ <div class="footer-inner-grid">
+  <div id="mj-container" class="mj-subcontainer">
+  
+  <!--$newsletter -->
+  
+<div id="SideNewsletterBox" class="newsletter-subscription">
+  $newsletter
+</div>
+  
+  </div>
+  </div>
+</div>
+<div id="mj-footer" class="inner"> <!-- mj-footer starts -->
+  <div class="mj-subcontainer" id="mj-container"> <!-- mj-subcontainer starts --> 
+    $footer_box_02
+    $footer_box_03
+    $footer_box_04 
+  </div>
+  
+</div>
+<div id="footer-links">
+
+<div id="mj-container">
+$footer_copyright 
+</div>
+</div>
+<!--ad javascript--> 
+<script src="includes/sts_templates/full/template3/ext/jquery/accordionMenu.js"></script> 
+<!---add javascrtip---->
+</body>
+</html>

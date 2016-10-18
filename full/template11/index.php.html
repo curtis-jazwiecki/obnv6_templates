@@ -1,161 +1,253 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 
 <html>
 
-  <head>
+    <head>
+    $headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        $template18_stylesheet1
 
-    <script>
+        <script type="text/javascript">
 
-      var jQuery = jQuery.noConflict();
+            var jqqqnoconf = jQuery.noConflict();
 
-    </script>
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
 
-   $stylesheet
+            if (jqqqnoconf.attrFn) {
 
-    $headcontent
+                jqqqnoconf.attrFn.text = true;
 
-  </head>
+            }
 
-  <body>
+        </script>
 
-    <div class="wrapper">
+        <script type="text/javascript">
 
-
-
-
+            var tba = jQuery.noConflict();
 
 
 
-      <table width="1000" height="150px" border="0" cellspacing="0"  cellpadding="0" align="center"   class="header">
+            tba(document).ready(function () {
 
-        <tr>
+                //SKU BOF
 
-            <td align="left" valign="middle" width="320px" height="150px" style="test-align:left;">$header_logo</td>
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
 
-            <td align="right" valign="middle" width="400px" height="100px">$search_box</td>
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
 
-            <td align="right" valign="top" width="280px" height="150px">$quick_links</td>
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
 
-        </tr>
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
 
-      </table>
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
 
-      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="navigation">
+                //SKU EOF
 
-        <tr>
+                var scroll_pos = 0;
 
-            <td align="left" valign="top" style="padding-left:10.0%;">$navigation_menu_top</td>
 
-        </tr>
 
-      </table>
+                tba(document).scroll(function () {
 
-      <table width="1050px" border="0" cellspacing="0" cellpadding="0" align="center" valign="top" class="container">
+                    //alert("hello");
 
-        <tr>
+                    scroll_pos = tba(this).scrollTop();
 
-          <td style="padding:5px 0 15px 0;">
+                    if (scroll_pos > 25) {
 
-            <span style="font-size:10px;color:#ffffff;">$breadcrumbs</span>
+                        tba("#mj-topbar").css('background-color', '#008080');
 
-          </td>
+                        tba("#mj-topbar").css('background-image', 'url("images/topbar-bg.png") repeat scroll 0 0 transparent');
 
-        </tr>
+                        tba("#mj-topbar a").css('color', '#FFFFFF');
 
-        <tr>
+                        tba("#mj-topbar i").css('color', '#FFFFFF');
 
-          <td>
+                        tba("#mj-topbar div").css('color', '#FFFFFF');
 
-            <div>
+                        //tba("#mj-topbar li").css('background', 'url("images/topbar-arrow-white.png") no-repeat scroll right center transparent');
 
-              <div style="margin-right:20px;float:left;width:150px;display:$left_column_display">
+                        tba("#mj-topbar li:last-child").css('background', 'none');
 
-                <table width="150" border="0" cellspacing="0" cellpadding="0" >
+                    }
 
-                  <tr>
+                    else
 
-                    <td align="left"><br /><div class="link4">$searchbox</div></td>
+                    {
 
-                  </tr>
+                        tba("#mj-topbar").css('background', 'url("images/topbar-bg.png") repeat scroll 0 0 transparent');
 
-                  <tr>
+                        tba("#mj-topbar a").css('color', '#008080');
 
-                    <td align="left"><div class="link4">$search_filterbox</div></td>
+                        tba("#mj-topbar i").css('color', '#008080');
 
-                  </tr>
+                        tba("#mj-topbar div").css('color', '#008080');
 
-                  <tr>
+                        //tba("#mj-topbar li").css('background', 'url("images/icons/<?php echo $_SESSION['themecolor_com']."-arrow.png" ?>") no-repeat scroll right center transparent');
 
-                    <td align="left"><div class="link4">$categorybox</div></td>
+                        tba("#mj-topbar li:last-child").css('background', 'none');
 
-                  </tr>
+                    }
 
-                  <tr>
+                });
 
-                    <td align="left"><div class="link4">$informationbox</div></td>
+            });
 
-                  </tr>
+        </script>
 
-                  <tr>
+            $stylesheet
 
-                    <td align="left"><div class="link4">$specialbox</div></td>
+    </head>
 
-                  </tr>
+    <body class="$script">
 
-                  <tr>
+        <div id="mj-container_index">
 
-                    <td>$cartbox</td>
+            $top_bar
 
-                  </tr>
+           
+   <?php
+if($_SERVER['PHP_SELF'] == "/index.php")
+{
+?>
+ $header
+ 
+ 
+ <?php 
+}
+?>
+ 
 
-                </table>
+            $navigation_menu
 
-              </div>
+            <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
 
-              <div style="float:left;width:880px;">$content</div>
+                <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+
+                    <div class="moduletable mj-grid96 breadcrumb">	<!-- mj-grid96 starts -->
+
+                        <div class="breadcrumbs mj-grid96 breadcrumb"> 
+
+                            <div id="navBreadCrumb">
+
+                                $breadcrumbs
+
+                                <!--<ul><li><a class="headerNavigation" href="http://localhost/osmart/index.php">Catalog</a></li> <li><a class="headerNavigation" href="http://localhost/osmart/login.php">Login</a></li></ul>-->
+
+                            </div> 
+
+                        </div>
+
+                    </div> <!-- mj-grid96 ends -->
+
+                </div> <!-- mj-subcontainer ends -->
 
             </div>
 
-          </td>
+            $free_shipping_banner
 
-        </tr>
 
-      </table>
 
-<table width="100%" height="330px" border="0" cellspacing="0" cellpadding="0"   align="center" class="footer" >
+            <div id="mj-maincontent">
 
-         <tr>
+                <div class="mj-subcontainer">
 
-           <td colspan="7" class="footer_row"></td>
+                    <div id="mj-contentarea" class="mj-grid64 mj-lspace">
 
-          </tr>
+                        <!--sku start-->
+                        
+                        
 
-        <tr>
+                        $content      
 
-            <td width="28%" align="right" valign="top">$footer_box_01</td>
 
-            <td width="12%" align="center" valign="top">$footer_box_02</td>
 
-            <td width="23%" align="center" valign="top">$footer_box_03</td>
+                        <!--sku end-->
 
-            <td width="10%" align="center" valign="top">$footer_box_04</td>
+                    </div>
 
-            <td width="30%" align="center" valign="top">$footer_box_05</td>
+                    
+                    
+                    
 
-        </tr>
+                    
 
-        <tr>
+                </div>
 
-            <td align="center" valign="middle" colspan="5" height="50px">$footer</td>
+            </div>
 
-        </tr>
+        </div>
 
-      </table>
-
+   
+                  <?php
+if($_SERVER['PHP_SELF'] == "/index.php")
+{
+?>    
+                    <div class="shopping_banner">
+        
+        <div class="banner_text">
+        
+       <p>Beat The Rush By Choosing Our Online Store!</p>
+       </div>
+    <div class="shop_now">
+    <a href="/shop.php">Shop Now!</a>
     </div>
+    
+    </div>
+    
+         
+                    
+  
+        <div class="footer_top">
 
-  </body>
+                <table width="100%">
+<tr>
+<td><a href="tel:800-699-0820"><img src="/images/phone_icon.png" class="footer_top_icons"></a>
+</td>
+<td><a href="https://www.google.com/maps/"><img src="/images/map_location.png" class="footer_top_icons"></a>
+</td>
+<td><a href="newsletters.php" class="mj-newstext"><img src="/images/Mail.png" class="footer_top_icons"></a>
+</td>
+<td><a href="https://halbrown.obndemo.com/sitemap-i-7.html"><img src="/images/events_icon.png" class="footer_top_icons"></a>
+</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+<td align="center" width="25%"><font color="#6F6C6C" size="-1" style="font-family:'PT Sans',sans-serif;">Call Us</font></td>
+<td align="center" width="25%"><font color="#6F6C6C" size="-1" style="font-family:'PT Sans',sans-serif;">Directions</font></td>
+<td align="center" width="25%"><font color="#6F6C6C" size="-1" style="font-family:'PT Sans',sans-serif;">Join Our <br>Newsletter</font></td>
+<td align="center" width="25%"><font color="#6F6C6C" size="-1" style="font-family:'PT Sans',sans-serif;">Site Map</font></td>
+</tr>
+</table>
+
+
+        </div>
+
+   <?php 
+}
+?>
+      
+
+        <div id="mj-footer"> <!-- mj-footer starts -->
+
+            <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+
+                $footer_box_01
+
+                $footer_box_02
+
+                $footer_box_03
+
+                $footer_box_04
+
+            </div>
+
+        </div>
+
+        $footer_copyright
+
+    </body>
 
 </html>

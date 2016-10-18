@@ -1,0 +1,1224 @@
+<script type="text/javascript">
+
+
+
+    var tba = jQuery.noConflict();
+
+
+
+
+
+
+
+    tba(document).ready(function () {
+
+
+
+        var scroll_pos = 0;
+
+
+
+
+
+
+
+        tba(document).scroll(function () {
+
+
+
+            //alert("hello");
+
+
+
+            scroll_pos = tba(this).scrollTop();
+
+
+
+            if (scroll_pos > 25) {
+
+
+
+               tba("#mj-righttop").css('background-color', '#000');
+
+
+
+                tba("#mj-righttop").css('position', 'fixed');
+
+
+
+				tba("#mj-righttop").css('top', '-1px');
+
+
+
+				 tba("#mj-righttop").css('z-index', '999999');
+
+
+
+//                tba("#mj-righttop i").css('color', '#FFFFFF');
+
+
+
+//                tba("#mj-righttop div").css('color', '#FFFFFF');
+
+
+
+                //tba("#mj-topbar li").css('background', 'url("images/topbar-arrow-white.png") no-repeat scroll right center transparent');
+
+
+
+                tba("#mj-righttop li:last-child").css('background', 'none');
+
+
+
+				tba(".search_box").css('position', 'fixed');
+
+
+
+				tba(".search_box").css('top', '7px');
+
+
+
+				 tba(".search_box").css('z-index', '2147483647');
+
+
+
+				 tba(".search_box").css('margin-left', '300px');
+
+
+
+				  tba(".search_box").css('width', '380px');
+
+
+
+				  //tba(".search_box").css('background', '#000');
+
+
+
+				  
+
+
+
+				tba(".cart_button_top").css('position', 'fixed');
+
+
+
+				tba(".cart_button_top").css('top', '9px');
+
+
+
+				 tba(".cart_button_top").css('z-index', '2147483647');
+
+
+
+				  tba(".cart_button_top").css('margin-left', '1200px');
+
+
+
+				   tba(".cart_button_top").css('background', '#000');
+
+
+
+				    tba(".pull-right.non-active-top > a").css('display', 'none');
+
+
+
+				
+
+
+
+				 
+
+
+
+            }
+
+
+
+            else
+
+
+
+            {
+
+
+
+                tba("#mj-righttop").css('background', '#000000');
+
+
+
+				tba("#mj-righttop").css('top', '0px');
+
+
+
+				 tba("#mj-righttop").css('position', 'relative');
+
+
+
+                //tba("#mj-righttop a").css('color', '#008080');
+
+
+
+//                tba("#mj-righttop i").css('color', '#008080');
+
+
+
+//                tba("#mj-righttop div").css('color', '#008080');
+
+
+
+                //tba("#mj-topbar li").css('background', 'url("images/icons/<?php echo $_SESSION['themecolor_com']."-arrow.png" ?>") no-repeat scroll right center transparent');
+
+
+
+                tba("#mj-righttop li:last-child").css('background', 'none');
+
+
+
+				tba(".search_box").css('position', 'relative');
+
+
+
+				 tba(".search_box").css('margin-left', '0px');
+
+
+
+				 tba(".search_box").css('width', '400px');
+
+
+
+				tba(".search_box").css('top', '0px');
+
+
+
+				tba(".cart_button_top").css('position', 'relative');
+
+
+
+				 tba(".cart_button_top").css('margin-left', '0px');
+
+
+
+				 tba(".cart_button_top").css('top', '0px');
+
+
+
+				 tba(".pull-right.non-active-top > a").css('display', 'block');
+
+
+
+            }
+
+
+
+        });
+
+
+
+    });
+
+
+
+</script>
+
+
+
+<?php
+
+
+
+	global $categories_array;
+
+
+
+	$categories_array = array();
+
+
+
+	
+
+
+
+	global $languages_id;
+
+
+
+    
+
+
+
+    $categories_query = tep_db_query("select cd.categories_name, c.categories_image, c.categories_id from " . TABLE_CATEGORIES . " c, " . TABLE_CATEGORIES_DESCRIPTION . " cd where c.categories_status = '1' and c.parent_id = '0' and cd.categories_id = c.categories_id and  cd.language_id = '" . (int)$languages_id . "' order by c.sort_order limit 0,6");
+
+
+
+    
+
+
+
+    while ($categories = tep_db_fetch_array($categories_query)) {
+
+
+
+        $cPath_new = tep_get_path($categories['categories_id']);
+
+
+
+		
+
+
+
+		$subcategory_array = array();
+
+
+
+        
+
+
+
+		$sub_categories_query = tep_db_query("select cd.categories_name, c.categories_image, c.categories_id from " . TABLE_CATEGORIES . " c, " . TABLE_CATEGORIES_DESCRIPTION . " cd where c.categories_status = '1' and c.parent_id = '".$categories['categories_id']."' and cd.categories_id = c.categories_id and  cd.language_id = '" . (int)$languages_id . "' order by c.sort_order limit 6");
+
+
+
+    	
+
+
+
+		$subcategories_ids = array();
+
+
+
+		$subcategories_ids = array($categories['categories_id']);
+
+
+
+		while($sub_categories = tep_db_fetch_array($sub_categories_query) ){
+
+
+
+			$cPath_new_2 = tep_get_path($sub_categories['categories_id']);
+
+
+
+			$subcategories_ids[] = $sub_categories['categories_id'];
+
+
+
+			$subcategory_array[] = array(
+
+
+
+            	"category_link" => tep_href_link(FILENAME_DEFAULT, $cPath_new_2),
+
+
+
+            	"category_name" => $sub_categories['categories_name']
+
+
+
+        	);	
+
+
+
+		}
+
+
+
+		
+
+
+
+		
+
+
+
+		$categories_products_array = array();
+
+
+
+		
+
+
+
+		$product_listing_sql = tep_db_query("select p.products_largeimage,p.products_image,pd.products_name,p.products_id, p.products_price, p.products_tax_class_id, IF(s.status, s.specials_new_products_price, NULL) as specials_new_products_price, IF(s.status, s.specials_new_products_price, p.products_price) as final_price from " . TABLE_PRODUCTS . " p left join " . TABLE_SPECIALS_RETAIL_PRICES . " s on p.products_id = s.products_id, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_PRODUCTS_TO_CATEGORIES . " p2c where p.products_status = '1' and p.products_id = p2c.products_id and pd.products_id = p2c.products_id and pd.language_id = '" . (int)$languages_id . "' and p2c.categories_id IN (" .implode(",",$subcategories_ids)  . ") " . (STOCK_HIDE_OUT_OF_STOCK_PRODUCTS=='true' ? " and p.products_quantity>='" . (int)STOCK_MINIMUM_VALUE . "' " : '') . " and p.is_store_item='0' and p.parent_products_model is NULL limit 4 ");
+
+
+
+		
+
+
+
+		 while ($products = tep_db_fetch_array($product_listing_sql)) {
+
+
+
+        
+
+
+
+            $products['specials_new_products_price'] = tep_get_products_special_price($products['products_id']);
+
+
+
+    
+
+
+
+            $special_flag = 0;
+
+
+
+			if ($products['specials_new_products_price']) {
+
+
+
+				$special_flag = 1;
+
+
+
+                 $products_price =  '<s>' . $currencies->display_price($products['products_price'], tep_get_tax_rate($products['products_tax_class_id'])) . '</s><br>';
+
+
+
+                 $products_price .= $currencies->display_price($products['specials_new_products_price'], tep_get_tax_rate($products['products_tax_class_id']));
+
+
+
+            } else {
+
+
+
+                 $products_price =  $currencies->display_price($products['products_price'], tep_get_tax_rate($products['products_tax_class_id']));
+
+
+
+            }
+
+
+
+       
+
+
+
+          /* if (tep_not_null($products['products_image'])) {
+
+
+
+            	
+
+
+
+                $feed_status = is_xml_feed_product($products['products_id']);
+
+
+
+                
+
+
+
+                //if ($feed_status) 
+
+
+
+                  // $image = tep_small_image($products['products_image'], $products['products_name'], 360, 380,'class="img-responsive img-portfolio img-hover"');
+
+
+
+                //else 
+
+
+
+                   $image = tep_image(DIR_WS_IMAGES . $products['products_image'], $products['products_name'], 360, 380,'class="img-responsive img-portfolio img-hover"');
+
+
+
+           
+
+
+
+           }*/
+
+
+
+		   
+
+
+
+		    if (tep_not_null($products['products_image'])) {
+
+
+
+					
+
+
+
+				
+
+
+
+				$feed_status = is_xml_feed_product($products['products_id']);
+
+
+
+				
+
+
+
+				if ($feed_status && stripos($products['products_largeimage'], 'http://')!==false){
+
+
+
+				
+
+
+
+					if (@getimagesize($products['products_largeimage'])){
+
+
+
+					
+
+
+
+					$image = '<img src="' . $products['products_largeimage'] . '" title="' . $products['products_name'] . '" class="img-responsive img-portfolio img-hover" style="width:350px;height:auto;">';
+
+
+
+					
+
+
+
+					} else {
+
+
+
+					
+
+
+
+					$image = '<img "' . DIR_WS_IMAGES . $products['products_largeimage'] . '" title="' . $products['products_name'] . '" class="img-responsive img-portfolio img-hover" style="width:350px;height:auto;">';
+
+					
+
+					
+
+
+
+					
+
+
+
+					}
+
+
+
+				
+
+
+
+				} else {
+
+
+
+				$image = '<img src="' . DIR_WS_IMAGES . $products['products_largeimage'] . '" title="' . $featured['products_name'] . '" class="img-responsive img-portfolio img-hover" style="width:350px;height:200px;">';
+
+
+
+				
+
+
+
+				}
+
+
+
+		   
+
+
+
+		   
+
+
+
+	   		}else{
+
+
+
+            	$image = '<img src="images/noimage.gif" title="' . $products['products_name'] . '" width="350" height="200" class="img-responsive img-portfolio img-hover">';
+
+
+
+       		}
+
+
+
+           
+
+
+
+            $categories_products_array[] = array(
+
+
+
+                "featured_image"  => $image,
+
+
+
+                "featured_link"   => tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $products['products_id']),
+
+
+
+                "featured_name"   => $products['products_name'],
+
+
+
+                "featured_price"  => $products_price,
+
+
+
+				"special_flag"	  => $special_flag
+
+
+
+            );
+
+
+
+        }
+
+
+
+		
+
+
+
+		$categories_array[] = array(
+
+
+
+            "category_link" 	  => tep_href_link(FILENAME_DEFAULT, 'cPath='.$categories['categories_id']),
+
+
+
+            "category_name" 	  => $categories['categories_name'],
+
+
+
+			"subcategories" 	  => $subcategory_array,
+
+
+
+			"categories_products" => $categories_products_array
+
+
+
+        );
+
+
+
+    }
+
+
+
+	
+
+
+
+	//echo '<pre>';
+
+
+
+	//print_r($categories_array);
+
+
+
+	//exit;
+
+
+
+	
+
+
+
+?>
+
+
+
+
+
+
+
+<div id="mj-righttop" class="top_menuBar" style="z-index: 10000!important;"> <!-- mj-righttop starts -->
+
+
+
+  
+
+
+
+  <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+
+
+
+    
+
+
+
+    <div id="mj-menubar"> <!-- mj-menubar starts -->
+
+
+
+      
+
+
+
+      <div class="jsn-mainnav navbar">
+
+
+
+        <div class="jsn-mainnav-inner navbar-inner">
+
+
+
+          <div class="container_default clearfix_default">
+
+
+
+            <div class="mainnav-toggle_new clearfix_default">
+
+
+
+              <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button" id="btn"><i class="fa fa-bars"></i> &nbsp;&nbsp; Menu</button>
+
+
+
+            </div>
+
+
+
+            <div class="nav-collapse collapse clearfix" id="jsn-pos-mainnav">
+
+
+
+              <ul id="SiteNav" class="nav site-nav list--inline">
+
+
+
+              <li  class="active"><a href="index.php">HOME</a></li>
+
+
+
+                <?php
+
+
+
+                $i=0;
+
+
+
+				foreach($categories_array as $header_category){ if($i==6) break; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                	<li>
+
+
+
+                    	<a href="javascript:void(0);" onclick="showHideMenu('D<?php echo $i; ?>')" id="<?php echo $header_category['category_link']; ?>" class="main_link_D<?php echo $i; ?>">
+
+
+
+                        	<?php echo strtoupper($header_category['category_name']); ?> <i class="fa fa-angle-down angle_down"></i>
+
+
+
+                             
+
+
+
+                        </a> 
+
+
+
+                        <span id="toggle_icon_D<?php echo $i; ?>" class="setinitial" onclick="showHideMenuMobile('D<?php echo $i; ?>')"><i class="fa fa-plus plus_icon"></i></span>
+
+
+
+                        
+
+
+
+                       <!-- menu html container #start -->
+
+
+
+                       
+
+
+
+                        <div role="navigation" class="site-nav__dropdown meganav meganav--active meganav--no-animation headermenujs" id="D<?php echo $i; ?>">
+
+
+
+                        <ul class="meganav__nav page-width">
+
+
+
+                            <div class="grid grid--no-gutters meganav__scroller--has-list main_nav">
+
+
+
+                            
+
+
+
+                            
+
+
+
+                            <div class="grid__item meganav__list one-fifth meganav__list--has-title" style="background-color:#ffffff;">
+
+
+
+                                <h5 class="h1 meganav__title" ><?php echo strtoupper($header_category['category_name']); ?></h5>
+
+
+
+                                <?php
+
+
+
+                                foreach($header_category['subcategories'] as $subcategories){ ?>
+
+
+
+                                	<li> <a class="meganav__link" href="<?php echo $subcategories['category_link']; ?>"><?php echo $subcategories['category_name']; ?></a> </li>
+
+
+
+                                <?php } ?>
+
+
+
+                              </div>
+
+
+
+                              
+
+
+
+                              
+
+
+
+                            <?php
+
+
+
+                            foreach($header_category['categories_products'] as $categories_products){?>
+
+
+
+                            <!--one product box-->
+
+
+
+                            	<div class="grid__item one-fifth meganav__product"> 
+
+
+
+                                <a class="product-card" href="<?php echo $categories_products['featured_link']; ?>">
+
+
+
+                              <div class="product-card__image-wrapper"> <?php echo $categories_products['featured_image']; ?> </div>
+
+
+
+                              <div class="product-card__info">
+
+
+
+                              <div class="product-card__name"> <?php echo $categories_products['featured_name']; ?></div>
+
+
+
+                              <div class="product-card__price"> <?php echo $categories_products['featured_price']; ?> </div>
+
+
+
+                            </div>
+
+
+
+                              <?php if($categories_products['special_flag']==1){ ?>
+
+
+
+                              <div aria-hidden="true" class="product-tag product-tag--absolute"> Sale </div>
+
+
+
+                              <?php } ?>
+
+
+
+                              <div class="Quik_view"> <span class="Quik_view_btn ">View</span> </div>
+
+
+
+                              </a> 
+
+
+
+                              </div>
+
+
+
+                            <!--End one product box--> 
+
+
+
+                            <?php } ?>
+
+
+
+                          </div>
+
+
+
+                          </ul>
+
+
+
+                      </div>
+
+
+
+      <!-- menu html container #start -->
+
+
+
+                        
+
+
+
+                    </li>
+
+
+
+
+                <?php $i++; }  ?>
+
+
+<li  class="active"><a href="/contact_us.php">CONTACT US</a></li>
+          
+
+
+
+                <?php
+
+
+
+                if (tep_session_is_registered('customer_id')) { ?>
+
+
+
+                <li class="pull-right non-active-top"><a href="logoff.php">Log out</a> </li>
+
+
+
+                <?php } ?>
+
+
+
+                <li class="pull-right non-active-top"><a href="account.php">ACCOUNT</a> </li>
+
+                  <li class="pull-right non-active-top"><a href="shopping_cart.php">CART</a> </li>
+
+
+
+                
+
+
+
+              </ul>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <script type="text/javascript">
+
+
+
+		var addcls = jQuery.noConflict();
+
+
+
+		addcls(".navbar-inner button#btn").click(function(){
+
+
+
+			 if (addcls(".navbar-inner #jsn-pos-mainnav").hasClass('intro')) {
+
+
+
+				addcls(".navbar-inner #jsn-pos-mainnav").removeClass("intro");
+
+
+
+			 }
+
+
+
+			 else {
+
+
+
+				 addcls(".navbar-inner #jsn-pos-mainnav").addClass("intro");
+
+
+
+			 }
+
+
+
+		}); 
+
+
+
+		</script> 
+
+
+
+        <script type="text/javascript">
+
+
+
+			addcls('.headermenujs').hide();
+
+
+
+			var start_container = '';
+
+
+
+			function showHideMenuMobile(container){
+
+
+
+				if(start_container != container){
+
+
+
+					addcls('.headermenujs').hide();
+
+
+
+					addcls('#'+container).slideDown();
+
+
+
+					start_container = container;
+
+
+
+					addcls('.setinitial').html('<i class="fa fa-plus plus_icon"></i>');
+
+
+
+					addcls('#toggle_icon_'+container).html('<i class="fa fa-minus minus_icon"></i>');
+
+
+
+					
+
+
+
+				}else{
+
+
+
+					addcls('#'+container).slideUp();
+
+
+
+					start_container = '';
+
+
+
+					addcls('#toggle_icon_'+container).html('<i class="fa fa-plus plus_icon"></i>');
+
+
+
+				}
+
+
+
+			}
+
+
+
+			function showHideMenu(container){
+
+
+
+				
+
+
+
+				if(start_container != container){
+
+
+
+					addcls('.headermenujs').hide();
+
+
+
+					addcls('#'+container).slideDown();
+
+
+
+					start_container = container;
+
+
+
+					addcls('.setinitial').html('<i class="fa fa-plus plus_icon"></i>');
+
+
+
+					addcls('#toggle_icon_'+container).html('<i class="fa fa-minus minus_icon"></i>');
+
+
+
+					
+
+
+
+				}else{
+
+
+
+					
+
+
+
+					location = addcls('.main_link_'+container).attr('id');
+
+
+
+					//addcls('#'+container).slideUp();
+
+
+
+					//start_container = '';
+
+
+
+					//addcls('#toggle_icon_'+container).html('<i class="fa fa-plus plus_icon"></i>');
+
+
+
+				}
+
+
+
+			}
+
+
+
+			if(addcls(window).width() >= 980){
+
+
+
+				addcls(document).click(function(event) { 
+
+
+
+					if(!addcls(event.target).closest('#SiteNav').length) {
+
+
+
+						if(addcls('#SiteNav').is(":visible")) {
+
+
+
+							addcls('.headermenujs').hide();
+
+
+
+						}
+
+
+
+					}        
+
+
+
+				});
+
+
+
+			}
+
+
+
+			
+
+
+
+		</script>
+
+
+
+    </div>
+
+
+
+    <!-- mj-menubar ends --> 
+
+
+
+  </div>
+
+
+
+  <!-- mj-subcontainer ends --> 
+
+
+
+</div>

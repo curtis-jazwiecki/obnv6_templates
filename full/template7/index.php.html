@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html> <head><link rel="icon" type="image/png" href="/includes/sts_templates/full/template7/images/favicon.png" />
+ $headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ $template18_stylesheet1
+  <script type="text/javascript">
+var jqqqnoconf = jQuery.noConflict();
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+if (jqqqnoconf.attrFn) {
+jqqqnoconf.attrFn.text = true;
+ }
+ </script>
+
+  <script type="text/javascript">
+
+ var tba = jQuery.noConflict();
+
+ tba(document).ready(function () {
+
+  //SKU BOF
+ tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+ tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
+ tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+  //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+  //SKU EOF
+   var scroll_pos = 0;
+  tba(document).scroll(function () {
+  //alert("hello");
+  scroll_pos = tba(this).scrollTop();
+  if (scroll_pos > 25) {
+  tba("#mj-topbar").css('background-color', '#000000');  tba("#mj-topbar").css('background', '-moz-linear-gradient(top,  #000000 25%, #000000 96%, #000000 97%)');               tba("#mj-topbar").css('background', '-webkit-linear-gradient(top,  #000000 25%,#000000 96%,#000000 97%);            tba("#mj-topbar").css('background', 'linear-gradient(to bottom,  #000000 25%,#000000 96%,#000000 97%);  
+ tba("#mj-topbar a").css('color', '#000');
+ tba("#mj-topbar i").css('color', '#000');
+ tba("#mj-topbar div").css('color', '#000');
+ 
+ tba("#mj-topbar li:last-child").css('background', 'none');
+  }
+   else
+  {
+
+  tba("#mj-topbar a").css('color', '#000000');
+  tba("#mj-topbar i").css('color', '#000000');
+   tba("#mj-topbar div").css('color', '#000000');
+
+ tba("#mj-topbar li:last-child").css('background', 'none');
+ } });  });</script>
+ 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
+ <meta name="description" content=""> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+$stylesheet
+
+
+
+
+ </head>
+
+<body class="$script">
+<div id="mj-container">
+$top_bar
+$header
+
+
+<div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
+ <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+<div class="moduletable mj-grid96 breadcrumb">	<!-- mj-grid96 starts -->
+<div class="breadcrumbs mj-grid96 breadcrumb"> 
+ <div id="navBreadCrumb">
+$breadcrumbs
+
+</div> </div> </div> <!-- mj-grid96 ends --> </div> <!-- mj-subcontainer ends --> </div>
+
+<div id="mj-maincontent">
+<div class="mj-subcontainer">
+<div id="mj-contentarea" class="mj-grid64 ">
+<?php
+if($_SERVER['PHP_SELF'] == "/index.php")
+{
+?>
+<center>   
+
+<div width="100%" align="center" style="float:none!important; padding-top:50px; padding-bottom:10px; margin-bottom:25px; border-bottom:2px solid #e9e9e9;"><a href="/featured_products.php"><h1>Featured Products</h1></a><div style="padding-top:3px;">$featured_products</div></div>
+
+
+<div class="fullnavbar">
+<div width="100%" align="center" style="float:none!important; padding-top:35px;  padding-bottom:0px;"><a href="/shop.php"><h1>Chose Your Adventure</h1></a></div>
+
+<table  class="bannermanager" width="100%" border="0" cellspacing="7px" cellpadding="10"  style="background-color:#a61a1e; max-width:100% !important;">
+
+
+<tr><td align="center"    valign="top"  style="background-color:#ffffff; border-radius:10px; box-shadow:inset 0px 0px 25px 5px rgba(164,164,164,1.00); max-width:32% ; padding-bottom:10px;">
+$banner_image1 <br><br>
+<div style="width:100%; text-align: center;" class="bulletdiv">
+$banner_caption1
+<br></div></td>
+
+<td align="center"    valign="top"  style="background-color:#ffffff; border-radius:10px; box-shadow:inset 0px 0px 25px 5px rgba(164,164,164,1.00); max-width:32%;  padding-bottom:10px;">
+$banner_image2<br><br>
+<div style="width:100%; text-align: center;" class="bulletdiv">
+$banner_caption2
+<br></div></td>
+
+<td align="center"    valign="top"  style="background-color:#ffffff; border-radius:10px; box-shadow:inset 0px 0px 25px 5px rgba(164,164,164,1.00);  max-width:32%;  padding-bottom:10px;">
+$banner_image3<br><br>
+<div style="width:100%; text-align: center;" class="bulletdiv">
+$banner_caption3
+<br></div></td></tr>
+
+</table></div>
+
+<div width="100%" align="center" style="float:none!important; padding-top:50px; padding-bottom:10px; margin-bottom:25px; border-bottom:2px solid #e9e9e9;"><a href="/specials.php"><h1>Monthly Specials</h1></a><div style="padding-top:3px;">$featuredgroup2</div></div>
+
+<div  class="bannermanager">$banner_big</div> </center>
+<?php 
+}
+?> <!--sku start-->  
+ 
+  <?php
+if($_SERVER['PHP_SELF'] != "/index.php")
+{
+?>
+  <div   style=" padding:15px; 	background-color:#ffffff;">$content    </div><?php  } ?> 
+
+ <!--sku end--> </div>
+
+<div id="mj-left" class="mj-grid16 mj-lspace" >  
+                         
+<div class="ui-widget infoBoxContainer mj-categoriessidebox" >
+ $categorybox </div>   
+ 
+ <div>$newsletter<br><br></div> 
+ <?php
+if($_SERVER['PHP_SELF'] != "/index.php")
+{
+?><div class="ui-widget infoBoxContainer mj-categoriessidebox" >
+ $search_filterbox  </div> <?php  } ?> 
+ 
+ 
+ 
+
+ 
+  
+ <div class="ui-widget infoBoxContainer mj-cartbox">
+$cartbox </div>
+
+
+  
+
+
+</div>
+ 
+ 
+
+<!--<div id="mj-right" class="mj-grid16 mj-lspace mj-rspace"> 
+</div>--> </div></div></div>
+
+<div id="mj-footertop">
+<div class="mj-subcontainer"> </div> </div>
+
+ <div id="mj-footer">
+
+
+
+
+<!-- mj-footer starts -->
+ <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+ $footer_box_01 $footer_box_02 $footer_box_03  $footer_box_04 </div> </div>
+ $footer_copyright </body></html>
+

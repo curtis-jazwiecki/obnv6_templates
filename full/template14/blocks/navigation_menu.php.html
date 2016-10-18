@@ -1,0 +1,118 @@
+<div id="mj-righttop"> <!-- mj-righttop starts -->
+
+    	<div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+
+    		<div id="mj-menubar"> <!-- mj-menubar starts -->
+
+            	
+
+    			<div class="jsn-mainnav navbar">
+
+					<div class="jsn-mainnav-inner navbar-inner">
+
+						<div class="container clearfix">
+
+                        	<div class="mainnav-toggle clearfix">
+
+                    			<button data-target=".nav-collapse" data-toggle="collapse"  type="button" id="hamburger_button" class="hamburger_button"> <span><!--Main Menu class="btn btn-navbar" id="btn"  hamburger_button--> <i class="fa fa-bars"></i></span></button>
+
+                			</div>
+
+   							<div class="nav-collapse collapse clearfix" id="jsn-pos-mainnav">
+
+    							<ul class="nav">
+
+                                    <li><a href="index.php">Home</a>
+
+                                    </li>
+                                    
+                                    
+                                    
+                                    <li id="cate_li"><a href="/shop.php">Categories</a>
+
+                                    	<ul class="nav-child unstyled">
+
+                                    <!--Superfish Horizontal Navigation bar-->
+
+$categories_html
+
+		                                    <!--end Superfish-->
+
+                                    	</ul>
+
+                                   	</li>
+
+
+
+                                    
+
+                                    <li id="store_li"><a href="javascript:void(0)">Information</a>
+
+                                    	<ul class="nav-child unstyled">
+
+       
+        <li><a href="/shipping-returns-i-3.html">Shipping and Returns</a></li>
+        <li><a href="/terms-conditions-i-125.html">Terms & Conditions</a></li>
+
+       
+        
+   </ul> </li>
+
+											                                                           
+ <li><a href="/about-us-i-5.html">About Us</a></li>
+                                  
+                                    <li>
+
+                                    	<a href="$urlcontactus">Contact&nbsp;Us</a>
+
+                                    </li>
+                                    
+                                   
+
+
+    							</ul>
+
+    						</div> 
+
+    					</div>
+
+    				</div>
+
+				</div>
+                
+                <!--addcls(".navbar-inner button#btn").click(function(){-->
+
+                <script type="text/javascript">
+
+
+
+
+				var addcls = jQuery.noConflict();
+
+				addcls(".navbar-inner button#hamburger_button").click(function(){
+
+					 if (addcls(".navbar-inner #jsn-pos-mainnav").hasClass('intro')) {
+
+  						addcls(".navbar-inner #jsn-pos-mainnav").removeClass("intro");
+
+					 }
+
+					 else {
+
+						 addcls(".navbar-inner #jsn-pos-mainnav").addClass("intro");
+
+					 }
+
+					
+
+				}); 
+
+					
+
+				</script>
+
+    		</div> <!-- mj-menubar ends -->
+
+    	</div> <!-- mj-subcontainer ends -->
+
+    </div>
