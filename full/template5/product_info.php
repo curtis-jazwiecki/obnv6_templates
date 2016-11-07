@@ -1,170 +1,48 @@
-              <!--left_td-->
-                <td align="center" width="60%" valign="top">
-                  <table>
-                    <tr>
-                      <td>
-                        <table border="0" cellspacing="0" cellpadding="2" align="left" width="100%">
-                          <tr>
-                            <td align="center" class="smallText">
-                              DISPLAY_PRODUCT_IMAGE
-                            </td>
-                          </tr>
-                          <tr>
-                            <td align="center" class="smallText">
-                              DISPLAY_PRODUCT_SHARE_LINK
-                            </td>
-                          </tr>
-                          <tr>
-                              <td width="100%" align="left">DISPLAY_PRODUCT_EXTRA_IMAGE</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-					<tr>
-                      <td valign="top" align="left">
-						<table width="100%" cellspacing="0" cellpadding="0">
-						  <tr>
-						    <td valign="top" align="left">DISPLAY_PRODUCT_SPECIFICATIONS</td>
-                          </tr>
-						  <tr>
-						    <td valign="top" align="left">
-								DISPLAY_PRODUCT_ATTRIBUTES
-							</td>
-						  </tr>
-                                                  <tr>
-                                                      <td width="100%" align="left" >
-                                                          DISPLAY_CHILD_PRODUCTS
-                                                     </td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td width="100%" align="left" >
-                                                          &nbsp;
-                                                     </td>
-                                                  </tr>
-						  <tr>
-                            <td  width="100%" class="infoBoxHeading" align="left">Product Description</td>
-                          </tr>
-						  <tr>
-                            <td width="100%" class="description" align="left" >
-								DISPLAY_PRODUCT_DESCRIPTION
-							</td>
-                          </tr>
-						</table>
-					  </td>
-                    </tr>
-				  </table>
-                </td>
-              <!--left_td_end-->
-			  <!--right_td_start-->
-				<td valign="top" align="center" width="40%">
-				  <table cellpadding="0" cellspacing="0" width="100%" border="0" class="productInfo">
-					<tr>
-					  <td valign="top">
-						<table width="100%" cellpadding="0" cellspacing="0">
-						  <tr>
-							<td valign="top" class="main" align="center">
-                              <img src="/images/template/logo_prod.gif" >
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="main" valign="top">
-                              <b><span class="productName">DISPLAY_PRODUCT_NAME</span></b>
-                            </td>
-                          </tr>
-                          <tr height="8px;">
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td class="main" valign="top">
-                              <b><span style="font-size: 14px">DISPLAY_PRODUCT_MANUFACTURER</span></b>
-                            </td>
-                          </tr>
-                          <tr height="8px;">
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td><b>DISPLAY_PRODUCT_STOCK</b></td>
-                          </tr>
-                          <tr>
-                            <td class="productPrice"><b>DISPLAY_PRODUCT_PRICE</b></td>
-                          </tr>
-                        </table>
-                	  </td>
-                    </tr>
-                    <tr>
-                      <td valign="top">      
-                        <table border="0" cellspacing="0" cellpadding="2">
-                          <tr>
-                            <td class="main" colspan="2"><b>DISPLAY_PRODUCT_OPTIONS_TITLE</b></td>
-                          </tr>
-                          <tr>
-                            <td class="main">
-                              DISPLAY_PRODUCT_ATTRIBUTE
-                            </td>
-                          </tr>
-                        </table>
-					  </td>
-                    </tr>
-					<tr>
-                      <td class="main">
-                        DISPLAY_PRODUCT_QUANTITY
-                      </td>
-                    </tr>
-                    <tr>
-                      <td valign="top">
-                        <table border="0" width="100%" cellspacing="1" cellpadding="2" class="ProductInfoBox infoBox" >
-                          <tr>
-                            <td valign="top" align="left">
-                              <table border="0"  cellspacing="0" cellpadding="2">
-                                <tr>
-                                  <td align="left" class="smallText" colspan="3">
-	                                DISPLAY_PRODUCT_DISCLAIMER
-								  </td>
-                                </tr>
-                                <tr>
-                                  <td width="10"></td>
-                                  <td class="main" align="right" colspan="2">
-                                    DISPLAY_PRODUCT_ADD_TO_CART
-                                  </td>
-                                  <td width="10"></td>
-                                </tr>
-                                <?// #7 12jan2014 (MA) BOF?>
-                                <tr>
-                                  <td width="10"></td>
-                                  <td class="main" align="right" colspan="2">
-                                    DISPLAY_PRODUCT_ADD_TO_WISHLIST
-                                  </td>
-                                  <td width="10"></td>
-                                </tr>
-                                <?// #7 12jan2014 (MA) EOF?>
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <table>
-                    <tr>
-                      <td><strong>Prices for internet orders only. <br>Not all products available in store.</strong></td>
-                    </tr>
-                    <tr>
-                      <td>
-                       <table width="100%" align="center">
-                         <tr>
-                          <td class="main" align="center"><b>Overall Customer Rating:</b></td>
-                           </tr>
-                           <tr>
-                            <td class="main" align="center">DISPLAY_PRODUCT_RATINGS</td>
-                           </tr>
-                           <tr>
-                            <td class="main">DISPLAY_PRODUCT_WRITE_RATINGS</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                      </td>
-                    </tr>
-                  </table>
+<div id="productinfo">
+    <div id="leftpart">
+<!--        <h1>DISPLAY_PRODUCT_NAME</h1>-->
+        <div id="proimg">
+<!--            <div id="mainImg">DISPLAY_PRODUCT_IMAGE</div>-->
+            <div id="moreImg">DISPLAY_PRODUCT_EXTRA_IMAGE</div>
+        </div>
+<!--        <div id="pro_info">
+            <p class="itembg">Product Description</p>
+            <div class="prodetail">DISPLAY_PRODUCT_DESCRIPTION</div>
+        </div>-->
+<!--        <div id="pro_spec">
+            <p class="itembg">Product Specifications</p>
+            <div class="prodetail">DISPLAY_PRODUCT_SPECIFICATIONS</div>
+        </div>-->
+<!--        <div id="pro_review">
+            <p class="itembg">Product Reviews</p>
+            <div class="prodetail">DISPLAY_PRODUCT_RATINGS | DISPLAY_PRODUCT_WRITE_RATINGS</div>
+            <div class="prodetail">DISPLAY_PRODUCT_REVIEWS</div>
+        </div>-->
+        <div id="pro_package">
+            <p class="itembg">Product Package</p>
+            <div class="prodetail">DISPLAY_PACKAGE</div>
+        </div>
+    </div>
+<!--    <div id="rightpart">
+        <div id="cartdiv">
+            <p>DISPLAY_PRODUCT_MANUFACTURER</p>
+            <p id="productItem12">DISPLAY_PRODUCT_MODEL</p>
+            <p id="productPrice12">DISPLAY_CHILD_PRODUCT_PRICE</p>
+            <div>
+                <table>DISPLAY_AVAILABILITY_N_PRICE</table>
+            </div>
+            <div>
+                <p>DISPLAY_PRODUCT_OPTIONS_TITLE</p>
+                DISPLAY_PRODUCT_ATTRIBUTE
+            </div>
+            <div>DISPLAY_PRODUCT_QUANTITY</div>
+            <div>DISPLAY_PRODUCT_DISCLAIMER</div>
+            <div>DISPLAY_PRODUCT_ADD_TO_CART <input type="submit" value="add to cart" class="addtocart_btn"></div>
+            <div>DISPLAY_PRODUCT_ADD_TO_WISHLIST
+                <input type="submit" class="skubutton" name="wishlist_x" value="Add to Wishlist">
+            </div>
+            <div id="sharelink">DISPLAY_PRODUCT_SHARE_LINK</div>
+        </div>
+        <div>DISPLAY_PRODUCT_RELATED_ITEMS</div>
+    </div>        -->
+</div>  

@@ -1,0 +1,201 @@
+<div class="fullitem">
+<div id="mj-topbar" align="center" ><!-- mj-topabar -->
+
+    <div class="mj-subcontainer" style="padding-left:30%;"><!-- mj-subcontainer --><br>
+
+        <div class="mj-grid16 mj-lspace" style="padding: 5px 20px 5px 5px; border: 0px solid #000; background-color:#880000; border-radius: 7px; "  >
+		
+		
+		
+		<form method="get" action="advanced_search_result.php" name="search" >                                    
+<div class="search"> 
+<input type="text" onfocus="if (this.value == ' Search')
+this.value = ''" onblur="if (this.value == '')
+this.value = ' Search'" value=" Search" style="width:100%;" class="go" name="keywords">
+<button type="submit" id="search-button"><span><i class="fa fa-search"></i></span></button>
+</div> </form> </div> <!-- mj-grid32 ends -->
+<script type="text/javascript">
+jQuery(document).ready(function(){
+jQuery('input:checkbox[name^="columns_"]').click(function(){
+var product_id = jQuery(this).val();
+var action = (jQuery(this).is(':checked') ? 'add' : 'remove'); 
+jQuery.ajax({
+url: 'register_product_for_comparison.php', 
+method: 'post', 
+data: {
+action: action, 
+id: product_id
+}, 
+success: function(response){
+if (response=='added'){
+alert('Product added for comparison');
+} else if (response=='removed'){
+alert('Product removed from comparison');
+} },
+error: function(xhr, textStatus, errorThrown) {
+alert(errorThrown);
+ } });	});	});
+var jqheader = jQuery.noConflict();
+jqheader(document).ready(function () {
+jqheader('#store_li').click(function () {
+jqheader(".navbar .nav > li").show();
+ });   });</script>
+		</div>           	
+<br><br><br><br>	
+				
+				
+				<div class="fullitem">
+				<div id="mj-righttop" > <!-- mj-righttop starts -->
+
+    	<div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+
+    		<div id="mj-menubar"> <!-- mj-menubar starts -->
+
+            	
+
+    			<div class="jsn-mainnav navbar">
+
+					<div class="jsn-mainnav-inner navbar-inner">
+
+						<div class="container clearfix">
+
+                        	<div class="mainnav-toggle clearfix">
+
+                    			<button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button" id="btn"> <span>Main Menu</span></button>
+
+                			</div>
+
+   							<div class="nav-collapse collapse clearfix" id="jsn-pos-mainnav">
+
+    								<ul class="nav">
+ <li id="cate_li"><a href="/index.php">Shop All Departments &nbsp;&dtrif;</a>
+<ul class="nav-child unstyled">
+<!--Superfish Horizontal Navigation bar-->
+
+$categories_html <!--end Superfish-->
+</ul></li>
+<li><a href="#">About Us</a></li>
+<li><a href="/contact_us.php">Contact Us</a></li>
+
+<li><a href="/advanced_search.php">Advanced Search</a></li>
+<li><a href="/specials.php">Weekly Deals</a></li>
+</ul>
+
+    						</div> 
+
+    					</div>
+
+    				</div>
+
+				</div>
+
+                <script type="text/javascript">
+
+
+
+				
+
+				var addcls = jQuery.noConflict();
+
+				addcls(".navbar-inner button#btn").click(function(){
+
+					 if (addcls(".navbar-inner #jsn-pos-mainnav").hasClass('intro')) {
+
+  						addcls(".navbar-inner #jsn-pos-mainnav").removeClass("intro");
+
+					 }
+
+					 else {
+
+						 addcls(".navbar-inner #jsn-pos-mainnav").addClass("intro");
+
+					 }
+
+					
+
+				}); 
+
+					
+
+				</script>
+
+    		</div> <!-- mj-menubar ends -->
+
+    	</div> <!-- mj-subcontainer ends -->
+
+    </div>    
+	
+	<div class="toplogin" ><a href="/shopping_cart.php" >Cart Contents   &nbsp;<i class="fa fa-shopping-cart fa-1x"></i></a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="/login.php">My Account&nbsp;<i class="fa fa-user fa-1x"></i></a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="/checkout.php" >Checkout &nbsp;<i class="fa fa-credit-card fa-1x"></i></a>
+</div>
+
+
+<div class="topsmalllogo"><a href="/index.php"><img src="images/store_logo.png" ></a>   
+</div></div></div></div>
+
+
+
+
+
+<div class="mobileitem" style="padding:10px; margin:0 auto; background-color:#880000; 
+
+ ">
+
+
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td align="left" valign="middle"  width=""> <div style="padding:10px 10px 10px 0px;">
+<form method="get" action="advanced_search_result.php" name="search">                                    
+<div class="search"> 
+<input type="text" onfocus="if (this.value == ' Search...')
+this.value = ''" onblur="if (this.value == '')
+this.value = ' Search...'" value=" Search..." style="max-width:100%; min-width:100px; padding-right:20px;" class="go" name="keywords">
+<button type="submit" id="search-button"><span><i class="fa fa-search"></i></span></button>
+</div> </form> </div></td>
+
+
+<td valign="middle" width="123px"> <a href="/advanced_search.php"><img src="/includes/sts_templates/full/template5/images/advse.png" border="0" width="123px" height="25px" alt="advanced search"  /></a>
+</td></tr></table>
+
+
+</div>
+
+
+<div class="mobileitem" style="background-color:#880000; "  width="100%">
+
+
+
+<div id="mj-menubar" align="center"> 
+<a href="/index.php"><img src="images/store_logo.png" style="max-width:50%; height:auto; padding:5px; " ></a>
+<div class="jsn-mainnav navbar">
+<div class="jsn-mainnav-inner navbar-inner">
+<div class="container clearfix" style="width: 100% !important; background-color:#000000 !important;" >
+<div class="mainnav-toggle" >
+<button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button" id="btn" style="width: 100% !important;"> <span>&#9776;&nbsp;&nbsp; Menu</span></button>
+</div>
+<div class="nav-collapse collapse clearfix" id="jsn-pos-mainnav" >
+
+<ul class="nav">
+ <li><a href="index.php">Home</a></li>
+ <li><a href="/shop.php">Shop All Categories</a></li>
+<li><a href="/contact_us.php">Contact Us</a></li>
+<li><a href="/about-us-i-5.html">About Us</a></li>
+
+
+
+<li><a href="/account.php"><span style="font-size:8; color:#666666;"> My Account</span></a></li>
+<li><a href="$urlcheckout"><span style="font-size:8; color:#666666;"> My Cart</span></a></li>
+<li><a href="$urlcartcontents"><span style="font-size:8; color:#666666;"> Checkout</span></a></li>
+</ul>
+
+
+</div></div></div></div>
+<script type="text/javascript">
+var addcls = jQuery.noConflict();
+addcls(".navbar-inner button#btn").click(function(){
+if (addcls(".navbar-inner #jsn-pos-mainnav").hasClass('intro')) {
+addcls(".navbar-inner #jsn-pos-mainnav").removeClass("intro");
+}
+ else {
+ addcls(".navbar-inner #jsn-pos-mainnav").addClass("intro");
+}  });  </script>
+
+</div></div>

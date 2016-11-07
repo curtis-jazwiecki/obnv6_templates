@@ -1,9 +1,13 @@
 <?php
 /*
-$Id: product_listing.php,v 1.44 2003/06/09 22:49:59 hpdl Exp $
-CloudCommerce - Multi-Channel eCommerce Solutions
-http://www.cloudcommerce.org
-Copyright (c) 2016 Outdoor Business Network, Inc.
+  $Id: product_listing.php,v 1.44 2003/06/09 22:49:59 hpdl Exp $
+
+  osCommerce, Open Source E-Commerce Solutions
+  http://www.oscommerce.com
+
+  Copyright (c) 2003 osCommerce
+
+  Released under the GNU General Public License
 */
 if (isset($pw_mispell)){ //added for search enhancements mod
 ?>
@@ -94,7 +98,7 @@ if (isset($pw_mispell)){ //added for search enhancements mod
             $lc_align = 'center';
             if (isset($HTTP_GET_VARS['manufacturers_id'])) {
 			$lc_text='';
-              $lc_image = '<table><tr><td style="border:1px solid #333333;" valign="bottom"><a href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'manufacturers_id=' . $HTTP_GET_VARS['manufacturers_id'] . '&products_id=' . $listing[$x]['products_id']) . '" >' .  $image . '</a></td></tr></table>';
+              $lc_image = '<table><tr><td style="border:0px solid  #ffffff;" valign="bottom"><a href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'manufacturers_id=' . $HTTP_GET_VARS['manufacturers_id'] . '&products_id=' . $listing[$x]['products_id']) . '" >' .  $image . '</a></td></tr></table>';
             } else {
 			$lc_text='';
               $lc_image = '<a href="' . tep_href_link(FILENAME_PRODUCT_INFO, ($cPath ? 'cPath=' . $cPath . '&' : '') . 'products_id=' . $listing[$x]['products_id']) . '"  >' . $image . '</a>';
@@ -134,7 +138,7 @@ if (isset($pw_mispell)){ //added for search enhancements mod
             if (isset($HTTP_GET_VARS['manufacturers_id']))
 			  {
 				$lc_text='';
-            	$lc_image_med = '<table width="100%" style="align: center"><tr><td style="border:1px solid #333333;" valign="bottom"><a href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'manufacturers_id=' . $HTTP_GET_VARS['manufacturers_id'] . '&products_id=' . $listing[$x]['products_id']) . '" >' .  str_replace("/small/","/medium/",$image) . '</a></td></tr></table>';
+            	$lc_image_med = '<table width="100%" style="align: center"><tr><td style="border:0px solid  #ffffff;" valign="bottom"><a href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'manufacturers_id=' . $HTTP_GET_VARS['manufacturers_id'] . '&products_id=' . $listing[$x]['products_id']) . '" >' .  str_replace("/small/","/medium/",$image) . '</a></td></tr></table>';
               }
 			else
 			  {

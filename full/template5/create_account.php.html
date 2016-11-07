@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+$template18_stylesheet1
+<script type="text/javascript">
+	var jqqqnoconf = jQuery.noConflict();
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+	if (jqqqnoconf.attrFn) {
+		jqqqnoconf.attrFn.text = true;
+	}
+</script>
+$stylesheet
+$javascript_validation_code
+</head>
+
+<body class="$script">
+<div id="mj-container"> $top_bar
+  
+  $header
+  
+  $navigation_menu
+  <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
+    
+    <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+      
+      <div class="moduletable mj-grid96 breadcrumb"> <!-- mj-grid96 starts -->
+        
+        <div class="breadcrumbs mj-grid96 breadcrumb">
+          <div id="navBreadCrumb"> $breadcrumbs </div>
+        </div>
+      </div>
+      <!-- mj-grid96 ends --> 
+      
+    </div>
+    <!-- mj-subcontainer ends --> 
+    
+  </div>
+  $free_shipping_banner
+  <div id="mj-maincontent">
+    <div class="mj-subcontainer">
+      <div id="mj-contentarea" class="mj-grid64 mj-lspace"> 
+        
+        <!-- start Default Content //-->
+        <form onsubmit="return check_form(create_account);" method="post" action="$action_url" name="create_account">
+          <input type="hidden" value="process" name="action">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <!-- PWA EOF -->
+            <tbody>
+              <tr>
+                <td colspan="3"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  </table></td>
+              </tr>
+              <tr>
+                <td width="5" height="20" background="images/template/infoboxbg.jpg" align="left"><img src="images/template/infoboxbgL.jpg"></td>
+                <td align="left" class="infoBoxHeadingLogin"><b>{%CATEGORY_PERSONAL%}</b></td>
+                <td width="5" height="20" background="images/template/infoboxbg.jpg" align="right"><img src="images/template/infoboxbgR.jpg"></td>
+              </tr>
+              
+              <?php
+  				if (!empty($message)) {?>
+                  <tr>
+                    <td colspan="3">$message</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                  </tr>
+			<?php
+  				} 
+            ?>
+              
+              
+              <tr>
+                <td colspan="3"><table width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1px solid #cacaca;">
+                    <tbody>
+                      <tr>
+                        <td class="main"><table width="100%" cellspacing="" cellpadding="0" border="0">
+                            <tbody>
+                              <tr>
+                                <td align="right" class="inputRequirement">{%FORM_REQUIRED_INFORMATION%}</td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" class="smallText">$form_information_text</td>
+                              </tr>
+                              <tr class="infoBoxContents">
+                                <td><table cellspacing="2" cellpadding="2" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td colspan="3">&nbsp;</td>
+                                      </tr>
+                                      <?php
+			  							if ($account_gender_enabled == 'true') {
+									  ?>
+                                      
+                                      <tr>
+                                        <td class="main">{%ENTRY_GENDER%}</td>
+                                        <td class="main"><input type="radio" value="m" name="gender">
+                                          &nbsp;&nbsp;{%MALE%}&nbsp;&nbsp;
+                                          <input type="radio" value="f" name="gender">
+                                          &nbsp;&nbsp;{%FEMALE%}&nbsp;<span class="inputRequirement">{%ENTRY_GENDER_TEXT%}</span></td>
+                                      </tr>
+                                      <?php
+                                      } ?>
+                                      
+                                      
+                                      <tr>
+                                        <td class="main setSize">{%ENTRY_FIRST_NAME%}</td>
+                                        <td align="left" class="main"><input type="text" name="firstname">
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_FIRST_NAME_TEXT%}</span></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="main">{%ENTRY_LAST_NAME%}</td>
+                                        <td class="main"><input type="text" name="lastname">
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_LAST_NAME_TEXT%}</span></td>
+                                      </tr>
+                                      
+                                      <?php
+			  							if ($account_dob_enabled == 'true') {
+									  ?>
+                                      
+                                      <tr>
+                                        <td class="main">{%ENTRY_DATE_OF_BIRTH%}</td>
+                                        <td class="main"><input type="text" name="dob">
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_DATE_OF_BIRTH_TEXT%}</span></td>
+                                      </tr>
+                                      <?php
+                                      } ?>
+                                      
+                                      
+                                      
+                                      <tr>
+                                        <td class="main">{%ENTRY_EMAIL_ADDRESS%}</td>
+                                        <td class="main"><input type="text" name="email_address">
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_EMAIL_ADDRESS_TEXT%}</span></td>
+                                      </tr>
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                      <?php
+			  			if ($account_company_enabled == 'true') {
+					  ?>
+                      <tr>
+                        <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                              <tr class="infoBoxContents">
+                                <td><table cellspacing="2" cellpadding="2" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td class="main setSize">{%ENTRY_COMPANY%}</td>
+                                        <td class="main"><input type="text" name="company">
+                                          &nbsp;</td>
+                                      </tr>
+                                      <!-- BOF Separate Pricing Per Customer: field for tax id number -->
+                                      <tr>
+                                        <td class="main">{%ENTRY_COMPANY_TAX_ID%}</td>
+                                        <td class="main"><input type="text" name="company_tax_id">
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_COMPANY_TAX_ID_TEXT%}</span></td>
+                                      </tr>
+                                      <!-- EOF Separate Pricing Per Customer: field for tax id number -->
+                                      
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                      <?php } ?>
+                      <tr>
+                        <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                              <tr class="infoBoxContents">
+                                <td><table cellspacing="2" cellpadding="2" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td class="main setSize">{%ENTRY_STREET_ADDRESS%}</td>
+                                        <td class="main"><input type="text" name="street_address">
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_STREET_ADDRESS_TEXT%}</span></td>
+                                      </tr>
+                                      
+                                      <?php
+                                          if ($account_suburb_enabled == 'true') {
+                                      ?>
+                                          <tr>
+                                            <td class="main">{%ENTRY_SUBURB%}</td>
+                                            <td class="main"><input type="text" name="suburb">
+                                            &nbsp; <span class="inputRequirement">{%ENTRY_SUBURB_TEXT%}</span></td>
+                                          </tr>
+                            		  <?php
+                                          }
+                                      ?>
+                                      
+                                      
+                                      <tr>
+                                        <td class="main">{%ENTRY_CITY%}</td>
+                                        <td class="main"><input type="text" name="city">
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_CITY_TEXT%}</span></td>
+                                      </tr>
+                                      <?php
+			  							if ($account_state_enabled == 'true') {
+									  ?>
+                                      <tr>
+                                        <td class="main">{%ENTRY_STATE%}</td>
+                                        <td class="main">$state
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_STATE_TEXT%} </span></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="main">{%ENTRY_POST_CODE%}</td>
+                                        <td class="main"><input type="text" name="postcode">
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_POST_CODE_TEXT%}</span></td>
+                                      </tr>
+                                      
+                                      <?php
+                                      } ?>
+                                      
+                                      <tr>
+                                        <td class="main">{%ENTRY_COUNTRY%}</td>
+                                        <td class="main"><select name="country">
+                                            <option value="">Please Select</option>
+                                            <option value="13">Australia</option>
+                                            <option value="14">Austria</option>
+                                            <option value="15">Azerbaijan</option>
+                                            <option value="16">Bahamas</option>
+                                            <option selected="" value="223">United States</option>
+                                            <option value="235">Yemen</option>
+                                          </select>
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_COUNTRY_TEXT%}</span></td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                              <tr class="infoBoxContents">
+                                <td><table cellspacing="2" cellpadding="2" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td class="main setSize">{%ENTRY_TELEPHONE_NUMBER%}</td>
+                                        <td class="main"><input type="text" name="telephone">
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_TELEPHONE_NUMBER_TEXT%}</span></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="main">{%ENTRY_FAX_NUMBER%}</td>
+                                        <td class="main"><input type="text" name="fax">
+                                          &nbsp; <span class="inputRequirement">{%ENTRY_FAX_NUMBER_TEXT%}</span> </td>
+                                      </tr>
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                      <?php
+                      if($is_guest == false){ ?>
+                      <tr>
+                        <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                              <tr class="infoBoxContents">
+                                <td><table cellspacing="2" cellpadding="2" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td class="main setSize"><img width="100" height="1" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                        <td align="right" class="main"><input type="checkbox" value="1" name="newsletter">
+                                          &nbsp;Sign me up for the {%STORE_NAME%} newsletter. </td>
+                                      </tr>
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3"><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3"><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3"><table width="100%" cellspacing="0" cellpadding="0" border="0" class="infoBox">
+                            <tbody>
+                              <tr class="infoBoxContents">
+                                <td><table cellspacing="2" cellpadding="2" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td class="main setSize">{%ENTRY_PASSWORD%}</td>
+                                        <td class="main"><input type="password" maxlength="40" name="password">
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_PASSWORD_TEXT%}</span></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="main">{%ENTRY_PASSWORD_CONFIRMATION%}</td>
+                                        <td class="main"><input type="password" maxlength="40" name="confirmation">
+                                          &nbsp;<span class="inputRequirement">{%ENTRY_PASSWORD_CONFIRMATION_TEXT%}</span></td>
+                                      </tr>
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                      <?php
+                      }else{ ?>
+                        <tr>
+                        	<td><input type="hidden" name="guest" value="guest"></td>
+                        </tr>
+                      <?php
+                      } ?>
+                    </tbody>
+                  </table></td>
+              </tr>
+              <tr>
+                <td colspan="3"><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+              </tr>
+              <tr>
+                <td colspan="3"><table width="100%" cellspacing="1" cellpadding="2" border="0">
+                    <tbody>
+                      <tr class="infoBoxContents">
+                        <td><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                            <tbody>
+                              <tr>
+                                <td width="10"><img width="10" height="1" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                <td><input type="image" border="0" title=" Continue " alt="Continue" src="includes/sts_templates/full/template5/images/buttons/button_continue.gif"></td>
+                                <td width="10"><img width="10" height="1" border="0" alt="" src="images/pixel_trans.gif"></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+        <!-- end Default Content //--> 
+        
+      </div>
+      <div id="mj-left" class="mj-grid16 mj-lspace">
+        <div class="ui-widget infoBoxContainer mj-categoriessidebox"> $categorybox </div>
+        <div class="ui-widget infoBoxContainer mj-whatsnew"> $whatsnewbox </div>
+        <div class="ui-widget infoBoxContainer mj-information"> $informationbox </div>
+      </div>
+      <div id="mj-right" class="mj-grid16 mj-lspace mj-rspace">
+        <div class="ui-widget infoBoxContainer mj-cartbox"> $cartbox </div>
+        <div class="ui-widget infoBoxContainer mj-bestsellersbox"> $bestsellersbox </div>
+        <div class="ui-widget infoBoxContainer mj-reviewbox"> $reviewsbox </div>
+        <div class="ui-widget infoBoxContainer mj-currenciesbox"> $currenciesbox </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="mj-footertop">
+  <div class="mj-subcontainer"> $brands
+    
+    $newsletter </div>
+</div>
+<div id="mj-footer"> <!-- mj-footer starts -->
+  
+  <div class="mj-subcontainer"> <!-- mj-subcontainer starts --> 
+    
+    $footer_box_01
+    
+    $footer_box_02
+    
+    $footer_box_03
+    
+    $footer_box_04 </div>
+</div>
+$footer_copyright
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+$template18_stylesheet1
+<script type="text/javascript">
+	var jqqqnoconf = jQuery.noConflict();
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+	if (jqqqnoconf.attrFn) {
+		jqqqnoconf.attrFn.text = true;
+	}
+</script>
+<script language="javascript"><!--
+function session_win() {
+  window.open("$shopping_cart_info_page","info_shopping_cart","height=460,width=430,toolbar=no,statusbar=no,scrollbars=yes").focus();
+}
+//--></script>
+
+$stylesheet
+</head>
+
+<body class="$script">
+<div id="mj-container"> $top_bar
+  
+  $header
+  
+  $navigation_menu
+  <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
+    
+    <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+      
+      <div class="moduletable mj-grid96 breadcrumb"> <!-- mj-grid96 starts -->
+        
+        <div class="breadcrumbs mj-grid96 breadcrumb">
+          <div id="navBreadCrumb"> $breadcrumbs </div>
+        </div>
+      </div>
+      <!-- mj-grid96 ends --> 
+      
+    </div>
+    <!-- mj-subcontainer ends --> 
+    
+  </div>
+  $free_shipping_banner
+  <div id="mj-maincontent">
+    <div class="mj-subcontainer">
+      <div id="mj-contentarea" class="mj-grid64 mj-lspace"> 
+      
+        
+        <!-- start Default Content //-->
+        <form method="post" action="$action_url" name="login">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+              <tr>
+                <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                      <tr>
+                        <td class="pageHeading">{%HEADING_TITLE%}</td>
+                        <td align="right" class="pageHeading"><img width="57" height="40" border="0" title=" Welcome, Please Sign In " alt="Welcome, Please Sign In" src="images/table_background_login.gif"></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+              <tr>
+                <td><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+              </tr>
+              
+              <?php
+              if (!empty($message)) {?>
+                <tr>
+                  <td>$message</td>
+                </tr>
+                <tr>
+                  <td><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                </tr>
+              <?php
+              } ?> 
+              
+              <?php
+              if(!empty($cart_product_count)){  ?>
+                <tr>
+                	<td class="smallText">{%TEXT_VISITORS_CART%}</td>
+                </tr>
+                <tr>
+                	<td><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                </tr>
+              <?php
+              } ?>
+              
+              
+              <tr>
+          <td class="login_box"><table border="0" width="100%" cellspacing="0" cellpadding="2" class="logintable">
+        <?php
+		if ($purchase_without_account) { ?>
+              <tr id="onepagecheckout">
+                <td colspan="2" width="100%"><table border="0" width="100%" height="100%" cellspacing="1" cellpadding="2" class="infoBox">
+                    <tr class="infoBoxContents">
+                      <td><table border="0" width="100%" height="100%" cellspacing="0" cellpadding="2">
+                          <tr>
+                            <td><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                          </tr>
+                          <tr>
+                            <td class="main">{%TEXT_GUEST_INTRODUCTION%}</td>
+                          </tr>
+                          <tr>
+                            <td><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                          </tr>
+                          <tr>
+                            <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                                <tr>
+                                  <td width="10"><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                  <td align="right"><a href="$guest_checkout_url">
+                                  <img title="{%IMAGE_BUTTON_CONTINUE%}" alt="{%IMAGE_BUTTON_CONTINUE%}" src="includes/sts_templates/full/template5/images/buttons/button_checkout.gif">
+                                  </a></td>
+                                  <td width="10"><?php echo tep_draw_separator('pixel_trans.gif', '10', '1'); ?></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <?php } ?>
+            </table></td>
+        </tr>
+              
+              
+              <tr>
+                <td class="login_box"><table width="100%" cellspacing="0" cellpadding="2" border="0" class="logintable">
+                  </table>
+                  <table width="50%" cellspacing="0" cellpadding="2" border="0" class="logintable table_login_responsive">
+                    <tbody>
+                      <tr id="tr1">
+                        <td width="100%" valign="top" class="main"><b>{%HEADING_NEW_CUSTOMER%}</b></td>
+                      </tr>
+                      <tr>
+                        <td width="100%" valign="top" height="100%"><table width="100%" height="100%" cellspacing="1" cellpadding="2" border="0" class="infoBox">
+                            <tbody>
+                              <tr class="infoBoxContents">
+                                <td><table width="100%" height="100%" cellspacing="0" cellpadding="2" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                      </tr>
+                                      <tr>
+                                        <td valign="top" class="main">{%TEXT_NEW_CUSTOMER%}<br>
+                                          <br>
+                                          {%TEXT_NEW_CUSTOMER_INTRODUCTION%}</td>
+                                      </tr>
+                                      <tr>
+                                        <td><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                      </tr>
+                                      <tr>
+                                        <td><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                                            <tbody>
+                                              <tr>
+                                                <td width="10"><img width="10" height="1" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                                <td align="right">
+                                                <a href="$create_account_url">
+                                                <img width="85" height="25" border="0" title=" Continue " alt="Continue" src="includes/sts_templates/full/template5/images/buttons/button_continue.gif">
+                                                </a>
+                                                </td>
+                                                <td width="10">
+                                                <img width="10" height="1" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                              </tr>
+                                            </tbody>
+                                          </table></td>
+                                      </tr>
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table width="50%" cellspacing="0" cellpadding="2" border="0" class="logintable table_login_responsive1">
+                    <tbody>
+                      <tr id="tr1">
+                        <td width="100%" valign="top" class="main"><b>{%HEADING_RETURNING_CUSTOMER%}</b></td>
+                      </tr>
+                      <tr>
+                        <td width="100%" valign="top" height="100%"><table width="100%" height="100%" cellspacing="1" cellpadding="2" border="0" class="infoBox">
+                            <tbody>
+                              <tr class="infoBoxContents">
+                                <td><table width="100%" height="100%" cellspacing="0" cellpadding="2" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td colspan="2"><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2" class="main">{%TEXT_RETURNING_CUSTOMER%}</td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2"><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="main"><b>{%ENTRY_EMAIL_ADDRESS%}</b></td>
+                                        <td class="main"><input type="text" name="email_address"></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="main"><b>{%ENTRY_PASSWORD%}</b></td>
+                                        <td class="main"><input type="password" maxlength="40" name="password"></td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2"><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2" class="smallText"><a href="$forgot_password_url">{%TEXT_PASSWORD_FORGOTTEN%}</a></td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2"><img width="100%" height="10" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2"><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                                            <tbody>
+                                              <tr>
+                                                <td width="10"><img width="10" height="1" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                                <td align="right"><input type="image" border="0" title=" Sign In " alt="Sign In" src="includes/sts_templates/full/template5/images/buttons/button_login.gif"></td>
+                                                <td width="10"><img width="10" height="1" border="0" alt="" src="images/pixel_trans.gif"></td>
+                                              </tr>
+                                            </tbody>
+                                          </table></td>
+                                      </tr>
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+        <!-- end Default Content //--> 
+        
+      </div>
+      <div id="mj-left" class="mj-grid16 mj-lspace">
+        <div class="ui-widget infoBoxContainer mj-categoriessidebox"> $categorybox </div>
+        <div class="ui-widget infoBoxContainer mj-whatsnew"> $whatsnewbox </div>
+        <div class="ui-widget infoBoxContainer mj-information"> $informationbox </div>
+      </div>
+      <div id="mj-right" class="mj-grid16 mj-lspace mj-rspace">
+        <div class="ui-widget infoBoxContainer mj-cartbox"> $cartbox </div>
+        <div class="ui-widget infoBoxContainer mj-bestsellersbox"> $bestsellersbox </div>
+        <div class="ui-widget infoBoxContainer mj-reviewbox"> $reviewsbox </div>
+        <div class="ui-widget infoBoxContainer mj-currenciesbox"> $currenciesbox </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="mj-footertop">
+  <div class="mj-subcontainer"> $brands
+    
+    $newsletter </div>
+</div>
+<div id="mj-footer"> <!-- mj-footer starts -->
+  
+  <div class="mj-subcontainer"> <!-- mj-subcontainer starts --> 
+    
+    $footer_box_01
+    
+    $footer_box_02
+    
+    $footer_box_03
+    
+    $footer_box_04 </div>
+</div>
+$footer_copyright
+</body>
+</html>
