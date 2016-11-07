@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html> <head> <link rel="icon" type="image/png" href="/includes/sts_templates/full/template10/images/favicon.png" />
+ $headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ $template18_stylesheet1
+  <script type="text/javascript">
+var jqqqnoconf = jQuery.noConflict();
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+if (jqqqnoconf.attrFn) {
+jqqqnoconf.attrFn.text = true;
+ }
+ </script>
+
+  <script type="text/javascript">
+
+ var tba = jQuery.noConflict();
+
+ tba(document).ready(function () {
+
+  //SKU BOF
+ tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+ tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
+ tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+  //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+  //SKU EOF
+   var scroll_pos = 0;
+  tba(document).scroll(function () {
+  //alert("hello");
+  scroll_pos = tba(this).scrollTop();
+  if (scroll_pos > 25) {
+  tba("#mj-topbar").css('background-color', '#002d62');  tba("#mj-topbar").css('background', '-moz-linear-gradient(top,  #002d62 25%, #000000 96%, #000000 97%)');               tba("#mj-topbar").css('background', '-webkit-linear-gradient(top,  #002d62 25%,#000000 96%,#000000 97%);            tba("#mj-topbar").css('background', 'linear-gradient(to bottom,  #002d62 25%,#000000 96%,#000000 97%);  
+ tba("#mj-topbar a").css('color', '#000');
+ tba("#mj-topbar i").css('color', '#000');
+ tba("#mj-topbar div").css('color', '#000');
+ 
+ tba("#mj-topbar li:last-child").css('background', 'none');
+  }
+   else
+  {
+
+  tba("#mj-topbar a").css('color', '#002d62');
+  tba("#mj-topbar i").css('color', '#002d62');
+   tba("#mj-topbar div").css('color', '#002d62');
+
+ tba("#mj-topbar li:last-child").css('background', 'none');
+ } });  });</script>
+ 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
+ <meta name="description" content=""> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+$stylesheet
+
+
+ </head>
+
+<body class="$script">
+<div id="mj-container">
+$top_bar
+$header
+$navigation_menu
+
+
+
+ 
+
+<?php
+if($_SERVER['PHP_SELF'] == "/index.php")
+{
+?>
+
+<link rel='stylesheet' id='camera-css'  href='/includes/sts_templates/full/template10/camera-big/css/camera.css' type='text/css' media='all'> 
+<script type='text/javascript' src='/includes/sts_templates/full/template10/camera-big/scripts/jquery.min.js'></script>
+<script type='text/javascript' src='/includes/sts_templates/full/template10/camera-big/scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='/includes/sts_templates/full/template10/camera-big/scripts/jquery.easing.1.3.js'></script> 
+<script type='text/javascript' src='/includes/sts_templates/full/template10/camera-big/scripts/camera.min.js'></script> 
+
+<script>
+jQuery(function(){
+jQuery('#camera_wrap_1').camera({
+thumbnails: false
+});
+
+
+jQuery('#camera_wrap_2').camera({
+height: '40%',
+loader: 'bar',
+pagination: false,
+thumbnails: false
+}); }); </script> 
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10"  ><tr>
+<td valign="center" align="center"  class="fullbanner"><section > 
+<div class="" style="margin:0 auto; border-bottom:5px solid #666666;">
+<div class="camera_wrap camera_black_skin" id="camera_wrap_1"  style="margin:0 auto;">
+
+<div  data-link="#"  data-src="/includes/sts_templates/full/template10/camera-big/images/slides/slide1.jpg"  data-fx="scrollRight" style="width:100%!important; "></div> 
+ <div  data-link="#"   data-src="/includes/sts_templates/full/template10/camera-big/images/slides/slide3.jpg"  data-fx="scrollRight"  style="width:100%!important; " ></div>
+ <div   data-link="#"  data-src="/includes/sts_templates/full/template10/camera-big/images/slides/slide2.jpg" data-fx="scrollRight"  style="width:100%!important; "></div>
+
+ </div></div></section></td></tr></table>
+ 
+ 
+ 
+ <div class="mobilebanner" style="max-width:100%; padding:10px;">
+ <a href="#"><img src="/includes/sts_templates/full/template10/camera-small/images/slides/slide1.jpg" style="max-width:100%!important;" /></a><br><br>
+ <a href="#"><img src="/includes/sts_templates/full/template10/camera-small/images/slides/slide3.jpg" style="max-width:100%!important;" /></a><br><br>
+ <a href="#"><img src="/includes/sts_templates/full/template10/camera-small/images/slides/slide2.jpg" style="max-width:100%!important;"  /></a></div>
+ 
+
+ 
+ 
+<?php 
+}
+?> 
+
+<div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
+ <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+<div class="moduletable mj-grid96 breadcrumb">	<!-- mj-grid96 starts -->
+<div class="breadcrumbs mj-grid96 breadcrumb"> 
+ <div id="navBreadCrumb">
+$breadcrumbs
+
+</div> </div> </div> <!-- mj-grid96 ends --> </div> <!-- mj-subcontainer ends --> </div>
+
+<div id="mj-maincontent">
+<div class="mj-subcontainer">
+<div id="mj-contentarea" class="mj-grid64 ">
+<?php
+if($_SERVER['PHP_SELF'] == "/index.php")
+{
+?>
+
+
+      
+    
+      
+<center>    
+<table width="100%" border="0" cellspacing="10" cellpadding="0"><tr>
+      <td align="center" valign="top"><div width="100%"   align="center" style="float:none!important;">
+      
+<h2>Featured Products</h2>$featured_products<br><br><br>
+
+<h2>Featured Categories</h2>
+
+
+<table width="100%" border="0" cellspacing="25" cellpadding="0">
+
+    <tr><td><a href="#"><img src="/includes/sts_templates/full/template10/images/rifles.png" style="width:100%;" alt="Rifles"  title="Rifles"/></a></td>
+    <td><a href="#"><img src="/includes/sts_templates/full/template10/images/pistols.png" style="width:100%;" alt="Pistols"  title="Pistols"/></a></td></tr>
+    
+      <tr><td><a href="#"><img src="/includes/sts_templates/full/template10/images/shotgun.png" style="width:100%;" alt="Shotguns" title="Shotguns"/></a></td>
+    <td><a href="#"><img src="/includes/sts_templates/full/template10/images/nfa.png" style="width:100%;" alt="NFA" title="NFA"/></a></td></tr>
+
+</table>
+
+ 
+<div class="fullbanner"><br><br></div>
+<table width="100%" border="0" cellspacing="10" cellpadding="0" class="fullbanner">
+<tr><td align="center" colspan="6"><h2>Featured Brands</h2></td></tr>
+<tr>
+      <td align="center"><a href="#"><img src="/includes/sts_templates/full/template10/images/brand01.png" width="100%" /></a></td>
+      <td align="center"><a href="#"><img src="/includes/sts_templates/full/template10/images/brand02.png" width="100%" /></a></td>
+      <td align="center"><a href="#"><img src="/includes/sts_templates/full/template10/images/brand03.png" width="100%" /></a></td>
+      <td align="center"><a href="#"><img src="/includes/sts_templates/full/template10/images/brand04.png" width="100%" /></a></td>
+      <td align="center"><a href="#"><img src="/includes/sts_templates/full/template10/images/brand05.png" width="100%" /></a></td>
+      <td align="center"><a href="#"><img src="/includes/sts_templates/full/template10/images/brand06.png" width="100%" /></a></td>
+    </tr></table>
+
+
+
+
+</div></td>
+      <td align="center" valign="top" class="fullnavbar" style="padding-top: 35px; "><div style="background-color:#ffffff; border:2px solid #cccccc; max-width:375px;"><a href="#"><img src="/includes/sts_templates/full/template10/images/about.png" style="width:100%;" alt="About Us" title="About Us"/></a><br><br><div style="padding:15px; text-align:left;"><b>Welcome to your online source for the best tactical gear and weapons. We guarantee the best products and the best prices, with expert service and knowledge to back it up. Gear up, go out, and be invincible!</div></div><br><br><div style=" max-width:375px;  text-align:left;">
+
+<a href="#"><img src="/includes/sts_templates/full/template10/images/specialize.png" style="width:100%;" alt="Titaniaum and Super Alloy Gun Parts "  title="Titaniaum and Super Alloy Gun Parts "/></a>
+<br><br><a href="#"><img src="/includes/sts_templates/full/template10/images/veteran_deal.png" style="width:100%;" alt="Veteran Deal" Title="Veteran Deal"/></a>
+
+<br><br><a href="#"><img src="/includes/sts_templates/full/template10/images/videos.png" style="width:100%;" alt="Videos" title="Videos"/></a>
+
+
+<br><br><a href="#"><img src="/includes/sts_templates/full/template10/images/training.png" style="width:100%;" alt="Training" title="Training"/></a></div></td>
+    </tr></table>
+    
+    <div class="fullbanner"><br><br><br><br></div>
+  
+
+
+
+
+</center>
+
+
+
+
+
+
+
+<?php 
+}
+?> <!--sku start-->  
+ 
+  <?php
+if($_SERVER['PHP_SELF'] != "/index.php")
+{
+?>
+  <div   style="border:2px solid #ccc; padding:15px; 	background-color:#ffffff;">$content    </div><?php  } ?> 
+
+ <!--sku end--> </div>
+
+<div id="mj-left" class="mj-grid16 mj-lspace" >     <?php
+if($_SERVER['PHP_SELF'] == "/index.php")
+{
+?>
+  <div  style="padding-top:35px;">&nbsp;   </div><?php  } ?>                          
+<div class="ui-widget infoBoxContainer mj-categoriessidebox" >
+ 
+ 
+ 
+
+  
+  
+   <?php
+if($_SERVER['PHP_SELF'] != "/index.php")
+{
+?><div class="" >
+ $search_filterbox  </div> <?php  } ?> 
+ $categorybox  </div>   
+
+ 
+  
+ <div class="ui-widget infoBoxContainer mj-cartbox">
+$cartbox </div>
+
+
+ 
+<div class="ui-widget infoBoxContainer mj-information">
+$informationbox </div><div>
+$newsletter</div></div>
+ 
+
+<!--<div id="mj-right" class="mj-grid16 mj-lspace mj-rspace"> 
+</div>--> </div></div></div>
+
+<div id="mj-footertop">
+<div class="mj-subcontainer"> </div> </div>
+
+ <div id="mj-footer"> <div class="fullbanner">
+<?php
+if($_SERVER['PHP_SELF'] != "/index.php")
+{
+?>
+
+<link rel='stylesheet' id='camera-css'  href='/includes/sts_templates/full/template10/camera-small/css/camera.css' type='text/css' media='all'> 
+<script type='text/javascript' src='/includes/sts_templates/full/template10/camera-small/scripts/jquery.min.js'></script>
+<script type='text/javascript' src='/includes/sts_templates/full/template10/camera-small/scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='/includes/sts_templates/full/template10/camera-small/scripts/jquery.easing.1.3.js'></script> 
+<script type='text/javascript' src='/includes/sts_templates/full/template10/camera-small/scripts/camera.min.js'></script> 
+
+<script>
+jQuery(function(){
+jQuery('#camera_wrap_1').camera({
+thumbnails: false
+});
+
+
+jQuery('#camera_wrap_2').camera({
+height: '40%',
+loader: 'bar',
+pagination: false,
+thumbnails: false
+}); }); </script> 
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10"  ><tr>
+<td valign="center" align="center"  class="fullbanner"><section > 
+<div class="" style="margin:0 auto;  border-bottom:5px solid #666666; border-top:5px solid #666666;" >
+<div class="camera_wrap camera_black_skin" id="camera_wrap_1"  style="margin:0 auto; ">
+
+<div  data-link=""  data-src="/includes/sts_templates/full/template10/camera-small/images/slides/slide1.jpg"  data-fx="scrollRight" style="width:100%!important; "></div> 
+ <div  data-link="#"   data-src="/includes/sts_templates/full/template10/camera-small/images/slides/slide3.jpg"  data-fx="scrollRight"  style="width:100%!important; " ></div>
+ <div   data-link="#"  data-src="/includes/sts_templates/full/template10/camera-small/images/slides/slide2.jpg" data-fx="scrollRight"  style="width:100%!important; "></div>
+
+ </div></div></section></td></tr></table>
+<?php 
+}
+?> <br><br></div>
+
+
+
+
+<!-- mj-footer starts -->
+ <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+ $footer_box_01 $footer_box_02 $footer_box_03  $footer_box_04 </div> </div>
+ $footer_copyright </body></html>
+

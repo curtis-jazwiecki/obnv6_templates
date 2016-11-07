@@ -1,0 +1,85 @@
+﻿/* Tab Content - menucool.com */
+
+.mj-productinfo .mj_prodinfo_tabcontent ul.tabs
+{
+    font-size: 0;
+    margin:0;
+    list-style-type: none;
+    text-align: left; /*set to left, center, or right to align the tabs as desired*/
+}
+
+.mj-productinfo span.title {
+
+    margin: 0;
+    padding: 0;  
+}
+.mj-productinfo ul.tabs li a
+{
+	height:auto;
+	}
+.mj-productinfo .mj_prodinfo_tabcontent ul.tabs li
+{
+    display: inline;
+    margin: 0;
+    margin-right:3px; /*distance between tabs*/
+}
+        
+.mj-productinfo .mj_prodinfo_tabcontent ul.tabs li a
+{
+   font-size:14px!important;
+   font-weight:bold!important;
+  text-decoration: none;
+    position: relative;
+  
+    
+    
+ outline:none;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5) inset;
+
+
+}
+        
+.mj-productinfo .mj_prodinfo_tabcontent ul.tabs li a:visited
+{
+    
+}
+        
+.mj-productinfo .mj_prodinfo_tabcontent ul.tabs li a:hover
+{
+    
+    background-color:#ffffff; color:#002d62!important ;
+}
+        
+.mj-productinfo .mj_prodinfo_tabcontent ul.tabs li.selected a, .mj-productinfo .mj_prodinfo_tabcontent ul.tabs li.selected a:hover
+{
+    position: relative;
+    top: 0px;
+    font-weight:bold;
+    background: #ffffff;
+	color:#002d62!important ;
+ 
+}
+        
+        
+.mj-productinfo .mj_prodinfo_tabcontent ul.tabs li.selected a:hover
+{
+    text-decoration: none;
+}
+     
+
+
+.mj-productinfo .mj_prodinfo_tabcontent div.tabcontents {
+    background-color: hsl(0, 0%, 100%);
+    border-left: 2px solid #ccc;   border-right: 2px solid #ccc;   border-bottom: 2px solid #ccc;
+   
+    padding: 2%;
+    width: 95%;
+	margin-top:-1px;
+}
+
+.mj-productinfo .mj_prodinfo_tabcontent {
+    display: inline-block;
+    float: left;
+    width: 100%;
+	margin-top:50px
+}

@@ -1,0 +1,64 @@
+
+<div class="fullnavbar" style="padding-top:65px; width:100%; background-color:#fff!important;"><a href="index.php"><img src="/images/store_logo.png" width="100%" border="0" alt=""/></a>
+<div align="right" style="
+
+
+background: #666666; /* Old browsers */
+background: -moz-linear-gradient(top,  #666666 25%, #333333 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #666666 25%,#333333 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #666666 25%,#333333 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#333333',GradientType=0 ); /* IE6-9 */
+
+
+ width:100%;border-bottom:3px solid #454545;  border-top:3px solid #454545; padding: 3px 0px  3px 0px; color:#ffffff !important;  font-family: 'Exo', Arial, sans-serif; font-size:14px; font-weight:bold; ">
+ <a href="/index.php"><span style="color:#ffffff !important;  font-family: 'Exo', Arial, sans-serif; font-size:14px; font-weight:bold;  ">Home</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="/shop.php"><span style="color:#ffffff !important;  font-family: 'Exo', Arial, sans-serif; font-size:14px; font-weight:bold;  ">Shop</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="#"><span style="color:#ffffff !important;  font-family: 'Exo', Arial, sans-serif; font-size:14px; font-weight:bold; ">About Us</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="#"><span style="color:#ffffff !important;  font-family: 'Exo', Arial, sans-serif; font-size:14px; font-weight:bold;  ">Services</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="#"><span style="color:#ffffff !important;  font-family: 'Exo', Arial, sans-serif; font-size:14px; font-weight:bold;  ">Videos</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="#"><span style="color:#ffffff !important;  font-family: 'Exo', Arial, sans-serif; font-size:14px; font-weight:bold; ">FAQ</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="/contact_us.php"><span style="color:#ffffff !important;  font-family: 'Exo', Arial, sans-serif; font-size:14px; font-weight:bold; ">Contact Us</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+
+
+</div>
+
+<!--<div style="position:absolute; right:10px; top:85px; z-index:500; width:15%; min-width:175px;" class="fullnavbar"><a href="/shipping-returns-i-5.html"><img src="/includes/sts_templates/full/template18/images/shipping.png" width="100%" border="0" alt=""/></a>
+</div>-->
+
+<div class="mobilenavbar" style="padding-top:0px; width:100%; background-color:#000000!important;"><a href="index.php"><img src="/includes/sts_templates/full/template10/images/mobileheader.png" width="100%" border="0" alt=""/></a></div>
+
+
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+jQuery('input:checkbox[name^="columns_"]').click(function(){
+var product_id = jQuery(this).val();
+var action = (jQuery(this).is(':checked') ? 'add' : 'remove'); 
+jQuery.ajax({
+url: 'register_product_for_comparison.php', 
+method: 'post', 
+data: {
+action: action, 
+id: product_id
+}, 
+success: function(response){
+if (response=='added'){
+alert('Product added for comparison');
+} else if (response=='removed'){
+alert('Product removed from comparison');
+} },
+error: function(xhr, textStatus, errorThrown) {
+alert(errorThrown);
+ } });	});	});
+var jqheader = jQuery.noConflict();
+jqheader(document).ready(function () {
+jqheader('#store_li').click(function () {
+jqheader(".navbar .nav > li").show();
+ });   });</script></div>
+
+ <link href='https://fonts.googleapis.com/css?family=Exo:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+
+
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>

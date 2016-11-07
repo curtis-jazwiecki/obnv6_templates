@@ -1,0 +1,137 @@
+
+
+
+<script type="text/javascript">
+var tba = jQuery.noConflict();
+tba(document).ready(function () {
+var scroll_pos = 0;
+tba(document).scroll(function () {
+//alert("hello");
+  scroll_pos = tba(this).scrollTop();
+  if (scroll_pos > 25) {
+  tba("#mj-topbar").css('background-color', '#002d62');  tba("#mj-topbar").css('background', '-moz-linear-gradient(top,  #002d62 25%, #000000 96%, #000000 97%)');               tba("#mj-topbar").css('background', '-webkit-linear-gradient(top,  #002d62 25%,#000000 96%,#000000 97%);            tba("#mj-topbar").css('background', 'linear-gradient(to bottom,  #002d62 25%,#000000 96%,#000000 97%);  
+ tba("#mj-topbar a").css('color', '#000');
+ tba("#mj-topbar i").css('color', '#000');
+ tba("#mj-topbar div").css('color', '#000');
+ 
+ tba("#mj-topbar li:last-child").css('background', 'none');
+  }
+   else
+  {
+  tba("#mj-topbar").css('background-color', '#002d62');  tba("#mj-topbar").css('background', '-moz-linear-gradient(top,  #002d62 25%, #000000 96%, #000000 97%)');               tba("#mj-topbar").css('background', '-webkit-linear-gradient(top,  #002d62 25%,#000000 96%,#000000 97%);            tba("#mj-topbar").css('background', 'linear-gradient(to bottom,  #002d62 25%,#000000 96%,#000000 97%); 
+  tba("#mj-topbar a").css('color', '#002d62');
+  tba("#mj-topbar i").css('color', '#002d62');
+   tba("#mj-topbar div").css('color', '#002d62');
+
+ tba("#mj-topbar li:last-child").css('background', 'none');
+ } });  });</script>
+ 
+ 
+ 
+<div class="fullnavbar" >
+<div id="mj-topbar" >
+ 
+
+ 
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+ 
+<tr>
+<td width="50px" class="widescreen">&nbsp;&nbsp;</td><td width="30px" class="fullbanner">&nbsp;&nbsp;</td>
+<td align="center" valign="middle"> <a href="/index.php"><span class="fullbanner" style="font-size:20 !important; font-weight:bold;">Home</span></a></td>
+<td width="2px" >&nbsp;&nbsp;</td>
+<td align="center" valign="middle"> <a href="/contact_us.php"><span class="fullbanner" style="font-size:20 !important; font-weight:bold;">Contact Us</span></a></td>
+<td width="2px" >&nbsp;&nbsp;</td>
+<td align="center" valign="middle"> <a href="#"><span class="fullbanner" style="font-size:20 !important; font-weight:bold;">About Us</span></a></td>
+<td width="50px" class="widescreen">&nbsp;&nbsp;</td><td width="30px" class="fullbanner">&nbsp;&nbsp;</td>
+<td style="max-width: 75%; min-width:65%;">
+
+
+
+<div style="padding:2px 10px 2px 10px ; background-color: #454545; border-radius:5px;" class="fullbanner">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td align="left" valign="middle"  width=""> <div style="padding:10px 50px 10px 0px;">
+<form method="get" action="advanced_search_result.php" name="search">                                    
+<div class="search"> 
+<input type="text" onfocus="if (this.value == ' Search...')
+this.value = ''" onblur="if (this.value == '')
+this.value = ' Search...'" value=" Search..." style="width:100%;" class="go" name="keywords">
+<button type="submit" id="search-button"><span><i class="fa fa-search"></i></span></button>
+</div> </form> </div></td>
+
+
+<td valign="middle" width="123px"> <a href="/advanced_search.php"><img src="/includes/sts_templates/full/template10/images/advse.png" border="0" width="123px" height="25px" alt="advanced search"  /></a>
+</td></tr></table>
+
+
+</div>
+
+
+
+
+
+
+</td>
+<td>
+         	
+<div id="topbar_account">
+<table class="menu" border="0" cellspacing="0" cellpadding="0"> <tr>
+<td align="center">
+<span class="menu_txt">
+<span class="tdbLink">
+ <a href="/account.php"><img src="/includes/sts_templates/full/template10/images/user.png" width="20px" border="0" alt="Account" title="Account"/><span class="widescreen">Account</span></a> </span> </span></td>
+  <td width="20px" class="widescreen">&nbsp;&nbsp;</td>
+  
+<td align="center">
+ <span class="menu_txt">
+<span class="tdbLink">
+<a href="$urlcheckout" id="tdb3"><img src="/includes/sts_templates/full/template10/images/card.png" width="20px" border="0" alt="Checkout"  title="Checkout"/><span class="widescreen">Checkout</span></a>
+</span></span></td>
+
+<td width="20px" class="widescreen">&nbsp;&nbsp;</td>
+<td align="center">
+<span class="menu_txt">
+<span class="tdbLink">
+<a href="$urlcartcontents" id="tdb4"> <img src="/includes/sts_templates/full/template10/images/cart.png" width="20px" border="0" alt="Cart"  title="Cart"/>&nbsp;($cart_items_count)<span class="widescreen">&nbsp;Cart</span></a>  
+ </span></span></td>
+</tr></table>
+ </div>
+
+</td><td width="10px">&nbsp;</td></tr></table>
+</div></div>
+
+
+
+
+
+
+
+<div class="mobilenavbar" style="padding:10px; margin:0 auto;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#002d62+25,4f4f4f+96,000000+97 */
+background: #002d62; /* Old browsers */
+background: -moz-linear-gradient(top,  #002d62 25%, #000000 96%, #000000 97%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #002d62 25%,#000000 96%,#000000 97%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #002d62 25%,#000000 96%,#000000 97%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002d62', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+ ">
+
+
+ <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td align="left" valign="middle"  width=""> <div style="padding:10px 10px 10px 0px;">
+<form method="get" action="advanced_search_result.php" name="search">                                    
+<div class="search"> 
+<input type="text" onfocus="if (this.value == ' Search...')
+this.value = ''" onblur="if (this.value == '')
+this.value = ' Search...'" value=" Search..." style="max-width:100%; min-width:100px; padding-right:20px;" class="go" name="keywords">
+<button type="submit" id="search-button"><span><i class="fa fa-search"></i></span></button>
+</div> </form> </div></td>
+
+
+<td valign="middle" width="123px"> <a href="/advanced_search.php"><img src="/includes/sts_templates/full/template10/images/advse.png" border="0" width="123px" height="25px" alt="advanced search"  /></a>
+</td></tr></table>
+
+
+</div>
+
+
