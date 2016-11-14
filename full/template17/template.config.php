@@ -1,0 +1,2 @@
+USE_CSS_BUTTON=TRUE;
+USE_CSS_BUTTON_CLASS=css_btn_styled;

@@ -7,7 +7,8 @@
           <div class="Instock-alert">DISPLAY_PRODUCT_STOCK</div>
           <div class="m-price">DISPLAY_PRODUCT_PRICE</div>
           <div class="ProductCompareButton"> DISPLAY_PRODUCT_COMPARE </div>
-          <div class="ProductActionAdd"> <a title="Choose Options" class="Chooise-BTTN icon-Choose Options" href="DISPLAY_PRODUCT_LINK">Choose Options</a> </div>
+          <div class="ProductActionAdd"> <a title="Add to Wishlist" data-toggle="tooltip" class="Chooise-BTTN icon-Choose Options" href="/"><i class="fa fa-heart" aria-hidden="true"></i></a> </div>
+          
         </div>
       </div></td>
   </tr>

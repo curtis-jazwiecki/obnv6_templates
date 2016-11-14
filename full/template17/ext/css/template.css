@@ -163,7 +163,7 @@ ul.nav-child {
     left: 0;
     margin-left: 10px;
     position: absolute;
-    top: -18px;
+    top: -20px;
     width: 0;
 }
 .jsn-mainnav li ul ul::before{content:none;}

@@ -12,7 +12,7 @@
 
 @charset "utf-8";
 body {
-	font-family: 'PT Sans', sans-serif;
+	font-family: "Lato",sans-serif;
 	color: #333;
 	font-size: 14px;/*background-image:url(../../../../../../images/background.jpg);
 	background-position:right;
@@ -32,7 +32,7 @@ ul {
 	text-transform: capitalize !important;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: sans-serif, sans-serif;
+	font-family:"Lato",sans-serif;
 	text-transform: none;
 }
 h1 {
@@ -51,6 +51,7 @@ h1 {
 #mj-logo img {
 	text-align: center;
 	width: 100%;
+	max-width:80px;
 }
 #mj-logo {
 	text-align: center;
@@ -62,7 +63,7 @@ h1 {
 	height: auto !important;
 }
 #mj-logo a {
-	font-family: sans-serif, sans-serif;
+	font-family: "Lato",sans-serif;
 	font-size: 40px;
 	line-height: 45px;
 	text-transform: none;
@@ -70,7 +71,7 @@ h1 {
 }
 #mj-logo .tagline {
 	display: block;
-	font-family: sans-serif, sans-serif;
+	font-family:"Lato",sans-serif;
 	font-size: 11px;
 	line-height: 15px;
 	margin-left: 2px;
@@ -125,7 +126,7 @@ h1 {
 	background: none repeat scroll 0 0 transparent;
 }
 FORM, SELECT, INPUT {
-	font-family: PT Sans, sans-serif;
+	font-family:"Lato",sans-serif;
 	font-size: 14px;
 }
 #mj-topbar, #mj-header, #mj-navigation, #mj-slideshow, #mj-featured1, #mj-featured2, #mj-featured3, #mj-featured4, #mj-maincontent, #mj-footer, #mj-copyright {
@@ -160,7 +161,7 @@ FORM, SELECT, INPUT {
 	margin-bottom: 10px;
 }
 .zen h3 {
-	font-family: sans-serif, sans-serif;
+	font-family: "Lato",sans-serif;
 	font-size: 17px;
 	font-weight: normal;
 	text-transform: none;
@@ -187,7 +188,7 @@ FORM, SELECT, INPUT {
 #mj-menu {
 	float: left;
 	width: 100%;
-	font-family: sans-serif, sans-serif;
+	font-family:"Lato",sans-serif;
 }
 ul .mj-submenu {
 	background: none repeat scroll 0 0 #FFFFFF;
@@ -369,7 +370,7 @@ a {
 	top: 0;
 	left: 0;
 	font-size: 12px;
-	font-family: 'Montserrat', helvetica, arial, sans-serif;
+	font-family:"Lato",sans-serif;
 	padding: 10px 0 9px;
 	/*	padding-left:30%; 9-22-15*/
 		
@@ -433,7 +434,7 @@ padding:0 20px 0 10px;*/
 	font-size: 18px;
 	text-transform: none;
 	color: #333;
-	font-family: 'Montserrat', helvetica, arial, sans-serif;
+	font-family: "Lato",sans-serif;
 	margin-bottom: 10px;
 }
 .mj-latest ul {
@@ -707,7 +708,7 @@ table td, .centerBoxWrapperContents table td {
 	border-width: 0;
 	text-shadow: none;
 	text-transform: none;
-	font-family: sans-serif, sans-serif;
+	font-family:"Lato",sans-serif;
 }
 #moduleMenu-wrapper span {
 	float: left;
@@ -731,7 +732,7 @@ table td, .centerBoxWrapperContents table td {
 	text-align: center;
 	box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5) inset;
 	text-transform: none;
-	font-family: sans-serif, sans-serif;
+	font-family:"Lato",sans-serif;
 	width: 100px;
 }
 .moduleBox {
@@ -1000,13 +1001,13 @@ p.s_desc {
 	position: relative;/*top:25px;*/
 }
 .price_amount, .prodprice {
-	font-family: Myriad Pro;
+	font-family:"Lato",sans-serif;
 	font-weight: bold;
 	color: #008080 !important;
 }
 .product-details {
 	padding: 3px 8px 1px !important;
-	font-family: sans-serif, sans-serif;
+	font-family:"Lato",sans-serif;
 	text-decoration: none;
 	text-transform: none;
 	border-radius: 4px 4px 4px 4px;
@@ -1309,7 +1310,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 .product_price .product_title {
 	text-transform: capitalize !important;
-	font-family: helvetica, arial, sans-serif !important;
+	font-family:"Lato",sans-serif !important;
 }
 .product_price {
 /*margin: 12px 0 16px;*/
@@ -1354,8 +1355,8 @@ input[type="radio"], input[type="checkbox"] {
 }
 span.title {
 	display: block;
-	font-family: sans-serif, sans-serif;
-	font-size: 16px;
+	font-family:"Lato",sans-serif;
+	font-size: 1.1em;
 	font-weight: normal;
 	margin: 0 0 9px;
 	padding-bottom: 9px;
@@ -1517,7 +1518,7 @@ span.bold, span.bold a {
 	padding: 5px 6px;
 	text-shadow: 0 0 0;
 	text-align: center;
-	font-family: sans-serif, Sans-serif;
+	font-family:"Lato",sans-serif;
 }
 .tableHeading th a, .tableHeading th a:hover, .tableHeading th a:active, .tableHeading th a:visited {
 	color: #FFFFFF;
@@ -1584,7 +1585,7 @@ span.bold, span.bold a {
 	border-radius: 3px 3px 3px 3px;
 	cursor: pointer;
 	display: inline-block;
-	font-family: sans-serif;
+	font-family:"Lato",sans-serif;
 	font-size: 16px;
 	line-height: 19px;
 	margin: 3px 0;
@@ -1788,7 +1789,7 @@ h4.optionName label {
 	width: 55%;
 }
 .flex-caption {
-	font-family: sans-serif;
+	font-family:"Lato",sans-serif;
 	font-size: 66px;
 	font-weight: bold;
 	line-height: 85px;
@@ -1819,7 +1820,7 @@ h2#gvFaqDefaultSubHeading, #gvFaqDefaultMainContent {
 .goog-te-gadget-simple .goog-te-menu-value {
 	color: #666666 !important;
 	font-size: 14px !important;
-	font-family: PT Sans, sans-serif !important;
+	font-family:"Lato",sans-serif !important;
 	box-shadow: 0 0 3px #C0C0C0 inset;
 	border: 0px solid #D2D2D2 !important;
 }
@@ -1968,7 +1969,7 @@ a.twtr-join-conv {
 	width: 80%;
 }
 #twittersideboxContent .twtr-widget {
-	font-family: 'PT Sans', sans-serif !important;
+	font-family: "Lato",sans-serif !important;
 	color: #404040;
 	padding: 5px 10px 0;
 	background: none repeat scroll 0 0 #E3E5E7;
@@ -2558,7 +2559,7 @@ ul.nav-child {
 	padding: 10px;
 	border-bottom: 0px solid #fff;
 	font-size: 16px;
-	font-family: 'Montserrat', helvetica, arial, sans-serif;
+	font-family:"Lato",sans-serif;
 	text-transform: none;
 }
 .ui-widget.infoBoxContainer {
@@ -2946,7 +2947,7 @@ h4.acc_trigger {
 	width: 100%;
 }
 .mj-checkoutprogress .mj-step, .mj-checkoutprogress .mj-step1 {
-	font-family: sans-serif, sans-serif;
+	font-family:"Lato",sans-serif;
 	font-size: 16px;
 	text-transform: none;
 }
@@ -3209,7 +3210,7 @@ ul.tabs li a {
 	border-radius: 5px 5px 5px 5px;
 	box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5) inset;
 	display: block;
-	font-family: sans-serif, sans-serif;
+	font-family:"Lato",sans-serif;
 	font-size: 16px;
 	font-weight: bold;
 	outline: medium none;
@@ -3493,12 +3494,12 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
 	color: inherit;
 }
 #mj-maincontent .ui-widget-header {
-	background-color: #333333 !important;
-	background: #333333 !important;
-	background: #333333 !important;
+	background-color: #446084 !important;
+	background: #446084 !important;
+	background: #446084 !important;
 	border-radius: 0px 0px 0px 0px;
 	border-bottom: 0px solid #fff;
-	font-family: "Lato", Arial, sans-serif !important;
+	font-family:"Lato",sans-serif !important;
 	font-size: 16px;
 	padding: 10px;
 	text-transform: none;
@@ -3538,7 +3539,7 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
 	font-weight: normal;
 }
 .menu_txt {
-	font-family: sans-serif, sans-serif;
+	font-family:"Lato",sans-serif;
 	font-size: 12px;
 	margin-left: 5px;
 	position: relative;
@@ -3568,7 +3569,7 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
 .fa.fa-arrow-circle-o-right :hover {
 }
 .bstsaller_text {
-	font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+	font-family:"Lato",sans-serif;
 }
 #jsn-pos-mainnav li a {
 	box-sizing: unset;
@@ -3593,6 +3594,15 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
 #availability_message {
 	margin-right: 8px;
 }
+ @media only screen and (min-device-width: 320px) and (max-device-width:480px) {
+.paging td.smallText{float:left !important;text-align: center;width: 100%;}
+.paging tr {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+ }
+
  @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
 #mj-topbar {
 	position: absolute;
@@ -3610,22 +3620,18 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
 }
 
 
+
+
  @media only screen and (min-width: 320px) and (max-width: 768px) {
 #mj-topbar {
 	position: absolute;
 }
 #mj-footer .mj-grid24 {
-	text-align: center;
+	text-align: left;
 }
 
 /*04.10.2016*/
 .logintable.table_login_responsive1.AccountLogin-old-customer{margin-top:15px;}
-.paging td.smallText{float:left !important;text-align: center;width: 100%;}
-.paging tr {
-    float: left;
-    text-align: center;
-    width: 100%;
-}
 .cart_quantity {
     margin-top: 5px;
     width: 50%;
@@ -3634,6 +3640,9 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
 div#mj-contentarea td.pageHeading{font-size:20px !important;}
 /*end css*/
 
+/*24.10.2016*/
+
+/*end*/
 }
 
 
@@ -3699,7 +3708,7 @@ li.menu_bar .tdbLink > a, li.menu_bar > a, .currency-converter > p {
 	font-size: 13px;
 	font-weight: bold;
 	line-height: 36px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family:"Lato",sans-serif;
 }
 .FormFieldLabel {
 	margin-right: 5px;
@@ -3713,16 +3722,23 @@ li.menu_bar .tdbLink > a, li.menu_bar > a, .currency-converter > p {
 	padding: 7px 25px 0 0;
 }
 .btn.alt {
-	background-color: transparent !important;
-	border: 3px solid #333333 !important;
-	color: #333333;
-	background: none !important;
-	text-align: center;
-	cursor: pointer;
+	background: #d26e4b none repeat scroll 0 0 !important;
+    border: medium none !important;
+    border-radius: 0 !important;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.97em;
+    font-weight: 700;
+    letter-spacing: 0.03em !important;
+    margin-top: 0 !important;
+    text-align: center;
+    text-shadow: 0 0 !important;
+    text-transform: uppercase;
 }
-.btn.alt {
-	line-height: 29px;
-}
+
+
+.Add_to_cart_BTTN:hover{color:#fff !important;background:#A8583C !important;}
+
 .inputRequirement {
 	color: #f00 !important;
 }
@@ -3748,9 +3764,15 @@ body.shop #mj-maincontent .mj-grid16 {
 .ProductCompareButton {
 	font-size: 11px;
 	margin: 10px 0;
-	text-align: center;
+	text-align: left;
 	text-transform: uppercase;
 }
+
+.Instock-alert {
+    color: green;
+    text-align: left;
+}
+
 .boxText > #billingAddress td {
 	width: 100% !important;
 }
@@ -3766,9 +3788,9 @@ body.shop #mj-maincontent .mj-grid16 {
 .Related-items {
 	float: left;
 }
-.mj_prodinfo_tabcontent ul.tabs li {
+/*.mj_prodinfo_tabcontent ul.tabs li {
 	float: none !important;
-}
+}*/
 .mj_prodinfo_tabcontent ul.tabs li a {
 	text-align: left !important;
 }
@@ -3777,6 +3799,9 @@ body.shop #mj-maincontent .mj-grid16 {
 
 .mj_prodinfo_tabcontent ul.tabs li a {
 	background: none !important;
+	font-weight: bolder;
+    letter-spacing: 0.02em !important;
+    text-transform: uppercase !important;
 }
 /* these styles are for the demo, but are not required for the plugin */
 .zoom {
@@ -3925,7 +3950,7 @@ table.paging td {
 }
 .account td.main > b {
 	color: #333333 !important;
-	font-family: "Lato", Arial, sans-serif !important;
+	font-family: "Lato",sans-serif !important;
 	font-weight: normal !important;
 	font-size: 16px !important;
 	padding: 20px 0 0px !important;
@@ -3969,11 +3994,11 @@ table.paging td {
 .shopping_cart .productListing-data.productlisting_new img{height:auto;}
 .Related-items {
     padding: 10px;
-    border: 1px solid #ccc;
+   
     margin: 2px;
     width: 195px;
 }
-
+.col-sm-3-3.centerBoxContentsNew.centeredContent.product-block{padding:10px;}
 .Related-items .ProductDetails, .m-price, .ProductActionAdd{height:auto !important;}
 
 .products_listing_large_products td{width:300px !important;}
@@ -3984,6 +4009,7 @@ table.paging td {
 @media screen and (max-device-width: 480px){
 	
 	body.advanced_search_result .productListing.productListingTpl2 td{float:left !important;text-align:center !important;width:100% !important;}	
+.advanced_search_result .ProductDetails, .m-price, .ProductActionAdd{height:20px !important;width:100%;max-width:300px;}
 	
 	}
 
@@ -3996,8 +4022,8 @@ table.paging td {
 #mj-copyright .custom.mj-grid88 > p{font-size:16px;}
 
 #mj-righttop-menu {
-    background-color: #ffffff;
-    font-family: "Montserrat",helvetica,arial,sans-serif;
+    
+    font-family:"Lato",sans-serif;
     font-size: 12px;
     left: 0;
     margin-bottom: 0;
@@ -4062,3 +4088,19 @@ table.paging td {
 }
 }
 
+/*19.10.2016*/
+#mj-logo img{width:80px !important;}
+.col-sm-3.pull-right.right-menu{padding:0px;}
+#mj-contentarea .Banner-homepage-top{display:none !important;}
+.col-sm-3.pull-right.right-menu{padding:0px;}
+ul.tabs li {
+    display: inline;
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+/*end*/
+
+/*25.10.2016*/
+
+/*end*/

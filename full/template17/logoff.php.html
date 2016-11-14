@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+$template18_stylesheet1
+<script type="text/javascript">
+
+            var jqqqnoconf = jQuery.noConflict();
+
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+
+            if (jqqqnoconf.attrFn) {
+
+                jqqqnoconf.attrFn.text = true;
+
+            }
+
+        </script>
+<script type="text/javascript">
+
+            var tba = jQuery.noConflict();
+
+
+
+            tba(document).ready(function () {
+
+                //SKU BOF
+
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
+
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+
+                //SKU EOF
+
+			})
+
+
+        </script>
+
+<!--add css stylesheet-->
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template17/ext/css/component.css">
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template17/ext/css/default.css">
+<link rel="stylesheet" href="includes/sts_templates/full/template17/ext/css/New-style.css">
+<!--end of stylesheet-->
+<link rel="stylesheet" href="includes/sts_templates/full/template17/ext/css/bootstrap-responsive.css">
+
+<!-- font-awesome new add link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<!---font-awesome end link--->
+
+<!--add new javascript -->
+<script src="includes/sts_templates/full/template17/ext/jquery/jquery-2.1.1.js"></script>
+<script src="includes/sts_templates/full/template17/ext/jquery/velocity.min.js"></script>
+<script src="includes/sts_templates/full/template17/ext/jquery/main.js"></script>
+<script src="includes/sts_templates/full/template17/ext/jquery/modernizr.js"></script><!-- Modernizr -->
+<script src="includes/sts_templates/full/template17/ext/jquery/slide-menu.js"></script>
+<script src="includes/sts_templates/full/template17/ext/jquery/menu.custom.js"></script>
+<!--end of javascript-->
+
+<script type='text/javascript' src='includes/sts_templates/full/template17/camera/scripts/jquery.min.js'></script>
+<script type='text/javascript' src='includes/sts_templates/full/template17/camera/scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='includes/sts_templates/full/template17/camera/scripts/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='includes/sts_templates/full/template17/camera/scripts/camera.min.js'></script>
+$stylesheet
+</head>
+
+<body class="$script side-menu-mobile">
+$top_bar
+<div id="mj-container-account">
+<div id="mj-container"> 
+  $header
+  $navigation_menu
+  </div>
+  <div id="mj-container" class="container"> <!-- mj-slidetitle starts -->
+    
+    <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
+      
+      <div class="moduletable mj-grid96 breadcrumb"> <!-- mj-grid96 starts -->
+        
+        <div class="breadcrumbs mj-grid96 breadcrumb">
+          <div id="navBreadCrumb"> $breadcrumbs </div>
+        </div>
+      </div>
+      <!-- mj-grid96 ends --> 
+      
+    </div>
+    <!-- mj-subcontainer ends --> 
+    
+  </div>
+  
+  <div class="my-account-header page-title normal-title">
+    <div class="page-title-inner container">
+      <div class="flex-col flex-grow medium-text-center">
+        <h1 class="uppercase mb-0">{%HEADING_TITLE%}</h1>
+      </div>
+      <!-- .flex-left --> 
+    </div>
+    <!-- flex-row --> 
+  </div>
+  
+  <div id="mj-container" class="container"> 
+  <div id="mj-maincontent">
+    <div class="mj-subcontainer">
+      <div id="mj-contentarea" class="mj-grid64 mj-lspace account-page-row"> 
+        
+        <!--sku start-->
+        
+        <table border="0" width="100%" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td><table border="0" width="100%" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td><img src="images/table_background_man_on_board.gif" border="0" alt="Log Off" title=" Log Off " width="100" height="100"></td>
+            <td valign="top"><table border="0" width="100%" cellspacing="0" cellpadding="2">
+              <tbody>
+              <tr>
+                <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+              </tr>
+              <tr>
+                <td class="main">{%TEXT_MAIN%}</td>
+              </tr>
+            </tbody></table></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+      </tr>
+      <tr>
+        <td><table border="0" width="100%" cellspacing="1" cellpadding="2" class="infoBox">
+          <tbody><tr class="infoBoxContents">
+            <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+              <tbody><tr>
+                <td width="10"><img src="images/pixel_trans.gif" border="0" alt="" width="10" height="1"></td>
+                <td align="right"><a href="$back_url"><img src="includes/sts_templates/full/template17/images/buttons/button_continue.gif" border="0" alt="Continue" title=" Continue " width="123" height="39"></a></td>
+                <td width="10"><img src="images/pixel_trans.gif" border="0" alt="" width="10" height="1"></td>
+              </tr>
+            </tbody></table></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+    </tbody></table>
+        
+        <!--sku end--> 
+        
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div id="products-INFO-box">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">$infobox_04</div>
+      <div class="col-sm-3">$infobox_04</div>
+      <div class="col-sm-3">$infobox_04</div>
+      <div class="col-sm-3">$infobox_04</div>
+    </div>
+  </div>
+</div>
+<div id="mj-footer" class="inner"> <!-- mj-footer starts -->
+  <div class="mj-subcontainer" id="mj-container"> <!-- mj-subcontainer starts --> 
+    $footer_box_02
+    $footer_box_03
+    $footer_box_04 </div>
+</div>
+<div id="footer-links">
+  <div id="mj-container"> $footer_copyright </div>
+</div>
+<!--ad javascript--> 
+<script src="includes/sts_templates/full/template17/ext/jquery/accordionMenu.js"></script> 
+<!---add javascrtip---->
+
+</body>
+</html>

@@ -43,10 +43,6 @@ tba('.category_cell table').addClass('categoryListBoxContents subproduct_name on
   tba("#top-menu li:last-child").css('background', 'none');
  } });*/
     </script>
-    
-    
-    
-    
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,16 +51,13 @@ tba('.category_cell table').addClass('categoryListBoxContents subproduct_name on
 <!--add css stylesheet-->
 <link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template17/ext/css/component.css">
 <link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template17/ext/css/default.css">
-<link rel="stylesheet" href="includes/sts_templates/full/template17/ext/css/New-style.css"> 
+<link rel="stylesheet" href="includes/sts_templates/full/template17/ext/css/New-style.css">
 <!--end of stylesheet-->
 <link rel="stylesheet" href="includes/sts_templates/full/template17/ext/css/bootstrap-responsive.css">
-
 
 <!-- font-awesome new add link -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <!---font-awesome end link--->
-
-
 
 <style>
 body {
@@ -84,80 +77,61 @@ a:hover {
 	line-height: 40px;
 	padding: 20px;
 }
-
 </style>
 
 <!--add new javascript -->
 <script src="includes/sts_templates/full/template17/ext/jquery/jquery-2.1.1.js"></script>
 <script src="includes/sts_templates/full/template17/ext/jquery/velocity.min.js"></script>
-<script src="includes/sts_templates/full/template17/ext/jquery/main.js"></script> 
-<script src="includes/sts_templates/full/template17/ext/jquery/modernizr.js"></script> <!-- Modernizr -->
+<script src="includes/sts_templates/full/template17/ext/jquery/main.js"></script>
+<script src="includes/sts_templates/full/template17/ext/jquery/modernizr.js"></script><!-- Modernizr -->
 <script src="includes/sts_templates/full/template17/ext/jquery/slide-menu.js"></script>
 <script src="includes/sts_templates/full/template17/ext/jquery/menu.custom.js"></script>
 <!--end of javascript-->
 
 <script type='text/javascript' src='includes/sts_templates/full/template17/camera/scripts/jquery.min.js'></script>
-
 <script type='text/javascript' src='includes/sts_templates/full/template17/camera/scripts/jquery.mobile.customized.min.js'></script>
 <script type='text/javascript' src='includes/sts_templates/full/template17/camera/scripts/jquery.easing.1.3.js'></script>
 <script type='text/javascript' src='includes/sts_templates/full/template17/camera/scripts/camera.min.js'></script>
-
 $stylesheet
 $google_analytics
 </head>
 <body class="$script side-menu-mobile">
+$top_bar
 <div id="top-header" class="header">
-<div id="mj-container"> $top_bar
-  $header
-  $navigation_menu
-</div>
+  <div id="mj-container"> $header
+    $navigation_menu </div>
 </div>
 <div id="mj-container" class="slider-home">
-
-
-<div class="mj-subcontainer">
-<div id="mj-contentarea" class="mj-grid64 mj-lspace">
-
- <?php
+  <div class="mj-subcontainer">
+    <div id="mj-contentarea" class="mj-grid64 mj-lspace">
+      <?php
 if($_SERVER['PHP_SELF'] == "/index.php")
 {
 ?>
-        <!-- Place somewhere in the of your page -->
-        <div class="flexslider-new">
-          <ul class="slides slide-show">
-            <li> <img src="includes/sts_templates/full/template17/camera/images/slides/slide1.png" />
-              <div class="slide-overlay">
-                
-              </div>
-            </li>
-            <li> <img src="includes/sts_templates/full/template17/camera/images/slides/slide2.png" />
-              <div class="slide-overlay">
-                
-              </div>
-            </li>
-            <li> <img src="includes/sts_templates/full/template17/camera/images/slides/slide3.png" />
-              <div class="slide-overlay">
-                
-              </div>
-            </li>
-            <li> <img src="includes/sts_templates/full/template17/camera/images/slides/slide4.png" />
-              <div class="slide-overlay">
-                
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div style="clear:both"></div>
-        <?php 
+      <!-- Place somewhere in the of your page -->
+      <div class="flexslider-new">
+        <ul class="slides slide-show">
+          <li> <img src="includes/sts_templates/full/template17/camera/images/slides/slide1.png" />
+            <div class="slide-overlay"> </div>
+          </li>
+          <li> <img src="includes/sts_templates/full/template17/camera/images/slides/slide2.png" />
+            <div class="slide-overlay"> </div>
+          </li>
+          <li> <img src="includes/sts_templates/full/template17/camera/images/slides/slide3.png" />
+            <div class="slide-overlay"> </div>
+          </li>
+          <li> <img src="includes/sts_templates/full/template17/camera/images/slides/slide4.png" />
+            <div class="slide-overlay"> </div>
+          </li>
+        </ul>
+      </div>
+      <div style="clear:both"></div>
+      <?php 
 }
 ?>
-</div>
-</div>
-
+    </div>
   </div>
-
-
-
+</div>
 <div id="mj-container">
   <div id="mj-slidetitle"> <!-- mj-slidetitle starts -->
     <div class="mj-subcontainer"> <!-- mj-subcontainer starts -->
@@ -170,21 +144,35 @@ if($_SERVER['PHP_SELF'] == "/index.php")
     </div>
     <!-- mj-subcontainer ends --> 
     
-    
-    
   </div>
-  
- 
   <div id="mj-maincontent">
     <div class="mj-subcontainer">
       <div id="mj-contentarea" class="mj-grid64 mj-lspace">
-        
         <div class="Banner-homepage-top"> $free_shipping_banner </div>
-        
         
         <!--sku start--> 
         $content 
-        <!--sku end--> 
+        <!--sku end-->
+        
+        <div class="container" id="advertisement-box">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="col-sm-4">
+              <div class="icon-ad"><i class="fa fa-check" aria-hidden="true"></i></div>
+              	<div class="icon-box-text last-reset"><h5 class="uppercase">Free Shipping on all orders</h5><p>Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p></div>
+              </div>
+              <div class="col-sm-4">
+              <div class="icon-ad"><i class="fa fa-heart" aria-hidden="true"></i></div>
+              	<div class="icon-box-text last-reset"><h5 class="uppercase">Amazing customer service</h5><p>Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p></div>
+              </div>
+              <div class="col-sm-4">
+              <div class="icon-ad"><i class="fa fa-star" aria-hidden="true"></i></div>
+              	<div class="icon-box-text last-reset"><h5 class="uppercase">No Customs or Duty Fees!</h5><p>We pay these fees so you don’t have to! The total billed at checkout is the final amount you pay, inclusive of VAT, with no additional charges at the time of delivery!</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         
       </div>
       
@@ -196,35 +184,34 @@ if($_SERVER['PHP_SELF'] == "/index.php")
         <div class="ui-widget infoBoxContainer mj-whatsnew" style="display:none"> $whatsnewbox </div>
         <div class="ui-widget infoBoxContainer mj-information" style="display:none"> $informationbox </div>
       </div>
-<div id="mj-right" class="mj-grid16 mj-lspace mj-rspace" style="display:none">
-  <div class="ui-widget infoBoxContainer mj-cartbox"> $cartbox </div>
-  <div class="ui-widget infoBoxContainer mj-bestsellersbox"> $bestsellersbox </div>
-  <div class="ui-widget infoBoxContainer mj-reviewbox"> $reviewsbox </div>
-  <div class="ui-widget infoBoxContainer mj-currenciesbox"> $currenciesbox </div>
-</div>
+      <div id="mj-right" class="mj-grid16 mj-lspace mj-rspace" style="display:none">
+        <div class="ui-widget infoBoxContainer mj-cartbox"> $cartbox </div>
+        <div class="ui-widget infoBoxContainer mj-bestsellersbox"> $bestsellersbox </div>
+        <div class="ui-widget infoBoxContainer mj-reviewbox"> $reviewsbox </div>
+        <div class="ui-widget infoBoxContainer mj-currenciesbox"> $currenciesbox </div>
+      </div>
     </div>
   </div>
   <div style="clear:both"></div>
 </div>
-
-
-
-
-
+<div id="products-INFO-box">
+<div class="container">
+        <div class="row">
+        <div class="col-sm-3">$infobox_04</div>
+        <div class="col-sm-3">$infobox_04</div>
+        <div class="col-sm-3">$infobox_04</div>
+        <div class="col-sm-3">$infobox_04</div>
+        </div>
+		</div>
+</div>
 <div id="mj-footer" class="inner"> <!-- mj-footer starts -->
   <div class="mj-subcontainer" id="mj-container"> <!-- mj-subcontainer starts --> 
     $footer_box_02
     $footer_box_03
-    $footer_box_04 
-  </div>
-  
+    $footer_box_04 </div>
 </div>
-
 <div id="footer-links">
-
-<div id="mj-container">
-$footer_copyright 
-</div>
+  <div id="mj-container"> $footer_copyright </div>
 </div>
 <script type="text/javascript" src="includes/sts_templates/full/template17/ext/jquery/jquery.flexslider.js"></script> 
 <script type="text/javascript">
@@ -234,9 +221,9 @@ jQuery(document).ready(function() {
     animation: "slide"
   });
 });
-</script>
+</script> 
 <!--ad javascript--> 
-<script src="includes/sts_templates/full/template17/ext/jquery/accordionMenu.js"></script>
+<script src="includes/sts_templates/full/template17/ext/jquery/accordionMenu.js"></script> 
 <!---add javascrtip---->
 </body>
 </html>

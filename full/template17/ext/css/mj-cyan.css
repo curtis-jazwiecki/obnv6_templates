@@ -81,13 +81,13 @@ ol > li:before {
 	color: #008080;
 }
 .button, input[type="submit"], input[type="reset"], input[type="button"], .readmore, button, .link_button {
-	background:-moz-linear-gradient(#333333, #333333) repeat scroll 0 0 #333333;
-	background:-webkit-linear-gradient(#333333, #333333) repeat scroll 0 0 #333333;
-	background:-ms-linear-gradient(#333333, #333333) repeat scroll 0 0 #333333;
-	background:-0-linear-gradient(#333333, #333333) repeat scroll 0 0 #333333;
-	border: 1px solid #333333;
-	background-color:#333333;
-	/*text-transform:uppercase;*/
+	background:-moz-linear-gradient(#d26e4b, #d26e4b) repeat scroll 0 0 #d26e4b;
+	background:-webkit-linear-gradient(#d26e4b, #d26e4b) repeat scroll 0 0 #d26e4b;
+	background:-ms-linear-gradient(#d26e4b, #d26e4b) repeat scroll 0 0 #d26e4b;
+	background:-0-linear-gradient(#d26e4b, #d26e4b) repeat scroll 0 0 #d26e4b;
+	border: 1px solid #d26e4b;
+	background-color:#d26e4b;
+	text-transform:uppercase;
 }
 .product-details, .billto-shipto .details, span.details-button input.details-button, .control-buttons button.default, #shoppingCartDefault .buttonRow, .change_add, .mj-step, .mj-step1 {
     background: -moz-linear-gradient(#008080, #00C4C4) repeat scroll 0 0 #008080 !important;

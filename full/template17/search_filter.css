@@ -2,7 +2,7 @@
 
     .Price_heading{
         background: #fff none repeat scroll 0 0;
-        border: 1px solid #dadada;
+        border: 0px solid #dadada;
     }
 	.Price_heading h4 {
         -moz-border-bottom-colors: none;
@@ -93,4 +93,7 @@
 
 .color_template h4{color:#333 !important; }
 	.color_template span{color:#333 !important; }
+
+
+.ui-widget-content .columnBoxContents td img{display:none;}
 /*end*/

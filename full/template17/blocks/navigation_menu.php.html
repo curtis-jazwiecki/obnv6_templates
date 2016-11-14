@@ -1,4 +1,3 @@
-
 <style type="text/css">
 .nav-uppercase > li > a {
 	font-weight: bolder;
@@ -27,7 +26,9 @@ li.current-dropdown > .nav-dropdown, li.has-dropdown:hover > .nav-dropdown {
 .nav-dropdown-default {
 	padding: 15px;
 }
-.nav-dropdown.nav-dropdown-default{position:absolute;}
+.nav-dropdown.nav-dropdown-default {
+	position: absolute;
+}
 .nav-dropdown {
 	background-color: #fff;
 	border: 2px solid #ddd;
@@ -85,19 +86,21 @@ ul {
 	font-weight: bolder;
 	max-width: 100%;
 	min-height: 2.5em;
-	padding: 0 1.2em;
-	color:#fff !important;
+	/*padding: 0 1.2em;*/
+	color: #fff !important;
+	top:0px !important;
 }
-.col-md-2.search-BTTN-dropdown{width:33px;}
+.col-md-2.search-BTTN-dropdown {
+	width: 33px;
+}
 #search-button.ux-search-submit.submit-button.secondary.button.icon.mb-0 {
 	background-color: #d26e4b !important;
-	position:relative !important;
-	top:0px !important;
+	position: relative !important;
+	top: 0px !important;
 }
 .flex-left {
 	margin-right: auto;
 }
-
 .flex-col {
 	max-height: 100%;
 }
@@ -119,7 +122,11 @@ li.has-dropdown::after, li.has-dropdown::before {
 	width: 0;
 	z-index: 10;
 }
+#jsn-pos-mainnav .nav > li > a:focus, .nav > li > a:hover {
+	background-color: transparent !important;
+}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <script type="text/javascript">
     var tba = jQuery.noConflict();
 
@@ -132,28 +139,34 @@ li.has-dropdown::after, li.has-dropdown::before {
             if (scroll_pos > 25) {
                 tba("#mj-righttop-menu").css('background-color', 'rgba(555,555,555, 0.9)');
                
-                tba("#mj-righttop-menu a").css('color', '#333');
-                tba("#mj-righttop-menu i").css('color', '#333');
-                tba("#mj-righttop-menu div").css('color', '#333');  
+                //tba("#mj-righttop-menu a").css('color', '#333');
+                //tba("#mj-righttop-menu i").css('color', '#333');
+                //tba("#mj-righttop-menu div").css('color', '#333');  
 				tba("#mj-righttop-menu").css('position', 'fixed');              
                 //tba("#top-menu li:last-child").css('background', 'none');
-				tba("#top-menu.jsn-mainnav.navbar").css('width', '1080px');
+				tba("#top-menu.jsn-mainnav.navbar").css('width', '100%');
+				tba("#top-menu.jsn-mainnav.navbar").css('max-width', '1080px');
 				tba("#top-menu.jsn-mainnav.navbar").css('margin', '0px auto');
-				tba("#mj-righttop-menu.sticky-jump").css('animation', '0.6s ease 0s normal none 1 running stuckMoveDown')
+				tba("#mj-righttop-menu.sticky-jump").css('animation', '0.6s ease 0s normal none 1 running stuckMoveDown');
+				tba("#top-menu.jsn-mainnav.navbar").css('padding-top', '15px')
 				
 				
+				
+
             }
             else
             {
                 
-                tba("#mj-righttop-menu a").css('color', '#333');
-                tba("#mj-righttop-menu i").css('color', '#333');
-                tba("#mj-righttop-menu div").css('color', '#333');
+                //tba("#mj-righttop-menu a").css('color', '#333');
+                //tba("#mj-righttop-menu i").css('color', '#333');
+                //tba("#mj-righttop-menu div").css('color', '#333');
                 tba("#mj-righttop-menu").css('position', 'relative')  
                 tba("#mj-righttop-menu li:last-child").css('background', 'none');
-				tba("#top-menu.jsn-mainnav.navbar").css('width', '1080px');
+				tba("#top-menu.jsn-mainnav.navbar").css('width', '100%');
+				tba("#top-menu.jsn-mainnav.navbar").css('max-width', '1080px');
 				tba("#top-menu.jsn-mainnav.navbar").css('margin', '0px auto');
-				tba("#mj-righttop-menu.sticky-jump").css('animation', '0.6s ease 0s normal none 1 running stuckMoveDown')
+				tba("#mj-righttop-menu.sticky-jump").css('animation', '0.6s ease 0s normal none 1 running stuckMoveDown');
+				tba("#top-menu.jsn-mainnav.navbar").css('padding-top', '0px')
             }
         });
     });
@@ -161,151 +174,142 @@ li.has-dropdown::after, li.has-dropdown::before {
 
 <div id="mj-righttop-menu" class="sticky-jump"> <!-- mj-righttop starts -->
   
-  <div class="header-wrapper-menu stuck" class="mj-subcontainer" > <!-- mj-subcontainer starts -->
+  <div class="header-wrapper-menu stuck" class="mj-subcontainer" >
+  <!-- mj-subcontainer starts -->
+  
+  <div id="mj-menubar"> <!-- mj-menubar starts -->
     
-    <div id="mj-menubar"> <!-- mj-menubar starts -->
-      
-      <nav class="mobile-spmenu mobile-spmenu-vertical mobile-spmenu-left mainNav" id="slide-mobile-menu">
-        <h3>Categories</h3>
-        <ul class="nav">
-          <li><a href="index.php">Homepage</a> </li>
-          <li id="store_li"><a href="javascript:void(0)">Store</a>
-            <ul class="nav-child unstyled">
-              <li><a href="#">What's&nbsp;New?</a> </li>
-              <li><a href="$urlspecials">Specials</a> </li>
-            </ul>
-          </li>
-          <li id="cate_li"><a href="javascript:void(0)">Categories</a>
-            <ul class="nav-child unstyled">
-              
-              <!--Superfish Horizontal Navigation bar--> 
-              
-              $categories_html 
-              
-              <!--end Superfish-->
-              
-            </ul>
-          </li>
-        </ul>
-        <h3>Site Information</h3>
-        <ul class="menu">
-          <li class="menu_bar"><span class="phoneIcon"><a href="tel:8888888888">Call Us - 8888888888</a></span></li>
-          <li class="menu_bar"> <span class="tdbLink"> $loginofflogo </span> </li>
-          <li class="menu_bar"> <span class="tdbLink"> <a href="$urlmyaccount">My Account</a> </span> </li>
-          <li class="menu_bar"><a href="$urlmyaccount">Create an Account</a></li>
-          <li class="menu_bar"> <span class="tdbLink"> <a href="$urlcheckout" id="tdb3">Checkout</a> </span> </li>
-        </ul>
-      </nav>
-      <div class="jsn-mainnav navbar" id="top-menu">
-        <div class="jsn-mainnav-inner navbar-inner">
-          <div class="container clearfix">
-            <div class="mainnav-toggle clearfix" style="display:none">
-              <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button" id="btn"> <span>Main Menu</span></button>
-            </div>
-            <div class="row">
-            <div class="col-md-2">
-            <div id="mj-logo" class="mj-box"> <!-- mj-logo starts --> 
-      <a href="index.php"><img src="images/tpl/logo_tpl18.png"></a> </div>
-    <!-- mj-logo ends --> 
-    </div>
+    <nav class="mobile-spmenu mobile-spmenu-vertical mobile-spmenu-left mainNav" id="slide-mobile-menu">
+ 		
+        <div id="mobile_search_box" class="header-search-form-wrapper">
+                            <div class="searchform-wrapper ux-search-box relative form- is-normal">
+                              <form method="get" class="searchform" name="search" action="advanced_search_result.php" role="search">
+                                <div class="flex-row relative">
+                                  <div class="flex-col flex-grow">
+                                    <input id="search_query"  class="search-field mb-0 go" type="text" onfocus="if (this.value == ' Search entire store...') this.value = ''" onblur="if (this.value == '') this.value = ' Search entire store...'" value=" Search entire store..." style="width:100%;"  name="keywords">
+                                  </div>
+                                  <div class="flex-col">
+                                    <button type="submit" id="search-button" class="ux-search-submit submit-button secondary button icon mb-0"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>   
     
-    <div class="col-md-2 search-BTTN-dropdown">
-    
-    <div class="mj-grid32-search mj-lspace-search">
-    
-    
-    <!--new create html search-->
-    
-    <div class="flex-col hide-for-medium flex-left flex-grow">
-  <ul class="header-nav header-nav-main nav nav-left nav-uppercase">
-    <li class="header-search header-search-dropdown has-icon has-dropdown menu-item-has-children">
-    <a href="#" class="is-small"><i class="fa fa-search" aria-hidden="true"></i></a>
-      <ul class="nav-dropdown nav-dropdown-default">
-        <li class="header-search-form search-form html relative has-icon">
-          <div class="header-search-form-wrapper">
-            <div class="searchform-wrapper ux-search-box relative form- is-normal">
+      <ul class="nav">
+        <li><a href="index.php">Homepage</a> </li>
+        <li id="store_li"><a href="javascript:void(0)">Store</a>
+          <ul class="nav-child unstyled">
+            <li><a href="#">What's&nbsp;New?</a> </li>
+            <li><a href="$urlspecials">Specials</a> </li>
+          </ul>
+        </li>
+        <li id="cate_li"><a href="javascript:void(0)">Categories</a>
+          <ul class="nav-child unstyled">
             
-              <form method="get" class="searchform" name="search" action="advanced_search_result.php" role="search">
-                <div class="flex-row relative">
-                  <div class="flex-col flex-grow">
-                  
-                  
-                    
-                    
-                  
-                  <input id="search_query"  class="search-field mb-0" type="text" onfocus="if (this.value == ' Search entire store...')
-                                            this.value = ''" onblur="if (this.value == '')
-                                                        this.value = ' Search entire store...'" value=" Search entire store..." style="width:100%;" class="go" name="keywords">
-                  
-                  
-                  </div>
-                  <div class="flex-col">
-                    <button type="submit" id="search-button" class="ux-search-submit submit-button secondary button icon mb-0"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-                  </div>
-                </div>
-                
-              </form>
-            </div>
-          </div>
+            <!--Superfish Horizontal Navigation bar--> 
+            
+            $categories_html 
+            
+            <!--end Superfish-->
+            
+          </ul>
         </li>
       </ul>
-    </li>
-  </ul>
-</div>
-    
-    <!--end of html search-->
-    
-    
-    
-    
-    
-     <!-- mj-grid32 starts -->
-      <form method="get" action="advanced_search_result.php" name="search" style="display:none">
-        <button type="submit" id="search-button"><i class="fa fa-search" aria-hidden="true"></i>
-</button>
-        <div class="search">
-          
-          
-          <input id="search_query" type="text" onfocus="if (this.value == ' Search entire store...')
-                                            this.value = ''" onblur="if (this.value == '')
-                                                        this.value = ' Search entire store...'" value=" Search entire store..." style="width:100%;" class="go" name="keywords">
-          
-        </div>
-      </form>
-    </div>
-    </div>
-    <div class="col-md-8">
-    
-      
-            <div class="nav-collapse collapse clearfix" id="jsn-pos-mainnav">
+      <ul class="menu">
+        <li class="menu_bar"><span class="phoneIcon"><a href="tel:8888888888">Call Us - 8888888888</a></span></li>
+        <li class="menu_bar"><a href="$urlwishlist">Wish Lists</a></li>
+        <li class="menu_bar"> <span class="tdbLink"> $loginofflogo </span> </li>
+        <li class="menu_bar"> <span class="tdbLink"> <a href="$urlmyaccount">My Account</a> </span> </li>
+        <li class="menu_bar"><a href="$urlmyaccount">Create an Account</a></li>
+        <li class="menu_bar"> <span class="tdbLink"> <a href="$urlcheckout" id="tdb3">Checkout</a> </span> </li>
+      </ul>
+    </nav>
+    <div class="jsn-mainnav navbar" id="top-menu">
+      <div class="jsn-mainnav-inner navbar-inner">
+        <div class="container clearfix-0">
+          <div class="row">
+            <div class="col-md-2">
+              <div id="mj-logo" class="mj-box"> <!-- mj-logo starts --> 
+                <a href="index.php"><img src="images/tpl/logo_tpl18.png"></a> </div>
+              <!-- mj-logo ends -->
+              <div class="clear"></div> 
+            </div>
+            <div class="col-md-2 search-BTTN-dropdown">
+              <div class="mj-grid32-search mj-lspace-search"> 
+                
+                <!--new create html search-->
+                
+                <div class="flex-col hide-for-medium flex-left flex-grow">
+                  <ul class="header-nav header-nav-main nav nav-left nav-uppercase">
+                    <li class="header-search header-search-dropdown has-icon has-dropdown menu-item-has-children"> <a href="#" class="is-small"><i class="fa fa-search" aria-hidden="true"></i></a>
+                      <ul class="nav-dropdown nav-dropdown-default">
+                        <li class="header-search-form search-form html relative has-icon">
+                          <div class="header-search-form-wrapper">
+                            <div class="searchform-wrapper ux-search-box relative form- is-normal">
+                              <form method="get" class="searchform" name="search" action="advanced_search_result.php" role="search">
+                                <div class="flex-row relative">
+                                  <div class="flex-col flex-grow">
+                                    <input id="search_query"  class="search-field mb-0 go" type="text" onfocus="if (this.value == ' Search entire store...') this.value = ''" onblur="if (this.value == '') this.value = ' Search entire store...'" value=" Search entire store..." style="width:100%;"  name="keywords">
+                                  </div>
+                                  <div class="flex-col">
+                                    <button type="submit" id="search-button" class="ux-search-submit submit-button secondary button icon mb-0"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                
+                <!--end of html search--> 
+                
+                <!-- mj-grid32 starts --> 
+                
+              </div>
+                            <div class="clear"></div>
+            </div>
+            <div class="col-md-5">
+              <div class="nav-collapse collapse clearfix" id="jsn-pos-mainnav">
+                <ul class="nav">
+                  <li><a href="index.php">Homepage</a></li>
+                  <li id="store_li"><a href="javascript:void(0)">Store</a>
+                    <ul class="nav-child unstyled">
+                      <li><a href="#">What's&nbsp;New?</a></li>
+                      <li><a href="$urlspecials">Specials</a></li>
+                    </ul>
+                  </li>
+                  <li id="cate_li"><a href="javascript:void(0)">Categories</a>
+                    <ul class="nav-child unstyled">
+                      <!--Superfish Horizontal Navigation bar--> 
+                      $categories_html 
+                      <!--end Superfish-->
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+                              <div class="clear"></div>
+              </div>
+            </div>
+            
+            <div class="col-sm-3 pull-right right-menu">
+            <div id="headerShortcuts">
               <ul class="nav">
-                <li><a href="index.php">Homepage</a> </li>
-                <li id="store_li"><a href="javascript:void(0)">Store</a>
-                  <ul class="nav-child unstyled">
-                    <li><a href="#">What's&nbsp;New?</a> </li>
-                    <li><a href="$urlspecials">Specials</a> </li>
-                  </ul>
-                </li>
-                <li id="cate_li"><a href="javascript:void(0)">Categories</a>
-                  <ul class="nav-child unstyled">
-                    
-                    <!--Superfish Horizontal Navigation bar--> 
-                    
-                    $categories_html 
-                    
-                    <!--end Superfish-->
-                    
-                  </ul>
-                </li>
-              </ul>
+            	<li class="menu_bar1">$loginofflogo </li>
+                
+                <li class="menu_bar1"><a href="$urlcartcontents" id="tdb4"><i class="fa fa-shopping-bag" title="View Cart"></i>($cart_items_count)</a></li>
+          	  </ul>
+              </div>
             </div>
-            </div>
-      
-      </div>
           </div>
         </div>
       </div>
-      <script type="text/javascript">
+    </div>
+    <script type="text/javascript">
 				
 				/*var addcls = jQuery.noConflict();
 				addcls(".navbar-inner button#btn").click(function(){
@@ -341,21 +345,22 @@ li.has-dropdown::after, li.has-dropdown::before {
 			
 			
 				</script> 
-      <script type="text/javascript">
+    <script type="text/javascript">
         jQuery(document).ready(function(){
 		
 			//Accordion Nav
 			jQuery('.mainNav').navAccordion({
-				expandButtonText: '<i class="fa fa-plus"></i>',  //Text inside of buttons can be HTML
-				collapseButtonText: '<i class="fa fa-minus"></i>'
+				expandButtonText: '<i class="fa fa-angle-down"></i>',  //Text inside of buttons can be HTML
+				collapseButtonText: '<i class="fa fa-angle-up"></i>'
 			});
 			
 		});
         </script> 
-    </div>
-    <!-- mj-menubar ends --> 
-    
   </div>
-  <!-- mj-subcontainer ends --> 
+  <!-- mj-menubar ends --> 
   
 </div>
+<!-- mj-subcontainer ends -->
+
+</div>
+

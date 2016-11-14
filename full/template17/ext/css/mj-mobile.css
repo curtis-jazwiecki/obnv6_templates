@@ -12,7 +12,7 @@
 		color:#333333;
 	}
 
-#jsn-pos-mainnav li .nav-child.unstyled li a:hover{background: #333333!important;}
+#jsn-pos-mainnav li .nav-child.unstyled li a:hover{background: #dcdcdc !important;}
 .jsn-mainnav.navbar .nav-collapse > ul.nav li a:hover{color:hsl(217, 16%, 35%)}
 @media screen and (max-width: 700px) {
 
