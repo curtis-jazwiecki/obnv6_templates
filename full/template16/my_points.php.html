@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+$template16_stylesheet1
+<script type="text/javascript">
+
+            var jqqqnoconf = jQuery.noConflict();
+
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+
+            if (jqqqnoconf.attrFn) {
+
+                jqqqnoconf.attrFn.text = true;
+
+            }
+
+        </script>
+<script type="text/javascript">
+
+            var tba = jQuery.noConflict();
+
+
+
+            tba(document).ready(function () {
+
+                //SKU BOF
+
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
+
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+
+                //SKU EOF
+
+			})
+
+
+        </script>
+<script language="javascript"><!--
+
+function rowOverEffect(object) {
+
+  if (object.className == 'moduleRow') object.className = 'moduleRowOver';
+
+}
+
+
+
+function rowOutEffect(object) {
+
+  if (object.className == 'moduleRowOver') object.className = 'moduleRow';
+
+}
+
+//--></script>
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.min.css"/>
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.css" />
+
+<!-- font-awesome new add link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<!---font-awesome end link--->
+
+<script type='text/javascript' src='includes/sts_templates/full/template16/camera/scripts/jquery.min.js'></script>
+<script type='text/javascript' src='includes/sts_templates/full/template16/camera/scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='includes/sts_templates/full/template16/camera/scripts/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='includes/sts_templates/full/template16/camera/scripts/camera.min.js'></script>
+$stylesheet
+</head>
+
+<body class="$script">
+
+
+
+<div class="menu-head" id="sticky-navigation"> $top_bar
+  $header
+  $navigation_menu
+  <div class="clear-style"></div>
+</div>
+<div class="clear-style"></div>
+<div id="mj-container" class="freeshipping-banner">
+  <div class="container">
+    <div class="col-md-12"> $free_shipping_banner </div>
+  </div>
+</div>
+<div class="clear-style"></div>
+
+
+
+
+<div id="mj-container">
+  
+  <div class="bg-color-page">
+  	<div class="container"><!-- mj-slidetitle starts -->
+    
+    
+  <div class="my-account-header page-title normal-title cnt">
+    <div class="page-title-inner container">
+      <div class="flex-col flex-grow medium-text-center">
+        <h1 class="uppercase mb-0">{%HEADING_TITLE%}</h1>
+      </div>
+      <!-- .flex-left --> 
+    </div>
+    <!-- flex-row --> 
+  </div>
+  <div id="mj-container1" class="col-md-12">
+    <div id="mj-maincontent">
+      <div class="mj-subcontainer1">
+        <div id="mj-contentarea" class="mj-grid-64 mj-lspace-2 account-page-row"> 
+          
+          <!--sku start-->
+          
+          <table border="0" width="100%" cellspacing="0" cellpadding="0">
+              <tbody>
+            
+              <tr>
+            
+            <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                <tbody>
+                  <tr>
+                    <td class="main">{%MY_POINTS_HELP_LINK%}</td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                  </tr>
+                  <tr>
+                    <?php if(!empty($has_point)){ ?>
+                    <td class="main">$my_points_current_balance</td>
+                    <?php if(!empty($points_auto_expires)){ ?>
+                    <td class="main" align="right"><b> {%MY_POINTS_EXPIRE%} </b> $customer_points_expires_dt</td>
+                    <?php } ?>
+                    <?php } else { ?>
+                    <td class="main"><b>{%TEXT_NO_POINTS%}</b></td>
+                    <?php } ?>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <!-- pending points start  --->
+              
+              <?php if(!empty($pending_points_number)){ ?>
+              <table border="0" width="100%" cellspacing="1" cellpadding="2" class="productListing-heading productsHeading">
+                <tbody>
+                  <tr class="productListing-heading productsHeading heading-my-points">
+                    <td class="productListing-heading productsHeading" width="20%" align="left">{%HEADING_ORDER_DATE%}</td>
+                    <td class="productListing-heading productsHeading" width="20%" align="center">{%HEADING_ORDERS_NUMBER%}</td>
+                    <td class="productListing-heading productsHeading" width="20%" align="center">{%HEADING_POINTS_COMMENT%}</td>
+                    <td class="productListing-heading productsHeading" width="20%" align="center">{%HEADING_POINTS_STATUS%}</td>
+                    <td class="productListing-heading productsHeading" align="right" width="20%">{%HEADING_POINTS_TOTAL%}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="0" width="100%" cellspacing="1" cellpadding="2" class="infoBox">
+                  <tbody>
+                
+                  <tr class="infoBoxContents">
+                
+                <td><table border="0" width="100%" cellspacing="1" cellpadding="2" class="products_listing_data_MYpoints">
+                    <tbody>
+                      <tr>
+                        <?php if(!empty($pending_points)) {?>
+                        <?php foreach($pending_points as $pending){ ?>
+                        <?php if(!empty($pending['history_info_link'])){ ?>
+                      <tr class="moduleRow" onmouseover="rowOverEffect(this)" onmouseout="rowOutEffect(this)" onclick="document.location.href='<?php echo $pending['history_info_link']; ?>'" title="{%TEXT_ORDER_HISTORY%} &nbsp <?php echo $pending['orders_id']; ?>">
+                        <?php } ?>
+                        <?php if(!empty($pending['product_info_link'])){ ?>
+                      <tr class="moduleRow" onmouseover="rowOverEffect(this)" onmouseout="rowOutEffect(this)" onclick="document.location.href='<?php echo $pending['product_info_link']; ?>'" title="{%TEXT_REVIEW_HISTORY%}">
+                        <?php } ?>
+                        <td class="productListing-data"width="20%" align="left"><?php echo $pending['date_added_text']; ?></td>
+                        <td class="productListing-data"width="20%" align="center"><?php echo '#' . $pending['orders_id'] . '&nbsp;&nbsp;' . $pending['orders_status_name']; ?></td>
+                        <td class="productListing-data" width="20%" align="center"><?php echo  $pending['points_comment'] .'&nbsp;' . $pending['customers_name']; ?></td>
+                        <td class="productListing-data"  width="20%" align="center"><?php echo  $pending['point_status']; ?></td>
+                        <td class="productListing-data" align="right"  width="20%"><?php echo $pending['pending_points']; ?></td>
+                      </tr>
+                      <?php } ?>
+                      <?php } ?>
+                      </tr>
+                    
+                      </tbody>
+                    
+                  </table></td>
+                  </tr>
+                
+                  </tbody>
+                
+              </table>
+              <table border="0" width="100%" cellspacing="0" cellpadding="2">
+                <tbody>
+                  <tr>
+                    <td><img src="images/pixel_trans.gif" border="0" alt="" width="1" height="10"></td>
+                  </tr>
+                </tbody>
+              </table></td>
+              </tr>
+            
+            <tr>
+              <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                  <tbody>
+                    <tr>
+                      <td class="smallText" valign="top">$pending_points_split</td>
+                      <td class="smallText" align="right">$text_result_page</td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+            <?php } ?>
+            
+            <!-- pending points end -->
+            
+            <tr>
+              <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+            </tr>
+            <tr>
+              <td><table border="0" width="100%" cellspacing="1" cellpadding="2" class="infoBox">
+                  <tbody>
+                    <tr class="infoBoxContents">
+                      <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                          <tbody>
+                            <tr>
+                              
+                              <td><a href="javascript:history.go(-1)"><img src="includes/sts_templates/full/template16/images/buttons/button_back.gif" border="0" alt="Back" title=" Back " width="76" height="31"></a></td>
+                              
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+              </tbody>
+            
+          </table>
+          
+          <!--sku end--> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--footer start-->
+
+
+<div id="mj-footer"> <!-- mj-footer starts -->
+ $newsletter
+  <div class="mj-subcontainer"> <!-- mj-subcontainer starts --> 
+    $footer_box_01
+    $footer_box_02
+    $footer_box_03
+    $footer_box_04
+    <div class="clear-style"></div>
+  </div>
+</div>
+$footer_copyright
+</body>
+</html>

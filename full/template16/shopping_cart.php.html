@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<link href="//fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet" type="text/css"  media="all"  />
+<link href="//fonts.googleapis.com/css?family=Unica+One:400,700" rel="stylesheet" type="text/css"  media="all"/>
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.min.css"/>
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.css" />
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+$template16_stylesheet1
+<script type="text/javascript">
+
+            var jqqqnoconf = jQuery.noConflict();
+
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+
+            if (jqqqnoconf.attrFn) {
+
+                jqqqnoconf.attrFn.text = true;
+
+            }
+
+        </script>
+<script type="text/javascript">
+
+            var tba = jQuery.noConflict();
+
+
+
+            tba(document).ready(function () {
+
+                //SKU BOF
+
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
+
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+
+                //SKU EOF
+
+
+            });
+
+        </script>
+$stylesheet
+</head>
+
+<body class="$script">
+
+<div class="menu-head" id="sticky-navigation"> $top_bar
+  $header
+  $navigation_menu
+  <div class="clear-style"></div>
+</div>
+
+<div class="clear-style"></div>
+
+<div id="mj-container" class="freeshipping-banner">
+ <div class="container">
+   <div class="col-md-12">
+    $free_shipping_banner
+   </div>
+  </div>
+</div>
+<div class="clear-style"></div>
+<div class="bg-color-in-shoppage">
+
+<div class="container">
+  <div id="navBreadCrumb">
+      <div class="col-md-12">
+       $breadcrumbs
+      </div>
+  </div>
+</div>
+</div>
+
+<div id="mj-container">
+<div class="bg-color-page">
+
+<div class="container">
+  
+  <div id="mj-maincontent" >
+    <div class="mj-subcontainer1">
+      <div id="productsInfoBox_innerpage" class="container"> 
+        
+        <!--sku start--> 
+        
+        $content 
+        
+        <!--sku end-->
+        <div class="checkout_new_btn">
+          <input class="new_btn" onclick="window.location='checkout_shipping.php';" type="submit" value="Check Out" name="checkout">
+        </div>
+      </div>
+      <script language="javascript">
+					  	function updateQuantityBox(action,ele){
+							var quantity_to_add = parseInt(jQuery('#qty_'+ele).val());
+							if(action == 'minus' && quantity_to_add != 0){
+								jQuery('#qty_'+ele).val(quantity_to_add-1);
+								document.forms["cart_quantity"].submit();
+							}else if(action == 'plus'){
+								jQuery('#qty_'+ele).val(quantity_to_add+1);
+								document.forms["cart_quantity"].submit();
+							}
+						}
+						jQuery('.increment_input_btn').css('display','');
+
+                        jQuery('.chkbox_template2 input').css('display','none');                        
+                      </script> 
+    </div>
+  </div>
+  
+</div>
+
+</div>
+</div>
+<!--<div id="mj-footertop">
+  <div class="mj-subcontainer"> $brands
+    
+    $newsletter </div>
+</div>-->
+
+<div id="mj-footer"> <!-- mj-footer starts -->
+  $newsletter
+  <div class="mj-subcontainer"> <!-- mj-subcontainer starts --> 
+    $footer_box_01
+    $footer_box_02
+    $footer_box_03
+    $footer_box_04
+    <div class="clear-style"></div>
+  </div>
+</div>
+$footer_copyright
+</body>
+</html>

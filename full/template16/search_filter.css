@@ -1,0 +1,107 @@
+/*15.03.2016 search filtter css*/
+
+    .Price_heading{
+        background: #fff none repeat scroll 0 0;
+        border: 0px solid #dadada;
+    }
+	.Price_heading h4 {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        border-color: #ccc;
+        border-image: none;
+        border-radius: 0;
+        border-style: solid;
+        border-width: 0 0 1px;
+        color: #008080;
+        cursor: pointer;
+    	
+    	font-weight:bold;
+        
+       
+        margin: 0;
+        padding: 5px 10px;
+    }
+  
+  .Price_heading h4 span {
+        /*border:2px solid #008080;*/
+    	/*color:#008080;*/
+        float: left;
+        height: 18px;
+        /*margin: 2px 7px 0 0;*/
+        width: 18px;
+    	/*border-radius:10px;*/
+    }
+    .Price_heading .price_headin_open_box {
+        padding: 8px 0;
+    }
+    .Price_heading div{
+     border-bottom: 0px solid #dadada;
+     margin: 0;
+     max-height: 195px;
+     min-height: 0;
+	 overflow-x: auto;
+    }
+
+.Price_heading div:hover{border-bottom:1px solid #333;cursor:pointer;}
+
+
+.Price_heading.color_template > h4{
+    font-family: "Proxima N W01 Cd Reg","Arial Narrow",Arial,sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 0;}
+
+/* for ISO */
+@media screen and (-webkit-min-device-pixel-ratio:0) {.Price_heading div{
+    border-bottom: 1px solid #dadada;
+    margin: 0;
+    max-height: 167px;
+    min-height: 0;
+	overflow-x: hidden;
+    overflow-y: visible;
+	
+    
+} 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+}
+
+  ::-webkit-scrollbar-track {
+    background-color: #fff;
+    /*border-radius: 8px;*/
+}
+::-webkit-scrollbar-thumb {
+    /*border-radius: 8px;*/
+    background-color: #A6A6A6;
+}
+
+
+
+}
+
+/*End Of ISO*/
+
+
+.price_headin_open_box > input{margin-left:5px;}
+.Price_heading .price_headin_open_box a, .Price_heading .price_headin_open_box a:hover {
+    background: #fafafa none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: block;
+    
+    font-size: 10px;
+    margin: 0 0 8px 7px;
+    padding: 3px 0;
+    text-align: center;
+    width: 26px;
+}
+
+.color_template h4{color:#333 !important; }
+	.color_template span{color:#333 !important; }
+
+
+.ui-widget-content .columnBoxContents td img{display:none;}
+/*end*/

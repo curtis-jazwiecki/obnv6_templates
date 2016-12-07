@@ -1,0 +1,48 @@
+<div class="mj-subcontainer form-signup">
+  <div id="newsletter_message" class="success_notification"></div>
+  <h3>Email Sign Up</h3>
+  <div class="form-news">
+    <form name="subscribe_form" class="contact-form" id="subscribe_form" method="post" action="?action=newsletter_signup" onsubmit="return validateNewsletterEmail();">
+      <label class="site-footer__newsletter-label" for="NewsletterEmail">Sign up for the latest news, offers and styles</label>
+      <div class="input-group">
+        <input type="email" class="input-group__field site-footer__newsletter-input" id="NewsletterEmail" name="newsletter_email" placeholder="Your Email Address" value="">
+        <div class="input-group__btn">
+          <button id="Subscribe" name="commit" class="btn btn--narrow" type="submit"> </svg> <span class="icon__fallback-text">Sign Up</span> </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+function getQueryStrings() { 
+  var assoc  = {};
+  var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+  var queryString = location.search.substring(1); 
+  var keyValues = queryString.split('&'); 
+
+  for(var i in keyValues) { 
+    var key = keyValues[i].split('=');
+    if (key.length > 1) {
+      assoc[decode(key[0])] = decode(key[1]);
+    }
+  } 
+
+  return assoc; 
+} 
+var qs = getQueryStrings();
+var signup = qs["signup"]; 
+if(signup == 'success'){
+	jQuery('#newsletter_message').html('Thank you for subscribing to the Newsletter');
+}
+function validateNewsletterEmail(){
+	var subscriber_email = jQuery('#NewsletterEmail').val();
+	var re = /\S+@\S+\.\S+/;
+    
+	if(!re.test(subscriber_email)){
+		alert("Please enter a valid email address!");
+		return false;
+	}else{
+		return true;
+	}
+}
+</script>

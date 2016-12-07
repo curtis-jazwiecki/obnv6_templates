@@ -1,28 +1,34 @@
 <!-- DO NOT REMOVE header, content, and footer comments -->
 <!--header_bof-->
-<table border="1" cellspacing="0" cellpadding="0">
-    <tr>
-        <th style="background-color: black;color: white; font-size: 12px;"><strong>$header</strong></th>
-    </tr>
-<!--header_eof-->
-<!--block_bof-->
-    <tr>
+<div class="moduleCls">
+    <p class="moduleHeader">$header</p>
+    <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+    <!--header_eof-->
+     
+    <!--block_bof-->
+   
+    	<tr class="col-md-related_items">
         <td valign="top">
             <table>
                 <tr>
-                    <td rowspan="2">$image</td>
-                    <td><a href="$link">$price</a></td>
+                    <td><a href="$link">$image</a></td>                    
                 </tr>
                 <tr>
-                    <td>$name</td>
+                    <td><a href="$link">$name</a></td>
+                </tr>
+                <tr>
+                    <td><a href="$link">$price</a></td>
                 </tr>
             </table>
         </td>
     </tr>
+    
 <!--block_eof-->
+
 <!--footer_bof-->
     <tr>
         <td>$footer</td>
     </tr>
 </table>
+</div>
 <!--footer_eof-->

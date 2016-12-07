@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+$template16_stylesheet1
+<script type="text/javascript">
+
+            var jqqqnoconf = jQuery.noConflict();
+
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+
+            if (jqqqnoconf.attrFn) {
+
+                jqqqnoconf.attrFn.text = true;
+
+            }
+
+        </script>
+<script language="javascript"><!--
+function checkForm() {
+  var error = 0;
+  var error_message = "<?php echo JS_ERROR; ?>";
+
+  var review = document.product_reviews_write.review.value;
+
+  if (review.length < <?php echo REVIEW_TEXT_MIN_LENGTH; ?>) {
+    error_message = error_message + "<?php echo JS_REVIEW_TEXT; ?>";
+    error = 1;
+  }
+
+  if ((document.product_reviews_write.rating[0].checked) || (document.product_reviews_write.rating[1].checked) || (document.product_reviews_write.rating[2].checked) || (document.product_reviews_write.rating[3].checked) || (document.product_reviews_write.rating[4].checked)) {
+  } else {
+    error_message = error_message + "<?php echo JS_REVIEW_RATING; ?>";
+    error = 1;
+  }
+
+  if (error == 1) {
+    alert(error_message);
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function popupWindow(url) {
+  window.open(url,'popupWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,copyhistory=no,width=100,height=100,screenX=150,screenY=150,top=150,left=150')
+}
+//--></script>
+<script type="text/javascript">
+
+            var tba = jQuery.noConflict();
+
+
+
+            tba(document).ready(function () {
+
+                //SKU BOF
+
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
+
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+
+                //SKU EOF
+
+			})
+
+
+        </script>
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.min.css"/>
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.css" />
+
+<!-- font-awesome new add link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<!---font-awesome end link--->
+
+<script type='text/javascript' src='includes/sts_templates/full/template16/camera/scripts/jquery.min.js'></script>
+<script type='text/javascript' src='includes/sts_templates/full/template16/camera/scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='includes/sts_templates/full/template16/camera/scripts/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='includes/sts_templates/full/template16/camera/scripts/camera.min.js'></script>
+$stylesheet
+</head>
+
+<body class="$script">
+
+
+
+
+<div class="menu-head" id="sticky-navigation"> $top_bar
+  $header
+  $navigation_menu
+  <div class="clear-style"></div>
+</div>
+<div class="clear-style"></div>
+<div id="mj-container" class="freeshipping-banner">
+  <div class="container">
+    <div class="col-md-12"> $free_shipping_banner </div>
+  </div>
+</div>
+<div class="clear-style"></div>
+
+
+
+
+
+
+
+<div id="mj-container">
+ 
+ 
+ <div class="bg-color-page">
+  	<div class="container">
+  
+  <div class="my-account-header page-title normal-title cnt">
+    <div class="page-title-inner container">
+      <div class="flex-col flex-grow medium-text-center">
+        <h1 class="uppercase mb-0">$products_name</h1>
+      </div>
+      <!-- .flex-left --> 
+    </div>
+    <!-- flex-row --> 
+  </div>
+  
+  
+  <div id="mj-container" class="col-md-12">
+    <div id="mj-maincontent">
+      <div class="mj-subcontainer1">
+        <div id="mj-contentarea" class="mj-grid-164 mj-lspace-1 account-page-row"> <?php echo 'review'. $review_help_link; ?> 
+          <!--sku start-->
+          <form name="product_reviews_write" action="$action_url" method="post" onsubmit="return checkForm();">
+            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+              <tbody>
+                
+                <!-- // Points/Rewards Module V2.1rc2a bof //-->
+                <?php if($use_points ==1){ ?>
+                <tr>
+                  <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                </tr>
+                <tr>
+                  <td class="main">$review_help_link</td>
+                </tr>
+                <?php } ?>
+                <!-- // Points/Rewards Module V2.1rc2a eof //-->
+                <tr>
+                  <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                </tr>
+                <?php if(!empty($message)){ ?>
+                <tr>
+                  <td>$message</td>
+                </tr>
+                <tr>
+                  <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                </tr>
+                <?php } ?>
+                <tr>
+                  <td><table width="100%" border="0" cellspacing="0" cellpadding="2">
+                      <tbody>
+                        <tr>
+                          <td valign="top" width="80%" class="Reviewer-left-box"><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                              <tbody>
+                                <tr>
+                                  <td class="main"><b>Reviewer Nickname</b>&nbsp;:&nbsp;</td>
+                                  <td class="main" width="*"><input name="nickname" maxlength="25" $customer_nickname_value >
+                                    $customer_nickname_textbox </td>
+                                </tr>
+                                <tr>
+                                  <td class="main" valign="top"><b>{%SUB_TITLE_RATING%}</b>&nbsp;:&nbsp;</td>
+                                  <td class="main" valign="middle"><script type="text/javascript">
+	loadStars();
+</script> 
+                                    <img src="http://www.guns-r-us.co/images/star1.gif" onmouseover="highlight(this.id)" onclick="setStar(this.id)" onmouseout="losehighlight(this.id)" id="1" style="width:30px; height:30px; float:left;"> <img src="http://www.guns-r-us.co/images/star1.gif" onmouseover="highlight(this.id)" onclick="setStar(this.id)" onmouseout="losehighlight(this.id)" id="2" style="width:30px; height:30px; float:left;"> <img src="http://www.guns-r-us.co/images/star1.gif" onmouseover="highlight(this.id)" onclick="setStar(this.id)" onmouseout="losehighlight(this.id)" id="3" style="width:30px; height:30px; float:left;"> <img src="http://www.guns-r-us.co/images/star1.gif" onmouseover="highlight(this.id)" onclick="setStar(this.id)" onmouseout="losehighlight(this.id)" id="4" style="width:30px; height:30px; float:left;"> <img src="http://www.guns-r-us.co/images/star1.gif" onmouseover="highlight(this.id)" onclick="setStar(this.id)" onmouseout="losehighlight(this.id)" id="5" style="width:30px; height:30px; float:left;">&nbsp;&nbsp;
+                                    <div id="vote" style="font-family:tahoma; color:red;display:inline;"></div>
+                                    <input type="hidden" name="rating" id="rating"></td>
+                                </tr>
+                                <tr>
+                                  <td class="main"><b>Review Title</b>&nbsp;:&nbsp;</td>
+                                  <td class="main"><input name="review_title" size="50" maxlength="50"></td>
+                                </tr>
+                                <tr>
+                                  <td class="main" valign="top"><b>{%SUB_TITLE_REVIEW%}</b>&nbsp;:&nbsp;</td>
+                                  <td class="main"><textarea name="review" wrap="soft" cols="60" rows="15"></textarea></td>
+                                </tr>
+                                <tr>
+                                  <td class="main" colspan="3" align="right"> {%TEXT_NO_HTML%} </td>
+                                </tr>
+                                <tr>
+                                  <td class="main" colspan="3"><div style="display:inline;float:left;"> <a href="$product_reviews_link"><img src="includes/sts_templates/full/template16/images/buttons/button_back.gif" border="0" alt="Back" title=" Back " width="83" height="39"></a> </div>
+                                    <div style="display:inline;float:right;">
+                                      <input type="submit" name="btn_Continue" value="Continue" alt="Continue" class="css_btn_styled ">
+                                    </div></td>
+                                </tr>
+                              </tbody>
+                            </table></td>
+                          <td width="20%" align="center" valign="top" class="Reviewer-right-box"><table border="0" cellspacing="0" cellpadding="2">
+                              <tbody>
+                                <tr>
+                                  <td align="center" class="smallText"><script language="javascript">
+document.write('<a href="javascript:popupWindow(\' $popup_image_link \')">$image<br>{%TEXT_CLICK_TO_ENLARGE%}</a>');
+</script><!--<a href="javascript:popupWindow('$popup_image_link')">$image<br>{%TEXT_CLICK_TO_ENLARGE%}</a>-->
+                                    
+                                    <noscript>
+                                    <a href="$normal_image_link" target="_blank">$image<br>
+                                    {%TEXT_CLICK_TO_ENLARGE%}</a>
+                                    </noscript>
+                                    <p><a href="$buy_now_link"><img src="includes/sts_templates/full/template16/images/buttons/button_in_cart.gif" border="0" alt="Add to Cart" title=" Add to Cart " width="124" height="31"></a></p></td>
+                                </tr>
+                              </tbody>
+                            </table></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+          
+          <!--sku end--> 
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--footer start-->
+<div id="mj-footer"> <!-- mj-footer starts -->
+  $newsletter
+  <div class="mj-subcontainer"> <!-- mj-subcontainer starts --> 
+    $footer_box_01
+    $footer_box_02
+    $footer_box_03
+    $footer_box_04
+    <div class="clear-style"></div>
+  </div>
+</div>
+$footer_copyright
+
+
+
+</body>
+</html>

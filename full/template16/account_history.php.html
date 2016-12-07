@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+$template16_stylesheet1
+<script type="text/javascript">
+
+            var jqqqnoconf = jQuery.noConflict();
+
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+
+            if (jqqqnoconf.attrFn) {
+
+                jqqqnoconf.attrFn.text = true;
+
+            }
+
+        </script>
+<script type="text/javascript">
+
+            var tba = jQuery.noConflict();
+
+
+
+            tba(document).ready(function () {
+
+                //SKU BOF
+
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
+
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+
+                //SKU EOF
+            });
+
+        </script>
+
+<!--end of javascript-->
+
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.min.css"/>
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.css" />
+
+<!-- font-awesome new add link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<!---font-awesome end link--->
+
+
+$stylesheet
+</head>
+
+<body class="$script">
+
+
+<div class="menu-head" id="sticky-navigation"> $top_bar
+  $header
+  $navigation_menu
+  <div class="clear-style"></div>
+</div>
+<div class="clear-style"></div>
+<div id="mj-container" class="freeshipping-banner">
+  <div class="container">
+    <div class="col-md-12"> $free_shipping_banner </div>
+  </div>
+</div>
+<div class="clear-style"></div>
+
+
+
+<div id="mj-container">
+  
+  <div class="bg-color-page">
+  	<div class="container">
+<!--breadcrumbs start--->
+<div id="mj-container1" class="col-md-121"> <!-- mj-slidetitle starts --> 
+  
+  
+  <div class="my-account-header page-title normal-title cnt">
+    <div class="page-title-inner container">
+      <div class="flex-col flex-grow medium-text-center">
+        <h1 class="uppercase mb-0">{%HEADING_TITLE%}</h1>
+      </div>
+      <!-- .flex-left --> 
+    </div>
+    <!-- flex-row --> 
+  </div>
+  <div id="mj-container1" class="container1">
+    <div id="mj-maincontent">
+      <div class="col-md-12">
+        <div id="mj-contentarea1" class="mj-grid-64 mj-lspace-1"> 
+          
+          <!--sku start-->
+          <table border="0" width="100%" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+              </tr>
+              <tr>
+                <td><!-- loop through orders start -->
+                  
+                  <?php
+        if($orders_total>0){ 
+            foreach($history_orders as $history){ ?>
+                  <div class="order-status-divider">
+                    <table border="0" width="100%" cellspacing="0" cellpadding="2" >
+                      <tbody>
+                        <tr>
+                          <td class="main"><b>{%TEXT_ORDER_NUMBER%}</b> <?php echo $history['orders_id']; ?></td>
+                          <td class="main" align="right"><b>{%TEXT_ORDER_STATUS%}</b> <?php echo $history['orders_status_name'] ?></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table border="0" width="100%" cellspacing="1" cellpadding="2" class="infoBox" >
+                      <tbody>
+                        <tr class="infoBoxContents">
+                          <td><table border="0" width="100%" cellspacing="2" cellpadding="4" class="order-status-heading">
+                              <tbody>
+                                <tr>
+                                  <td class="main" width="50%" valign="top"><b>{%TEXT_ORDER_DATE%}</b> <?php echo $history['date_purchased']?><br>
+                                    <b><?php echo $history['order_type'] ?></b> <?php echo $history['order_name'] ?></td>
+                                  <td class="main" width="30%" valign="top"><b>{%TEXT_ORDER_PRODUCTS%}</b> <?php echo $history['product_count'] ?><br>
+                                    <b>{%TEXT_ORDER_COST%}</b> <?php echo $history['order_total'] ?></td>
+                                  <td class="main" width="20%" align="right"><a href="<?php echo $history['order_url'] ?>"><img src="includes/sts_templates/full/template16/images/buttons/small_view.gif" border="0" alt="View" title=" View " width="76" height="31"></a></td>
+                                </tr>
+                              </tbody>
+                            </table></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <?php }} else {?>
+                  <table border="0" width="100%" cellspacing="1" cellpadding="2" class="infoBox">
+                    <tr class="infoBoxContents">
+                      <td><table border="0" width="100%" cellspacing="2" cellpadding="4">
+                          <tr>
+                            <td class="main">{%TEXT_NO_PURCHASES%}</td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table>
+                  <?php } ?>
+                  
+                  <!-- loop through orders ends --></td>
+              </tr>
+              <tr>
+                <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                    <tbody>
+                      <tr>
+                        <td class="smallText" valign="top">$text_no_orders</td>
+                        <td class="smallText" align="right">{%TEXT_RESULT_PAGE%}&nbsp;$link_pages</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+              <tr>
+                <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+              </tr>
+              <tr>
+                <td><table border="0" width="100%" cellspacing="1" cellpadding="2" class="infoBox">
+                    <tbody>
+                      <tr class="infoBoxContents">
+                        <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                            <tbody>
+                              <tr>
+                                <td><a href="$back_url"><img src="includes/sts_templates/full/template16/images/buttons/button_back.gif" border="0" alt="Back" title="Back" width="76" height="31"></a></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </tbody>
+          </table>
+          <!--sku end--> 
+          
+        </div>
+        <div id="mj-left" class="mj-grid16 mj-lspace" style="display:none">
+          <div class="ui-widget infoBoxContainer mj-categoriessidebox"> $categorybox </div>
+          <div class="ui-widget infoBoxContainer mj-whatsnew"> $whatsnewbox </div>
+          <div class="ui-widget infoBoxContainer mj-information"> $informationbox </div>
+        </div>
+        <div id="mj-right" class="mj-grid16 mj-lspace mj-rspace" style="display:none">
+          <div class="ui-widget infoBoxContainer mj-cartbox"> $cartbox </div>
+          <div class="ui-widget infoBoxContainer mj-bestsellersbox"> $bestsellersbox </div>
+          <div class="ui-widget infoBoxContainer mj-reviewbox"> $reviewsbox </div>
+          <div class="ui-widget infoBoxContainer mj-currenciesbox"> $currenciesbox </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+  </div>
+  </div>
+</div>
+
+<!--footer start-->
+
+
+<div id="mj-footer"> <!-- mj-footer starts -->
+  $newsletter
+  <div class="mj-subcontainer"> <!-- mj-subcontainer starts --> 
+    $footer_box_01
+    $footer_box_02
+    $footer_box_03
+    $footer_box_04
+    <div class="clear-style"></div>
+  </div>
+</div>
+$footer_copyright
+
+</body>
+</html>

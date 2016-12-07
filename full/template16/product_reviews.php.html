@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+$template16_stylesheet1
+<script type="text/javascript">
+
+            var jqqqnoconf = jQuery.noConflict();
+
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+
+            if (jqqqnoconf.attrFn) {
+
+                jqqqnoconf.attrFn.text = true;
+
+            }
+
+        </script>
+<script language="javascript"><!--
+function popupWindow(url) {
+  window.open(url,'popupWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,copyhistory=no,width=100,height=100,screenX=150,screenY=150,top=150,left=150')
+}
+//--></script>
+<script type="text/javascript">
+
+            var tba = jQuery.noConflict();
+
+
+
+            tba(document).ready(function () {
+
+                //SKU BOF
+
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
+
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+
+                //SKU EOF
+
+			})
+
+
+        </script>
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.min.css"/>
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.css" />
+
+<!-- font-awesome new add link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<!---font-awesome end link--->
+$stylesheet
+</head>
+
+<body class="$script">
+<div class="menu-head" id="sticky-navigation"> $top_bar
+  $header
+  $navigation_menu
+  <div class="clear-style"></div>
+</div>
+<div class="clear-style"></div>
+<div id="mj-container" class="freeshipping-banner">
+  <div class="container">
+    <div class="col-md-12"> $free_shipping_banner </div>
+  </div>
+</div>
+<div class="clear-style"></div>
+<div id="mj-container">
+  <div class="bg-color-page">
+    <div class="container">
+      <div class="my-account-header page-title normal-title cnt">
+        <div class="page-title-inner container">
+          <div class="flex-col flex-grow medium-text-center">
+            <h1 class="uppercase mb-0">$products_name</h1>
+          </div>
+          <!-- .flex-left --> 
+        </div>
+        <!-- flex-row --> 
+      </div>
+      <div id="mj-container" class="col-md-12">
+        <div id="mj-maincontent1">
+          <div class="mj-subcontainer1">
+            <div id="mj-contentarea1" class="mj-grid-64 mj-lspace-1 account-page-row"> 
+              
+              <!--sku start-->
+              
+              <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td><table border="0" width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <!-- // Points/Rewards Module V2.1rc2a bof //-->
+                          <?php if(!empty($use_points)){ ?>
+                          <tr>
+                            <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                          </tr>
+                          <tr>
+                            <td class="main">$review_help_link</td>
+                          </tr>
+                          <?php } ?>
+                          <!-- // Points/Rewards Module V2.1rc2a eof //-->
+                        </tbody>
+                      </table></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="2">
+                        <tbody>
+                          <tr>
+                            <td valign="top" class="left-box-products-reviws"><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                                <tbody>
+                                  <?php if($no_of_reviews >0){ ?>
+                                  <?php if($prev_next_bar_loc == 1 || $prev_next_bar_loc == 3) { ?>
+                                  <tr>
+                                    <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                                        <tr>
+                                          <td class="smallText">$display_count</td>
+                                          <td align="right" class="smallText">$result_page</td>
+                                        </tr>
+                                      </table></td>
+                                  </tr>
+                                  <tr>
+                                    <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                                  </tr>
+                                  <?php } ?>
+                                  <?php foreach($review as $rev){ ?>
+                                  <tr>
+                                    <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                                        <tr>
+                                          <td class="main"><?php echo $rev['review_by']; ?></td>
+                                          <td class="smallText" align="right"><?php echo $rev['date_added']; ?></td>
+                                        </tr>
+                                      </table></td>
+                                  </tr>
+                                  <tr>
+                                    <td><table border="0" width="100%" cellspacing="1" cellpadding="2" class="infoBox">
+                                        <tr class="infoBoxContents">
+                                          <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                                              <tr>
+                                                <td width="10"><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                                                <td valign="top" class="main rating_star_img"><?php echo $rev['rating_string']; ?></td>
+                                                <td width="10" align="right"><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                                              </tr>
+                                            </table></td>
+                                        </tr>
+                                      </table></td>
+                                  </tr>
+                                  <tr>
+                                    <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                                  </tr>
+                                  <?php } ?>
+                                  <?php } else { ?>
+                                  <tr>
+                                    <td>$text_no_review</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                                  </tr>
+                                  <?php } ?>
+                                  <?php if (($no_of_reviews > 0) && (($prev_next_bar_loc == '2') || ($prev_next_bar_loc == '3'))) { ?>
+                                  <tr>
+                                    <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                                        <tr>
+                                          <td class="smallText">$display_count</td>
+                                          <td align="right" class="smallText">$result_page</td>
+                                        </tr>
+                                      </table></td>
+                                  </tr>
+                                  <tr>
+                                    <td><img src="images/pixel_trans.gif" border="0" alt="" width="100%" height="10"></td>
+                                  </tr>
+                                  <?php } ?>
+                                  <tr>
+                                    <td><table border="0" width="100%" cellspacing="1" cellpadding="2" class="infoBox">
+                                        <tbody>
+                                          <tr class="infoBoxContents">
+                                            <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                                                <tbody>
+                                                  <tr>
+                                                    <td width="10"><img src="images/pixel_trans.gif" border="0" alt="" width="10" height="1"></td>
+                                                    <td class="main"><a href="$product_info_link"><img src="includes/sts_templates/full/template16/images/buttons/button_back.gif" border="0" alt="Back" title=" Back " width="83" height="39"></a></td>
+                                                    <td class="main" align="right"><a href="$product_review_write_link"><img src="includes/sts_templates/full/template16/images/buttons/button_write_review.gif" border="0" alt="Write Review" title=" Write Review " width="157" height="39"></a></td>
+                                                    <td width="10"><img src="images/pixel_trans.gif" border="0" alt="" width="10" height="1"></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table></td>
+                                          </tr>
+                                        </tbody>
+                                      </table></td>
+                                  </tr>
+                                </tbody>
+                              </table></td>
+                            <td width="146" align="right" valign="bottom" class="right-box-products-reviws"><table border="0" cellspacing="0" cellpadding="2">
+                                <tbody>
+                                  <tr>
+                                    <td align="center" class="smallText" width="146"><?php if(!empty($product_image)){ ?>
+                                      <script language="javascript"><!--
+document.write('<a href="javascript:popupWindow(\'$popup_image_link\')">$product_image<br>{%TEXT_CLICK_TO_ENLARGE%}</a>');
+//--></script>
+                                      <noscript>
+                                      <a href="$normal_image_link" target="_blank">$image<br>
+                                      {%TEXT_CLICK_TO_ENLARGE%}</a>
+                                      </noscript>
+                                      <?php } ?>
+                                      <p><a href="$buy_now_link"><img src="includes/sts_templates/full/template16/images/buttons/button_in_cart.gif" border="0" alt="Add to Cart" title=" Add to Cart " width="123" height="31"></a></p></td>
+                                  </tr>
+                                </tbody>
+                              </table></td>
+                          </tr>
+                        </tbody>
+                      </table></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <!--sku end--> 
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--footer start-->
+<div id="mj-footer"> <!-- mj-footer starts -->
+  $newsletter
+  <div class="mj-subcontainer"> <!-- mj-subcontainer starts --> 
+    $footer_box_01
+    $footer_box_02
+    $footer_box_03
+    $footer_box_04
+    <div class="clear-style"></div>
+  </div>
+</div>
+$footer_copyright
+</body>
+</html>

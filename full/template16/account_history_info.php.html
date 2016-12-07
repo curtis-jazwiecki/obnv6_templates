@@ -1,0 +1,495 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+$headertags
+<meta name="viewport" content="width=device-width, initial-scale=1">
+$template16_stylesheet1
+
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.min.css"/>
+<link rel="stylesheet" type="text/css" href="includes/sts_templates/full/template16/css/bootstrap-new.css" />
+
+<!-- font-awesome new add link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<!---font-awesome end link--->
+
+<script type="text/javascript">
+
+            var jqqqnoconf = jQuery.noConflict();
+
+// fix jQuery 1.8.0 and jQuery UI 1.8.22 bug with dialog buttons; http://bugs.jqueryui.com/ticket/8484
+
+            if (jqqqnoconf.attrFn) {
+
+                jqqqnoconf.attrFn.text = true;
+
+            }
+
+        </script>
+<script type="text/javascript">
+
+            var tba = jQuery.noConflict();
+
+
+
+            tba(document).ready(function () {
+
+                //SKU BOF
+
+                tba('.bestsellers').html('<i class="fa fa-chevron-circle-right"></i>');
+
+                tba('.category_cell table').addClass('categoryListBoxContents subproduct_name onlycat');
+
+                tba('body.password_forgotten').find('.pageHeading').eq(0).wrapInner('<h1></h1>');  
+
+                tba('body.shopping_cart .productListing-tr').addClass('tablecontent').removeClass('productListing-odd productListing-even productListing-tr');
+
+                //tba('body.checkout').find('h2.margin').addClass('acc_trigger active');
+
+                //SKU EOF
+            });
+
+        </script>
+
+
+$stylesheet
+</head>
+
+<body class="$script">
+
+
+<div class="menu-head" id="sticky-navigation"> $top_bar
+  $header
+  $navigation_menu
+  <div class="clear-style"></div>
+</div>
+<div class="clear-style"></div>
+<div id="mj-container" class="freeshipping-banner">
+  <div class="container">
+    <div class="col-md-12"> $free_shipping_banner </div>
+  </div>
+</div>
+<div class="clear-style"></div>
+
+
+
+<div id="mj-container">
+  
+  
+   <div class="bg-color-page">
+  	<div class="container">
+    
+  <div class="my-account-header page-title normal-title cnt">
+    <div class="page-title-inner container">
+      <div class="flex-col flex-grow medium-text-center">
+        <h1 class="uppercase mb-0">{%HEADING_TITLE%}</h1>
+      </div>
+      <!-- .flex-left --> 
+    </div>
+    <!-- flex-row --> 
+  </div>
+  <div id="mj-container" class="col-md-12">
+    <div id="mj-maincontent1">
+      <div class="mj-subcontainer1">
+        <div id="mj-contentarea1" class="mj-grid-64 mj-lspace-1"> 
+          
+          <!--sku start-->
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <tr>
+                <td><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                    <tbody>
+                      <tr>
+                        <td class="infoBoxHeading" colspan="2"><b>$heading_order_number</b></td>
+                      </tr>
+                      <tr>
+                        <td class="smallText">$heading_order_date</td>
+                        <td class="smallText" align="right">$heading_order_total</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+              <?php if(!empty($order_delivery)){ ?>
+              <tr>
+                <td><table class="infoBox" width="100%" cellspacing="1" cellpadding="2" border="0">
+                    <tbody>
+                      <tr class="infoBoxContents">
+                        <td width="30%" valign="top"><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                            <tbody>
+                              <tr>
+                                <td class="main"><b>{%HEADING_DELIVERY_ADDRESS%}</b></td>
+                              </tr>
+                              <tr>
+                                <td class="main">$delivery_address_label</td>
+                              </tr>
+                              <?php if(!empty($shipping_method)){ ?>
+                              <tr>
+                                <td class="main"><b>{%HEADING_SHIPPING_METHOD%}</b></td>
+                              </tr>
+                              <tr>
+                                <td class="main">$shipping_method</td>
+                              </tr>
+                              <?php } ?>
+                            </tbody>
+                          </table></td>
+                        <td width="<?php if(!empty($order_delivery)){echo '70%';}else{echo '100%';} ?>" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                              <tr>
+                                <?php if(!empty($order_shipping_id)){ ?>
+                                <?php
+                    require_once (DIR_WS_INCLUDES . 'vendor_order_data.php');
+                    require_once (DIR_WS_INCLUDES . 'vendor_order_info.php');
+              ?>
+                                <?php } else { ?>
+                                <td><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                                    <tbody>
+                                      <?php if(!empty($tax_groups)){ ?>
+                                      <tr>
+                                        <td class="main" colspan="2"><b>{%HEADING_PRODUCTS%}</b></td>
+                                        <td class="smallText" align="right"><b>{%HEADING_TAX%}</b></td>
+                                        <td class="smallText" align="right"><b>{%HEADING_TOTAL%}</b></td>
+                                      </tr>
+                                      <?php } else { ?>
+                                      <tr>
+                                        <td class="main" colspan="3"><b>{%HEADING_PRODUCTS%}</b></td>
+                                      </tr>
+                                      <?php } ?>
+                                      <?php if(!empty($products)){ ?>
+                                      <?php foreach($products as $prod){?>
+                                      <tr>
+                                        <td class="main" width="30" valign="top" align="right"><?php echo $prod['qty'] ?>&nbsp;x</td>
+                                        <td class="main" valign="top"><?php echo $prod['name'];?>
+                                          <?php foreach($prod['attributes'] as $attr){?>
+                                          <br>
+                                          <nobr><small>&nbsp;<i> - <?php echo $attr['option'];?>: <?php echo $attr['value']; ?></i></small></nobr>
+                                          <?php } ?></td>
+                                        <?php if(!empty($tax_groups)){ ?>
+                                        <td class="main" valign="top" align="right"><?php $prod['tax'];?></td>
+                                        <?php } ?>
+                                        <td class="main" valign="top" align="right"><?php echo $prod['price'] ?></td>
+                                      </tr>
+                                      <?php } ?>
+                                      <?php } ?>
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                              <?php } ?>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+              <?php } ?>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <tr>
+                <td class="infoBoxHeading"><b>{%HEADING_BILLING_INFORMATION%}</b></td>
+              </tr>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <tr>
+                <td><table class="infoBox" width="100%" cellspacing="1" cellpadding="2" border="0">
+                    <tbody>
+                      <tr class="infoBoxContents">
+                        <td width="30%" valign="top"><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                            <tbody>
+                              <tr>
+                                <td class="main"><b>{%HEADING_BILLING_ADDRESS%}</b></td>
+                              </tr>
+                              <tr>
+                                <td class="main">$billing_address_label </td>
+                              </tr>
+                              <tr>
+                                <td class="main"><b>{%HEADING_PAYMENT_METHOD%}</b></td>
+                              </tr>
+                              <tr>
+                                <td class="main">$payment_method</td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                        <td width="70%" valign="top"><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                            <tbody>
+                              <?php if(!empty($order_totals)){?>
+                              <?php foreach($order_totals as $ot){?>
+                              <tr>
+                                <td class="main" align="right" width="100%"><?php echo $ot['title']; ?></td>
+                                <td class="main" align="right"><?php echo $ot['text']; ?></td>
+                              </tr>
+                              <?php } ?>
+                              <?php } ?>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <tr>
+                <td class="infoBoxHeading"><b>{%HEADING_ORDER_HISTORY%}</b></td>
+              </tr>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <tr>
+                <td><table class="infoBox" width="100%" cellspacing="1" cellpadding="2" border="0">
+                    <tbody>
+                      <tr class="infoBoxContents">
+                        <td valign="top"><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                            <tbody>
+                              <?php foreach($status as $stat){ ?>
+                              <tr>
+                                <td class="main" width="70" valign="top"><?php echo $stat['date']; ?></td>
+                                <td class="main" width="70" valign="top"><?php echo $stat['name']; ?></td>
+                                <td class="main" valign="top"><?php echo $stat['comments']; ?></td>
+                              </tr>
+                              <?php } ?>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+              <!-- Package Tracking Plus BEGIN -->
+              <?php if(!empty($and_null)){ ?>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <?php } elseif(!empty($or_null)) { ?>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <tr>
+                <td class="infoBoxHeading"><b>{%HEADING_TRACKING%}</b></td>
+              </tr>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <tr>
+                <td><table border="0" width="100%" cellspacing="1" cellpadding="2" class="infoBox">
+                    <tr class="infoBoxContents">
+                      <td width="100%" valign="top"><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                          <?php if(!empty($usps_num_present1)){ ?>
+                          <tr>
+                            <td class="main" align="left">USPS(1):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=$usps_track_num1">$usps_track_num1</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=usps_track_num1"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <?php } ?>
+                          <?php if(!empty($usps_num_present2)){ ?>
+                          <tr>
+                            <td class="main" align="left">USPS(2):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=$usps_track_num2">$usps_track_num2</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=$usps_track_num2"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <?php } ?>
+                          <?php if(!empty($ups_num_present)){ ?>
+                          <tr>
+                            <td class="main" align="left">UPS(1):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://wwwapps.ups.com/etracking/tracking.cgi?InquiryNumber1=$ups_track_num&InquiryNumber2=&InquiryNumber3=&InquiryNumber4=&InquiryNumber5=&TypeOfInquiryNumber=T&UPS_HTML_Version=3.0&IATA=us&Lang=en&submit=Track+Package">$ups_track_num</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://wwwapps.ups.com/etracking/tracking.cgi?InquiryNumber1=$ups_track_num&InquiryNumber2=&InquiryNumber3=&InquiryNumber4=&InquiryNumber5=&TypeOfInquiryNumber=T&UPS_HTML_Version=3.0&IATA=us&Lang=en&submit=Track+Package"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <?php } ?>
+                          <?php if(!empty($ups_num_present2)){ ?>
+                          <tr>
+                            <td class="main" align="left">UPS(2):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://wwwapps.ups.com/etracking/tracking.cgi?InquiryNumber1=$ups_track_num2&InquiryNumber2=&InquiryNumber3=&InquiryNumber4=&InquiryNumber5=&TypeOfInquiryNumber=T&UPS_HTML_Version=3.0&IATA=us&Lang=en&submit=Track+Package"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://wwwapps.ups.com/etracking/tracking.cgi?InquiryNumber1=$ups_track_num2&InquiryNumber2=&InquiryNumber3=&InquiryNumber4=&InquiryNumber5=&TypeOfInquiryNumber=T&UPS_HTML_Version=3.0&IATA=us&Lang=en&submit=Track+Package"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <?php } ?>
+                          <?php if(!empty($fedex_num_present)){ ?>
+                          <tr>
+                            <td class="main" align="left">Fedex(1):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://www.fedex.com/Tracking?tracknumbers=$fedex_track_num&action=track&language=english&cntry_code=us">$fedex_track_num</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://www.fedex.com/Tracking?tracknumbers=$fedex_track_num&action=track&language=english&cntry_code=us"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <?php } ?>
+                          <?php if(!empty($fedex_num_present2)){ ?>
+                          <tr>
+                            <td class="main" align="left">Fedex(2):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://www.fedex.com/Tracking?tracknumbers=$fedex_track_num2&action=track&language=english&cntry_code=us">$fedex_track_num2</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://www.fedex.com/Tracking?tracknumbers=$fedex_track_num2&action=track&language=english&cntry_code=us"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <?php } ?>
+                          <?php if(!empty($dhl_num_present1)){ ?>
+                          <tr>
+                            <td class="main" align="left">DHL(1):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://track.dhl-usa.com/atrknav.asp?ShipmentNumber=$dhl_track_num&action=track&language=english&cntry_code=us">$dhl_track_num</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://track.dhl-usa.com/atrknav.asp?ShipmentNumber=$dhl_track_num&action=track&language=english&cntry_code=us"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <?php } ?>
+                          <?php if(!empty($dhl_num_present2)){ ?>
+                          <tr>
+                            <td class="main" align="left">DHL(2):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://track.dhl-usa.com/atrknav.asp?ShipmentNumber=$dhl_track_num2&action=track&language=english&cntry_code=us">$dhl_track_num2</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://track.dhl-usa.com/atrknav.asp?ShipmentNumber=dhl_track_num2&action=track&language=english&cntry_code=us"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <?php } ?>
+                          <?php if(!empty($extra_num_present)){ ?>
+                          <tr>
+                            <td class="main" align="left">{%EXTRA_TRACKING_NUMBER%}</td>
+                            <td class="main" align="left">$extra_track_num</td>
+                          </tr>
+                          <?php } ?>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <?php }elseif(!empty($no_null)){ ?>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <tr>
+                <td class="infoBoxHeading"><b><?php echo HEADING_TRACKING; ?></b></td>
+              </tr>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <tr>
+                <td><table border="0" width="100%" cellspacing="1" cellpadding="2" class="infoBox">
+                    <tr class="infoBoxContents">
+                      <td width="100%" valign="top"><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                          <tr>
+                            <td class="main" align="left">USPS(1):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=$usps_track_num1">$usps_track_num1</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=$usps_track_num1"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td class="main" align="left">USPS(2):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=$usps_track_num2">$usps_track_num2</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=$usps_track_num2"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td class="main" align="left">UPS(1):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://wwwapps.ups.com/etracking/tracking.cgi?InquiryNumber1=$ups_track_num&InquiryNumber2=&InquiryNumber3=&InquiryNumber4=&InquiryNumber5=&TypeOfInquiryNumber=T&UPS_HTML_Version=3.0&IATA=us&Lang=en&submit=Track+Package">$ups_track_num</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://wwwapps.ups.com/etracking/tracking.cgi?InquiryNumber1=$ups_track_num&InquiryNumber2=&InquiryNumber3=&InquiryNumber4=&InquiryNumber5=&TypeOfInquiryNumber=T&UPS_HTML_Version=3.0&IATA=us&Lang=en&submit=Track+Package"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td class="main" align="left">UPS(2):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://wwwapps.ups.com/etracking/tracking.cgi?InquiryNumber1=$ups_track_num2&InquiryNumber2=&InquiryNumber3=&InquiryNumber4=&InquiryNumber5=&TypeOfInquiryNumber=T&UPS_HTML_Version=3.0&IATA=us&Lang=en&submit=Track+Package">$ups_track_num2</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://wwwapps.ups.com/etracking/tracking.cgi?InquiryNumber1=$ups_track_num2&InquiryNumber2=&InquiryNumber3=&InquiryNumber4=&InquiryNumber5=&TypeOfInquiryNumber=T&UPS_HTML_Version=3.0&IATA=us&Lang=en&submit=Track+Package"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td class="main" align="left">Fedex(1):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://www.fedex.com/Tracking?tracknumbers=$fedex_track_num&action=track&language=english&cntry_code=us">$fedex_track_num</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://www.fedex.com/Tracking?tracknumbers=$fedex_track_num&action=track&language=english&cntry_code=us"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td class="main" align="left">Fedex(2):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://www.fedex.com/Tracking?tracknumbers=$fedex_track_num2&action=track&language=english&cntry_code=us">$fedex_track_num2</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://www.fedex.com/Tracking?tracknumbers=$fedex_track_num2&action=track&language=english&cntry_code=us"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td class="main" align="left">DHL(1):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://track.dhl-usa.com/atrknav.asp?ShipmentNumber=$dhl_track_num&action=track&language=english&cntry_code=us">$dhl_track_num</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://track.dhl-usa.com/atrknav.asp?ShipmentNumber=$dhl_track_num&action=track&language=english&cntry_code=us"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td class="main" align="left">DHL(2):</td>
+                            <td class="main" align="left"><a target="_blank" href="http://track.dhl-usa.com/atrknav.asp?ShipmentNumber=$dhl_track_num2&action=track&language=english&cntry_code=us">$dhl_track_num2</a></td>
+                            <td class="main" align="left"><a target="_blank" href="http://track.dhl-usa.com/atrknav.asp?ShipmentNumber=$dhl_track_num2&action=track&language=english&cntry_code=us"><img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td class="main" align="left">{%EXTRA_TRACKING_NUMBER%}</td>
+                            <td class="main" align="left">$extra_track_num</td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <?php } ?>
+              <?php if(!empty($tracking_data)){ ?>
+              <tr>
+                <td class="main"><b>Track Packages</b></td>
+              </tr>
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <tr>
+                <td><table class="infoBox" width="100%" cellspacing="1" cellpadding="2" border="0">
+                    <tbody>
+                      <?php foreach($tracking_data as $tracking){?>
+                      <tr>
+                        <td><?php echo $tracking['title']; ?></td>
+                        <td><a target="_blank" href="<?php echo $tracking['link']; ?>"> <img src="includes/languages/english/images/buttons/button_track.gif" alt="Track Packages" border="0"> </a></td>
+                      </tr>
+                      <?php
+    } ?>
+                    </tbody>
+                  </table></td>
+              </tr>
+              <?php } ?>
+              
+              <!-- downloads //-->
+              <?php if ($download_enabled == 'true') include(DIR_WS_MODULES . 'downloads.php'); ?>
+              <!-- downloads_eof //--> 
+              <!-- Package Tracking Plus END -->
+              
+              <tr>
+                <td><img src="images/pixel_trans.gif" alt="" width="100%" border="0" height="10"></td>
+              </tr>
+              <tr>
+                <td><table class="infoBox" width="100%" cellspacing="1" cellpadding="2" border="0">
+                    <tbody>
+                      <tr class="infoBoxContents">
+                        <td><table width="100%" cellspacing="0" cellpadding="2" border="0">
+                            <tbody>
+                              <tr>
+                               
+                                <!-- // Points/Rewards Module V2.1rc2a history_back_bof  //-->
+                                <td><a href="javascript:history.go(-1)"><img src="includes/sts_templates/full/template16/images/buttons/button_back.gif" alt="Back" title=" Back " width="66" border="0" height="35"></a></td>
+                                <!-- // Points/Rewards Module V2.1rc2a history_back_eof //-->
+                                
+                               
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </tbody>
+          </table>
+          <!--sku end--> 
+          <div class="clear-style"></div>
+
+        </div>
+        
+        &nbsp;
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+<!--footer start-->
+<!--footer start-->
+
+
+<div id="mj-footer"> <!-- mj-footer starts -->
+  $newsletter
+  <div class="mj-subcontainer"> <!-- mj-subcontainer starts --> 
+    $footer_box_01
+    $footer_box_02
+    $footer_box_03
+    $footer_box_04
+    <div class="clear-style"></div>
+  </div>
+</div>
+$footer_copyright
+</body>
+</html>
